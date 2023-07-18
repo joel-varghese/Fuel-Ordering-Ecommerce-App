@@ -1,0 +1,2494 @@
+@import "../../assets/styles/constants.scss";
+.MuiPaper-root {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+}
+.MuiTable-root {
+    font-family: $font-family;
+    .Mui-selected, .MuiTableRow-root.MuiTableRow-hover {
+        background-color: transparent !important;
+    }
+    thead{
+        th {
+            color: $table-head-clr !important;
+            text-align: center;
+            font-family: $font-family;
+            border-bottom: 0;
+            padding: 16px 5px 5px 5px;
+            font-weight: 600;
+            line-height: 16px;
+            .Mui-active {
+                color: $table-head-clr !important;
+            }
+            svg {
+                font-size: 16px;
+                fill:$gray-c2;
+            }
+            span {
+                &:hover {
+                    color: $table-head-clr !important;
+                }
+                &.Mui-active {
+                    svg.desc {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+    }
+    tbody {
+        tr {
+            th,td {
+                color: $btn-primary-clr;
+                text-align: center;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                font-family: $font-family;
+                button {
+                    text-transform: capitalize !important;
+                }
+                .bf-row-font-color {
+                    color: crimson; 
+                 }
+            }
+            th {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            td {
+                &:last-child {
+                    padding-right: 0;
+                    &.action-buttons {
+                        flex-direction: row !important;
+                        justify-content: flex-end;
+                        text-align: right;
+                        .bf-multi-delete-icon,
+                        .bf-multi-edit-icon {
+                            display: none;
+                        }
+                        &.bf-multi-table {
+                            button {
+                                background-color: transparent !important;
+                                border-color: transparent !important;
+                                color: $btn-primary-clr !important;
+                                padding-left: 0;
+                                padding-right: 0;
+                                &:last-child {
+                                    margin-left: 5px !important;
+                                }
+                            }
+                            .bf-multi-delete-icon,
+                            .bf-multi-edit-icon {
+                                display: inline;
+                                margin-left: 5px;
+                                height: 11px;
+                            }
+                        }
+                    }
+                }
+                
+            }
+            .btn-bf-primary {
+                background-color: $btn-primary-clr;
+                font-family: $font-family;
+                border: 1px solid $btn-primary-clr;
+                min-width: min(10vw, max(100px, 8vw));
+                box-shadow: none;
+                font-size: 13px;
+                height: 30px;
+                padding-top: 8px;
+                &:hover {
+                    background-color: $hover-clr;
+                }
+                &:active, &:focus {
+                    color: $clr-white !important;
+                }
+                &:disabled {
+                    background-color: $disabled-clr !important;
+                    border-color: $disabled-clr !important;
+                    color: $clr-white !important;
+                }
+                &.bf-btn-success {
+                    background-color: $success-bg-color !important;
+                    border-color: $success-bg-color !important;
+                    &:hover {
+                        background-color: $hover-clr !important;
+                        border-color: $hover-clr !important;
+                        color: $btn-primary-clr !important;
+                    }
+                }
+            }
+            .bf-mrgl20 {
+                margin-left: 12px;
+            }
+            .btn-bf-secondary {
+                background-color: transparent;
+                font-family: $font-family;
+                color: $primary-clr !important;
+                border: 1px solid $btn-primary-clr;
+                min-width: min(10vw, max(100px, 8vw));
+                box-shadow: none;
+                font-size: 13px;
+                height: 30px;
+                padding-top: 8px;
+                &:hover {
+                    background-color: $hover-clr;
+                }
+                &:disabled {
+                    background-color: $disabled-clr !important;
+                    border-color: $disabled-clr !important;
+                    color: $clr-white !important;
+                    opacity: 0.65;
+                }
+            }
+            
+        }
+    }
+}
+
+.bf-select {
+    margin-left: 30px;
+    margin-top: 2px;
+    border: 0;
+    margin-right: 0px;
+    width: 179px !important;
+    z-index: 2;
+    fieldset {
+        border-radius: 0 !important;    
+        border-right: 0;
+        border-color: rgb(206 212 218);
+    }
+    legend {
+        display: none !important;
+    }
+    position: absolute;
+    left: 0;
+    top:0;
+    select {
+        height: 33.6px;
+    }
+
+}
+.bf-user-tab-search {
+    margin-left: 209px !important;
+}
+
+.bf-paginarion-seciton {
+    position: relative;
+    .bf-pagination-dropdown {
+        position: absolute;
+        left: 30px;
+        height: 25px;
+        bottom: -10px;
+        margin-left: 0 !important;
+        > div {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        .MuiSelect-iconOutlined {
+            right: 0;
+        }
+        fieldset {
+            border-radius: 0;
+            border-color: #000;
+            padding-right: 0;
+            padding-left: 3px;
+        }
+        select {
+            background-color: white !important;
+            background-position: right 0.2rem center; 
+            height: 25px;
+            width: 60px;
+            padding: 0;
+            border: 1px solid $btn-primary-clr !important;
+            padding-left: 5px;
+            margin-top: -7px;
+        }
+    }
+    .MuiPagination-ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+        li {
+            button {
+                &.MuiPaginationItem-page{
+                  color: #e0e0e0;
+                  font-family: $font-family;
+                  &.Mui-selected {
+                        font-weight: 600;
+                        color: #000;
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+}
+.table-buttons{
+    display: flex;
+    padding-left: 30px;
+    margin-top: 5px;
+}
+.table-subheading{
+    font-size: 18px;
+    padding-left: 30px;
+    color: $btn-primary-clr;
+    height: 35px;
+    padding-top: 5px;
+    color: $btn-primary-clr;
+}
+.bf-order-link {
+    text-decoration: none; 
+    cursor: pointer;
+}
+.bf-popup-info {
+    text-align: right;
+    font-style: italic;
+    font-size: 14px;
+    color: $primary-clr;
+}
+.bf-table-footer {
+    font-style: italic;
+    font-size: 12px;
+    color: $primary-clr;
+    position: absolute;
+    right: 30px;
+    bottom: 5px;
+}
+.bf-fuel-tiers-head {
+    .bf-subheading {
+        padding-left: 30px;
+        padding-right: 15px;
+        width: 100%;
+        margin-top: 10px;
+        &::after {
+            width: 90% !important
+        }
+    }
+}
+
+.MuiBox-root {
+    padding: 15px 35px 35px 35px;
+    height: 100%;
+     .MuiPaper-root {
+        height: 100%;
+        width: calc(100% - 3.5vw);
+        .MuiTableContainer-root {
+            height: calc(100% - 90px);
+            overflow-y: auto;
+            padding-right: 15px;
+            padding-left: 30px;
+            z-index: 1;
+            position: relative;
+        }
+        .MuiTextField-root {
+            padding-left: 30px;
+            padding-top: 10px;
+            > div {
+                padding-left: 5px;
+                border: 1px solid $border-clr;
+                &::before {
+                    border-bottom: none !important;
+                }
+                
+            }
+        }
+    }
+    .search-component {
+        .search-icon {
+            font-size: 24px;
+            color: $btn-primary-clr;
+        }
+    }
+    #filled-search {
+        width: 32.5vw;
+    }
+}
+.bf-table-search-results {
+    .MuiBox-root {
+        .MuiPaper-root {
+            .MuiTableContainer-root {
+                height: calc(100% - 50px);  
+                tbody{
+                    position: relative;
+                    
+                 tr th{       
+                    &.bf-totprice{
+                       &:hover{
+                            .bf-order-total-price{
+                                display: block;
+                                position: absolute;            
+                            }
+                        
+                       }     
+                    }
+                        .bf-order-total-price{ 
+                            display: none;
+                            background-color:$clr-white !important;
+                            box-shadow:  0 3px 6px rgba(0,0,0,0.29);; 
+                            min-height: 93px;
+                            min-width: 214px;  
+                            left: 45.9% ;
+                            margin-top: -11%;
+                            @media screen and (min-width:1241px) and (max-width:1360px){
+                                left: 48.7% !important;
+                                margin-top: -11.8% !important;  
+                                  
+                            }
+                            @media screen and (min-width:1092px) and (max-width:1241px){
+                                left: 48.7% !important;
+                                margin-top: -13.8% !important;  
+                                  
+                            }
+
+                            @media screen and (min-width:1500px) and (max-width:1707px){
+                                left: 50.9% !important;
+                                margin-top: -9.5% !important;  
+                                  
+                            }
+                           
+                            @media screen and (min-width:1707px) and (max-width:1800px){
+                                left: 53.6% !important;
+                                margin-top: -9.5% !important;  
+                                  
+                            }
+                            @media screen and (min-width:1800px) and (max-width:2020px) {
+                                
+                                        left: 56.6% !important;
+                                         margin-top: -8.5% !important;        
+                                  
+                            }
+                            @media screen and (min-width:2040px) and (max-width:2700px) {
+                               
+                                        left: 61.3% !important;
+                                         margin-top: -7.5% !important;
+                                        
+                                  
+                            }
+                            @media screen and (min-width:2732px) and (max-width:4098px) {
+                                
+                                        left: 71.3% !important;
+                                        margin-top: -5% !important;      
+                                  
+                            }
+                            
+                            @media screen and (min-width:4098px) and (max-width:5464px) {
+                                
+                                        left: 80% !important;
+                                        margin-top: -3% !important;    
+                                   
+                            }
+                            @media screen and (min-width:5464px) and (max-width:5500px) {
+                                
+                                        left: 83.8% !important;
+                                        margin-top: -2.2% !important;
+                                     
+                                
+                            }
+                      
+                            .bf-order-total-price-popup{
+                                padding: 5px 5px 5px 5px !important;
+                                position: absolute !important;
+                                z-index: 1;
+                                .bf-order-total-price-text{
+                                    display: flex;
+                                    width: 100%;
+                                    justify-content: space-around !important;
+
+                                }
+                                .bf-gallons{
+                                    width: calc(100% - 10px);
+                                    color: $primary-clr;
+                                    background-color: $gray-c2;
+                                    min-height: 42px;
+                                    min-width: 206px; 
+                                    align-items: center;
+                                    font-size: 12px;
+                                    
+                                 }
+                                 .bf-price{
+                                    width: calc(100% - 10px);
+                                    background-color:$primary-clr;
+                                    color:$clr-white;
+                                    min-height: 42px;
+                                    min-width: 206px;
+                                    align-items: center !important;
+                                    font-size: 12px;
+                                    
+                                 }
+                            } 
+                            .bf-tiers-arrow{
+                                position: relative !important;
+                                bottom: -74px !important;
+                                left: 70px !important;
+                                
+
+                            }  
+                        }
+
+                    }
+                }
+            }
+            }
+        }
+    
+    
+    &.bf-internal-activeorder-table-container {
+        th {
+            &.bf-orderId,&.bf-location {
+                min-width: max(6vw, 80px);
+                max-width: max(6vw, 80px);
+            }
+            &.bf-dateOrder {
+                min-width: max(8vw, 120px);
+                max-width: max(8vw, 120px);
+            }
+            &.bf-fbo {
+                min-width: max(10vw, 80px);
+                max-width: max(10vw, 80px);
+            }
+            &.bf-operator {
+                min-width: max(10vw, 80px);
+                max-width: max(10vw, 80px);
+            }
+            &.bf-totPrice {
+                min-width: max(7vw, 90px);
+                max-width: max(7vw, 90px);
+            }
+        }
+    }
+    &.bf-tax-table-container {
+        th {
+            &.bf-orderId {
+                min-width: max(6vw, 80px);
+                max-width: max(6vw, 80px);
+            }
+            &.bf-dateDispute {
+                min-width: max(8vw, 120px);
+                max-width: max(8vw, 120px);
+            }
+            &.bf-location {
+                min-width: max(8vw, 80px);
+                max-width: max(8vw, 80px);
+            }
+            &.bf-raised,&.bf-reason {
+                min-width: max(12vw, 100px);
+                max-width: max(14vw, 100px);
+            }
+            &.bf-status {
+                min-width: max(7vw, 70px);
+                max-width: max(7vw, 70px);
+            }
+        }
+    }
+    &.bf-activeorder-table-container {
+        &.bf-operator-completedorder-table-container {
+            th {
+                &.bf-orderId {
+                    min-width: max(7vw, 80px) !important;
+                    max-width: max(7vw, 80px) !important;
+                }
+                &.bf-date {
+                    min-width: max(10vw, 80px);
+                    max-width: max(10vw, 80px);
+                }
+                &.bf-location {
+                    min-width: max(5vw, 70px);
+                    max-width: max(5vw, 70px);
+                }
+                &.bf-fbo {
+                    min-width: max(10vw, 80px);
+                    max-width: max(10vw, 80px);
+                }
+                &.bf-aircraft {
+                    min-width: max(6vw, 80px);
+                    max-width: max(6vw, 80px);
+                }
+                &.bf-totalPrice {
+                    min-width: max(6vw, 80px);
+                    max-width: max(6vw, 80px);
+                }
+                &.bf-status {
+                    min-width: max(5vw, 70px);
+                    max-width: max(5vw, 70px);
+                }
+            }
+        }
+        &.bf-internal-completedorder-table-container {
+            th {
+                &.bf-orderId {
+                    min-width: max(6vw, 80px);
+                    max-width: max(6vw, 80px);
+                }
+                &.bf-date {
+                    min-width: max(8vw, 120px);
+                    max-width: max(8vw, 120px);
+                }
+                &.bf-location {
+                    min-width: max(6vw, 80px);
+                    max-width: max(6vw, 80px);
+                }
+                &.bf-fbo {
+                    min-width: max(10vw, 80px);
+                    max-width: max(10vw, 80px);
+                }
+                &.bf-operator {
+                    min-width: max(10vw, 80px);
+                    max-width: max(10vw, 80px);
+                }
+                &.bf-status {
+                    min-width: max(5vw, 70px);
+                    max-width: max(5vw, 70px);
+                }
+            }
+        }
+        &.bf-fbo-completedorder-table-container {
+            th {
+                &.bf-orderId,
+                &.bf-location,
+                &.bf-aircraft {
+                    min-width: max(6vw, 80px);
+                    max-width: max(6vw, 80px);
+                }
+                &.bf-date,
+                &.bf-operator,
+                &.bf-totalPrice {
+                    min-width: max(8vw, 120px);
+                    max-width: max(8vw, 120px);
+                }
+                &.bf-status {
+                    min-width: max(7vw, 80px);
+                    max-width: max(7vw, 80px);
+                }
+            }
+        }
+    }
+}
+
+.bf-report-results {
+    .MuiBox-root {
+        .MuiPaper-root {
+            .MuiTableContainer-root {
+                height: calc(100% - 50px);
+            }
+        }
+    }
+}
+
+.bf-no-records {
+    color: $primary-clr;
+    position: absolute;
+    height: 50px;
+    top: 50%;
+    width: calc(100% - 3.5vw);
+    left: 0;
+}
+.bf-no-match {
+    color: $primary-clr;
+    height: 50px;
+    width: calc(100% - 3.5vw);
+    font-weight: 600;
+    padding-left: 60px;
+    padding-top: 25px;
+}
+
+.bf-user-table-container {
+    th {
+        padding-left: 5px;
+        padding-right: 5px;
+        &.bf-name {
+            min-width: max(8vw, 100px);
+            max-width: max(8vw, 100px);
+        }
+        &.bf-email {
+            min-width: max(15vw, 150px);
+            max-width: max(15vw, 150px);
+        }
+        &.bf-mobileNumber {
+            min-width: max(10vw, 150px);
+            max-width: max(10vw, 150px);
+        }
+        &.bf-access {
+            min-width: max(9vw, 120px);
+            max-width: max(9vw, 120px);
+        }
+        &.bf-roles {
+            min-width: min(9vw, 140px);
+            max-width: min(9vw, 140px);
+        }
+        &.bf-locations {
+            min-width: min(10vw, 150px);
+            max-width: min(10vw, 150px);
+        }
+    }
+}
+.bf-fees-table-container {
+    th {
+        padding-right: 5px;
+        &.bf-location {
+            min-width: max(10vw, 100px);
+            max-width: max(10vw, 100px);
+        }
+        &.bf-name {
+            min-width: max(8vw, 80px);
+            max-width: max(8vw, 80px);
+        }
+        &.bf-status {
+            min-width: max(8vw, 80px);
+            max-width: max(8vw, 80px);
+        }
+        &.bf-addedBy {
+            min-width: max(10vw, 100px);
+            max-width: max(10vw, 100px);
+        }
+        &.bf-criteria {
+            min-width: min(10vw, 110px);
+            max-width: min(10vw, 110px);
+        }
+        &.bf-feesAmount {
+            min-width: min(8vw, 80px);
+            max-width: min(8vw, 80px);
+        }
+    }
+}
+
+.bf-additionalServices-table-container {
+    th {
+        padding-right: 5px;
+        &.bf-service {
+            min-width: max(9vw, 90px);
+            max-width: max(9vw, 90px);
+        }
+        &.bf-location {
+            min-width: max(10vw, 100px);
+            max-width: max(10vw, 100px);
+        }
+        &.bf-fee {
+            min-width: max(8vw, 80px);
+            max-width: max(8vw, 80px);
+        }
+        &.bf-addedBy {
+            min-width: max(12vw, 120px);
+            max-width: max(12vw, 120px);
+        }
+        &.bf-wavier {
+            min-width: min(9vw, 100px);
+            max-width: min(9vw, 100px);
+        }
+    }
+}
+
+.bf-tax-table-container {
+    th {
+        padding-right: 5px;
+        &.bf-taxtype {
+            min-width: max(9vw, 100px);
+            max-width: max(9vw, 100px);
+        }
+        &.bf-taxname,
+        &.bf-status,
+        &.bf-location {
+            min-width: max(7vw, 70px);
+            max-width: max(7vw, 70px);
+        }
+        &.bf-addedBy {
+            min-width: max(11vw, 110px);
+            max-width: max(11vw, 110px);
+        }
+        &.bf-criteria {
+            min-width: max(10vw, 100px);
+            max-width: max(10vw, 100px);
+        }
+        &.bf-taxAmount {
+            min-width: min(8vw, 80px);
+            max-width: min(8vw, 80px);
+        }
+    }
+}
+
+.bf-payment-table-container {
+    th {
+        padding-left: 5px;
+        padding-right: 5px;
+        &.bf-nickName {
+            min-width: max(17vw, 100px);
+            max-width: max(17vw, 100px);
+            padding-left: 5vw;
+        }
+        &.bf-paymentMode {
+            min-width: min(10vw, 120px);
+            max-width: min(10vw, 120px);
+            width: 120px;
+        }
+        &.bf-dateUploaded {
+            min-width: max(24vw, 120px);
+            max-width: max(24vw, 120px);
+        }
+    }
+}
+.bf-search-company-table-container {
+    th {
+        padding-left: 5px;
+        padding-right: 5px;
+        &.bf-organizationName {
+            min-width: max(10vw, 100px);
+            max-width: max(10vw, 100px);
+        }
+        &.bf-primaryLocation {
+            min-width: min(15vw, 120px);
+            max-width: min(15vw, 120px);
+        }
+        &.bf-email {
+            min-width: min(15vw, 120px);
+            max-width: min(15vw, 120px);
+        }
+        &.bf-phoneNumber {
+            min-width: min(10vw, 120px);
+            max-width: min(10vw, 120px);
+        }
+        &.bf-membership {
+            min-width: min(10vw, 120px);
+            max-width: min(10vw, 120px);
+        }
+        &.bf-fuelService {
+            min-width: max(12vw, 120px);
+            max-width: max(12vw, 120px);
+        }
+    }
+}
+.bf-aricraft-table-container {
+    th {
+        padding-left: 5px;
+        &.bf-tailNumber {
+            min-width: min(12vw, 120px);
+            max-width: min(12vw, 120px);
+            width: 120px;
+        }
+        &.bf-aircraftTailNumber {
+            min-width: min(17vw, 110px);
+            max-width: min(17vw, 110px);
+        }
+        &.bf-serialNumber,
+        &.bf-aircraftType {
+            min-width: max(10vw, 100px);
+            max-width: max(10vw, 100px);
+        }
+        &.bf-manufacturerName {
+            min-width: max(12vw, 164px);
+            max-width: max(12vw, 164px);
+        }
+        &.bf-homeBaseAirport {
+            min-width: max(10vw, 100px);
+            max-width: max(13vw, 100px);
+        }
+    }
+}
+
+.bf-banking-table-container {
+    th {
+        padding-left: 5px;
+        &.bf-name {
+            min-width: max(10vw, 120px);
+            width: 130px;
+        }
+    }
+}
+
+.bf-location-table-container {
+    th {
+        padding-left: 5px;
+        &.bf-airportId {
+            width: 85px;
+        }
+        &.bf-airportName,
+        &.bf-airportLocation {
+            min-width: max(10vw, 100px);
+            max-width: max(10vw, 100px);
+        }
+        &.bf-addedby {
+            min-width: max(9vw, 90px);
+            max-width: max(10vw, 100px);
+        }
+        &.bf-fuelService {
+            min-width: max(10vw, 100px);
+            max-width: max(10vw, 140px);
+        }
+    }
+    table {
+        tbody {
+            th,td {
+                .btn-bf-primary,
+                .btn-bf-secondary {
+                    padding-top: 8px;
+                }
+            }
+        }
+    }
+}
+
+.bf-banking-table-container {
+    th {
+        padding-left: 5px;
+        &.bf-accountHolder {
+            min-width: max(10vw, 100px);
+            max-width: max(10vw, 100px);
+            width: 90px;
+        }
+        &.bf-bankName,
+        &.bf-accountType,
+        &.bf-accountNumber {
+            min-width: max(10vw, 100px);
+            max-width: max(10vw, 100px);
+        }
+    }
+}
+
+
+.MuiTableSortLabel-icon {
+    display: none !important;
+}
+
+.bf-account-enroll-container {
+    .bf-table {
+        padding-right: 0 !important;
+        height: calc(100vh - 41px - 1.5rem - 26px - 9vw);
+        > div {
+            height: 100%;
+        }
+        .MuiBox-root {
+            padding: 0;
+            .MuiPaper-root {
+                width: 100%;
+                .MuiTableContainer-root {
+                    padding-left: 15px;
+                    height: calc(100% - 50px);
+                }
+            }
+        }
+    }
+    .bf-fbo-enroll-New {
+        th {
+            padding-left: 5px;
+            &.bf-name {
+                min-width: max(9vw, 90px);
+                max-width: max(9vw, 90px);
+                width: 90px;
+            }
+            &.bf-company,
+            &.bf-email {
+                min-width: max(10vw, 100px);
+                max-width: max(10vw, 100px);
+            }
+            &.bf-mode {
+                min-width: max(12vw, 120px);
+                max-width: max(12vw, 120px);
+            }
+            .bf-phone {
+                min-width: max(9vw, 90px);
+                max-width: max(9vw, 90px);
+            }
+        }
+        &.bf-fbo-enroll-new {
+            tbody {
+                tr {
+                    th {
+                        padding-left: 5px;
+                        &:first-child,
+                        &:nth-child(5)  {
+                            min-width: max(9vw, 90px);
+                            max-width: max(9vw, 90px);
+                        }
+                        &:nth-child(2) {
+                            min-width: max(10vw, 100px);
+                            max-width: max(10vw, 100px);
+                        }
+                        &:nth-child(3) {
+                            min-width: max(10vw, 100px);
+                            max-width: max(10vw, 100px);
+                        }
+                        &:nth-child(4) {
+                            min-width: max(12vw, 120px);
+                            max-width: max(12vw, 120px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .bf-operator-enroll-New {
+        th {
+            padding-left: 5px;
+            &.bf-name, &:first-child {
+                min-width: max(9vw, 90px);
+                max-width: max(9vw, 90px);
+            }
+            &.bf-company,
+            &:nth-child(2) {
+                min-width: max(10vw, 100px);
+                max-width: max(10vw, 100px);
+            }
+            &.bf-aircraft, &:nth-child(3) {
+                min-width: max(5vw, 70px);
+                max-width: max(5vw, 70px);
+            }
+            &.bf-mode,&:nth-child(4) {
+                min-width: max(12vw, 120px);
+                max-width: max(12vw, 120px);
+            }
+            .bf-email,&:nth-child(5) {
+                min-width: max(9vw, 90px);
+                max-width: max(9vw, 90px);
+            }
+            .bf-phone, &:nth-child(6) {
+                min-width: max(9vw, 90px);
+                max-width: max(9vw, 90px);
+            }
+        }
+    }
+    .bf-operator-enroll-Pending {
+        th {
+            padding-left: 5px;
+            &.bf-name, &:first-child  {
+                min-width: max(9vw, 80px);
+                max-width: max(9vw, 80px);
+            }
+            &.bf-assign, &:nth-child(6) {
+                min-width: max(8vw, 80px);
+                max-width: max(8vw, 80px);
+            }
+            &.bf-company, &:nth-child(2)  {
+                min-width: max(10vw, 9px);
+                max-width: max(10vw, 90px);
+            }
+            &.bf-mode, &:nth-child(3) {
+                min-width: max(12vw, 120px);
+                max-width: max(12vw, 120px);
+            }
+            &.bf-email, &:nth-child(4) {
+                min-width: max(9vw, 90px);
+                max-width: max(9vw, 90px);
+            }
+            .bf-phone , &:nth-child(5){
+                min-width: max(9vw, 90px);
+                max-width: max(9vw, 90px);
+            }
+        }
+    }
+    .bf-fbo-enroll-Pending{
+        &.bf-fbo-enroll-pending {
+            th {
+                padding-left: 5px;
+                &:first-child  {
+                    min-width: max(9vw, 80px);
+                    max-width: max(9vw, 80px);
+                }
+                &:nth-child(6) {
+                    min-width: max(9vw, 80px);
+                    max-width: max(9vw, 80px);
+                }
+                &:nth-child(2)  {
+                    min-width: max(10vw, 9px);
+                    max-width: max(10vw, 90px);
+                }
+                &:nth-child(3) {
+                    min-width: max(12vw, 120px);
+                    max-width: max(12vw, 120px);
+                }
+                &:nth-child(4) {
+                    min-width: max(9vw, 90px);
+                    max-width: max(9vw, 90px);
+                }
+                &:nth-child(5){
+                    min-width: max(9vw, 90px);
+                    max-width: max(9vw, 90px);
+                }
+            }
+        }
+    }
+    .bf-fbo-enroll-Completed {
+        &.bf-fbo-enroll-completed {
+            th {
+                padding-left: 5px;
+                &:first-child {
+                    min-width: max(9vw, 80px);
+                    max-width: max(9vw, 80px);
+                }
+                &:last-child {
+                    min-width: max(9vw, 80px);
+                    max-width: max(9vw, 80px);
+                }
+                &:nth-child(2) {
+                    min-width: max(9vw, 9px);
+                    max-width: max(9vw, 90px);
+                }
+                &:nth-child(3) {
+                    min-width: max(12vw, 120px);
+                    max-width: max(12vw, 120px);
+                }
+                &:nth-child(4) {
+                    min-width: max(9vw, 90px);
+                    max-width: max(9vw, 90px);
+                }
+                &:nth-child(5) {
+                    min-width: max(9vw, 90px);
+                    max-width: max(9vw, 90px);
+                }
+                &:nth-child(5) {
+                    min-width: max(9vw, 90px);
+                    max-width: max(9vw, 90px);
+                }
+            }
+        }
+    }
+    .bf-operator-enroll-Completed {
+        &.bf-operator-enroll-completed {
+            th {
+                padding-left: 5px;
+                &:first-child {
+                    min-width: max(9vw, 80px);
+                    max-width: max(9vw, 80px);
+                }
+                &:last-child {
+                    min-width: max(9vw, 80px);
+                    max-width: max(9vw, 80px);
+                }
+                &:nth-child(2) {
+                    min-width: max(9vw, 9px);
+                    max-width: max(9vw, 90px);
+                }
+                &:nth-child(3) {
+                    min-width: max(12vw, 120px);
+                    max-width: max(12vw, 120px);
+                }
+                &:nth-child(4) {
+                    min-width: max(9vw, 90px);
+                    max-width: max(9vw, 90px);
+                }
+                &:nth-child(5) {
+                    min-width: max(9vw, 90px);
+                    max-width: max(9vw, 90px);
+                }
+                &:nth-child(5) {
+                    min-width: max(9vw, 90px);
+                    max-width: max(9vw, 90px);
+                }
+            }
+        }
+    }
+}
+.bf-report-table-container {
+    th {
+        padding-left: 5px;
+        min-width: 100px;
+        max-width: 100px;
+        &.bf-firstName{
+            min-width: max(9vw, 80px);
+            max-width: max(9vw, 80px);
+        }
+        &.bf-middleName {
+            min-width: max(8vw, 70px);
+            max-width: max(7vw, 70px);
+        }
+        &.bf-status,
+        &.bf-lastName {
+            min-width: max(9vw, 80px);
+            max-width: max(9vw, 80px);
+        }
+        &.bf-company {
+            min-width: max(10vw, 100px);
+            max-width: max(10vw, 100px);
+        }
+        &.bf-email,
+        &.bf-location {
+            min-width: max(12vw, 120px);
+            max-width: max(12vw, 120px);
+        }
+        &.bf-access,
+        &.bf-role {
+            min-width: max(9vw, 80px);
+            max-width: max(9vw, 80px);
+        }
+        &.bf-phone ,
+        &.bf-fee,
+        &.bf-fee_val {
+            min-width: max(9vw, 80px);
+            max-width: max(9vw, 80px);
+        }
+        &.bf-orderid {
+            min-width: max(9vw, 70px);
+            max-width: max(9vw, 70px);
+        }
+        &.bf-tail {
+            min-width: max(8vw, 70px);
+            max-width: max(8vw, 70px);
+        }
+        &.bf-arriving,
+        &.bf-basePrice,
+        &.bf-finalPrice {
+            min-width: max(8vw, 70px);
+            max-width: max(8vw, 70px);
+        }
+        &.bf-fuelQuantity ,
+        &.bf-tax,
+        &.bf-tax_val,
+        &.bf-fuelDate,
+        &.bf-orderDate,
+        &.bf-flight,
+        &.bf-product,
+        &.bf-savings {
+            min-width: max(8vw, 70px);
+            max-width: max(8vw, 70px);
+        }
+        &.bf-paymantName ,
+        &.bf-paymentMode,
+        &.bf-addService,
+        &.bf-service,
+        &.bf-operator,
+        &.bf-fbo {
+            min-width: max(12vw, 120px);
+            max-width: max(12vw, 120px);
+        }
+        &.bf-cardAccount,
+        &.bf-addTax,
+        &.bf-taxVal,
+        &.bf-addFee,
+        &.bf-feeVal {
+            min-width: max(14vw, 120px);
+            max-width: max(14vw, 120px);
+        }
+    }
+}
+.bf-discount-table-container {
+    th {
+        padding-left: 5px;
+        &.bf-tailNumber{
+            min-width: max(9vw, 80px);
+            max-width: max(9vw, 80px);
+        }
+        &.bf-criteria  {
+            min-width: max(7vw, 70px);
+            max-width: max(7vw, 70px);
+        }
+        &.bf-status,
+        &.bf-value  {
+            min-width: max(6vw, 60px);
+            max-width: max(6vw, 60px);
+        }
+        &.bf-location {
+            min-width: max(10vw, 100px);
+            max-width: max(10vw, 100px);
+        }
+        &.bf-addedBy {
+            min-width: max(12vw, 120px);
+            max-width: max(12vw, 120px);
+        }
+    }
+}
+.bf-fuelPricint-active-table-container,
+.bf-fuelpricing-archive-table-container {
+    th {
+        
+        &.bf-location,
+        &.bf-validRange {
+            min-width: max(9vw, 90px);
+            max-width: max(9vw, 90px);
+        }
+        &.bf-status,
+        &.bf-value  {
+            min-width: max(6vw, 60px);
+            max-width: max(6vw, 60px);
+        }
+        &.bf-addedBy {
+            min-width: max(9vw, 90px);
+            max-width: max(9vw, 90px);
+        }
+        &.bf-criteria, 
+        &.bf-roles {
+            min-width: max(8vw, 80px);
+            max-width: max(8vw, 80px);
+            div {
+                min-width: max(8vw, 80px);
+                max-width: max(8vw, 80px);
+            }
+        }
+        &.bf-mobileNumber,
+        &.bf-jetA,
+        &.bf-100ll,
+        &.bf-item1,
+        &.bf-saf,
+        &.bf-item2{
+            min-width: max(5vw, 50px);
+            max-width: max(5vw, 50px);
+        }
+        &.bf-jetaprist,
+        &.bf-item3 {
+            min-width: max(8vw, 80px);
+            max-width: max(8vw, 80px);
+        }
+    }
+}
+.bf-table-bulk-upload {
+    th {
+        padding-left: 5px;
+        &.bf-tailNumber{
+            min-width: max(8vw, 80px);
+            max-width: max(8vw, 80px);
+        }
+        &.bf-criteria,
+        &.bf-operator  {
+            min-width: max(7vw, 70px);
+            max-width: max(7vw, 70px);
+        }
+        &.bf-status,
+        &.bf-value  {
+            min-width: max(6vw, 60px);
+            max-width: max(6vw, 60px);
+        }
+        &.bf-location {
+            min-width: max(10vw, 100px);
+            max-width: max(10vw, 100px);
+        }
+        &.bf-addedBy {
+            min-width: max(12vw, 120px);
+            max-width: max(12vw, 120px);
+        }
+    }
+}
+.bf-fuelPricint-active-table-container,
+.bf-fuelpricing-archive-table-container {
+    .MuiBox-root{
+        .MuiPaper-root{
+            .MuiTextField-root{
+                padding-left: 42px !important;
+            }
+        } 
+    } 
+    table{
+        padding-left: 12px !important;
+    }
+    tbody tr th.bf-location{
+        text-align: center;
+    }
+     
+    th {
+        &.bf-location{
+            text-align: left;
+            padding-left: 0;
+            min-width:65px;
+            max-width:65px;
+        }
+        &.bf-validRange {
+            min-width: max(9vw, 90px);
+            max-width: max(9vw, 90px);
+            
+            
+        }
+        &.bf-status,
+        &.bf-value  {
+            min-width: max(6vw, 60px);
+            max-width: max(6vw, 60px);
+        }
+        &.bf-addedBy {
+            min-width: max(9vw, 90px);
+            max-width: max(9vw, 90px);
+        }
+        &.bf-criteria, 
+        &.bf-Tire {
+            min-width: max(8vw, 80px);
+            max-width: max(8vw, 80px);
+            // div {
+            //     min-width: max(8vw, 80px);
+            //     max-width: max(8vw, 80px);
+            // }
+        }
+        &.bf-mobileNumber,
+        &.bf-jetA,
+        &.bf-100ll,
+        &.bf-prist,
+        &.bf-saf,
+        &.bf-item2{
+            min-width: max(5vw, 50px);
+            max-width: max(5vw, 50px);
+        }
+        &.bf-jetaprist,
+        &.bf-item3 {
+            min-width: max(8vw, 80px);
+            max-width: max(8vw, 80px);
+        }
+    }
+}
+.bf-fueltier-table-container {
+    th {
+        padding-right: 0px;
+        &.bf-airportId{
+            min-width: max(10vw, 100px);
+            max-width: max(10vw, 100px);
+            text-align: left;
+            padding-left: 0;
+        }
+        &.bf-jet-A,
+        &.bf-100ll,
+        &.bf-jetaprist,
+        &.bf-SAF  {
+            min-width: max(10vw, 100px);
+            max-width: max(10vw, 100px);
+        }
+    }
+    tbody tr td:last-child {
+        text-align: right;
+    }
+    .MuiTable-stickyHeader {
+        > tbody {
+            > .MuiTableRow-root {
+                &:nth-child(odd) {
+                    > td {
+                        &:first-child {
+                            text-align: left !important;
+                            padding-left: 0 !important;
+                        }
+                    }
+                }
+                td {
+                    border-bottom-color:transparent !important ;
+                }
+                &:nth-child(even) {
+                    > td {
+                        border-bottom-color:$disabled-clr !important ;
+                    }
+                }
+            }
+        }
+    } 
+}
+.bf-accordion-table-container {
+    .bf-table-accordion-container {
+        border: 1px solid #797979;
+        width: calc(100% - 100px - 7.5vw);
+        margin-left: 5.5vw;
+        padding-left: 20px;
+        position: relative;
+        @media screen and (min-width:1366px) {
+            margin-left: 5vw;
+            width: calc(100% - 100px - 6.5vw);
+        }
+        @media screen and (min-width:1560px) {
+            margin-left: 5.5vw;
+            width: calc(100% - 100px - 6.5vw);
+        }
+        @media screen and (min-width:1600px) {
+            margin-left: 4.5vw;
+            width: calc(100% - 100px - 6.5vw);
+        }
+        @media screen and (min-width:1920px) {
+            margin-left: 3.5vw;
+            width: calc(100% - 100px - 6.5vw);
+        }
+        &::after {
+            content: '';
+            height: 1px;
+            background-color: #797979;
+            left: -55px;
+            width: 55px;
+            position: absolute;
+            top: 50%;
+        }
+        &::before {
+            content: '';
+            height: 75%;
+            background-color: #797979;
+            left: -55px;
+            width: 1px;
+            position: absolute;
+            top: -25%;
+        }
+        > div {
+            display: flex;
+            > div {
+                width: calc(100% / 8);
+                text-align: center;
+                margin-bottom: 10px;
+                margin-top: 10px;
+                &:first-child {
+                    width: 70px;
+                    color: $clr-white;
+                }
+            }
+            &:nth-child(2) {
+                > div {
+                    &:first-child{
+                        background-color: $hover-clr ;
+                    }
+                }   
+            }
+            
+            &:nth-child(3) {
+                > div {
+                   &:first-child{
+                        background-color: $btn-primary-clr ;
+                   }
+                }   
+            }
+        }
+    }
+}
+.bf-activeorder-table-container {
+    th {
+        padding-left: 5px;
+        padding-right: 5px;
+        &.bf-orderid {
+            min-width: min(6vw, 100px);
+            max-width: min(6vw, 100px);
+        }
+        &.bf-actualfuel{
+            min-width: min(6vw, 100px);
+            max-width: min(6vw, 100px);
+            min-height: max(6vw, 80px) !important;
+        }
+        &.bf-operator{
+            min-width: min(7vw, 120px);
+            max-width: min(7vw, 120px);
+        }
+    }
+}
+.bf-primary-color {
+    color: $btn-primary-clr;
+}
+.bf-notifications-table {
+    table {
+        tbody {
+            th,td {
+                height: 65px;
+            }
+            .bf-more-info {
+                font-size: 12px;
+                color: #949595;
+            }
+            .btn-bf-primary {
+                margin-top: 7px !important;
+                padding-top: 8px;
+            }
+        }
+    }
+}
+.bf-mrgl120 {
+    position: absolute;
+    top: 6px;
+    right: 3.5vw;
+}
+.bf-expired-fuel {
+    th {
+        color: $bf-error-clr !important;
+        font-weight: bold;
+    }
+}
+.bf-expired-fuel-multi {
+    td {
+        color: $bf-error-clr !important;
+        font-weight: bold;
+    }
+    &.bf-expired-bgcolor {
+        td{
+            background-color: #f1d9c8 !important;
+        }
+    }
+}
+.bf-row-select {
+    td {
+        background-color: #f1d9c8 !important;
+    }
+}
+th {
+    .bf-expired-soon{
+        color: $bf-error-clr !important;
+        font-weight: bold;
+    }
+}
+
+.bf-pagination-dropdown, .bf-select {
+    // background-image: url('../../assets/images/arrow-down_icon.svg');
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position: 90% center;
+    svg {
+        visibility: hidden;
+    }
+}
+.bf-user-tab-search {
+    padding-left: 0 !important;
+}
+
+.bf-order-summary {
+    background-color: $clr-white;
+    .MuiBox-root {
+        padding: 0;
+        height: auto;
+        .MuiPaper-root {
+            width: 100%;
+
+            .MuiTableContainer-root {
+                padding-left: 10px;
+                padding-right: 10px;
+                table {
+                    min-width: auto;
+                    button {
+                        min-width: auto !important;
+                    }
+                    tr.MuiTableRow-root {
+                        > td {
+                            &:last-child {
+                                display: flex;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+.bf-order-summary-container {
+    .MuiTable-root thead th {
+        &.bf-order {
+            padding-right: 0 !important;
+            padding-left: 16px;
+        }
+        &:first-child {
+            text-align: left !important;
+            padding-left: 20px;
+        }
+    }
+    .MuiBox-root {
+        padding: 0;
+        height: auto;
+        .MuiPaper-root {
+            width: 100%;
+
+            .MuiTableContainer-root {
+                padding-left: 10px;
+                padding-right: 10px;
+                height: auto;
+                table {
+                    min-width: auto;
+                    td {
+                        text-transform: capitalize
+                    }
+                }
+            }
+        }
+    }
+    .MuiTableRow-root {
+        &:nth-child(2n) {
+            > td {
+                padding-left: 5px !important;
+                > .MuiCollapse-root{
+                    background-color: $gray-clr;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        &:nth-child(odd) {
+            > td {
+                &:first-child {
+                    min-width: 80px !important;
+                    text-align: left;
+                    padding-left: 0;
+                }
+                &:nth-last-child(2) {
+                    padding-right: 0 !important;
+                }
+                &:last-child {
+                    display: none !important;
+                }
+            }
+        }
+    }
+}
+.bf-order-summary-container {
+    &.bf-multi-order-summary-container {
+        .MuiBox-root {
+            height: 100%;
+            .MuiPaper-root .MuiTableContainer-root {
+                height: 100%;
+            }
+        }
+    }
+}
+.bf-multileg-left-summary {
+    .MuiTable-root {
+        thead th {
+            color: $btn-primary-clr !important;
+        }
+        tr {
+            th, td {
+                border-bottom-color: $clr-white;
+            }
+        }
+        @media screen and (min-width:1366px) and (max-width:1450px) {
+            tr {
+                th {
+                    &.bf-legID {
+                        width:35px;
+                    }
+                    &.bf-fuelingDate {
+                        width: 50px;
+                    }
+                    &.bf-ICAO {
+                        width: 60px;
+                        max-width: 60px;
+                    }
+                    &.bf-finalPrice {
+                        width: 60px;
+                        max-width: 60px;
+                    }
+                }
+                td {
+                    &.action-buttons {
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+        @media screen and (min-width:1451px) {
+            tr {
+                th {
+                    &.bf-legID {
+                        width:50px;
+                    }
+                    &.bf-fuelingDate {
+                        width: 45px;
+                    }
+                    &.bf-ICAO {
+                        width: 60px;
+                        max-width: 60px;
+                    }
+                    &.bf-finalPrice {
+                        width: 5vw;
+                        max-width: 5vw;
+                    }
+                }
+            }
+        }
+        @media screen and (min-width:1700px) {
+            tr {
+                th {
+                    &.bf-legID {
+                        width:50px;
+                    }
+                    &.bf-fuelingDate {
+                        width: 90px;
+                    }
+                    &.bf-ICAO {
+                        width: 70px;
+                        max-width: 70px;
+                    }
+                    &.bf-finalPrice {
+                        width: 8vw;
+                        max-width: 8vw;
+                    }
+                }
+                .action-buttons {
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+    .bf-ICAO {
+        font-weight: 600 !important;
+    }
+    
+}
+
+.bf-popup-view-buttons {
+    width: 265px;
+    margin: 50px auto 30px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &.bf-popup-single-button {
+        justify-content: center !important;
+        button {
+            background-color: $btn-primary-clr !important;
+            color: $clr-white !important;
+            &:hover {
+                background-color: $hover-clr !important;
+                color: $btn-primary-clr !important;
+            }
+        } 
+    }
+    button {
+        width: 120px;
+        height: 30px;
+        text-transform: capitalize !important;
+        padding: 0 !important;
+        font-size: 16px;
+        img {
+            display: none;
+        }
+        &:first-child {
+            background-color: $btn-primary-clr;
+            color: $clr-white;
+            font-family: $font-family;
+        }
+        &:last-child {
+            background-color: $clr-white;
+            color: $btn-primary-clr;
+            font-family: $font-family;
+        }
+        &:hover {
+            background-color: $hover-clr;
+            color: $btn-primary-clr;
+        }
+    }
+}
+
+.bf-operator-activeorder-table-container {
+    th {
+        padding-left: 5px;
+        padding-right: 5px;
+        &.bf-orderId,
+        &.bf-fuelDate,
+        &.bf-location,
+        &.bf-aircraft   {
+            min-width: min(8vw, 100px);
+            max-width: min(8vw, 100px);
+        }
+        &.bf-totPrice {
+            min-width: min(8vw, 90px);
+            max-width: min(8vw, 90px);
+        }
+        &.bf-fbo {
+            min-width: min(12vw, 160px);
+            max-width: min(12vw, 160px);
+        }
+        &.bf-actFuel {
+            min-width: min(8vw, 66px);
+            max-width: min(8vw, 66px);
+        }
+        &.bf-actions {
+            width: 300px;
+        }
+    }
+}
+.bf-table-search-results{
+    &.bf-fbo-activeorder-table-container {
+        th {
+            padding-left: 5px;
+            padding-right: 5px;
+            &.bf-orderId,
+            &.bf-location,
+            &.bf-aircraft   {
+                min-width: max(6vw, 80px);
+                max-width: max(6vw, 80px);
+            }
+            &.bf-dateOrder{
+                min-width: max(8vw, 100px);
+                max-width: max(8vw, 100px);
+            }
+            &.bf-totPrice {
+                min-width: max(7vw, 70px);
+                max-width: max(7vw, 70px);
+            }
+            &.bf-operator {
+                min-width: max(5vw, 70px);
+                max-width: max(5vw, 70px);
+            }
+            &.bf-fbo {
+                min-width: min(12vw, 160px);
+                max-width: min(12vw, 160px);
+            }
+            &.bf-estFuel {
+                min-width: max(7vw, 66px);
+                max-width: max(7vw, 66px);
+            }
+            &.bf-actFuel {
+                min-width: max(9vw, 80px);
+                max-width: max(9vw, 80px);
+            }
+            
+        }
+        td {
+            &.action-buttons {
+                padding-left: 0;
+                width: 250px;
+                .btn-bf-primary {
+                    padding-left: 2px !important;
+                    padding-right: 2px !important;
+                }
+                .btn-bf-secondary {
+                    padding-left: 2px !important;
+                    padding-right: 2px !important;
+                    margin-left: 5px !important;
+                }
+            }
+            &.bf-actualfuel {
+                min-width: min(12vw, 100px);
+                max-width: min(12vw, 100px);
+                div.mb-4 {
+                    width: 100%;
+                    max-width: 100px;
+                    margin: 0 auto !important;
+                    .mb-3 {
+                        margin-bottom: 0 !important;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width:1500px){
+    .bf-table-search-results {
+        &.bf-fbo-activeorder-table-container {
+            th {
+                &.bf-orderId,
+                &.bf-location,
+                &.bf-aircraft   {
+                    min-width: max(2vw, 50px) !important;
+                    max-width: max(2vw, 50px) !important;
+                }
+                &.bf-dateOrder{
+                    min-width: max(1vw, 20px) !important;
+                    max-width: max(1vw, 20px) !important;
+                }
+                &.bf-totPrice {
+                    min-width: max(1vw, 30px) !important;
+                    max-width: max(1vw, 30px) !important;
+                }
+                &.bf-operator {
+                    min-width: max(4vw, 70px) !important;
+                    max-width: max(4vw, 70px) !important;
+                }
+                &.bf-estFuel {
+                    min-width: max(5vw, 50px) !important;
+                    max-width: max(5vw, 50px) !important;
+                }
+                &.bf-actFuel {
+                    min-width: max(1vw, 30px) !important;
+                    max-width: max(1vw, 30px) !important;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width:1600px) {
+    .bf-fbo-activeorder-table-container {
+        td {
+            &.action-buttons {
+                width: 250px;
+                .btn-bf-primary {
+                    min-width: 120px;
+                    max-width: 120px;
+                    width: 120px;
+                }
+                .btn-bf-secondary {
+                    min-width: 120px;
+                    max-width: 120px;
+                    width: 120px;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width:1520px) and (max-width:1599px) {
+    
+    .bf-fbo-activeorder-table-container {
+        td {
+            &.action-buttons {
+                width: 275px;
+            }
+        }
+        th {
+            &.bf-estFuel {
+                min-width: min(10vw, 100px);
+                max-width: min(10vw, 100px);
+            }
+            &.bf-operator {
+                min-width: min(10vw, 120px);
+                max-width: min(10vw, 120px);
+            }
+        }
+    }
+}
+
+
+.bf-user-table-container,
+.bf-aricraft-table-container,
+.bf-payment-table-container,
+.bf-orders-active-table-container,
+.bf-table-disputes-container,
+.bf-table-completed-container,
+.bf-responsive-table-container{
+    .MuiBox-root {
+        &:last-child {
+            display: none;
+        }
+        @media screen and (min-width:350px) and (max-width:767px) {
+            &:first-child {
+                display: none;
+            }
+            &:last-child {
+                display: block;
+                table.MuiTable-root {
+                    min-width: 100% !important;
+                    .bf-name,
+                    .bf-aircraftModel {
+                        min-width: 40vw;
+                        max-width: 40vw;
+                        text-align: left;
+                    }
+                    .bf-accessLevel {
+                        min-width: 100px;
+                        max-width: 100px;
+                    }
+                    tbody {
+                        tr {
+                            td:last-child {
+                                width: 48px;
+                            }
+                        }
+                    }
+                }
+                .MuiPaper-root .MuiTableContainer-root {
+                    height: calc(100% - 120px);
+                }
+                .bf-paginarion-seciton {
+                    .bf-pagination-dropdown {
+                        bottom: 2px;
+                    }
+                    height: 55px;
+                    .MuiPagination-root {
+                        padding-top: 10px;
+                        margin-top: 20px;
+                    }
+                }
+                .MuiTextField-root {
+                    width: calc(100% - 47px);
+                    margin-left: 30px !important;
+                    height: 44px;
+                    padding-top: 0;
+                    padding-left: 0 !important;
+                    margin-top: -22px;
+                    #filled-search {
+                        width: 100% !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.bf-table-search-results { 
+    &.bf-user-table-container,
+     &.bf-aricraft-table-container {
+         .MuiBox-root {
+             &:last-child {
+                 display: block;
+             } 
+         }
+    }
+}
+@media screen and (min-width:350px) and (max-width:767px) {
+    .bf-paginarion-seciton {
+        .MuiPaginationItem-icon {
+            width: 1.5em;
+            height: 1.5em;
+        }
+    }
+    .bf-aricraft-table-container {
+        table.MuiTable-root {
+            .bf-aircraftType {
+                text-align: left !important;
+            }
+            .bf-aircraftTailNumber {
+                min-width: 100px;
+                max-width: 100px;
+            }
+        }
+    }
+    .bf-payment-table-container {
+        table.MuiTable-root {
+            .bf-paymentMode {
+                text-align: left !important;
+                min-width: 120px;
+                max-width: 120px;
+            }
+            .bf-nickName {
+                min-width: 100px;
+                max-width: 100px;
+            }
+        }
+    }
+    .bf-banking-table-container {
+        table.MuiTable-root {
+            .bf-accountHolderName {
+                text-align: left !important;
+                min-width: 120px;
+                max-width: 120px;
+            }
+        }
+    }
+
+    .bf-location-table-container {
+        .bf-airportIdentificationNumber {
+            text-align: left !important;
+            min-width: 70px;
+            max-width: 70px;
+        }
+        .bf-airportName {
+            min-width: 120px;
+            max-width: 120px;
+        }
+    }
+    .tab-details-container .bf-add-right-top.bf-upload-docs {
+        right: auto !important;
+        left: 30px;
+        width: auto !important;
+        top: 14px !important;
+    }
+    .bt-document-table-container { 
+        tbody {
+            justify-content: space-between;
+        }
+        padding-top: 10px;
+        .bf-delete-doc {
+            margin-top: 13px;
+        }
+        .bf-pagination-dropdown {
+            display: none !important;
+        }
+        .MuiBox-root {
+            .MuiPaper-root .MuiTableContainer-root {
+                height: calc(100% - 130px) !important;
+            }
+            .MuiTextField-root {
+                width: calc(100% - 15px) !important;
+                padding-top: 0;
+                margin-top: -31px;
+                #filled-search {
+                    width: 100% !important;
+                }
+            }
+        }
+        .MuiTable-root {
+            display: flex;
+            width: 85%;
+            flex-wrap: wrap;
+            max-width: 600px;
+            min-width: 350px;
+            margin: auto;
+            tbody { 
+                tr {
+                    display: flex;
+                    width: 40.5%;
+                    margin-right: 0%;
+                    &:nth-child(2n) {
+                        margin-right: 0 !important;
+                    }
+                    th {
+                        > div {
+                            &:first-child {
+                                img {
+                                    height: 50px !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .bf-orders-active-table-container {
+        > div {
+            &:nth-child(2) {
+                display: none;
+            }
+        }
+    }
+    .bf-operator-activeorder-table-container .MuiTableContainer-root {
+        overflow-x: hidden;
+    }
+    .bf-operator-activeorder-table-container,
+    .bf-table-disputes-container,
+    .bf-operator-completedorder-table-container {
+        height: calc(100% - 78px) !important;
+        .MuiTableContainer-root {
+            height: calc(100% - 50px) !important;
+        }
+        .bf-paginarion-seciton {
+            .MuiPagination-root {
+                padding-top: 0 !important;
+                margin-top: -5px !important;
+            }
+        }
+        th {
+            &.bf-orderid {
+                padding-left: 0 !important;
+                width: 70px !important;
+                text-align: left;
+            }
+            &.bf-orderId {
+                padding-left: 0 !important;
+                width: 70px !important;
+                text-align: left;
+            }
+        }
+    }
+    .bf-fbo-activeorder-table-container,
+    .bf-table-disputes-container.bf-fbo-disputes-table-container,
+    .bf-fbo-completedorder-table-container {
+        margin-top: 15px;
+        height: calc(100% - 10px) !important;
+        .MuiTableContainer-root {
+            height: calc(100% - 50px) !important;
+        }
+        .bf-paginarion-seciton {
+            .MuiPagination-root {
+                padding-top: 0 !important;
+                margin-top: -5px !important;
+            }
+        }
+        th {
+            &.bf-orderid {
+                padding-left: 0 !important;
+                width: 70px !important;
+                text-align: left;
+            }
+            &.bf-orderId {
+                padding-left: 0 !important;
+                width: 70px !important;
+                text-align: left;
+            }
+        }
+    }
+
+}
+
+.bf-activeorder-table-container,
+.bf-operator-activeorder-table-container,
+.bf-fbo-activeorder-table-container,
+.bf-tax-table-container {
+    tbody {
+        tr {
+            th {
+                cursor: pointer;
+            }
+        }
+    }
+    .bf-order-link {
+        min-width: min(10vw, max(100px, 8vw));
+        text-align: center;
+        display: inline-block;
+        color: $help-clr;
+        text-align: center;
+        width: 100%;
+        @media screen and (min-width:1500px) {
+            min-width: 120px;
+            max-width: 120px;
+            width: initial;
+        }
+    }
+    @media screen and (min-width:1200px) and (max-width:1450px) {
+        .bf-table-footer {
+            font-size: 10px;
+            right: 20px;
+            bottom: 9px;
+        }
+    }
+}
+
+
+@media screen and (min-width:1500px) and (max-width:1699px) {
+    .bf-table-search-results {
+        &.bf-user-table-container {
+            .MuiTable-root {
+                th {
+                    &.bf-email {
+                        min-width: 18vw !important;
+                        max-width: 18vw !important;
+                    }
+                    &.bf-accessLevel {
+                        min-width: 7vw !important;
+                        max-width: 7vw !important;
+                    }
+                    &.bf-roles {
+                        min-width: min(7vw, 140px) !important;
+                        max-width: min(7vw, 140px) !important;
+                    }
+                }
+
+            }
+        }
+    }
+}
+@media screen and (min-width:1700px) {
+    
+    .bf-select {
+        background-position: 90% 19px;
+        > div {
+            padding-top: 0 !important;
+        }
+        select {
+            height: 51px;
+        }
+        fieldset {
+            height: 51px;
+        }
+    }
+    .bf-paginarion-seciton {
+        .bf-pagination-dropdown {
+            left: 38px;
+        }
+        .css-g2z002-MuiSvgIcon-root-MuiPaginationItem-icon {
+            width: 1.4em;
+            height: 1.4em;
+        }
+    }
+    .MuiBox-root .MuiPaper-root .MuiTextField-root {
+        padding-left: 35px;
+        > div {
+            height: 51px;
+        }
+    }
+    .MuiBox-root {
+        #filled-search {
+            width: 26.5vw;
+        }
+        .MuiPaper-root .MuiTableContainer-root {
+            padding-left: 38px;
+            padding-right: 38px;
+            height: calc(100% - 90px - 25px);
+        } 
+        tbody {
+            tr { 
+                .btn-bf-primary,
+                .btn-bf-secondary { 
+                    min-width: 120px;
+                    max-width: 120px;
+
+                } 
+                .bf-mrgl20 {
+                    margin-left: 25px;
+                }
+            }
+        }
+    }
+    .bt-document-table-container .MuiBox-root .MuiPaper-root .MuiTableContainer-root {
+        height: calc(100% - 90px - 50px) !important;
+    }
+    .bf-table-search-results {
+        &.bf-user-table-container {
+            .MuiTable-root {
+                th {
+                    &.bf-email {
+                        min-width: 18vw !important;
+                        max-width: 18vw !important;
+                    }
+                    &.bf-accessLevel {
+                        min-width: 7vw !important;
+                        max-width: 7vw !important;
+                    }
+                    &.bf-roles {
+                        min-width: min(7vw, 140px) !important;
+                        max-width: min(7vw, 140px) !important;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1700px) and (max-width: 1919px) {
+    
+
+    .bf-user-table-container {
+        .MuiTable-root {
+            th {
+                &.bf-name {
+                    min-width: 10vw;
+                    max-width: 10vw;
+                }
+                &.bf-email {
+                    min-width: 14vw;
+                    max-width: 14vw;
+                }
+                &.bf-status {
+                    min-width: 6vw;
+                    max-width: 6vw;
+                }
+            }
+        }
+    }
+    .bf-aricraft-table-container {
+        .MuiTable-root {
+            th {
+                &.bf-manufacturerName {
+                    min-width: 13vw;
+                    max-width: 13vw;
+                }
+            }
+        }
+    }
+
+    .bf-search-company-table-container th.bf-organizationName {
+        min-width: max(7vw, 80px);
+        max-width: max(7vw, 80px);
+    }
+    .bf-search-company-table-container th.bf-organizationName {
+        min-width: max(7vw, 80px);
+        max-width: max(7vw, 80px); 
+    }
+    
+    .bf-account-enroll-container {
+        .bf-fbo-enroll-New th.bf-mode, 
+        .bf-fbo-enroll-Pending th.bf-mode, 
+        .bf-fbo-enroll-Pending th:nth-child(3), 
+        .bf-operator-enroll-Pending th.bf-mode, 
+        .bf-operator-enroll-Pending th:nth-child(3),
+        .bf-fbo-enroll-Completed th.bf-mode, 
+        .bf-fbo-enroll-Completed th:nth-child(3), 
+        .bf-operator-enroll-Completed th.bf-mode, 
+        .bf-operator-enroll-Completed th:nth-child(3) {
+            min-width: max(9vw, 120px);
+            max-width: max(9vw, 120px);
+        }
+        
+        .bf-fbo-enroll-Pending th.bf-assign, 
+        .bf-fbo-enroll-Pending th:nth-child(6), 
+        .bf-operator-enroll-Pending th.bf-assign, 
+        .bf-operator-enroll-Pending th:nth-child(6), 
+        .bf-fbo-enroll-Pending th.bf-name, 
+        .bf-fbo-enroll-Pending th:first-child, 
+        .bf-operator-enroll-Pending th.bf-name, 
+        .bf-operator-enroll-Pending th:first-child,
+        .bf-fbo-enroll-Completed th.bf-created, 
+        .bf-fbo-enroll-Completed th:last-child, 
+        .bf-operator-enroll-Completed th.bf-created, 
+        .bf-operator-enroll-Completed th:last-child {
+            min-width: max(9vw, 80px);
+            max-width: max(9vw, 80px);
+            width: initial;
+        }
+    }
+}
+@media screen and (min-width:1920px) {
+    .bf-user-table-container {
+        .MuiTable-root {
+            th {
+                &.bf-name {
+                    min-width: 9vw;
+                    max-width: 9vw;
+                }
+                &.bf-email {
+                    min-width: 18vw;
+                    max-width: 18vw;
+                }
+                &.bf-accessLevel {
+                    min-width: 8vw;
+                    max-width: 8vw;
+
+                }
+                &.bf-status {
+                    min-width: 5vw;
+                    max-width: 8vw;
+                    padding-left: 2vw;
+                }
+            }
+        }
+    }
+    .bf-aricraft-table-container {
+        .MuiTable-root {
+            th {
+                &.bf-manufacturerName {
+                    min-width: 13vw;
+                    max-width: 13vw;
+                }
+            }
+        }
+    }
+    .bf-search-company-table-container th.bf-organizationName {
+        min-width: max(7vw, 80px);
+        max-width: max(7vw, 80px);
+    }
+    .bf-search-company-table-container th.bf-organizationName {
+        min-width: max(7vw, 80px);
+        max-width: max(7vw, 80px); 
+    }
+    .bf-account-enroll-container {
+        .bf-fbo-enroll-New th.bf-mode, 
+        .bf-fbo-enroll-Pending th.bf-mode, 
+        .bf-fbo-enroll-Pending th:nth-child(3), 
+        .bf-operator-enroll-Pending th.bf-mode, 
+        .bf-operator-enroll-Pending th:nth-child(3),
+        .bf-fbo-enroll-Completed th.bf-mode, 
+        .bf-fbo-enroll-Completed th:nth-child(3), 
+        .bf-operator-enroll-Completed th.bf-mode, 
+        .bf-operator-enroll-Completed th:nth-child(3) {
+            min-width: max(9vw, 120px);
+            max-width: max(9vw, 120px);
+        }
+        
+        .bf-fbo-enroll-Pending th.bf-assign, 
+        .bf-fbo-enroll-Pending th:nth-child(6), 
+        .bf-operator-enroll-Pending th.bf-assign, 
+        .bf-operator-enroll-Pending th:nth-child(6), 
+        .bf-fbo-enroll-Pending th.bf-name, 
+        .bf-fbo-enroll-Pending th:first-child, 
+        .bf-operator-enroll-Pending th.bf-name, 
+        .bf-operator-enroll-Pending th:first-child,
+        .bf-fbo-enroll-Completed th.bf-created, 
+        .bf-fbo-enroll-Completed th:last-child, 
+        .bf-operator-enroll-Completed th.bf-created, 
+        .bf-operator-enroll-Completed th:last-child {
+            min-width: max(9vw, 80px);
+            max-width: max(9vw, 80px);
+            width: initial;
+        }
+    }
+}
+.bf-table-container {
+	&.bf-discount-table-container {
+	    &.bf-audit-log-table{
+            th{
+                padding-left: 5px;
+                &.bf-userName,
+                &.bf-actionPerformed,
+                &.bf-action{
+                    min-width: max(16vw, 110px);
+                    max-width: max(16vw, 110px);
+                }
+                &.bf-company,
+                &.bf-actionPerformed  {
+                    min-width: max(17vw, 110px);
+                    max-width: max(17vw, 110px);
+                }
+                &.bf-validTo{
+                    min-width: 70px;
+                    max-width: 70px;
+                    padding-left: 0;
+                }
+                &.bf-category{
+                    min-width: max(7vw, 70px);
+                    max-width: max(7vw, 70px);
+                }
+                &.bf-validFromA {
+                    min-width: max(6vw, 60px);
+                    max-width: max(6vw, 60px);
+                }
+            }
+		}
+	}
+}
+@media screen and (min-width:1700px) {
+    .bf-table-container {
+        &.bf-discount-table-container {
+            &.bf-audit-log-table{
+                .MuiTableContainer-root.css-rorn0c-MuiTableContainer-root {
+                    padding-right: 15px;
+                }
+            }
+        }
+    }
+}

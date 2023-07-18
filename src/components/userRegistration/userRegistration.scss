@@ -1,0 +1,117 @@
+@import "../../assets/styles/constants.scss";
+
+.bf-user-registration-section {
+    h1 {
+        margin-bottom: 10px !important;
+    }
+    .bf-menu-header{
+        padding-left: 5%;
+        padding-right: 5%;
+        margin: 20px 0;
+        .login-logo{
+            margin-top: 0 !important;
+        }
+    }
+    .bf-user-register {
+        &.row {
+            .row {
+                padding-right: 0;
+                margin-left: 0;
+                padding-left: 0;
+                margin-right: 0;
+            }
+        }
+        .form-label {
+            margin-bottom: 0.3rem !important;
+        }
+        .mb-4.col-md-12 {
+            margin-bottom: 0.3rem !important;
+        }
+        .mb-3.input-group {
+            margin-bottom: 0.5rem !important;
+        }
+        
+        .p-root {
+            margin-top: -5px !important;
+            h6 {
+                font-size: 12px;
+                font-weight: 600;
+            }
+            ul {
+                li {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    .bg-image-container {
+        background-image: url('../../assets/images/login_bg.png') !important;
+        .bf-login-right-sec{
+            padding-top: 110px;
+            .bf-banner-img-placeholder {
+
+                color: #FFF;
+            
+                font-size: 36px;
+            
+                letter-spacing: 5px;
+            
+                font-weight: 600;
+            
+                text-align: center;
+            
+                margin-bottom: 45px;
+            
+            }
+            
+            ul {
+            
+                list-style-image: url('../../assets/images/bullet-icon.png');
+            
+                width: 45%;
+            
+                margin: 0 auto;
+            
+                li {
+            
+                    color: #FFF;
+            
+                    margin-bottom: 10px;
+            
+                    &::marker {
+                        margin-top: 2px;
+                    } 
+                    span {
+                        margin-left: 5px;
+                    }
+            
+                }
+            
+            }
+        }
+    }
+    
+}
+.bf-btn-left {
+    margin: 0 0 0 15px !important;
+}
+@media screen and (min-width:350px) and (max-width:767px) {
+    .bf-user-registration-section{
+        h1 {
+            display: none !important;   
+          }
+        .login-logo{
+            display: none !important;
+        }
+        form {
+            // margin-top: 20%;
+            margin-bottom: 0px !important;
+
+        }
+        
+        .user-reg-copyright{
+            margin-top: 0px !important;
+        }
+
+    }
+}

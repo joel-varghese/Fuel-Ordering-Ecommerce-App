@@ -1,0 +1,192 @@
+@import "../../assets/styles/constants.scss";
+
+.bf-account-home-container{
+    background-color: $dashboard-bg-clr;
+    width: 100%;
+    height: 100%;
+    .bf-home-company-name{
+        font-size: 2rem;
+    }
+    .bf-account-home{
+        height: 100%;
+        .row {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        .bf-userBar{
+            display: flex;
+            align-items: center;
+            padding-left: 0;
+            .mb-4 {
+                margin-bottom: 0 !important;
+                > div {
+                    display: none !important;
+                }
+                select {
+                    height: 42px;
+                }
+            }
+            .search{
+                position: relative;
+                .search-icon{
+                    position: absolute;
+                    font-size: 22px;
+                    top: 9px;
+                    left: 7px;
+                }
+                .search-input{
+                    width: 40vw;
+                    padding: 8px 30px;
+                }
+                .bf-down-arrow {
+                    position: absolute;
+                    right: 8px;
+                    top: 20px;
+                }
+            }
+        }
+        .tab-details-container {
+            height: calc(100% - 104px);
+            position: relative;
+            width: calc(100% + 3.5vw);
+            > div {
+                height: 100%;
+            }
+            .bf-table-container {
+                &.bf-user-table-container {
+                    .bf-table-column { 
+                        .MuiTableHead-root {
+                            .MuiTableRow-root {
+                                
+                            }
+                        }
+                    }
+                }
+                .MuiBox-root {
+                    padding: 0 !important;
+                }
+            }
+            .bf-add-right-top {
+                position: absolute;
+                right: 3.2vw;
+                top: -38px;
+                display: flex;
+                align-items: self-end;
+                justify-content: flex-end;
+                 height: 36px;
+            }
+            .login-section {
+                height: 100% !important;
+                form {
+                    padding: 0 3.2vw 0 0;
+                    > div {
+                        background-color: $clr-white;
+                        &.bf-company-section {
+                            padding: 25px 20px 20px 20px;
+                        }
+                    }
+                }
+            }
+        }
+        .bf-mrgt20 {
+            margin-top: 20px;
+        }
+    }
+}
+
+
+.bf-upload-doc {
+    input {
+        visibility: hidden;
+        width: 1px;
+        height: 1px;
+    }
+}
+.bt-document-table-container {
+    .MuiBox-root .MuiPaper-root .MuiTableContainer-root {
+        margin-top: 20px !important;
+        height: calc(100% - 110px);
+    }
+    .bf-delete-doc {
+        position: absolute;
+        right: 3.6vw;
+        width: auto !important;
+        background-color: transparent !important;
+        border: none !important;
+        color: $btn-primary-clr !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 8px;
+        img {
+            margin-right: 5px;
+        }
+        svg {
+            fill: $btn-primary-clr !important;
+        }
+        &:hover, &:active, &:visited {
+            background-color: transparent !important;
+        }
+    }
+    tbody {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        tr {
+            display: flex;
+            width: max(21%, 185px);
+            margin-right: 5%;
+            &:nth-child(4n) {
+                margin-right: 0;
+            }
+            th {
+                width: 100%;
+                border-bottom: none;
+                > div:first-child {
+                    border: 1px solid #707070;
+                    padding-top: 20%;
+                    padding-bottom: 20%;
+                    position: relative;
+                    img {
+                        height: max(85px, 6vw);
+                        cursor: pointer;
+                    }
+                    .bf-delete-image-cb {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                    }
+                }
+                .bf-doc-name {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    margin-top: 7px;
+                    > span {
+                        color: rgba(0,0,0,0.3);
+                    }
+                }
+            }
+        }
+    }
+}
+.bf-accout-sugesstion-dropdown {
+    position: absolute;
+    z-index: 22;
+    background: $clr-white;
+    width: 100%;
+    max-height: 30vh;
+    overflow-y: auto;
+    border: 1px solid $dashboard-bg-clr;
+    list-style-type: none;
+    padding-left: 0;
+    li {
+        padding: 3px 5px;
+        &:hover {
+            background-color: $primary-clr;
+            color: $clr-white;
+            cursor: pointer;
+        }
+    }
+}
