@@ -1,0 +1,20 @@
+.form-check-input[type=radio] {
+  border-radius: 50% !important;
+}
+
+.form-control {
+  background-color: #F6F6F6;
+}
+
+.tooltip-arrow {
+  display: none !important;
+}
+
+.tooltip > .tooltip-inner {
+  background-color: #FFF;
+  color: #051B2E;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.25);
+  border-radius: 0 !important;
+  padding: 5px !important;
+  max-width: 300px !important;
+}
