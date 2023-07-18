@@ -1,0 +1,226 @@
+{
+    "bankingData":[
+        {
+            "component": "accountBanking",
+            "id":"1",
+            "headCells":[
+                {
+                    "id": "accountHolder",
+                    "numeric": false,
+                    "disablePadding": true,
+                    "label": "Account Holder"
+                },
+                {
+                    "id": "bankName",
+                    "numeric": true,
+                    "disablePadding": false,
+                    "label": "Bank Name"
+                },
+                {
+                    "id": "accountType",
+                    "numeric": true,
+                    "disablePadding": false,
+                    "label": "Account Type"
+                },
+                {
+                    "id": "accountNumber",
+                    "numeric": true,
+                    "disablePadding": false,
+                    "label": "Account Number"
+                },
+                {
+                    "id": "Actions",
+                    "numeric": true,
+                    "disablePadding": false,
+                    "label": ""
+                }
+            ],
+            "mobileViewHeader":"Banking Information",
+            "mobileHeadCells":[
+                {
+                    "id": "accountHolder",
+                    "numeric": false,
+                    "disablePadding": true,
+                    "label": "Account Holder",
+                    "sortable": false
+                },
+                {
+                    "id": "bankName",
+                    "numeric": true,
+                    "disablePadding": false,
+                    "label": "Bank Name",
+                    "sortable": false
+                },
+                {
+                    "id": "actions",
+                    "numeric": true,
+                    "disablePadding": false,
+                    "label": ""
+                }
+            ],
+            "Buttons":[
+                {"Label":"Edit", 
+                    "method":"onEditClick",
+                    "className":"btn btn-bf-primary"
+                },
+                {"Label":"Delete", 
+                    "method":"onDeactivateClick",
+                    "className":"btn-bf-secondary bf-mrgl20"
+                }
+            ],
+            "addNewBanking" : {
+                "component": "button",
+                "type":"button",
+                "label":"Add New Banking Details",
+                "variant":"primary",
+                "name":"addNew",
+                "isRequired": true,
+                "styles": {
+                    "colWidth": "bf-add-right-top",
+                    "className": "add-more bf-width-auto"
+                }
+            },
+            "bankInformation": 
+                {
+                    "fields": [
+                        {
+                            "component": "header",
+                            "type": "subheading",
+                            "label": "Edit Banking Details",
+                            "labelAdd": "User Details"
+                        },
+                        {
+                            "component": "input",
+                            "type": "text",
+                            "name": "accountHolderName",
+                            "maxLength": "100",
+                            "label": "Account Holder",
+                            "disable": false,
+                            "placeholder": "Account Holder Name",
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "styles": {
+                                "colWidth": "4",
+                                "className": ""
+                            },
+                            "validations":[
+                                {
+                                    "type":"IsMandatory",
+                                    "errorMessage":""
+                                }
+                            ]
+                        },
+                        {
+                            "component": "input",
+                            "type": "text",
+                            "name": "bankName",
+                            "label": "Bank Name",
+                            "maxLength": "100",
+                            "disable": false,
+                            "placeholder": "Bank Name",
+                            "isRequired": true,
+                            "styles": {
+                                "colWidth": "4",
+                                "className": ""
+                            },
+                            "validations":[
+                                {
+                                    "type":"IsMandatory",
+                                    "errorMessage":""
+                                }
+                            ]
+                        },
+                        {
+                            "component": "select",
+                            "type": "select",
+                            "dynamicSelect": true,
+                            "lookupReference": {
+                                "name": "accountType"
+                            },
+                            "name": "accountType",
+                            "label": "Account Type",
+                            "placeholder": "Account Type",
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "styles": {
+                                "colWidth": "4",
+                                "className": ""
+                            },
+                            "validations":[
+                                {
+                                    "type":"IsMandatory",
+                                    "errorMessage":""
+                                }
+                            ]
+                        },
+                        {
+                            "component": "input",
+                            "type": "text",
+                            "name": "accountNumber",
+                            "dataType":"numeric",
+                            "maxLength": "20",
+                            "label": "Account Number",
+                            "disable": false,
+                            "placeholder": "Account Number",
+                            "isRequired": true,
+                            "styles": {
+                                "colWidth": "4",
+                                "className": ""
+                            },
+                            "validations":[
+                                {
+                                    "type":"IsMandatory",
+                                    "errorMessage":""
+                                }
+                            ]
+                        },
+                        {
+                            "component": "input",
+                            "type": "text",
+                            "name": "routingNo",
+                            "maxLength": "20",
+                            "label": "Routing Number",
+                            "disable": false,
+                            "placeholder": "Routing Number",
+                            "isRequired": true,
+                            "styles": {
+                                "colWidth": "4",
+                                "className": "bf-mrgr100i"
+                            },
+                            "validations":[
+                                {
+                                    "type":"IsMandatory",
+                                    "errorMessage":""
+                                }
+                            ]
+                        },
+                        {
+                            "component": "button",
+                            "type":"button",
+                            "label":"Submit",
+                            "name":"submitform",
+                            "disabled":false,
+                            "variant":"primary",
+                            "call":"onClickSubmit",
+                            "isRequired": true,
+                            "styles": {
+                                "colWidth": "4",
+                                "className": "bf-btn-imp"
+                            }
+                        }
+                    ]
+                },
+            "modal":{
+                "deactivate":{
+                    "text":"Are you sure you want to delete the Bank details?",
+                    "button1":"Yes",
+                    "button2":"Cancel"
+                },
+                "validate":{
+                    "text":"Please verify. A required field is missing information!",
+                    "button1":"OK"
+                }
+            }
+        }
+    ]
+}

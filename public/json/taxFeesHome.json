@@ -1,0 +1,67 @@
+{
+    "component": "taxFeesHome",
+    "id":"6",
+    "user": {
+        "name": "selectUser",
+        "id": "1.1",
+        "component": "select",
+        "type":"select",
+        "initialValue":"internal",
+        "styles": {
+            "colWidth": "2",
+            "className": ""
+        },
+        "placeholder":"Select User",
+        "options":[
+            {
+                "value":"internal",
+                "title":"BF User"
+            },
+            {
+                "value":"fbo",
+                "title":"FBO"
+            }
+            
+        ]
+    },
+    "userTypes":{
+        "name": "accounttabs",
+        "id": "1.2",
+        "internal":{
+            "name":"internal",
+            "tabs":[
+                
+                {
+                    "name": "taxes",
+                    "title": "Taxes"
+                }
+                
+            ]
+        },
+        "fbo": {
+            "name":"FBO",
+            "tabs":[
+                {
+                    "name": "taxes",
+                    "title": "Taxes"
+                },
+                {
+                    "name": "fees",
+                    "title": "Fees"
+                },
+                {
+                    "name": "additionalServices",
+                    "title": "Additional Services"
+                }
+            ]
+        }        
+    },
+    "search":{
+        "name": "searchbar",
+        "id": "1.3",
+        "component": "searchbar",
+        "type":"text",
+        "placeholder": "Company Name"
+    }
+
+}

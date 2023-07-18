@@ -1,0 +1,127 @@
+[
+  {
+    "headers": [
+      {
+        "menutabs": [
+          {
+            "component": "NavLink"
+          },
+          {
+            "id": "tab1",
+            "name": "Home",
+            "path": "/",
+            "style": "nav-link"
+          },
+          {
+            "id": "tab2",
+            "name": "Features",
+            "path": "/users",
+            "style": "nav-link"
+          },
+          {
+            "id": "tab3",
+            "name": "Contact",
+            "path": "/posts",
+            "style": "nav-link"
+          },
+          {
+            "id": "tab4",
+            "name": "About US",
+            "path": "/users",
+            "style": "nav-link"
+          },
+          {
+            "id": "tab4",
+            "name": "Contact US",
+            "path": "/users",
+            "style": "nav-link"
+          },
+          {
+            "id": "tab5",
+            "name": "Contact",
+            "path": "/users",
+            "style": "nav-link"
+          }
+        ],
+        "logosection": {"logoURL":"http://localhost:8001/images/LogoWithLabel.svg"},
+        "loginsection": {"label":"Login"},
+        "signupsection": {"label": "Sign Up"}
+      }
+    ],
+    "body": [{"pages:": [
+      {
+      "page1": [{
+        "id": "section1",
+        "image01_url": "http://localhost:8001/images/aircraft.png",
+        "text": [
+        {
+            "content": "SIMPLIFIED Fuel Process",
+            "style": "content-style"
+        },
+        {
+            "content": "FUEL SHOPPING",
+            "style": "textStyle"
+        },
+        {
+            "content": "An automated and modernized fuel purchasing experience",
+            "style": "textStyle"
+        },
+        {
+            "content": "to transperently and fairly fuel the aviation industry",
+            "style": "textStyle"
+        }
+        ]
+    },
+  
+    {
+      "id": "section2",
+      "image01_url": "http://localhost:8001/images/aircraft01.png",
+      "text": [
+      {
+          "content": "SIMPLIFIED",
+          "style": "textStyle"
+      },
+      {
+          "content": "FUEL SHOPPING",
+          "style": "textStyle"
+      },
+      {
+          "content": "An automated and modernized fuel purchasing experience",
+          "style": "textStyle"
+      },
+      {
+          "content": "to transperently and fairly fuel the aviation industry",
+          "style": "textStyle"
+      }
+      ]
+  },
+
+  {
+  "id": "section3",
+  "image01_url": "http://localhost:8001/images/aircraft_single.png",
+  "text": [
+  {
+      "content": "SIMPLIFIED",
+      "style": "textStyle"
+  },
+  {
+      "content": "FUEL SHOPPING",
+      "style": "textStyle"
+  },
+  {
+      "content": "An automated and modernized fuel purchasing experience",
+      "style": "textStyle"
+  },
+  {
+      "content": "to transperently and fairly fuel the aviation industry",
+      "style": "textStyle"
+  }
+  ]
+}
+  
+  ]
+    }]
+    }],
+    "footer": []
+  }
+]

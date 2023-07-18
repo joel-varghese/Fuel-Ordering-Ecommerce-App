@@ -1,0 +1,1576 @@
+{
+    "orderCompletedData":[
+        {
+            "component": "orderCompleted",
+            "id":"1",
+            "headCells":[
+                {
+                    "id": "orderId",
+                    "users":["fbo", "operator","barrel fuel"],
+                    "disablePadding": true,
+                    "label": "Order ID",
+                    "sortable": true
+                },
+                {
+                    "id": "date",
+                    "users":["fbo", "operator","barrel fuel"],
+                    "disablePadding": false,
+                    "label": "Date Actioned",
+                    "sortable": true
+                },
+                {
+                    "id": "location",
+                    "users":["fbo", "operator","barrel fuel"],
+                    "disablePadding": false,
+                    "label": "Location",
+                    "sortable": true
+                },
+                {
+                    "id": "fbo",
+                    "users":["operator","barrel fuel"],
+                    "disablePadding": false,
+                    "label": "FBO",
+                    "sortable": true
+                },
+                {
+                    "id": "operator",
+                    "users":[ "fbo","barrel fuel"],
+                    "disablePadding": false,
+                    "label": "Operator",
+                    "sortable": true
+                },
+                {
+                    "id": "aircraft",
+                    "users":["fbo","operator"],
+                    "disablePadding": false,
+                    "label": "Aircraft",
+                    "sortable": true
+                },
+                {
+                    "id": "actualPrice",
+                    "users":["fbo","operator"],
+                    "disablePadding": false,
+                    "label": "Total Price"
+                },
+                {
+                    "id": "status",
+                    "users":["fbo","operator","barrel fuel"],
+                    "disablePadding": false,
+                    "label": "Status",
+                    "sortable": true
+                },
+                {
+                    "id": "actions",
+                    "numeric": true,
+                    "users":["fbo", "operator","barrel fuel"],
+                    "disablePadding": false,
+                    "label": ""
+                }
+            ],
+            "mobileViewHeader":"Order Details",
+            "mobileHeadCells":[
+                {
+                   "id": "orderId",
+                   "label":"Order ID"
+                },
+                {
+                   "id": "date",
+                   "label":"Date Actioned"
+                },
+                {
+                   "id": "actions",
+                   "label": ""
+                }
+            ],
+            "Buttons":[
+                {
+                    "Label":"Reorder", 
+                    "users":["operator","barrel fuel"],
+                    "name":"reorder",
+                    "method":"onEditClick",
+                    "className":"btn btn-bf-primary"
+                },
+                {
+                    "Label":"View", 
+                    "users":["fbo","isMulti"],
+                    "name":"view",
+                    "disable":false,
+                    "method":"onDeactivateClick",
+                    "className":"btn btn-bf-primary"
+                }
+            ],
+            "mobileButtons":[
+                {
+                    "Label":"Reorder", 
+                    "users":["operator"],
+                    "name":"reorder",
+                    "mobile":true,
+                    "method":"onEditClick",
+                    "className":"btn btn-bf-primary"
+                },
+                {
+                    "Label":"View", 
+                    "users":["fbo","operator","isMulti"],
+                    "name":"view",
+                    "mobile":true,
+                    "disable":false,
+                    "method":"onDeactivateClick",
+                    "className":"btn btn-bf-primary"
+                },
+                {
+                    "Label":"Dismiss", 
+                    "users":["fbo"],
+                    "name":"dismiss",
+                    "mobile":true,
+                    "disable":false,
+                    "method":"onDeactivateClick",
+                    "className":"btn btn-bf-primary"
+                }
+            ],
+            "raiseDisputeData": [
+                {
+                    "component": "disputes",
+                    "id": "1",
+                    "errorMessage":"Please verify. A required field is missing information",
+                    "viewType":{
+                        "component": "radio",
+                        "type": "radio",
+                        "name": "viewType",
+                        "defaultValue": "Operator View",
+                        "label": "Operator View",
+                        "styles": {
+                          "colWidth": "12",
+                          "className": ""
+                        },
+                        "options": [
+                          
+                          {
+                            "value": "Operator View",
+                            "label": "Operator View"
+                          },
+                          {
+                            "value": "FBO View",
+                            "label": "FBO View"
+                          }
+                        ]
+                    },
+                    "sections":[
+                        {
+                            "fields":[
+                                {
+                                    "component": "select",
+                                    "type":"select",
+                                    "users":["barrel fuel"],
+                                    "name":"requestedBy",
+                                    "label":"Requested By",
+                                    "disable": false,
+                                    "placeholder": "Email Address",
+                                    "isRequired": true,
+                                    "isVisible": true,
+                                    "styles": {
+                                        "colWidth": "5 bf-flex-row",
+                                        "className": ""
+                                    },
+                                    "validations":[
+                                        {
+                                            "validation":"IsMandatory",
+                                            "errorMessage":""
+                                        }
+                                    ]
+                                },
+                                {
+                                    "component": "header",
+                                    "users":["barrel fuel","fbo","operator"],
+                                    "type": "subheading",
+                                    "label": "Reason for Dispute",
+                                    "isVisible": true
+                                }
+                            ]    
+                        },
+                        {
+                            "fieldsArray" :[
+                                {
+                                "fields" :[
+                                    {
+                                        "component": "select",
+                                        "type":"select",
+                                        "dynamicValue":["all","only"],
+                                        "name":"IssueName",
+                                        "label":"Issue Related To",
+                                        "fieldType":true,
+                                        "disable": false,
+                                        "placeholder": "Issue Related To",
+                                        "isRequired": true,
+                                        "isVisible": true,
+                                        "defaultValue":"Fuel",
+                                        "maxLength": "30",
+                                        "styles": {
+                                            "colWidth": "4 bf-dispute-issue",
+                                            "className": ""
+                                        },
+                                        "validations":[
+                                            {
+                                                "validation":"IsMandatory",
+                                                "errorMessage":""
+                                            }
+                                        ],
+                                        "options":[
+                                            {
+                                                "value":"Fuel",
+                                                "title":"Fuel"
+                                            },
+                                            {
+                                                "value":"Billing",
+                                                "title":"Billing"
+                                            },
+                                            {
+                                                "value":"Service",
+                                                "title":"Service"
+                                            },
+                                            {
+                                                "value":"Data",
+                                                "title":"Data"
+                                            },
+                                            {
+                                                "value":"Other",
+                                                "title":"Other"
+                                            }    
+                                        ]
+                                    },
+                                    {
+                                        "component": "select",
+                                        "type":"select",
+                                        "dynamicValue":["fuel","fuel price mismatch","fuel quantity mismatch"],
+                                        "name": "Reason",
+                                        "fieldType":true,
+                                        "id": "1.4",
+                                        "group": "details",
+                                        "dynamicSelect": false,
+                                        "isRequired": true,
+                                        "label": "Reason",
+                                        "placeholder": "Reason",
+                                        "isVisible": true,
+                                        "defaultValue":"Fuel Quantity Mismatch",
+                                        "styles": {
+                                          "colWidth": "4",
+                                          "className": ""
+                                        },
+                                        "validations": [
+                                          {
+                                            "validation": "IsMandatory",
+                                            "errorMessage": ""
+                                          }
+                                        ],
+                                        "options":[
+                                            {
+                                                "value":"Fuel Quantity Mismatch",
+                                                "title":"Fuel Quantity Mismatch"
+                                            },
+                                            {
+                                                "value":"Fuel Price Mismatch",
+                                                "title":"Fuel Price Mismatch"
+                                            } 
+                                        ]
+                                    },
+                                    {
+                                        "component": "select",
+                                        "type":"select",
+                                        "dynamicValue":["billing","duplicate charge","incorrect tax","incorrect fee","incorrect payment method","incorrect discount"],
+                                        "name": "Reason",
+                                        "fieldType":true,
+                                        "id": "1.4",
+                                        "group": "details",
+                                        "dynamicSelect": false,
+                                        "isRequired": true,
+                                        "label": "Reason",
+                                        "placeholder": "Reason",
+                                        "isVisible": true,
+                                        "styles": {
+                                          "colWidth": "4",
+                                          "className": ""
+                                        },
+                                        "validations": [
+                                          {
+                                            "validation": "IsMandatory",
+                                            "errorMessage": ""
+                                          }
+                                        ],
+                                        "options":[
+                                            {
+                                                "value":"Duplicate Charge",
+                                                "title":"Duplicate Charge"
+                                            },
+                                            {
+                                                "value":"Incorrect Payment Method",
+                                                "title":"Incorrect Payment Method"
+                                            },
+                                            {
+                                                "value":"Incorrect Tax",
+                                                "title":"Incorrect Tax"
+                                            },
+                                            {
+                                                "value":"Incorrect Fee",
+                                                "title":"Incorrect Fee"
+                                            },
+                                            {
+                                                "value":"Incorrect Discount",
+                                                "title":"Incorrect Discount"
+                                            }    
+                                        ]
+                                    },
+                                    {
+                                        "component": "select",
+                                        "type":"select",
+                                        "dynamicValue":["service","additional services not received","additional services not billed","service not availed"],
+                                        "name": "Reason",
+                                        "id": "1.4",
+                                        "group": "details",
+                                        "dynamicSelect": false,
+                                        "fieldType":true,
+                                        "isRequired": true,
+                                        "label": "Reason",
+                                        "placeholder": "Reason",
+                                        "isVisible": true,
+                                        "styles": {
+                                          "colWidth": "4",
+                                          "className": ""
+                                        },
+                                        "validations": [
+                                          {
+                                            "validation": "IsMandatory",
+                                            "errorMessage": ""
+                                          }
+                                        ],
+                                        "options":[
+                                            {
+                                                "value":"Service Not Availed",
+                                                "title":"Service Not Availed"
+                                            },
+                                            {
+                                                "value":"Additional Services Not Received",
+                                                "title":"Additional Services Not Received"
+                                            },
+                                            {
+                                                "value":"Additional Services Not Billed",
+                                                "title":"Additional Services Not Billed"
+                                            }  
+                                        ]
+                                    },
+                                    {
+                                        "component": "select",
+                                        "type":"select",
+                                        "dynamicValue":["data","incorrect fueling date","incorrect tail number"],
+                                        "name": "Reason",
+                                        "fieldType":true,
+                                        "id": "1.4",
+                                        "group": "details",
+                                        "dynamicSelect": false,
+                                        "isRequired": true,
+                                        "label": "Reason",
+                                        "placeholder": "Reason",
+                                        "isVisible": true,
+                                        "styles": {
+                                          "colWidth": "4",
+                                          "className": ""
+                                        },
+                                        "validations": [
+                                          {
+                                            "validation": "IsMandatory",
+                                            "errorMessage": ""
+                                          }
+                                        ],
+                                        "options":[
+                                            {
+                                                "value":"Incorrect Fueling Date",
+                                                "title":"Incorrect Fueling Date"
+                                            },
+                                            {
+                                                "value":"Incorrect Tail Number",
+                                                "title":"Incorrect Tail Number"
+                                            } 
+                                        ]
+                                    },
+                                    {
+                                        "component": "input",
+                                        "dynamicValue":["fuel price mismatch"],
+                                        "type":"text",
+                                        "dataType":"float",
+                                        "callback":false,
+                                        "name":"ActualFuelPrice",
+                                        "label":"Actual Fuel Price",
+                                        "disable": false,
+                                        "isVisible": true,
+                                        "placeholder": "Fuel Price",
+                                        "isRequired": true,
+                                        "styles": {
+                                            "colWidth": "2",
+                                            "className": ""
+                                        },
+                                        "validations":[
+                                            {
+                                                "validation":"IsMandatory",
+                                                "errorMessage":""
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "component": "input",
+                                        "dynamicValue":["fuel quantity mismatch"],
+                                        "type":"text",
+                                        "callback":false,
+                                        "dataType":"float",
+                                        "name":"ActualFuelQuantity",
+                                        "label":"Actual Fuel Taken",
+                                        "disable": false,
+                                        "isVisible": true,
+                                        "placeholder": "Fuel Quantity",
+                                        "isRequired": true,
+                                        "styles": {
+                                            "colWidth": "2 bf-text-left bf-fuel-qmm",
+                                            "className": ""
+                                        },
+                                        "validations":[
+                                            {
+                                                "validation":"IsMandatory",
+                                                "errorMessage":""
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "component": "select",
+                                        "type":"select",
+                                        "dynamicValue":["fuel price mismatch"],
+                                        "callback":false,
+                                        "name":"Unit",
+                                        "label":"Unit",
+                                        "disable": false,
+                                        "placeholder": "Unit",
+                                        "defaultValue":"Per Gallon",
+                                        "isRequired": true,
+                                        "isVisible": true,
+                                        "options":[
+                                            {
+                                                "value":"Per Gallon",
+                                                "title":"Per Gallon"
+                                            },
+                                            {
+                                                "value":"Per Order",
+                                                "title":"Per Order"
+                                            } 
+                                        ],
+                                        "styles": {
+                                            "colWidth": "2",
+                                            "className": ""
+                                        },
+                                        "validations":[
+                                            {
+                                                "validation":"IsMandatory",
+                                                "errorMessage":""
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "component": "select",
+                                        "type":"select",
+                                        "dynamicValue":["fuel quantity mismatch"],
+                                        "callback":false,
+                                        "name":"Unit",
+                                        "label":"Unit",
+                                        "disable": false,
+                                        "placeholder": "Unit",
+                                        "defaultValue":"Gallon",
+                                        "isRequired": true,
+                                        "isVisible": true,
+                                        "options":[
+                                            {
+                                                "value":"Gallon",
+                                                "title":"Gallon"
+                                            },
+                                            {
+                                                "value":"Pound",
+                                                "title":"Pound"
+                                            },
+                                            {
+                                                "value":"Kilogram",
+                                                "title":"Kilogram"
+                                            },
+                                            {
+                                                "value":"Liter",
+                                                "title":"Liter"
+                                            }   
+                                        ],
+                                        "styles": {
+                                            "colWidth": "2",
+                                            "className": ""
+                                        },
+                                        "validations":[
+                                            {
+                                                "validation":"IsMandatory",
+                                                "errorMessage":""
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "component": "input",
+                                        "dynamicValue":["duplicate charge"],
+                                        "type":"text",
+                                        "callback":false,
+                                        "name":"RelatedOrderId",
+                                        "label":"Related Order Id",
+                                        "disable": false,
+                                        "isVisible": true,
+                                        "placeholder": "Order Id",
+                                        "isRequired": true,
+                                        "maxLength": "7",
+                                        "styles": {
+                                            "colWidth": "4",
+                                            "className": ""
+                                        },
+                                        "validations":[
+                                            {
+                                                "validation":"IsMandatory",
+                                                "errorMessage":""
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "component": "select",
+                                        "type":"select",
+                                        "dynamicValue":["incorrect payment method"],
+                                        "callback":false,
+                                        "name":"ActualPaymentMethod",
+                                        "label":"Actual Payment",
+                                        "disable": false,
+                                        "placeholder": "Payment Method",
+                                        "isRequired": true,
+                                        "isVisible": true,
+                                        "options":[
+                                            {
+                                                "value":"Fixed",
+                                                "title":"Fixed"
+                                            },
+                                            {
+                                                "value":"Tiered",
+                                                "title":"Tierd"
+                                            } 
+                                        ],
+                                        "styles": {
+                                            "colWidth": "4",
+                                            "className": ""
+                                        },
+                                        "validations":[
+                                            {
+                                                "validation":"IsMandatory",
+                                                "errorMessage":""
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "component": "multiselectcheckbox",
+                                        "type":"multiselectcheckbox",
+                                        "dynamicValue":["incorrect tax"],
+                                        "callback":false,
+                                        "name":"Taxes",
+                                        "label":"Select Tax",
+                                        "disable": false,
+                                        "placeholder": "Tax Name",
+                                        "isRequired": true,
+                                        "isVisible": true,
+                                        "options":[
+                                            {
+                                                "value":"Payment 1",
+                                                "label":"Payment 1"
+                                            },
+                                            {
+                                                "value":"Payment 2",
+                                                "label":"Payment 2"
+                                            } 
+                                        ],
+                                        "styles": {
+                                            "colWidth": "4 bf-text-left",
+                                            "className": ""
+                                        },
+                                        "validations":[
+                                            {
+                                                "validation":"IsMandatory",
+                                                "errorMessage":""
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "component": "multiselectcheckbox",
+                                        "type":"multiselectcheckbox",
+                                        "dynamicValue":["incorrect fee"],
+                                        "callback":false,
+                                        "name":"Fees",
+                                        "label":"Select Fee",
+                                        "disable": false,
+                                        "placeholder": "Fee Name",
+                                        "isRequired": true,
+                                        "isVisible": true,
+                                        "options":[
+                                            {
+                                                "value":"Fixed",
+                                                "label":"Fixed"
+                                            },
+                                            {
+                                                "value":"Tiered",
+                                                "label":"Tierd"
+                                            } 
+                                        ],
+                                        "styles": {
+                                            "colWidth": "4 bf-text-left",
+                                            "className": ""
+                                        },
+                                        "validations":[
+                                            {
+                                                "validation":"IsMandatory",
+                                                "errorMessage":""
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "component": "input",
+                                        "dynamicValue":["incorrect discount"],
+                                        "type":"text",
+                                        "callback":false,
+                                        "name":"QuotedDiscount",
+                                        "label":"Quoted Discount",
+                                        "dataType":"float",
+                                        "disable": false,
+                                        "isVisible": true,
+                                        "placeholder": "Discount",
+                                        "isRequired": true,
+                                        "styles": {
+                                            "colWidth": "2",
+                                            "className": ""
+                                        },
+                                        "validations":[
+                                            {
+                                                "validation":"IsMandatory",
+                                                "errorMessage":""
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "component": "select",
+                                        "type":"select",
+                                        "dynamicValue":["incorrect discount"],
+                                        "callback":false,
+                                        "name":"Unit",
+                                        "label":"Unit",
+                                        "disable": false,
+                                        "placeholder": "Unit",
+                                        "isRequired": true,
+                                        "defaultValue":"$",
+                                        "isVisible": true,
+                                        "options":[
+                                            {
+                                                "value":"$",
+                                                "title":"$"
+                                            },
+                                            {
+                                                "value":"%",
+                                                "title":"%"
+                                            } 
+                                        ],
+                                        "styles": {
+                                            "colWidth": "2",
+                                            "className": ""
+                                        },
+                                        "validations":[
+                                            {
+                                                "validation":"IsMandatory",
+                                                "errorMessage":""
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "component": "multiselectcheckbox",
+                                        "type":"multiselectcheckbox",
+                                        "dynamicValue":["additional services not received","additional services not billed"],
+                                        "callback":false,
+                                        "name":"Services",
+                                        "label":"Services",
+                                        "disable": false,
+                                        "placeholder": "Select Services",
+                                        "isRequired": true,
+                                        "isVisible": true,
+                                        "options":[
+                                            {
+                                                "value":"Fixed",
+                                                "label":"Fixed"
+                                            },
+                                            {
+                                                "value":"Tiered",
+                                                "label":"Tierd"
+                                            } 
+                                        ],
+                                        "styles": {
+                                            "colWidth": "4 bf-text-left",
+                                            "className": ""
+                                        },
+                                        "validations":[
+                                            {
+                                                "validation":"IsMandatory",
+                                                "errorMessage":""
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "component": "input",
+                                        "dynamicValue":["incorrect tail number"],
+                                        "type":"text",
+                                        "callback":false,
+                                        "name":"ActualTailNumber",
+                                        "label":"Actual Tail Number",
+                                        "disable": false,
+                                        "isVisible": true,
+                                        "placeholder": "Tail Number",
+                                        "isRequired": true,
+                                        "maxLength": "6",
+                                        "styles": {
+                                            "colWidth": "4",
+                                            "className": ""
+                                        },
+                                        "validations":[
+                                            {
+                                                "validation":"IsMandatory",
+                                                "errorMessage":""
+                                            }
+                                        ]
+                                    },
+                                    {   
+                                        "dynamicValue":["incorrect fueling date"],
+                                        "component": "date",
+                                        "type":"date",
+                                        "callback":false,
+                                        "name":"ActualFuelDate",
+                                        "label":"Actual Fueling Date",
+                                        "user": ["fbo","internal"],
+                                        "disable": false,
+                                        "placeholder": "DD/MM/YYY",
+                                        "isRequired": true,
+                                        "isVisible": true,
+                                        "styles": {
+                                            "colWidth": "4",
+                                            "className": ""
+                                        },
+                                        "validations":[
+                                            {
+                                                "validation":"IsMandatory",
+                                                "errorMessage":""
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "component": "input",
+                                        "dynamicValue":["other"],
+                                        "type":"text",
+                                        "callback":false,
+                                        "name":"Reason",
+                                        "label":"Specify(others)",
+                                        "disable": false,
+                                        "isVisible": true,
+                                        "placeholder": "Text",
+                                        "isRequired": true,
+                                        "styles": {
+                                            "colWidth": "8",
+                                            "className": ""
+                                        },
+                                        "validations":[
+                                            {
+                                                "validation":"IsMandatory",
+                                                "errorMessage":""
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "component": "link",
+                                        "type":"link",
+                                        "dynamicValue":["all"],
+                                        "name":"addNotes",
+                                        "label":"Add Notes & Documents",
+                                        "label2":"Cancel",
+                                        "styles": {
+                                            "colWidth": "12 bf-mrgrn15",
+                                            "className": ""
+                                        }
+                                    },
+                                    {
+                                        "component": "input",
+                                        "dynamicValue":["add notes"],
+                                        "type":"text",
+                                        "callback":false,
+                                        "name":"Notes",
+                                        "label":"Notes",
+                                        "disable": false,
+                                        "isVisible": true,
+                                        "placeholder": "Notes",
+                                        "isRequired": false,
+                                        "styles": {
+                                            "colWidth": "8",
+                                            "className": ""
+                                        }
+                                    },
+                                    {
+                                        "component": "doc",
+                                        "dynamicValue":["add notes"],
+                                        "type":"doc",
+                                        "name":"DocumentName",
+                                        "isRequired": false
+                                    },
+                                    {
+                                        "component": "doc",
+                                        "dynamicValue":["add notes"],
+                                        "type":"doc",
+                                        "name":"DocumentType",
+                                        "isRequired": false
+                                    },
+                                    {
+                                        "component": "input",
+                                        "dynamicValue":["add notes"],
+                                        "type":"file",
+                                        "callback":false,
+                                        "name":"Document",
+                                        "label":"Upload Related Document",
+                                        "disable": false,
+                                        "isVisible": true,
+                                        "placeholder": "Upload",
+                                        "successMessage":"Document Uploaded",
+                                        "isRequired": false,
+                                        "styles": {
+                                            "colWidth": "4",
+                                            "className": ""
+                                        },
+                                        "validations":[
+                                            {
+                                                "validation":"fileSize",
+                                                "errorMessage":"File Size Error > 5MB"
+                                            },
+                                            {
+                                                "validation":"fileType",
+                                                "errorMessage":"File format not supported"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "component": "button",
+                                        "type":"button",
+                                        "label":"Add Another Reason",
+                                        "dynamicValue":["all","only"],
+                                        "name":"addNew",
+                                        "disabled":false,
+                                        "isVisible": true,
+                                        "variant":"primary",
+                                        "call":"onClickSubmit",
+                                        "isRequired": true,
+                                        "styles": {
+                                            "colWidth": "4",
+                                            "className": "add-more"
+                                        }
+                                    },
+                                    {
+                                        "component": "button",
+                                        "type":"button",
+                                        "label":"Remove Reason",
+                                        "dynamicValue":["all","only"],
+                                        "name":"remove",
+                                        "disabled":false,
+                                        "isVisible": true,
+                                        "variant":"primary",
+                                        "call":"onClickSubmit",
+                                        "isRequired": true,
+                                        "styles": {
+                                            "colWidth": "4",
+                                            "className": "remove"
+                                        }
+                                    }
+                            ]}
+                            ]
+                        }
+                    ],
+                    "mobileSections":[
+                        {
+                            "fields":[
+                                {
+                                    "component": "header",
+                                    "users":["barrel fuel","fbo","operator"],
+                                    "type": "subheading",
+                                    "label": "Reason for Dispute",
+                                    "isVisible": true
+                                }
+                            ]    
+                        },
+                        {
+                            "fieldsArray" :[
+                                {
+                                "fields" :[
+                                    {
+                                        "component": "select",
+                                        "type":"select",
+                                        "dynamicValue":["all","only"],
+                                        "name":"IssueName",
+                                        "label":"Issue Related To",
+                                        "fieldType":true,
+                                        "disable": false,
+                                        "placeholder": "Issue Related To",
+                                        "isRequired": true,
+                                        "isVisible": true,
+                                        "defaultValue":"Fuel",
+                                        "maxLength": "30",
+                                        "styles": {
+                                            "colWidth": "4 bf-dispute-issue",
+                                            "className": ""
+                                        },
+                                        "validations":[
+                                            {
+                                                "validation":"IsMandatory",
+                                                "errorMessage":""
+                                            }
+                                        ],
+                                        "options":[
+                                            {
+                                                "value":"Fuel",
+                                                "title":"Fuel"
+                                            },
+                                            {
+                                                "value":"Billing",
+                                                "title":"Billing"
+                                            },
+                                            {
+                                                "value":"Service",
+                                                "title":"Service"
+                                            },
+                                            {
+                                                "value":"Data",
+                                                "title":"Data"
+                                            },
+                                            {
+                                                "value":"Other",
+                                                "title":"Other"
+                                            }    
+                                        ]
+                                    },
+                                    {
+                                        "component": "select",
+                                        "type":"select",
+                                        "dynamicValue":["fuel","fuel price mismatch","fuel quantity mismatch"],
+                                        "name": "Reason",
+                                        "fieldType":true,
+                                        "id": "1.4",
+                                        "group": "details",
+                                        "dynamicSelect": false,
+                                        "isRequired": true,
+                                        "label": "Reason",
+                                        "placeholder": "Reason",
+                                        "isVisible": true,
+                                        "defaultValue":"Fuel Quantity Mismatch",
+                                        "styles": {
+                                          "colWidth": "4",
+                                          "className": ""
+                                        },
+                                        "validations": [
+                                          {
+                                            "validation": "IsMandatory",
+                                            "errorMessage": ""
+                                          }
+                                        ],
+                                        "options":[
+                                            {
+                                                "value":"Fuel Quantity Mismatch",
+                                                "title":"Fuel Quantity Mismatch"
+                                            },
+                                            {
+                                                "value":"Fuel Price Mismatch",
+                                                "title":"Fuel Price Mismatch"
+                                            } 
+                                        ]
+                                    },
+                                    {
+                                        "component": "select",
+                                        "type":"select",
+                                        "dynamicValue":["billing","duplicate charge","incorrect tax","incorrect fee","incorrect payment method","incorrect discount"],
+                                        "name": "Reason",
+                                        "fieldType":true,
+                                        "id": "1.4",
+                                        "group": "details",
+                                        "dynamicSelect": false,
+                                        "isRequired": true,
+                                        "label": "Reason",
+                                        "placeholder": "Reason",
+                                        "isVisible": true,
+                                        "styles": {
+                                          "colWidth": "4",
+                                          "className": ""
+                                        },
+                                        "validations": [
+                                          {
+                                            "validation": "IsMandatory",
+                                            "errorMessage": ""
+                                          }
+                                        ],
+                                        "options":[
+                                            {
+                                                "value":"Duplicate Charge",
+                                                "title":"Duplicate Charge"
+                                            },
+                                            {
+                                                "value":"Incorrect Payment Method",
+                                                "title":"Incorrect Payment Method"
+                                            },
+                                            {
+                                                "value":"Incorrect Tax",
+                                                "title":"Incorrect Tax"
+                                            },
+                                            {
+                                                "value":"Incorrect Fee",
+                                                "title":"Incorrect Fee"
+                                            },
+                                            {
+                                                "value":"Incorrect Discount",
+                                                "title":"Incorrect Discount"
+                                            }    
+                                        ]
+                                    },
+                                    {
+                                        "component": "select",
+                                        "type":"select",
+                                        "dynamicValue":["service","additional services not received","additional services not billed","service not availed"],
+                                        "name": "Reason",
+                                        "id": "1.4",
+                                        "group": "details",
+                                        "dynamicSelect": false,
+                                        "fieldType":true,
+                                        "isRequired": true,
+                                        "label": "Reason",
+                                        "placeholder": "Reason",
+                                        "isVisible": true,
+                                        "styles": {
+                                          "colWidth": "4",
+                                          "className": ""
+                                        },
+                                        "validations": [
+                                          {
+                                            "validation": "IsMandatory",
+                                            "errorMessage": ""
+                                          }
+                                        ],
+                                        "options":[
+                                            {
+                                                "value":"Service Not Availed",
+                                                "title":"Service Not Availed"
+                                            },
+                                            {
+                                                "value":"Additional Services Not Received",
+                                                "title":"Additional Services Not Received"
+                                            },
+                                            {
+                                                "value":"Additional Services Not Billed",
+                                                "title":"Additional Services Not Billed"
+                                            }  
+                                        ]
+                                    },
+                                    {
+                                        "component": "select",
+                                        "type":"select",
+                                        "dynamicValue":["data","incorrect fueling date","incorrect tail number"],
+                                        "name": "Reason",
+                                        "fieldType":true,
+                                        "id": "1.4",
+                                        "group": "details",
+                                        "dynamicSelect": false,
+                                        "isRequired": true,
+                                        "label": "Reason",
+                                        "placeholder": "Reason",
+                                        "isVisible": true,
+                                        "styles": {
+                                          "colWidth": "4",
+                                          "className": ""
+                                        },
+                                        "validations": [
+                                          {
+                                            "validation": "IsMandatory",
+                                            "errorMessage": ""
+                                          }
+                                        ],
+                                        "options":[
+                                            {
+                                                "value":"Incorrect Fueling Date",
+                                                "title":"Incorrect Fueling Date"
+                                            },
+                                            {
+                                                "value":"Incorrect Tail Number",
+                                                "title":"Incorrect Tail Number"
+                                            } 
+                                        ]
+                                    },
+                                    {
+                                        "component": "input",
+                                        "dynamicValue":["fuel price mismatch"],
+                                        "type":"text",
+                                        "dataType":"float",
+                                        "callback":false,
+                                        "name":"ActualFuelPrice",
+                                        "label":"Actual Fuel Price",
+                                        "disable": false,
+                                        "isVisible": true,
+                                        "placeholder": "Fuel Price",
+                                        "isRequired": true,
+                                        "styles": {
+                                            "colWidth": "2 bf-mobile-col-2",
+                                            "className": ""
+                                        },
+                                        "validations":[
+                                            {
+                                                "validation":"IsMandatory",
+                                                "errorMessage":""
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "component": "input",
+                                        "dynamicValue":["fuel quantity mismatch"],
+                                        "type":"text",
+                                        "callback":false,
+                                        "dataType":"float",
+                                        "name":"ActualFuelQuantity",
+                                        "label":"Actual Fuel Taken",
+                                        "disable": false,
+                                        "isVisible": true,
+                                        "placeholder": "Fuel Quantity",
+                                        "isRequired": true,
+                                        "styles": {
+                                            "colWidth": "2 bf-text-left bf-mobile-col-2",
+                                            "className": ""
+                                        },
+                                        "validations":[
+                                            {
+                                                "validation":"IsMandatory",
+                                                "errorMessage":""
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "component": "select",
+                                        "type":"select",
+                                        "dynamicValue":["fuel price mismatch"],
+                                        "callback":false,
+                                        "name":"Unit",
+                                        "label":"Unit",
+                                        "disable": false,
+                                        "placeholder": "Unit",
+                                        "defaultValue":"Per Gallon",
+                                        "isRequired": true,
+                                        "isVisible": true,
+                                        "options":[
+                                            {
+                                                "value":"Per Gallon",
+                                                "title":"Per Gallon"
+                                            },
+                                            {
+                                                "value":"Per Order",
+                                                "title":"Per Order"
+                                            } 
+                                        ],
+                                        "styles": {
+                                            "colWidth": "2 bf-mobile-col-2",
+                                            "className": ""
+                                        },
+                                        "validations":[
+                                            {
+                                                "validation":"IsMandatory",
+                                                "errorMessage":""
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "component": "select",
+                                        "type":"select",
+                                        "dynamicValue":["fuel quantity mismatch"],
+                                        "callback":false,
+                                        "name":"Unit",
+                                        "label":"Unit",
+                                        "disable": false,
+                                        "placeholder": "Unit",
+                                        "defaultValue":"Gallon",
+                                        "isRequired": true,
+                                        "isVisible": true,
+                                        "options":[
+                                            {
+                                                "value":"Gallon",
+                                                "title":"Gallon"
+                                            },
+                                            {
+                                                "value":"Pound",
+                                                "title":"Pound"
+                                            },
+                                            {
+                                                "value":"Kilogram",
+                                                "title":"Kilogram"
+                                            },
+                                            {
+                                                "value":"Liter",
+                                                "title":"Liter"
+                                            }   
+                                        ],
+                                        "styles": {
+                                            "colWidth": "2 bf-mobile-col-2",
+                                            "className": ""
+                                        },
+                                        "validations":[
+                                            {
+                                                "validation":"IsMandatory",
+                                                "errorMessage":""
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "component": "input",
+                                        "dynamicValue":["duplicate charge"],
+                                        "type":"text",
+                                        "callback":false,
+                                        "name":"RelatedOrderId",
+                                        "label":"Related Order Id",
+                                        "disable": false,
+                                        "isVisible": true,
+                                        "placeholder": "Order Id",
+                                        "isRequired": true,
+                                        "maxLength": "7",
+                                        "styles": {
+                                            "colWidth": "4",
+                                            "className": ""
+                                        },
+                                        "validations":[
+                                            {
+                                                "validation":"IsMandatory",
+                                                "errorMessage":""
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "component": "select",
+                                        "type":"select",
+                                        "dynamicValue":["incorrect payment method"],
+                                        "callback":false,
+                                        "name":"ActualPaymentMethod",
+                                        "label":"Actual Payment",
+                                        "disable": false,
+                                        "placeholder": "Payment Method",
+                                        "isRequired": true,
+                                        "isVisible": true,
+                                        "options":[
+                                            {
+                                                "value":"Fixed",
+                                                "title":"Fixed"
+                                            },
+                                            {
+                                                "value":"Tiered",
+                                                "title":"Tierd"
+                                            } 
+                                        ],
+                                        "styles": {
+                                            "colWidth": "4",
+                                            "className": ""
+                                        },
+                                        "validations":[
+                                            {
+                                                "validation":"IsMandatory",
+                                                "errorMessage":""
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "component": "multiselectcheckbox",
+                                        "type":"multiselectcheckbox",
+                                        "dynamicValue":["incorrect tax"],
+                                        "callback":false,
+                                        "name":"Taxes",
+                                        "label":"Select Tax",
+                                        "disable": false,
+                                        "placeholder": "Tax Name",
+                                        "isRequired": true,
+                                        "isVisible": true,
+                                        "options":[
+                                            {
+                                                "value":"Payment 1",
+                                                "label":"Payment 1"
+                                            },
+                                            {
+                                                "value":"Payment 2",
+                                                "label":"Payment 2"
+                                            } 
+                                        ],
+                                        "styles": {
+                                            "colWidth": "4 bf-text-left",
+                                            "className": ""
+                                        },
+                                        "validations":[
+                                            {
+                                                "validation":"IsMandatory",
+                                                "errorMessage":""
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "component": "multiselectcheckbox",
+                                        "type":"multiselectcheckbox",
+                                        "dynamicValue":["incorrect fee"],
+                                        "callback":false,
+                                        "name":"Fees",
+                                        "label":"Select Fee",
+                                        "disable": false,
+                                        "placeholder": "Fee Name",
+                                        "isRequired": true,
+                                        "isVisible": true,
+                                        "options":[
+                                            {
+                                                "value":"Fixed",
+                                                "label":"Fixed"
+                                            },
+                                            {
+                                                "value":"Tiered",
+                                                "label":"Tierd"
+                                            } 
+                                        ],
+                                        "styles": {
+                                            "colWidth": "4 bf-text-left",
+                                            "className": ""
+                                        },
+                                        "validations":[
+                                            {
+                                                "validation":"IsMandatory",
+                                                "errorMessage":""
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "component": "input",
+                                        "dynamicValue":["incorrect discount"],
+                                        "type":"text",
+                                        "callback":false,
+                                        "name":"QuotedDiscount",
+                                        "label":"Quoted Discount",
+                                        "dataType":"float",
+                                        "disable": false,
+                                        "isVisible": true,
+                                        "placeholder": "Discount",
+                                        "isRequired": true,
+                                        "styles": {
+                                            "colWidth": "2",
+                                            "className": ""
+                                        },
+                                        "validations":[
+                                            {
+                                                "validation":"IsMandatory",
+                                                "errorMessage":""
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "component": "select",
+                                        "type":"select",
+                                        "dynamicValue":["incorrect discount"],
+                                        "callback":false,
+                                        "name":"Unit",
+                                        "label":"Unit",
+                                        "disable": false,
+                                        "placeholder": "Unit",
+                                        "isRequired": true,
+                                        "defaultValue":"$",
+                                        "isVisible": true,
+                                        "options":[
+                                            {
+                                                "value":"$",
+                                                "title":"$"
+                                            },
+                                            {
+                                                "value":"%",
+                                                "title":"%"
+                                            } 
+                                        ],
+                                        "styles": {
+                                            "colWidth": "2",
+                                            "className": ""
+                                        },
+                                        "validations":[
+                                            {
+                                                "validation":"IsMandatory",
+                                                "errorMessage":""
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "component": "multiselectcheckbox",
+                                        "type":"multiselectcheckbox",
+                                        "dynamicValue":["additional services not received","additional services not billed"],
+                                        "callback":false,
+                                        "name":"Services",
+                                        "label":"Services",
+                                        "disable": false,
+                                        "placeholder": "Select Services",
+                                        "isRequired": true,
+                                        "isVisible": true,
+                                        "options":[
+                                            {
+                                                "value":"Fixed",
+                                                "label":"Fixed"
+                                            },
+                                            {
+                                                "value":"Tiered",
+                                                "label":"Tierd"
+                                            } 
+                                        ],
+                                        "styles": {
+                                            "colWidth": "4 bf-text-left",
+                                            "className": ""
+                                        },
+                                        "validations":[
+                                            {
+                                                "validation":"IsMandatory",
+                                                "errorMessage":""
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "component": "input",
+                                        "dynamicValue":["incorrect tail number"],
+                                        "type":"text",
+                                        "callback":false,
+                                        "name":"ActualTailNumber",
+                                        "label":"Actual Tail Number",
+                                        "disable": false,
+                                        "isVisible": true,
+                                        "placeholder": "Tail Number",
+                                        "isRequired": true,
+                                        "maxLength": "6",
+                                        "styles": {
+                                            "colWidth": "4",
+                                            "className": ""
+                                        },
+                                        "validations":[
+                                            {
+                                                "validation":"IsMandatory",
+                                                "errorMessage":""
+                                            }
+                                        ]
+                                    },
+                                    {   
+                                        "dynamicValue":["incorrect fueling date"],
+                                        "component": "date",
+                                        "type":"date",
+                                        "callback":false,
+                                        "name":"ActualFuelDate",
+                                        "label":"Actual Fueling Date",
+                                        "user": ["fbo","internal"],
+                                        "disable": false,
+                                        "placeholder": "DD/MM/YYY",
+                                        "isRequired": true,
+                                        "isVisible": true,
+                                        "styles": {
+                                            "colWidth": "4",
+                                            "className": ""
+                                        },
+                                        "validations":[
+                                            {
+                                                "validation":"IsMandatory",
+                                                "errorMessage":""
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "component": "input",
+                                        "dynamicValue":["other"],
+                                        "type":"text",
+                                        "callback":false,
+                                        "name":"Reason",
+                                        "label":"Specify(others)",
+                                        "disable": false,
+                                        "isVisible": true,
+                                        "placeholder": "Text",
+                                        "isRequired": true,
+                                        "styles": {
+                                            "colWidth": "8",
+                                            "className": ""
+                                        },
+                                        "validations":[
+                                            {
+                                                "validation":"IsMandatory",
+                                                "errorMessage":""
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "component": "textarea",
+                                        "dynamicValue":["all","only"],
+                                        "type":"text",
+                                        "callback":false,
+                                        "name":"Notes",
+                                        "label":"Notes",
+                                        "disable": false,
+                                        "isVisible": true,
+                                        "placeholder": "Notes",
+                                        "isRequired": false,
+                                        "styles": {
+                                            "colWidth": "8 bf-text-left",
+                                            "className": ""
+                                        }
+                                    },
+                                    {
+                                        "component": "doc",
+                                        "dynamicValue":["add notes"],
+                                        "type":"doc",
+                                        "name":"DocumentName",
+                                        "isRequired": false
+                                    },
+                                    {
+                                        "component": "doc",
+                                        "dynamicValue":["add notes"],
+                                        "type":"doc",
+                                        "name":"DocumentType",
+                                        "isRequired": false
+                                    },
+                                    {
+                                        "component": "input",
+                                        "dynamicValue":["add notes"],
+                                        "type":"file",
+                                        "callback":false,
+                                        "name":"Document",
+                                        "label":"Upload Related Document",
+                                        "disable": false,
+                                        "isVisible": true,
+                                        "placeholder": "Upload",
+                                        "successMessage":"Document Uploaded",
+                                        "isRequired": false,
+                                        "styles": {
+                                            "colWidth": "4",
+                                            "className": ""
+                                        },
+                                        "validations":[
+                                            {
+                                                "validation":"fileSize",
+                                                "errorMessage":"File Size Error > 5MB"
+                                            },
+                                            {
+                                                "validation":"fileType",
+                                                "errorMessage":"File format not supported"
+                                            }
+                                        ]
+                                    }
+                                ]}
+                            ]
+                        }
+                    ],
+                    "emailBody":{
+                        "title": "A dispute has been raised for Order ",
+                        "paragraph": "Hi ",
+                        "html1": "You have raised a new dispute for order ",
+                        "html2": ". This case is being reviewed by the FBO to address the concerns that have been raised. If you have any questions, you can check for status updates on the dispute section or contact the FBO directly for more information. Thank you for your patience!   <br><br> Thanks, <br> The Barrel Fuel Team",
+                        "htmlFbo":". This case is being reviewed by the BF team to address the concerns that have been raised. If you have any questions, you can check for status updates on the dispute section or contact the BF team directly for more information. Thank you for your patience!  <br><br> Thanks, <br> The Barrel Fuel Team"
+                    }
+                }
+            ]
+        
+        }
+    ]
+}

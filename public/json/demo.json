@@ -1,0 +1,87 @@
+{
+    "demoData":
+        {
+            "landingScreen":[
+                {
+                    "type": "image",
+                    "url": "./images/marketing/demo_devices.png",
+                    "imageDetails": { 
+                        "url": "images/demo_devices.png",
+                        "name": "demo-banner"
+                    }
+                },
+                {
+                    "type" : "paragraph",
+                    "heading":"The Barrel Fuel App",
+                    "text":"Our Fluid Jet Fuel Purchase Process",
+                    "list" : ["Request an account.","Get approved & complete your profile.","Access barrel fuel exclusive benefits."]
+                }
+            ],
+            "demoDetails": [
+                {
+                    "type": "heading",
+                    "text": "Improve the way you purchase fuel"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "A Barrel Fuel team member will walk your through our process to show you just how easy it is to purchase fuel for your jet using our application."
+                },
+                {
+                    "type": "button",
+                    "text": "Sign Up",
+                    "url": "./signup"
+                }
+            ],
+            "footer" : {
+                "logo" : "./images/marketing/bf-footer-logo.svg",
+                "links": [
+                    {
+                        "text": "Contact Us",
+                        "url": ""
+                    },
+                    {
+                        "text": "Request a Demo",
+                        "url": ""
+                    },
+                    {
+                        "text": "Careers",
+                        "url": ""
+                    },
+                    {
+                        "text": "Terms of Use",
+                        "url": ""
+                    },
+                    {
+                        "text": "Cookies",
+                        "url": ""
+                    },
+                    {
+                        "text": "Privacy",
+                        "url": "About"
+                    },
+                    {
+                        "text": "",
+                        "url": ""
+                    }
+                ],
+                "social":[
+                    {
+                        "logo": "./images/marketing/fb_logo.svg",
+                        "url": "www.facebook.com"
+                    },
+                    {
+                        "logo": "./images/marketing/insta_logo.svg",
+                        "url": "www.instagram.com"
+                    },
+                    {
+                        "logo": "./images/marketing/linkidin_logo.svg",
+                        "url": "www.linkidin.com"
+                    },
+                    {
+                        "logo": "./images/marketing/twitter_logo.svg",
+                        "url": "www.twitter.com"
+                    }
+                ]
+            }
+        }
+}

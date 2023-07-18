@@ -1,0 +1,242 @@
+{
+    "fboEnrollData" :
+        {
+            "headline":{
+                "type":"text",
+                "label":"FBO Enrollment"
+            },
+            "sections":[{
+                "subSections":[
+                    {
+                        "fields" :[
+                            {
+                                "component": "input",
+                                "type":"text",
+                                "name":"companyName",
+                                "maxLength":"100",
+                                "label":"Company Name",
+                                "placeholder": "Company Name",
+                                "isRequired": true,
+                                "defaultValue":"",
+                                "styles": {
+                                    "colWidth": "6 bf-mrgb-1rem",
+                                    "className": ""
+                                },
+                                "validations":[
+                                    {
+                                        "type":"IsMandatory",
+                                        "errorMessage":""
+                                    },
+                                    {
+                                       "type":"onlyspecial",
+                                       "validateRule":"[a-zA-Z0-9]+",
+                                       "errorMessage":"Invalid Data"
+                                    },
+                                    {
+                                       "type":"onlydigit",
+                                       "validateRule":"[a-zA-Z\\.?!#@_=$:]+",
+                                       "errorMessage":"Invalid Data"
+                                    }
+                                ]
+                            },
+                            {
+                                "component": "select",
+                                "type":"select",
+                                "dynamicSelect": true,
+                                "lookupReference": {
+                                    "name": "modeOfCommunication"
+                                },
+                                "name":"preferred_mode_communication",
+                                "label":"Preferred Mode of Communication",
+                                "placeholder": "Email Or Phone",
+                                "isRequired": true,
+                                "defaultValue":"",
+                                "styles": {
+                                    "colWidth": "6 bf-mrgt2px",
+                                    "className": ""
+                                },
+                                "validations":[
+                                    {
+                                        "type":"IsMandatory",
+                                        "errorMessage":""
+                                    }
+                                ],
+
+                                "options":[
+                                    {
+                                        "value":"email",
+                                        "title":"E-mail"
+                                    },
+                                    {
+                                        "value":"phone",
+                                        "title":"Phone"
+                                    },
+                                    {
+                                        "value":"email or phone",
+                                        "title":"E-mail or Phone"
+                                    }
+                                ]
+                            },
+                            {
+                                "component": "input",
+                                "type":"text",
+                                "name":"firstName",
+                                "maxLength":"35",
+                                "label":"First Name",
+                                "placeholder": "First Name",
+                                "isRequired": true,
+                                "defaultValue":"",
+                                "styles": {
+                                    "colWidth": "6",
+                                    "className": ""
+                                },
+                                "validations":[
+                                    {
+                                        "type":"IsMandatory",
+                                        "errorMessage":""
+                                    }
+                                ]
+                            },
+                            {
+                                "component": "input",
+                                "type":"text",
+                                "name":"lastName",
+                                "maxLength":"35",
+                                "label":"Last Name",
+                                "placeholder": "Last Name",
+                                "isRequired": true,
+                                "defaultValue":"",
+                                "styles": {
+                                    "colWidth": "6",
+                                    "className": ""
+                                },
+                                "validations":[
+                                    {
+                                        "type":"IsMandatory",
+                                        "errorMessage":""
+                                    }
+                                ]
+                            },
+                            {
+                                "component": "input",
+                                "type":"text",
+                                "name":"emailId",
+                                "maxLength":"50",
+                                "label":"Email Address",
+                                "placeholder": "Email Address",
+                                "isRequired": true,
+                                "defaultValue":"",
+                                "styles": {
+                                    "colWidth": "6",
+                                    "className": ""
+                                },
+                                "validations":[
+                                    {
+                                        "type":"IsMandatory",
+                                        "errorMessage":""
+                                    },
+                                    {
+                                        "type":"IsEmail",
+                                        "validateRule":"([A-Za-z0-9_\\-\\.])+\\@([A-Za-z0-9_\\-\\.])+\\.([A-Za-z]{2,4})$",
+                                        "errorMessage":"Oops! Invalid E-mail"
+                                    }
+                                ]
+                            },
+                            {
+                                "component": "input",
+                                "type":"text",
+                                "name":"contact_number",
+                                "minlength":10,
+                                "maxLength":"14",
+                                "label":"Phone Number",
+                                "placeholder": "Phone Number",
+                                "isRequired": true,
+                                "defaultValue":"",
+                                "styles": {
+                                    "colWidth": "6",
+                                    "className": ""
+                                },
+                                "validations":[
+                                    {
+                                        "type":"IsMandatory",
+                                        "errorMessage":""
+                                    },
+                                    {
+                                        "type": "CheckUSPhone",
+                                        "errorMessage": "Enter a valid Mobile Number"
+                                    }
+                                ]
+                            }
+                        ],
+                        "primaryButton":[{
+                                "component": "button",
+                                "type":"button",
+                                "label":"Submit",
+                                "variant":"primary",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "",
+                                    "className": "bf-btn-login"
+                                }
+                        }]
+                    }
+                ]
+            }],
+            "modal": [
+                {
+                    "submitModal": {
+                        "title": "",
+                        "paragraph": "Success! We'll be in touch soon!",
+                        "primaryButton": {
+                            "id": "17678",
+                            "href": "#",
+                            "name": "okButton",
+                            "text": "OK",
+                            "target": "_self"
+                        }
+                    },
+                    "errorModal": {
+                        "title": "",
+                        "paragraph": "Oops! This E-mail already exists",
+                        "primaryButton": {
+                            "id": "17680",
+                            "href": "#",
+                            "name": "okButton",
+                            "text": "OK",
+                            "target": "_self"
+                        }
+                    },
+                    "errorModal2": {
+                        "title": "",
+                        "paragraph": "Oops! This Company already exists",
+                        "primaryButton": {
+                            "id": "17681",
+                            "href": "#",
+                            "name": "okButton",
+                            "text": "OK",
+                            "target": "_self"
+                        }
+                    },
+                    "validateModal": {
+                        "title": "",
+                        "paragraph": "Please verify. A required field is missing information",
+                        "primaryButton": {
+                            "id": "17682",
+                            "href": "#",
+                            "name": "okButton",
+                            "text": "OK",
+                            "target": "_self"
+                        }
+                    }
+                }
+            ],
+            "emailBody":{
+                "title": "FBO Enrollment Verification Email",
+                "paragraph": "Hello",
+                "html":"You're Almost Done… A verification email was sent to: . Open this email and click the link to complete the process."
+            },
+            "notifyMessage":{
+                "msg1": "Let's go! New FBO enrollment request received "
+            }
+        }
+}

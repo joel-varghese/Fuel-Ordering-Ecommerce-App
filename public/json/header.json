@@ -1,0 +1,39 @@
+{
+    "landingPageData":
+        {
+            "navigation": {
+                "logo" : [
+                    {
+                        "imageDetails": { 
+                            "url": "images/m_barrel_fuel_logo.png",
+                            "name": "bf-footer-logo"
+                        },
+                        "type": "image",
+                        "logo": "./m_barrel_fuel_logo.png"
+                    }
+                ],
+                "navLinks":[
+                    {
+                        "text": "Home",
+                        "url": "./"
+                    },
+                    {
+                        "text": "About",
+                        "url": "./about"
+                    },
+                    {
+                        "text": "Demo",
+                        "url": "./demo"
+                    },
+                    {
+                        "text": "Contact",
+                        "url": "./contact"
+                    },
+                    {
+                        "text": "Login",
+                        "url": "./login"
+                    }
+                ]
+            }
+        }
+}

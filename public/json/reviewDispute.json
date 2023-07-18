@@ -1,0 +1,462 @@
+{
+    "reviewData":{
+          "reviewInformation" :{
+                "subReason":[
+                  {
+                    "component": "radio",
+                    "fieldType": "radio",
+                    "name": "servicetaken",
+                    "place" : "left",
+                    "defaultValue": "",
+                    "isRequired": true,
+                    "styles": {
+                      "colWidth": "4 bf-mrgb-0",
+                      "className": "d-flex"
+                    },
+                    "options": [
+                      {
+                        "value": "No Action",
+                        "label": "No Action"
+                      },
+                      {
+                        "value": "",
+                        "label": ""
+                      }
+                    ]
+                  },
+                  {
+                    "component": "radio",
+                    "fieldType": "radio",
+                    "name": "serviceused",
+                    "place" : "left",
+                    "defaultValue": "",
+                    "isRequired": true,
+                    "styles": {
+                      "colWidth": "4 bf-mrgb-0",
+                      "className": "d-flex"
+                    },
+                    "options": [
+                      {
+                        "value": "No Action",
+                        "label": "No Action"
+                      },
+                      {
+                        "value": "Remove",
+                        "label": "Remove"
+                      }
+                    ]
+                  },
+                  {
+                    "component": "radio",
+                    "fieldType": "radio",
+                    "name": "incorrect",
+                    "defaultValue": "",
+                    "place" : "left",
+                    "isRequired": true,
+                    "styles": {
+                      "colWidth": "4 bf-mrgb-0",
+                      "className": "d-flex"
+                    },
+                    "options": [
+                      {
+                        "value": "No Action",
+                        "label": "No Action"
+                      },
+                      {
+                        "value": "Modify",
+                        "label": "Modify"
+                      }
+                    ]
+                  },
+                  {
+                  "component": "input",
+                  "type": "text",
+                  "name": "modify",
+                  "label": "",
+                  "place" : "left",
+                  "placeholder": "",
+                  "isRequired": false,
+                  "disable": true,
+                  "modify":true,
+                  "defaultValue":"",
+                  "initialVal":"",
+                  "styles": {
+                    "colWidth": "2 bf-mrgb-0",
+                    "className": "d-flex"
+                  }
+                }
+                ],
+                "heading" :{
+                    "label": "Review Open Dispute - ",
+                    "label1": "View Open Dispute - ",
+                    "label2": "View Resolved Dispute - "
+                  },
+                "link" : {
+                  "label": "View Order History"
+                },
+                "reasons" :[
+                  {
+                  "fields":[
+                    {
+                        "component": "paragraph",
+                        "name": "subhead",
+                        "type": "subheading",
+                        "label": "Reason : "
+                    },
+                    {
+                        "component": "input",
+                        "type": "text",
+                        "name": "cause",
+                        "label": "Cause",
+                        "place" : "right",
+                        "placeholder": "",
+                        "isRequired": true,
+                        "defaultValue":"",
+                        "styles": {
+                          "colWidth": "3 bf-mrgb-0",
+                          "className": "d-flex"
+                        }
+                    },
+                    {
+                        "component": "input",
+                        "type": "text",
+                        "name": "subcause",
+                        "label": "Sub Cause",
+                        "place" : "right",
+                        "placeholder": "",
+                        "isRequired": true,
+                        "defaultValue":"",
+                        "styles": {
+                          "colWidth": "3 bf-mrgb-0",
+                          "className": "d-flex"
+                        }
+                    },
+                    {
+                        "component": "textarea",
+                        "type": "text",
+                        "name": "notes",
+                        "label": "Disputer Notes",
+                        "place" : "right",
+                        "placeholder": "",
+                        "isRequired": false,
+                        "disable": true,
+                        "defaultValue":"",
+                        "styles": {
+                          "colWidth": "3 bf-mrgb-0",
+                          "className": "d-flex"
+                        }
+                    },
+                    {
+                      "component": "button",
+                      "type":"button",
+                      "label":"Save",
+                      "text1":"Save",
+                      "text2":"Reopen",
+                      "name":"save",
+                      "place" : "right",
+                      "variant":"primary",
+                      "styles": {
+                          "colWidth": "4",
+                          "className": "bf-btn-left bf-btn-imp bf-mrgt20i bf-mrgb20i"
+                      }
+                    },
+                    {
+                      "component": "link",
+                      "type":"link",
+                      "name":"viewDocument",
+                      "place" : "right",
+                      "label":"View Related Documents",
+                      "styles": {
+                          "colWidth": "4",
+                          "className": ""
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            "disputeManagement" :{
+              "mobileFields": {
+                "disputeHeadingText": "Dispute Management",
+                "originalDetailsText": "Original Order Details: "
+              },
+              "fields":[
+                {
+                  "component": "paragraph",
+                  "name": "subhead",
+                  "type": "subheading",
+                  "label": "Dispute Management"
+                },
+                {
+                  "component": "span",
+                  "name": "heading",
+                  "type": "span",
+                  "label": "View Order: "
+                },
+                {
+                  "component": "spanbold",
+                  "name": "heading",
+                  "type": "spanbold",
+                  "label": "Dispute Log",
+                  "styles": {
+                    "className": "bf-mrgtb10"
+                  }
+                },
+                {
+                  "component": "spanbold",
+                  "name": "heading",
+                  "type": "spanbold",
+                  "label": "Case Notes",
+                  "show":"below",
+                  "styles": {
+                    "className": "bf-case-notes"
+                  }
+                },
+                { 
+        "component": "box",
+        "name": "logbox",
+        "type": "box",
+        "label": "Log Box",
+        "text": "bold",
+        "content": []
+        },
+                {
+                  "component": "select",
+
+                  "type":"text",
+                  "name":"action",
+                  "disable": false,
+                  "label":"Action",
+                  "placeholder": "Action",
+                  "isRequired": true,
+                  "defaultValue":"",
+                  "show":"below",
+                  "optionsBF":[
+                      {
+                          "value":"Add Notes - Internal",
+                          "title":"Add Notes - Internal"
+                      },
+                      {
+                        "value":"Add Notes - Disputer",
+                        "title":"Add Notes - Disputer"
+                      },
+                      {
+                        "value":"Add Notes - FBO",
+                        "title":"Add Notes - FBO"
+                      },
+                      {
+                        "value":"Resolve",
+                        "title":"Resolve"
+                      }
+                  ],
+                  "optionsBFView":[
+                    {
+                        "value":"Add Notes - Internal",
+                        "title":"Add Notes - Internal"
+                    },
+                    {
+                      "value":"Add Notes - Disputer",
+                      "title":"Add Notes - Disputer"
+                    },
+                    {
+                      "value":"Add Notes - FBO",
+                      "title":"Add Notes - FBO"
+                    },
+                    {
+                      "value":"Cancel",
+                      "title":"Cancel"
+                    }
+                ],
+                  "optionsFBO":[
+                    {
+                        "value":"Add Notes - Internal",
+                        "title":"Add Notes - Internal"
+                    },
+                    {
+                      "value":"Add Notes - Disputer",
+                      "title":"Add Notes - Disputer"
+                    },
+                    {
+                      "value":"Resolve",
+                      "title":"Resolve"
+                    }
+                  ],
+                  "optionsFBOView":[
+                    {
+                        "value":"Add Notes - Internal",
+                        "title":"Add Notes - Internal"
+                    },
+                    {
+                      "value":"Add Notes - Disputer",
+                      "title":"Add Notes - Disputer"
+                    }
+                  ],
+                  "optionsOperator":[
+                      {
+                          "value":"Add Notes",
+                          "title":"Add Notes"
+                      },
+                      {
+                        "value":"Cancel",
+                        "title":"Cancel"
+                      }
+                ],
+                  "styles": {
+                      "colWidth": "12",
+                      "className": "bf-mrg-r50p"
+                  },
+                  "validations":[
+                      {
+                          "validation":"IsMandatory",
+                          "errorMessage":""
+                      }
+                  ]
+                },
+                {
+                  "component": "textarea",
+                  "type": "text",
+                  "name": "notesLog",
+                  "label": "Notes",
+                  "placeholder": "",
+                  "isRequired": true,
+                  "defaultValue":"",
+                  "rows": 3,
+                  "show":"below",
+                  "styles": {
+                    "colWidth": "12 bf-mrgb-0",
+                    "className": ""
+                  },
+                  "validations":[
+                    {
+                        "validation":"IsMandatory",
+                        "errorMessage":""
+                    }
+                ]
+              },
+              {
+                "component": "button",
+                "type":"button",
+                "lables":["Submit","Reopen","Reorder"],
+                "label":"",
+                "name":"submit",
+                "variant":"primary",
+                "styles": {
+                    "colWidth": "6",
+                    "className": "bf-btn-left bf-btn-imp bf-mrgt20i bf-mrgb20i"
+                }
+              },
+              {
+                "component": "button",
+                "type":"button",
+                "lables":["Back"],
+                "label":"Back",
+                "name":"back",
+                "variant":"primary",
+                "styles": {
+                    "colWidth": "6",
+                    "className": "bf-btn-clear bf-btn-imp bf-mrgt20i bf-mrgb20i"
+                }
+              }
+              ],
+              "editmodal":{
+                "validationMessage":"Please verify. A required field is missing information",
+                "fields":[
+                    {
+                       "component": "paragraph",
+                       "users":["barrel fuel","fbo","operator"],
+                       "type": "subheading",
+                       "label": "Reason For Reopening Dispute"
+                    },
+                    {
+                       "component": "textArea",
+                       "type":"text",
+                       "name": "Notes",
+                       "maxLength":"500",
+                       "dynamicSelect": false,
+                       "isRequired": false,
+                       "label": "Reason",
+                       "placeholder": "Notes",
+                       "lengthRestriction":true,
+                       "isVisible": true,
+                       "defaultValue":"",
+                       "rows":"4",
+                       "styles": {
+                       "colWidth": "4",
+                       "className": ""
+                       }
+                    }
+                ]
+               },
+               "editmodalBF":{
+                "validationMessage":"Please verify. A required field is missing information",
+                "fields":[
+                    {
+                       "component": "paragraph",
+                       "users":["barrel fuel","fbo","operator"],
+                       "type": "subheading",
+                       "label": "Are You Sure You Want To Cancel The Dispute?"
+                    },
+                    {
+                      "component": "select",
+                      "type":"select",
+                      "name": "requestedBy",
+                      "fieldType":true,
+                      "id": "1.4",
+                      "group": "details",
+                      "dynamicSelect": false,
+                      "isRequired": true,
+                      "label": "Requested By",
+                      "placeholder": "Email Address",
+                      "isVisible": true,
+                      "defaultValue":"",
+                      "styles": {
+                      "colWidth": "4",
+                      "className": ""
+                      },
+                      "validations": [
+                      {
+                         "validation": "IsMandatory",
+                         "errorMessage": ""
+                      }
+                      ],
+                      "options":[
+    
+                      ]
+                   }
+                ]
+               }
+            },
+            "modal": [
+              {
+                "message":"Please verify. A required field is missing information",
+                "text":"OK",
+                "cancel":"Are You Sure You Want To Cancel The Dispute?",
+                "button1":"Yes",
+                "button2":"Back"
+              }
+            ],
+            "emailBody":{
+              "title": "Order ",
+              "title2": " has now been resolved",  
+              "paragraph": "Hi ",
+              "html1": "Your disputed order ",
+              "html2": " is now resolved. If you have any futher comments or concerns, you can contact the FBO directly or re-open the dispute  on the Barrel Fuel platform. Thank you for patience and we look forward to your next order! <br><br> Thanks, <br>  The Barrel Fuel team"
+          },
+          "notifyMessage":{
+            "msg1": " Has Been Accepted by the Operator",
+            "msg2": "Your Order ",
+            "msg3": " Has Been Successfully Completed. Thank You For Choosing BarrelFuel Service",
+            "msg4": "You Have Successfully Opened A New Dispute For Order ",
+            "msg5": " And Will Be Contacted By The FBO With More Details",
+            "msg6": "And Will Be Contacted By The Barrel Fuel Representative with more details",
+            "msg7": "Hi ",
+            "msg8": ", your disputed order ",
+            "msg9": " has now been resolved",
+            "msg10": ",Order ",
+            "msg11": " Has Been Declined By The FBO",
+            "msg12": "You Have Successfully Re-Opened A New Dispute For Order ",
+            "msg13": " Of Multi Leg Order ",
+            "msg14": " has been Declined "
+        }
+      }
+}

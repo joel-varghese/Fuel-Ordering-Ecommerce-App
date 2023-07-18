@@ -1,0 +1,414 @@
+{
+    "locationData":[
+        {
+            "component": "accountUser",
+            "id":"1",
+            "headCells":[
+                {
+                    "id": "airportIdentificationNumber",
+                    "numeric": false,
+                    "disablePadding": true,
+                    "label": "Airport ID"
+                },
+                {
+                    "id": "airportName",
+                    "numeric": true,
+                    "disablePadding": false,
+                    "label": "Airport Name"
+                },
+                {
+                    "id": "airportLocation",
+                    "numeric": true,
+                    "disablePadding": false,
+                    "label": "Airport Location"
+                },
+                {
+                    "id": "fuelService",
+                    "numeric": true,
+                    "disablePadding": false,
+                    "label": "Fuel Service Offered"
+                },
+                {
+                    "id": "addedby",
+                    "numeric": true,
+                    "disablePadding": false,
+                    "label": "Added By"
+                },
+                {
+                    "id": "Actions",
+                    "numeric": true,
+                    "disablePadding": false,
+                    "label": ""
+                }
+            ],
+            "mobileViewHeader":"Airport Information",
+            "mobileHeadCells":[
+                {
+                    "id": "airportIdentificationNumber",
+                    "numeric": false,
+                    "disablePadding": true,
+                    "label": "Airport ID",
+                    "sortable": false
+                },
+                {
+                    "id": "airportName",
+                    "numeric": true,
+                    "disablePadding": false,
+                    "label": "Airport Name",
+                    "sortable": false
+                },
+                {
+                    "id": "actions",
+                    "numeric": true,
+                    "disablePadding": false,
+                    "label": ""
+                }
+            ],
+            "Buttons":[
+                {"Label":"Edit", 
+                    "method":"onEditClick",
+                    "className":"btn btn-bf-primary"
+                },
+                {"Label":"Delete", 
+                    "method":"onDeactivateClick",
+                    "className":"btn-bf-secondary bf-mrgl20"
+                }
+            ],
+            "addNewAircraft" : {
+                "component": "button",
+                "type":"button",
+                "label":"Add Location",
+                "variant":"primary",
+                "name":"addNew",
+                "isRequired": true,
+                "styles": {
+                    "colWidth": "bf-add-right-top",
+                    "className": "add-more bf-width-auto"
+                }
+            },
+            "aircraftInformation" :{
+                "fields" :[
+                    {
+                        "component": "header",
+                        "type": "subheading",
+                        "label": "Edit Airport Information",
+                        "labelAdd": "Add Airport Information"
+                    },
+                    {
+                        "component": "input",
+                        "type":"text",
+                        "callback":false,
+                        "name":"airportIdentificationNumber",
+                        "disable": false,
+                        "label":"Airport ID",
+                        "placeholder": "Airport ID",
+                        "isRequired": true,
+                        "maxLength": "4",
+                        "styles": {
+                            "colWidth": "4",
+                            "className": ""
+                        },
+                        "validations": [
+                            {
+                                "type": "IsMandatory",
+                                "errorMessage": ""
+                            },
+                            {
+                               "type":"onlyspecial",
+                               "validateRule":"[a-zA-Z0-9]+",
+                               "errorMessage":"Invalid Data"
+                            }
+                        ]
+                    },
+                    {
+                        "component": "input",
+                        "type":"text",
+                        "callback":false,
+                        "name":"airportName",
+                        "disable": false,
+                        "label":"Airport Name",
+                        "placeholder": "Airport Name",
+                        "isRequired": true,
+                        "maxLength": "100",
+                        "styles": {
+                            "colWidth": "4",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "type":"IsMandatory",
+                                "errorMessage":""
+                            }
+                        ]
+                    },
+                    {
+                        "component": "multiSelectCheckbox",
+                        "type":"multiSelectCheckbox",
+                        "callback":false,
+                        "name":"fuelService",
+                        "label":"Fuel Service Offered",
+                        "disable": false,
+                        "placeholder": "Fuel Type",
+                        "lookupReference": {
+                            "name": "fuelServices"
+                        },
+                        "isRequired": true,
+                        "dynamicSelect": true,
+                        "options":[
+                            {
+                                "value":"Jet Fuel",
+                                "label":"Jet Fuel"
+                            },
+                            {
+                                "value":"AV Gas",
+                                "label":"AV Gas"
+                            },
+                            {
+                                "value":"Sustainable Aviation",
+                                "label":"Sustainable Aviation"
+                            },
+                            {
+                                "value":"Fuel (SAF)",
+                                "label":"Fuel (SAF)"
+                            }
+                            
+                        ],
+                        "styles": {
+                            "colWidth": "4",
+                            "className": "bf-text-left bf-btn-imp"
+                        },
+                        "validations":[
+                            {
+                                "type":"IsMandatory",
+                                "errorMessage":""
+                            }
+                        ]
+                    },
+                    
+                    {
+                        "component": "input",
+                        "type":"input",
+                        "id":"1.4",
+                        "name":"airportLocation",
+                        "callback":false,
+                        "group":"details",
+                        "label":"Address Line 1",
+                        "placeholder": "Airport Address Line 1",
+                        "isRequired": true,
+                        "maxLength": "50",
+                        "disabled":true,
+                        "styles": {
+                            "colWidth": "4",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "type":"IsMandatory",
+                                "errorMessage":""
+                            }
+                        ]
+                    },
+                    {
+                        "component": "input",
+                        "type":"input",
+                        "id":"1.5",
+                        "name":"airportLocation2",
+                        "callback":false,
+                        "group":"details",
+                        "label":"Address Line 2",
+                        "placeholder": "Airport Address Line 2",
+                        "isRequired": false,
+                        "maxLength": "50",
+                        "disabled":true,
+                        "styles": {
+                            "colWidth": "4",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "type":"IsMandatory",
+                                "errorMessage":""
+                            }
+                        ]
+                    },
+                    
+                    {
+                        "component": "input",
+                        "type":"input",
+                        "id":"1.7",
+                        "name":"city",
+                        "group":"details",
+                        "callback":false,
+                        "label":"City",
+                        "placeholder": "Airport City",
+                        "isRequired": true,
+                        "maxLength": "30",
+                        "disabled":true,
+                        "styles": {
+                            "colWidth": "4",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "type":"IsMandatory",
+                                "errorMessage":""
+                            },
+                            {
+                                "type":"CheckRegex",
+                                "validateRule":"^\\d*[a-zA-Z][a-zA-Z\\d ]*$",
+                                "errorMessage":"Invalid Data"
+                            }
+                        ]
+                    },
+                    {
+                        "component": "input",
+                        "type":"input",
+                        "id":"1.8",
+                        "name":"state",
+                        "group":"details",
+                        "callback":false,
+                        "label":"State",
+                        "placeholder": "Airport State",
+                        "isRequired": true,
+                        "disabled":true,
+                        "styles": {
+                            "colWidth": "4",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "type":"IsMandatory",
+                                "errorMessage":""
+                            }
+                        ]
+                    },
+                    {
+                        "component": "input",
+                        "type":"input",
+                        "id":"1.9",
+                        "name":"zip",
+                        "group":"details",
+                        "callback":false,
+                        "label":"Zip",
+                        "placeholder": "Airport Zip",
+                        "isRequired": true,
+                        "maxLength": "10",
+                        "disabled":true,
+                        "styles": {
+                            "colWidth": "4",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "type":"IsMandatory",
+                                "errorMessage":""
+                            },
+                            {
+                                "validation": "CheckRegex",
+                                "validateRule": "(?=.*[0-9])",
+                                "errorMessage": "Invalid ZIP code"
+                            }
+                        ]
+                    },
+                    {
+                        "component": "input",
+                        "type":"input",
+                        "id":"1.6",
+                        "name":"country",
+                        "group":"details",
+                        "callback":false,
+                        "label":"Country",
+                        "placeholder": "Airport Country",
+                        "isRequired": true,
+                        "disabled":true,
+                        "styles": {
+                            "colWidth": "4",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "type":"IsMandatory",
+                                "errorMessage":""
+                            }
+                        ]
+                    },
+                   
+                   
+                   
+                    {
+                        "component": "button",
+                        "type":"button",
+                        "label":"Submit",
+                        "name":"submitform",
+                        "disabled":false,
+                        "variant":"primary",
+                        "call":"onClickSubmit",
+                        "isRequired": true,
+                        "styles": {
+                            "colWidth": "4",
+                            "className": "bf-btn-login bf-btn-imp"
+                        }
+                    }
+            ]
+            },
+            "modal":{
+                "deactivate":{
+                    "text":" Wait! Are you sure you want to delete the location?",
+                    "button1":"Yes",
+                    "button2":"Cancel"
+                },
+                "validate":{
+                    "text":"Please verify. A required field is missing information",
+                    "button1":"OK"
+                }
+            },
+            "sections":{
+                "modal": [
+                    {
+                      "successModal": {
+                                  "title": "",
+                                  "paragraph": "Success! Location created",
+                                  "primaryButton": {
+                                      "id": "17678",
+                                      "href": "#",
+                                      "name": "okButton",
+                                      "text": "OK",
+                                      "target": "_self"
+                                  }
+                              },
+                      "deactivate": {
+                                  "title": "",
+                                  "paragraph": "Success! Location deactivated",
+                                  "primaryButton": {
+                                      "id": "17678",
+                                      "href": "#",
+                                      "name": "okButton",
+                                      "text": "OK",
+                                      "target": "_self"
+                                  }
+                              },
+                      "mandatoryModal": {
+                                  "title": "",
+                                  "paragraph": "Please verify. A required field is missing information",
+                                  "primaryButton": {
+                                      "id": "17678",
+                                      "href": "#",
+                                      "name": "okButton",
+                                      "text": "OK",
+                                      "target": "_self"
+                                  }
+                              }
+                    }
+                  ]
+            },
+            "notifyMessage":{
+                "msg1": "Success! ",
+                "msg2": " has been added as a new location to this account.",
+                "msg3": "Success! Fuel service offered modified by ",
+                "msg4": "Location ",
+                "msg5": " has been deleted by "
+            }
+        
+        }
+    ]
+}

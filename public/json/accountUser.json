@@ -1,0 +1,385 @@
+{
+    "userData":[
+        {
+            "component": "accountUser",
+            "id":"1",
+            "headCells":[
+                {
+                    "id": "name",
+                    "numeric": false,
+                    "users":["fbo", "operator","internal"],
+                    "disablePadding": true,
+                    "label": "Name"
+                },
+                {
+                    "id": "email",
+                    "numeric": true,
+                    "users":["fbo", "operator","internal"],
+                    "disablePadding": false,
+                    "label": "Email Address"
+                },
+                {
+                    "id": "accessLevel",
+                    "numeric": false,
+                    "users":["fbo", "operator","internal"],
+                    "disablePadding": false,
+                    "label": "Access Level",
+                    "sortable": true
+                },
+                {
+                    "id": "status",
+                    "numeric": true,
+                    "users":["fbo", "operator","internal"],
+                    "disablePadding": false,
+                    "label": "Status",
+                    "sortable": true
+                },
+                {
+                    "id": "mobileNumber",
+                    "numeric": true,
+                    "users":[ "operator","internal"],
+                    "disablePadding": false,
+                    "label": "Mobile Number"
+                },
+                {
+                    "id": "location",
+                    "numeric": true,
+                    "users":["fbo"],
+                    "disablePadding": false,
+                    "label": "Location(s)"
+                },
+                {
+                    "id": "actions",
+                    "numeric": true,
+                    "users":["fbo", "operator","internal"],
+                    "disablePadding": false,
+                    "label": ""
+                }
+            ],
+            "mobileViewHeader":"User Information",
+            "mobileHeadCells":[
+                {
+                    "id": "name",
+                    "numeric": false,
+                    "users":["fbo", "operator","internal"],
+                    "disablePadding": true,
+                    "label": "Name"
+                },
+                {
+                    "id": "accessLevel",
+                    "numeric": false,
+                    "users":["fbo", "operator","internal"],
+                    "disablePadding": false,
+                    "label": "Access Level",
+                    "sortable": false
+                },
+                {
+                    "id": "actions",
+                    "numeric": true,
+                    "users":["fbo", "operator","internal"],
+                    "disablePadding": false,
+                    "label": ""
+                }
+            ],
+            "Buttons":[
+                {"Label":"Edit", 
+                    "method":"onEditClick",
+                    "className":"btn btn-bf-primary"
+                },
+                {"Label":"Deactivate", 
+                    "method":"onDeactivateClick",
+                    "className":"btn-bf-secondary bf-mrgl20"
+                }
+            ],
+            "ActivateButtons":[
+                {"Label":"Activate", 
+                    "method":"onActivateClick",
+                    "className":"btn btn-bf-primary"
+                },
+                {"Label":"Delete", 
+                    "method":"onDeleteClick",
+                    "className":"btn-bf-secondary bf-mrgl20"
+                }
+            ],
+            "addNewAircraft" : {
+                "component": "button",
+                "type":"button",
+                "label":"Add New User",
+                "variant":"primary",
+                "name":"addNew",
+                "isRequired": true,
+                "styles": {
+                    "colWidth": "bf-add-right-top",
+                    "className": "add-more bf-width-auto"
+                }
+            },
+            "aircraftInformation" :{
+                "fields" :[
+                    {
+                        "component": "header",
+                        "type": "subheading",
+                        "users":["fbo", "operator","internal"],
+                        "label": "Edit User Information"
+                    },
+                    {
+                        "component": "id",
+                        "users":["fbo", "operator","internal"],
+                        "name": "userId" 
+                    },
+                    {
+                        "component": "input",
+                        "type":"text",
+                        "users":["fbo", "operator","internal"],
+                        "callback":false,
+                        "maxLength": "35",
+                        "name":"firstName",
+                        "disable": false,
+                        "label":"First Name",
+                        "placeholder": "First Name",
+                        "isRequired": true,
+                        "styles": {
+                            "colWidth": "4",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "validation":"IsMandatory",                               
+                                 "errorMessage":""
+                            }
+                        ]
+                    },
+                    {
+                        "component": "input",
+                        "type":"text",
+                        "users":["internal"],
+                        "callback":false,
+                        "maxLength": "35",
+                        "name":"middleName",
+                        "disable": false,
+                        "label":"Middle Name",
+                        "placeholder": "Middle Name",
+                        "isRequired": false,
+                        "styles": {
+                            "colWidth": "4",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "validation":"IsMandatory",                               
+                                 "errorMessage":""
+                            }
+                        ]
+                    },
+                    {
+                        "component": "input",
+                        "type":"text",
+                        "callback":false,
+                        "users":["fbo", "operator","internal"],
+                        "name":"lastName",
+                        "disable": false,
+                        "label":"Last Name",
+                        "maxLength": "35",
+                        "placeholder": "Last Name",
+                        "isRequired": true,
+                        "styles": {
+                            "colWidth": "4",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "validation":"IsMandatory",
+                                "errorMessage":""
+                            }
+                        ]
+                    },
+                    {
+                        "component": "input",
+                        "type":"text",
+                        "users":["fbo", "operator","internal"],
+                        "callback":false,
+                        "maxLength": "50",
+                        "name":"email",
+                        "label":"Email Address",
+                        "disable": false,
+                        "placeholder": "Email Address",
+                        "isRequired": true,
+                        "styles": {
+                            "colWidth": "4",
+                            "className": ""
+                        },
+                        "validations":[
+
+                            {
+
+                                "validation":"IsMandatory",
+
+                                "errorMessage":""
+
+                            },
+
+                            {
+
+                                "validation":"CheckRegex",
+
+                                "validateRule":"([A-Za-z0-9_\\-\\.])+\\@([A-Za-z0-9_\\-\\.])+\\.([A-Za-z]{2,4})$",
+
+                                "errorMessage":"Oops! Invalid E-mail"
+
+                            }
+
+                        ]
+                    }, {
+                        "component": "input",
+                        "type":"text",
+                        "callback":false,
+                        "users":["fbo", "operator","internal"],
+                        "name":"mobileNumber",
+                        "maxLength":"15",
+                        "dataType":"numeric",
+                        "label":"Mobile Number",
+                        "disable": false,
+                        "placeholder": "Mobile Number",
+                        "isRequired": true,
+                        "styles": {
+                            "colWidth": "4",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "validation":"IsMandatory",
+                                 "errorMessage":""
+                            },
+                            {
+                                "validation":"CheckUSPhone",
+                                 "errorMessage":"Enter a valid Mobile Number"
+                            }
+                        ]
+                    },
+                    {
+                        "component": "select",
+                        "type":"select",
+                        "users":["fbo", "operator","internal"],
+                        "callback":false,
+                        "name":"accessLevel",
+                        "label":"Level Of Access",
+                        "disable": false,
+                        "placeholder": "Select Level Of Access",
+                        "dynamicSelect": true,
+                        "accessLevel": true,
+                        "lookupReference": {
+                            "name": "accessLevels"
+                        },
+                        "isRequired": true,
+                        "styles": {
+                            "colWidth": "4",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "validation":"IsMandatory",
+                                "errorMessage":""
+                            }
+                        ]
+                    },
+                    {
+                        "component": "select",
+                        "type": "select",
+                        "users":["fbo", "operator"],
+                        "name": "roles",
+                        "id": "1.3",
+                        "group": "details",
+                        "dynamicSelect": true,
+                        "userRole":true,
+                        "lookupReference": {
+                          "name": "roles"
+                        },
+                        "dependentField": "userType",
+                        "label": "Role",
+                        "placeholder": "Role",
+                        "isRequired": true,
+                        "styles": {
+                          "colWidth": "4",
+                          "className": ""
+                        },
+                        "validations": [
+                          {
+                            "validation": "IsMandatory",
+                            "errorMessage": ""
+                          }
+                        ]
+                      },
+                      {
+                        "component": "multiSelectCheckbox",
+                        "type": "multiSelectCheckbox",
+                        "users":["fbo"],
+                        "name": "location",
+                        "id": "1.4",
+                        "group": "details",
+                        "dynamicSelect": true,
+                        "isRequired": true,
+                        "dependentField": "organizationName",
+                        "lookupReference": {
+                          "name": "location"
+                        },
+                        "label": "Location(s)",
+                        "placeholder": "Location",
+                        "styles": {
+                          "colWidth": "12",
+                          "className": "bf-text-left"
+                        },
+                        "validations": [
+                          {
+                            "validation": "IsMandatory",
+                            "errorMessage": ""
+                          }
+                        ]
+                      },
+                    {
+                        "component": "button",
+                        "type":"button",
+                        "users":["fbo", "operator","internal"],
+                        "label":"Submit",
+                        "name":"submitform",
+                        "disabled":false,
+                        "variant":"primary",
+                        "call":"onClickSubmit",
+                        "isRequired": true,
+                        "styles": {
+                            "colWidth": "4",
+                            "className": "bf-btn-left"
+                        }
+                    }
+            ]
+            },
+            "modal":{
+                "deactivate":{
+                    "text":"Are you sure you want to deactivate the user?",
+                    "button1":"Yes",
+                    "button2":"Cancel"
+                },
+                "delete":{
+                    "text":"Are you sure you want to permanantly delete the user?",
+                    "button1":"Yes",
+                    "button2":"Cancel"
+                },
+                "validate":{
+                    "text":"Please verify. A required field is missing information",
+                    "button1":"OK"
+                }
+            },
+            "emailBody" : {
+                "title": "User Deactivated",
+                "paragraph":"Hi",
+                "html": "You account has been deactivated. We are sorry to see you go!  <br><br> Thanks, <br> The Barrel Fuel Team"
+              },
+              "notifyMessage":{
+                "msg1": "Your email has been changed from ",
+                "msg2": "Your level of access has been changed from ",
+                "msg3": "Your role has been changed from ",
+                "msg4": "Your location has been changed from ",
+                "msg5": " to "
+            }
+        
+        }
+    ]
+}

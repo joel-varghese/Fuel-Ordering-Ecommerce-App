@@ -1,0 +1,92 @@
+{
+    "component": "accountHome",
+    "id":"1",
+    "user": {
+        "name": "selectUser",
+        "id": "1.1",
+        "component": "select",
+        "type":"select",
+        "initialValue":"internal",
+        "styles": {
+            "colWidth": "2",
+            "className": ""
+        },
+        "placeholder":"Select User",
+        "options":[
+            {
+                "value":"operator",
+                "title":"Operator"
+            }
+        ]
+    },
+    "userTypes":{
+        "name": "accounttabs",
+        "id": "1.2",
+        "internal":{
+            "name":"internal",
+            "tabs":[
+                
+                {
+                    "name": "user",
+                    "title": "User"
+                }
+                
+            ]
+        },
+        "fbo": {
+            "name":"FBO",
+            "tabs":[
+                {
+                    "name": "company",
+                    "title": "Company",
+                    "mobileHeader": "Company"
+                },
+                {
+                    "name": "user",
+                    "title": "User",
+                    "mobileHeader": "User"
+                },
+                {
+                    "name": "location",
+                    "title": "Location",
+                    "mobileHeader": "Location"
+                },
+                {
+                    "name": "payment-method",
+                    "title": "Payment Method",
+                    "mobileHeader": "Payment Method"
+                },
+                {
+                    "name": "banking-details",
+                    "title": "Billing Details",
+                    "mobileHeader": "Billing Details"
+                },
+                {
+                    "name": "documents",
+                    "title": "Documents",
+                    "mobileHeader": "Documents"
+                }
+            ]
+        },
+        "operator":{
+            "name":"operator",
+
+            "tabs":[
+                {
+                    "name": "company",
+                    "title": "Company",
+                    "mobileHeader": "Company"
+                }
+            ]
+        }
+        
+    },
+    "search":{
+        "name": "searchbar",
+        "id": "1.3",
+        "component": "searchbar",
+        "type":"text",
+        "placeholder": "Company Name"
+    }
+
+}

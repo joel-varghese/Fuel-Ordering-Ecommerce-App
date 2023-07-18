@@ -1,0 +1,1624 @@
+{
+    "fboEnrollData": {
+        "headline": {
+            "type": "text",
+            "label": "FBO Sign Up Form"
+        },
+        "sections": [
+            {
+                "adminDetailsSection": [
+                    {
+                        "fields": [
+                            {
+                                "component": "input",
+                                "type": "text",
+                                "name": "firstName",
+                                "maxLength": "35",
+                                "label": "First Name",
+                                "placeholder": "First Name",
+                                "isRequired": true,
+                                "disable": false,
+                                "defaultValue": "",
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+                                "validations": [
+                                    {
+                                        "type": "IsMandatory",
+                                        "errorMessage": ""
+                                    }
+                                ]
+                            },
+                            {
+                                "component": "input",
+                                "type": "text",
+                                "label": "Middle Name",
+                                "disable": false,
+                                "placeholder": "Middle Name",
+                                "defaultValue": "",
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+                                "maxLength": "25",
+                                "name": "middleName"
+                            },
+                            {
+                                "component": "input",
+                                "type": "text",
+                                "name": "lastName",
+                                "maxLength": "35",
+                                "label": "Last Name",
+                                "disable": false,
+                                "placeholder": "Last Name",
+                                "isRequired": true,
+                                "defaultValue": "",
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+                                "validations": [
+                                    {
+                                        "type": "IsMandatory",
+                                        "errorMessage": ""
+                                    }
+                                ]
+                            },
+                            {
+                                "component": "input",
+                                "type": "text",
+                                "name": "emailId",
+                                "maxLength": "50",
+                                "label": "Email Address",
+                                "disable": false,
+                                "placeholder": "Email Address",
+                                "isRequired": true,
+                                "defaultValue": "",
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+                                "validations": [
+                                    {
+                                        "type": "IsMandatory",
+                                        "errorMessage": ""
+                                    },
+                                    {
+                                        "type": "IsEmail",
+                                        "validateRule": "^(([^<>()[\\]\\.,;:\\s@\"]+(\\.[^<>()[\\]\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$",
+                                        "errorMessage": "Oops! Invalid E-mail"
+                                    }
+                                ]
+                            },
+                            {
+                                "component": "input",
+                                "type": "text",
+                                "name": "mobileNumber",
+                                "minlength": 10,
+                                "maxLength": "14",
+                                "label": "Mobile Number",
+                                "disable": false,
+                                "placeholder": "Mobile Number",
+                                "isRequired": true,
+                                "defaultValue": "",
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+                                "validations": [
+                                    {
+                                        "type": "IsMandatory",
+                                        "errorMessage": ""
+                                    },
+                                    {
+                                        "type": "CheckUSPhone",
+                                        "errorMessage": "Enter a valid Mobile Number"
+                                    }
+                                ]
+                            },
+                            {
+                                "component": "select",
+                                "type": "select",
+                                "dynamicSelect": true,
+                                "lookupReference": {
+                                    "name": "roles"
+                                },
+                                "name": "role",
+                                "label": "Role",
+                                "placeholder": "Role",
+								 "dependentField": "userType",
+                                "dependentFieldVal": "FBO",
+                                "isRequired": true,
+                                "defaultValue": "",
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+                                "validations": [
+                                    {
+                                        "type": "IsMandatory",
+                                        "errorMessage": ""
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "companyDetailsSection": [
+                    {
+                        "fields": [
+                            {
+                                "component": "AsyncTypeCompany",
+                                "type": "text",
+                                "name": "companyName",
+                                "maxLength": "100",
+                                "label": "Name",
+                                "disable": false,
+                                "placeholder": "Company Name",
+                                "isRequired": true,
+                                "defaultValue": "",
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+                                "validations": [
+                                    {
+                                        "type": "IsMandatory",
+                                        "errorMessage": ""
+                                    },
+                                    {
+                                       "type":"onlyspecial",
+                                       "validateRule":"[a-zA-Z0-9]+",
+                                       "errorMessage":"Invalid Data"
+                                    },
+                                    {
+                                       "type":"onlydigit",
+                                       "validateRule":"[a-zA-Z\\.?!#@_=$:]+",
+                                       "errorMessage":"Invalid Data"
+                                    }
+                                ]
+                            },
+                            {
+                                "component": "input",
+                                "type": "text",
+                                "name": "primaryLocation",
+                                "label": "Primary Location",
+                                "maxLength": "100",
+                                "disable": false,
+                                "placeholder": "Company Primary Location",
+                                "isRequired": true,
+                                "validations": [
+                                    {
+                                        "type": "IsMandatory",
+                                        "errorMessage": ""
+                                    }
+                                ],
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "input",
+                                "type": "text",
+                                "name": "companyNumber",
+                                "minlength": 10,
+                                "maxLength": "14",
+                                "label": "Phone Number",
+                                "disable": false,
+                                "placeholder": "Company Number",
+                                "isRequired": true,
+                                "defaultValue": "",
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+                                "validations": [
+                                    {
+                                        "type": "IsMandatory",
+                                        "errorMessage": ""
+                                    },
+                                    {
+                                        "type": "CheckUSPhone",
+                                        "errorMessage": "Enter a valid Mobile Number"
+                                    }
+                                ]
+                            },
+                            {
+                                "component": "AsyncTypeahead",
+                                "type": "text",
+                                "name": "addressLine1",
+                                "maxLength": "50",
+                                "label": "Mailing Address Line 1",
+                                "disable": false,
+                                "placeholder": "Company Mailing Address Line 1",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+                                "validations": [
+                                    {
+                                        "type": "IsMandatory",
+                                        "errorMessage": ""
+                                    },
+                                    {
+                                       "type":"onlyspecial",
+                                       "validateRule":"[a-zA-Z0-9]+",
+                                       "errorMessage":"Invalid Data"
+                                    },
+                                    {
+                                       "type":"onlydigit",
+                                       "validateRule":"[a-zA-Z\\.?!#@_=$:]+",
+                                       "errorMessage":"Invalid Data"
+                                    }
+                                ]
+                            },
+                            {
+                                "component": "input",
+                                "type": "text",
+                                "name": "addressLine2",
+                                "maxLength": "50",
+                                "label": "Mailing Address Line 2",
+                                "disable": false,
+                                "placeholder": "Company Mailing Address Line 2",
+                                "isRequired": false,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+                                "validations": [
+                                    {
+                                        "type": "IsMandatory",
+                                        "errorMessage": ""
+                                    },
+                                    {
+                                       "type":"onlyspecial",
+                                       "validateRule":"[a-zA-Z0-9]+",
+                                       "errorMessage":"Invalid Data"
+                                    },
+                                    {
+                                       "type":"onlydigit",
+                                       "validateRule":"[a-zA-Z\\.?!#@_=$:]+",
+                                       "errorMessage":"Invalid Data"
+                                    }
+                                ]
+                            },
+                            {
+                                "component": "input",
+                                "type": "text",
+                                "name": "city",
+                                "label": "City",
+                                "maxLength": "30",
+                                "disable": false,
+                                "placeholder": "Company City",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+                                "validations": [
+                                    {
+                                        "type": "IsMandatory",
+                                        "errorMessage": ""
+                                    },
+                                    {
+                                       "type":"CheckRegex",
+                                       "validateRule":"^\\d*[a-zA-Z][a-zA-Z\\d ]*$",
+                                       "errorMessage":"Invalid Data"
+                                    }
+                                ]
+                            },
+                            {
+                            "component": "select",
+                            "type":"select",
+                            "callback":false,
+                            "dynamicSelect": false,
+                            "name":"stateName",
+                            "id": "companyState",
+                            "label":"State",
+                            "placeholder": "Company State",
+                            "isRequired": true,
+                            "defaultValue":"",
+                            "styles": {
+                                "colWidth": "4",
+                                "className": ""
+                            },
+                            "validations":[
+                                {
+                                    "type":"IsMandatory",
+                                    "errorMessage":""
+                                }
+                            ],
+                            "options":[
+                                {
+                                    "title": "Alabama",
+                                    "value": "AL"
+                                },
+                                {
+                                    "title": "Alaska",
+                                    "value": "AK"
+                                },
+                                {
+                                    "title": "American Samoa",
+                                    "value": "AS"
+                                },
+                                {
+                                    "title": "Arizona",
+                                    "value": "AZ"
+                                },
+                                {
+                                    "title": "Arkansas",
+                                    "value": "AR"
+                                },
+                                {
+                                    "title": "California",
+                                    "value": "CA"
+                                },
+                                {
+                                    "title": "Colorado",
+                                    "value": "CO"
+                                },
+                                {
+                                    "title": "Connecticut",
+                                    "value": "CT"
+                                },
+                                {
+                                    "title": "Delaware",
+                                    "value": "DE"
+                                },
+                                {
+                                    "title": "District Of Columbia",
+                                    "value": "DC"
+                                },
+                                {
+                                    "title": "Federated States Of Micronesia",
+                                    "value": "FM"
+                                },
+                                {
+                                    "title": "Florida",
+                                    "value": "FL"
+                                },
+                                {
+                                    "title": "Georgia",
+                                    "value": "GA"
+                                },
+                                {
+                                    "title": "Guam",
+                                    "value": "GU"
+                                },
+                                {
+                                    "title": "Hawaii",
+                                    "value": "HI"
+                                },
+                                {
+                                    "title": "Idaho",
+                                    "value": "ID"
+                                },
+                                {
+                                    "title": "Illinois",
+                                    "value": "IL"
+                                },
+                                {
+                                    "title": "Indiana",
+                                    "value": "IN"
+                                },
+                                {
+                                    "title": "Iowa",
+                                    "value": "IA"
+                                },
+                                {
+                                    "title": "Kansas",
+                                    "value": "KS"
+                                },
+                                {
+                                    "title": "Kentucky",
+                                    "value": "KY"
+                                },
+                                {
+                                    "title": "Louisiana",
+                                    "value": "LA"
+                                },
+                                {
+                                    "title": "Maine",
+                                    "value": "ME"
+                                },
+                                {
+                                    "title": "Marshall Islands",
+                                    "value": "MH"
+                                },
+                                {
+                                    "title": "Maryland",
+                                    "value": "MD"
+                                },
+                                {
+                                    "title": "Massachusetts",
+                                    "value": "MA"
+                                },
+                                {
+                                    "title": "Michigan",
+                                    "value": "MI"
+                                },
+                                {
+                                    "title": "Minnesota",
+                                    "value": "MN"
+                                },
+                                {
+                                    "title": "Mississippi",
+                                    "value": "MS"
+                                },
+                                {
+                                    "title": "Missouri",
+                                    "value": "MO"
+                                },
+                                {
+                                    "title": "Montana",
+                                    "value": "MT"
+                                },
+                                {
+                                    "title": "Nebraska",
+                                    "value": "NE"
+                                },
+                                {
+                                    "title": "Nevada",
+                                    "value": "NV"
+                                },
+                                {
+                                    "title": "New Hampshire",
+                                    "value": "NH"
+                                },
+                                {
+                                    "title": "New Jersey",
+                                    "value": "NJ"
+                                },
+                                {
+                                    "title": "New Mexico",
+                                    "value": "NM"
+                                },
+                                {
+                                    "title": "New York",
+                                    "value": "NY"
+                                },
+                                {
+                                    "title": "North Carolina",
+                                    "value": "NC"
+                                },
+                                {
+                                    "title": "North Dakota",
+                                    "value": "ND"
+                                },
+                                {
+                                    "title": "Northern Mariana Islands",
+                                    "value": "MP"
+                                },
+                                {
+                                    "title": "Ohio",
+                                    "value": "OH"
+                                },
+                                {
+                                    "title": "Oklahoma",
+                                    "value": "OK"
+                                },
+                                {
+                                    "title": "Oregon",
+                                    "value": "OR"
+                                },
+                                {
+                                    "title": "Palau",
+                                    "value": "PW"
+                                },
+                                {
+                                    "title": "Pennsylvania",
+                                    "value": "PA"
+                                },
+                                {
+                                    "title": "Puerto Rico",
+                                    "value": "PR"
+                                },
+                                {
+                                    "title": "Rhode Island",
+                                    "value": "RI"
+                                },
+                                {
+                                    "title": "South Carolina",
+                                    "value": "SC"
+                                },
+                                {
+                                    "title": "South Dakota",
+                                    "value": "SD"
+                                },
+                                {
+                                    "title": "Tennessee",
+                                    "value": "TN"
+                                },
+                                {
+                                    "title": "Texas",
+                                    "value": "TX"
+                                },
+                                {
+                                    "title": "Utah",
+                                    "value": "UT"
+                                },
+                                {
+                                    "title": "Vermont",
+                                    "value": "VT"
+                                },
+                                {
+                                    "title": "Virgin Islands",
+                                    "value": "VI"
+                                },
+                                {
+                                    "title": "Virginia",
+                                    "value": "VA"
+                                },
+                                {
+                                    "title": "Washington",
+                                    "value": "WA"
+                                },
+                                {
+                                    "title": "West Virginia",
+                                    "value": "WV"
+                                },
+                                {
+                                    "title": "Wisconsin",
+                                    "value": "WI"
+                                },
+                                {
+                                    "title": "Wyoming",
+                                    "value": "WY"
+                                }
+                            ]                     
+                        },	
+                            {
+                                "component": "input",
+                                "type": "text",
+                                "name": "zip",
+                                "label": "Zip Code",
+                                "dataType":"numeric",
+                                "disable": false,
+                                "maxLength": "10",
+                                "placeholder": "Company Zip",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+                                "validations": [
+                                    {
+                                        "type": "IsMandatory",
+                                        "errorMessage": ""
+                                    },
+                                    {
+                                        "type": "CheckZIP",
+                                        "validateRule": "^\\d{5}(?:[-]\\d{4})?$",
+                                        "errorMessage": "Enter a valid Zip"
+                                    }
+                                ]
+                            },
+                            {
+                                "component": "select",
+                                "type":"select",
+                                "callback":false,
+                                "dynamicSelect": true,
+                                "lookupReference": {
+                                    "name": "country"
+                                },
+                                "name":"countryName",
+                                "id": "companyCountry",
+                                "label":"Country",
+                                "placeholder": "Company Country",
+                                "isRequired": true,
+                                "defaultValue":"",
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+                                "validations":[
+                                    {
+                                        "type":"IsMandatory",
+                                        "errorMessage":""
+                                    }
+                                ]                      
+                            },	
+                            {
+                                "component": "input",
+                                "type": "text",
+                                "name": "EIN",
+                                "label": "EIN",
+                                "maxLength": "11",
+                                "disable": false,
+                                "placeholder": "Company EIN",
+                                "isRequired": false,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+                                "validations": [
+                                    {
+                                        "type": "CheckEIN",
+                                        "errorMessage": "Enter a valid EIN"
+                                    }
+                                ]
+                            },
+                            {
+                                "component": "input",
+                                "type": "text",
+                                "name": "fedralTaxExemptId",
+                                "label": "Federal Tax Exempt ID",
+                                "maxLength": "11",
+                                "disable": false,
+                                "placeholder": "Federal Tax Exempt ID",
+                                "isRequired": false,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+                                "validations": [
+                                    {
+                                        "type": "CheckEIN",
+                                        "errorMessage": "Enter a valid ID"
+                                    }
+                                ]
+                            },
+                            {
+                                "component": "input",
+                                "type": "text",
+                                "name": "vatExemptId",
+                                "maxLength": "20",
+                                "label": "VAT Exempt ID",
+                                "disable": false,
+                                "placeholder": "VAT Exempt ID",
+                                "isRequired": false,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+                                "validations": [
+                                    {
+                                       "type":"CheckRegex",
+                                       "validateRule":"^\\d*[a-zA-Z][a-zA-Z\\d ]*$",
+                                       "errorMessage":"Invalid Data"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "airportLocationSection": [
+                    {
+                        "fields": [
+                            {
+                                "component": "input",
+                                "type": "text",
+                                "name": "airportIdentificationNumber",
+                                "maxLength": "4",
+                                "label": "Airport ID",
+                                "disable": false,
+                                "placeholder": "Airport ID",
+                                "isRequired": true,
+                                "defaultValue": "",
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+                                "validations": [
+                                    {
+                                        "type": "IsMandatory",
+                                        "errorMessage": ""
+                                    },
+                                    {
+                                        "type": "duplicateICAO",
+                                        "errorMessage": ""
+                                    }
+                                ]
+                            },
+                            {
+                                "component": "input",
+                                "type": "text",
+                                "name": "airportName",
+                                "maxLength": "100",
+                                "label": "Airport Name",
+                                "disable": false,
+                                "placeholder": "Airport Name",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+                                "validations": [
+                                    {
+                                        "type": "IsMandatory",
+                                        "errorMessage": ""
+                                    }
+                                ]
+                            },
+                            {
+                                "component": "multiSelectCheckbox",
+                                "type":"multiSelectCheckbox",
+                                "callback":false,
+                                "name":"fuelServiceOffered",
+                                "label":"Fuel Service Offered",
+                                "disable": false,
+                                "placeholder": "Fuel Type",
+                                "lookupReference": {
+                                    "name": "fuelServices"
+                                },
+                                "isRequired": true,
+                                "dynamicSelect": true,
+                                "options":[
+                                    {
+                                        "value":"Jet Fuel",
+                                        "label":"Jet Fuel"
+                                    },
+                                    {
+                                        "value":"AV Gas",
+                                        "label":"AV Gas"
+                                    },
+                                    {
+                                        "value":"Sustainable Aviation",
+                                        "label":"Sustainable Aviation"
+                                    },
+                                    {
+                                        "value":"Fuel (SAF)",
+                                        "label":"Fuel (SAF)"
+                                    }
+                                    
+                                ],
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": "bf-text-left"
+                                },
+                                "validations":[
+                                    {
+                                        "type":"IsMandatory",
+                                        "errorMessage":""
+                                    }
+                                ]
+                            },
+                            {
+                                "component": "input",
+                                "type": "text",
+                                "name": "locationAdr1",
+                                "label": "Address Line 1",
+                                "maxLength": "50",
+                                "disable": false,
+                                "placeholder": "Airport Address Line 1",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+                                "validations": [
+                                    {
+                                        "type": "IsMandatory",
+                                        "errorMessage": ""
+                                    },
+                                    {
+                                       "type":"onlyspecial",
+                                       "validateRule":"[a-zA-Z0-9]+",
+                                       "errorMessage":"Invalid Data"
+                                    },
+                                    {
+                                       "type":"onlydigit",
+                                       "validateRule":"[a-zA-Z\\.?!#@_=$:]+",
+                                       "errorMessage":"Invalid Data"
+                                    }
+                                ]
+                            },
+                            {
+                                "component": "input",
+                                "type": "text",
+                                "name": "locationAdr2",
+                                "label": "Address Line 2",
+                                "maxLength": "50",
+                                "disable": false,
+                                "placeholder": "Airport Address Line 2",
+                                "isRequired": false,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+                                "validations": [
+                                    {
+                                       "type":"onlyspecial",
+                                       "validateRule":"[a-zA-Z0-9]+",
+                                       "errorMessage":"Invalid Data"
+                                    },
+                                    {
+                                       "type":"onlydigit",
+                                       "validateRule":"[a-zA-Z\\.?!#@_=$:]+",
+                                       "errorMessage":"Invalid Data"
+                                    }
+                                ]
+                            },
+                            {
+                                "component": "input",
+                                "type": "text",
+                                "name": "locationCity",
+                                "maxLength": "30",
+                                "label": "City",
+                                "disable": false,
+                                "placeholder": "Airport City",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+                                "validations": [
+                                    {
+                                        "type": "IsMandatory",
+                                        "errorMessage": ""
+                                    },
+                                    {
+                                       "type":"CheckRegex",
+                                       "validateRule":"^\\d*[a-zA-Z][a-zA-Z\\d ]*$",
+                                       "errorMessage":"Invalid Data"
+                                    }
+                                ]
+                            },
+                            {
+                                "component": "select",
+                                "type":"select",
+                                "callback":false,
+                                "dynamicSelect": false,
+                                "id": "locationState",
+                                "name":"locationState",
+                                "label":"State",
+                                "placeholder": "Airport State",
+                                "isRequired": true,
+                                "defaultValue":"",
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+                                "validations":[
+                                    {
+                                        "type":"IsMandatory",
+                                        "errorMessage":""
+                                    }
+                                ],
+                                "options":[
+                                    {
+                                        "title": "Alabama",
+                                        "value": "AL"
+                                    },
+                                    {
+                                        "title": "Alaska",
+                                        "value": "AK"
+                                    },
+                                    {
+                                        "title": "Arizona",
+                                        "value": "AZ"
+                                    },
+                                    {
+                                        "title": "Arkansas",
+                                        "value": "AR"
+                                    },
+                                    {
+                                        "title": "California",
+                                        "value": "CA"
+                                    },
+                                    {
+                                        "title": "Colorado",
+                                        "value": "CO"
+                                    },
+                                    {
+                                        "title": "Connecticut",
+                                        "value": "CT"
+                                    },
+                                    {
+                                        "title": "Delaware",
+                                        "value": "DE"
+                                    },
+                                    {
+                                        "title": "District Of Columbia",
+                                        "value": "DC"
+                                    },
+                                    {
+                                        "title": "Florida",
+                                        "value": "FL"
+                                    },
+                                    {
+                                        "title": "Georgia",
+                                        "value": "GA"
+                                    },
+                                    {
+                                        "title": "Hawaii",
+                                        "value": "HI"
+                                    },
+                                    {
+                                        "title": "Idaho",
+                                        "value": "ID"
+                                    },
+                                    {
+                                        "title": "Illinois",
+                                        "value": "IL"
+                                    },
+                                    {
+                                        "title": "Indiana",
+                                        "value": "IN"
+                                    },
+                                    {
+                                        "title": "Iowa",
+                                        "value": "IA"
+                                    },
+                                    {
+                                        "title": "Kansas",
+                                        "value": "KS"
+                                    },
+                                    {
+                                        "title": "Kentucky",
+                                        "value": "KY"
+                                    },
+                                    {
+                                        "title": "Louisiana",
+                                        "value": "LA"
+                                    },
+                                    {
+                                        "title": "Maine",
+                                        "value": "ME"
+                                    },
+                                    {
+                                        "title": "Maryland",
+                                        "value": "MD"
+                                    },
+                                    {
+                                        "title": "Massachusetts",
+                                        "value": "MA"
+                                    },
+                                    {
+                                        "title": "Michigan",
+                                        "value": "MI"
+                                    },
+                                    {
+                                        "title": "Minnesota",
+                                        "value": "MN"
+                                    },
+                                    {
+                                        "title": "Mississippi",
+                                        "value": "MS"
+                                    },
+                                    {
+                                        "title": "Missouri",
+                                        "value": "MO"
+                                    },
+                                    {
+                                        "title": "Montana",
+                                        "value": "MT"
+                                    },
+                                    {
+                                        "title": "Nebraska",
+                                        "value": "NE"
+                                    },
+                                    {
+                                        "title": "Nevada",
+                                        "value": "NV"
+                                    },
+                                    {
+                                        "title": "New Hampshire",
+                                        "value": "NH"
+                                    },
+                                    {
+                                        "title": "New Jersey",
+                                        "value": "NJ"
+                                    },
+                                    {
+                                        "title": "New Mexico",
+                                        "value": "NM"
+                                    },
+                                    {
+                                        "title": "New York",
+                                        "value": "NY"
+                                    },
+                                    {
+                                        "title": "North Carolina",
+                                        "value": "NC"
+                                    },
+                                    {
+                                        "title": "North Dakota",
+                                        "value": "ND"
+                                    },
+                                    {
+                                        "title": "Ohio",
+                                        "value": "OH"
+                                    },
+                                    {
+                                        "title": "Oklahoma",
+                                        "value": "OK"
+                                    },
+                                    {
+                                        "title": "Oregon",
+                                        "value": "OR"
+                                    },
+                                    {
+                                        "title": "Pennsylvania",
+                                        "value": "PA"
+                                    },
+                                    {
+                                        "title": "Rhode Island",
+                                        "value": "RI"
+                                    },
+                                    {
+                                        "title": "South Carolina",
+                                        "value": "SC"
+                                    },
+                                    {
+                                        "title": "South Dakota",
+                                        "value": "SD"
+                                    },
+                                    {
+                                        "title": "Tennessee",
+                                        "value": "TN"
+                                    },
+                                    {
+                                        "title": "Texas",
+                                        "value": "TX"
+                                    },
+                                    {
+                                        "title": "Utah",
+                                        "value": "UT"
+                                    },
+                                    {
+                                        "title": "Vermont",
+                                        "value": "VT"
+                                    },
+                                    {
+                                        "title": "Virginia",
+                                        "value": "VA"
+                                    },
+                                    {
+                                        "title": "Washington",
+                                        "value": "WA"
+                                    },
+                                    {
+                                        "title": "West Virginia",
+                                        "value": "WV"
+                                    },
+                                    {
+                                        "title": "Wisconsin",
+                                        "value": "WI"
+                                    },
+                                    {
+                                        "title": "Wyoming",
+                                        "value": "WY"
+                                    }
+                                ]                    
+                            },	
+                            {
+                                "component": "input",
+                                "type": "text",
+                                "name": "locationZip",
+                                "dataType":"numeric",
+                                "label": "Zip Code",
+                                "disable": false,
+                                "maxLength": "10",
+                                "placeholder": "Airport Zip",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+                                "validations": [
+                                    {
+                                        "type": "IsMandatory",
+                                        "errorMessage": ""
+                                    },
+                                    {
+                                        "type": "CheckZIP",
+                                        "validateRule": "^\\d{5}(?:[-]\\d{4})?$",
+                                        "errorMessage": "Enter a valid Zip"
+                                    }
+                                ]
+                            },
+                            {
+                                "component": "select",
+                                "type":"select",
+                                "callback":false,
+                                "dynamicSelect": true,
+                                "lookupReference": {
+                                    "name": "country"
+                                },
+                                "name":"locationCountry",
+                                "id": "locationCountry",
+                                "label":"Country",
+                                "placeholder": "Airport Country",
+                                "isRequired": true,
+                                "defaultValue":"",
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+                                "validations":[
+                                    {
+                                        "type":"IsMandatory",
+                                        "errorMessage":""
+                                    }
+                                ]                      
+                            },	
+                            {
+                                "component": "button",
+                                "type": "button",
+                                "label": "Add New",
+                                "name": "airportAddNew",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "3",
+                                    "className": "add-more"
+                                }
+                            },
+                            {
+                                "component": "button",
+                                "type": "button",
+                                "label": "Remove",
+                                "name": "airportRemove",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "3",
+                                    "className": "remove"
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "bankInformationSection": [
+                    {
+                        "fields": [
+                            {
+                                "component": "input",
+                                "type": "text",
+                                "name": "accountHolderName",
+                                "maxLength": "100",
+                                "label": "Account Holder",
+                                "disable": false,
+                                "placeholder": "Account Holder Name",
+                                "isRequired": false,
+                                "defaultValue": "",
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "input",
+                                "type": "text",
+                                "name": "bankName",
+                                "label": "Bank Name",
+                                "maxLength": "100",
+                                "disable": false,
+                                "placeholder": "Bank Name",
+                                "isRequired": false,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "select",
+                                "type": "select",
+                                "dynamicSelect": true,
+                                "lookupReference": {
+                                    "name": "accountType"
+                                },
+                                "name": "accountType",
+                                "label": "Account Type",
+                                "placeholder": "Account Type",
+                                "isRequired": false,
+                                "defaultValue": "",
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "input",
+                                "type": "text",
+                                "name": "accountNumber",
+                                "dataType":"numeric",
+                                "maxLength": "20",
+                                "label": "Account Number",
+                                "disable": false,
+                                "placeholder": "Account Number",
+                                "isRequired": false,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "input",
+                                "type": "text",
+                                "name": "routingNo",
+                                "maxLength": "20",
+                                "label": "Routing Number",
+                                "disable": false,
+                                "placeholder": "Routing Number",
+                                "isRequired": false,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "button",
+                                "type": "button",
+                                "label": "Add New",
+                                "name": "bankAddNew",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "3",
+                                    "className": "add-more"
+                                }
+                            },
+                            {
+                                "component": "button",
+                                "type": "button",
+                                "label": "Remove",
+                                "name": "bankRemove",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "3",
+                                    "className": "remove"
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "fboMemberShipSection": [
+                    {
+                        "fields": [
+                            {
+                                "component": "Checkbox",
+                                "type": "radio",
+                                "id": "premiumId",
+                                "label": "Premium",
+                                "name": "fboMemberShip",
+                                "value": "check",
+                                "ischeck":true,
+                                "isRequired": false,
+                                "styles": {
+                                    "colWidth": "3",
+                                    "className": "bf-checkbox bf-mrgl30"
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "paymentSection": [
+                    {
+                        "fields": [
+                            {
+                                "component": "select",
+                                "type": "select",
+                                "dynamicSelect": true,
+                                "lookupReference": {
+                                    "name": "paymentModes"
+                                },
+                                "name": "paymentMode",
+                                "label": "Payment Mode",
+                                "placeholder": "Credit/Debit Card",
+                                "isRequired": false,
+                                "defaultValue": "",
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "input",
+                                "type": "input",
+                                "name": "nickName",
+                                "label": "Nick Name",
+                                "placeholder": "Nick Name(optional)",
+                                "isRequired": false,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "input",
+                                "type": "text",
+                                "name": "cardHolderName",
+                                "maxLength": "35",
+                                "label": "Card Holder",
+                                "placeholder": "Card Holder Name",
+                                "disable": false,
+                                "isRequired": false,
+                                "defaultValue": "",
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "input",
+                                "type": "text",
+                                "label": "Credit/Debit Card Number",
+                                "name": "cardNumber",
+                                "placeholder": "Credit/Debit Card Number",
+                                "isRequired": false,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "select",
+                                "type": "select",
+                                "dynamicSelect": false,
+                                "lookupReference": {
+                                    "name": "month"
+                                },
+                                "name": "MM",
+                                "label": "Expiration Date",
+                                "placeholder": "MM",
+                                "isRequired": false,
+                                "defaultValue": "01",
+                                "styles": {
+                                    "colWidth": "2",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "select",
+                                "type": "select",
+                                "dynamicSelect": false,
+                                "lookupReference": {
+                                    "name": "year"
+                                },
+                                "label": "Expiration Date",
+                                "name": "YYYY",
+                                "placeholder": "YYYY",
+                                "isRequired": false,
+                                "defaultValue": "2000",
+                                "styles": {
+                                    "colWidth": "2",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "input",
+                                "type": "text",
+                                "label": "Security Code",
+                                "name": "securityCode",
+                                "placeholder": "Code",
+                                "isRequired": false,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "checkbox",
+                                "type": "checkbox",
+                                "label": "Same as Company Address",
+                                "name": "sameAsCompanyAdderss",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "12",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "input",
+                                "type": "text",
+                                "label": "Address Line 1",
+                                "placeholder": "Billing Address Line 1",
+                                "name": "paymentAdr1",
+                                "isRequired": false,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "input",
+                                "type": "text",
+                                "label": "Address Line 2",
+                                "placeholder": "Billing Address Line 2",
+                                "name": "paymentAdr2",
+                                "isRequired": false,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "input",
+                                "type": "text",
+                                "label": "City",
+                                "placeholder": "City",
+                                "name": "paymentCity",
+                                "isRequired": false,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "input",
+                                "type": "text",
+                                "label": "State",
+                                "placeholder": "State",
+                                "name": "paymentState",
+                                "isRequired": false,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "input",
+                                "type": "text",
+                                "label": "Zip Code",
+                                "dataType":"numeric",
+                                "maxLength": "10",
+                                "placeholder": "Zip",
+                                "name": "paymentZip",
+                                "isRequired": false,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+                                "validations": [
+                                    {
+                                        "type": "CheckZIP",
+                                        "validateRule": "^\\d{5}(?:[-]\\d{4})?$",
+                                        "errorMessage": "Enter a valid Zip"
+                                    }
+                                ]
+                            },
+                            {
+                                "component": "input",
+                                "type": "text",
+                                "label": "Country",
+                                "placeholder": "Country",
+                                "name": "paymentCountry",
+                                "isRequired": false,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "button",
+                                "type": "button",
+                                "label": "Add New",
+                                "name": "paymentAddNew",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "3",
+                                    "className": "add-more"
+                                }
+                            },
+                            {
+                                "component": "button",
+                                "type": "button",
+                                "label": "Remove",
+                                "name": "paymentRemove",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "3",
+                                    "className": "remove"
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "primaryButton": [
+                    {
+                        "component": "button",
+                        "type": "button",
+                        "label": "Create User",
+                        "variant": "primary",
+                        "isRequired": true,
+                        "styles": {
+                            "colWidth": "",
+                            "className": "bf-btn-login bf-btn-left bf-btn-left0i bf-btn-imp"
+                        }
+                    },
+                    {
+                        "component": "button",
+                        "type": "button",
+                        "label": "Clear",
+                        "name": "clear",
+                        "variant": "primary",
+                        "isRequired": true,
+                        "styles": {
+                            "colWidth": "",
+                            "className": "bf-btn-clear bf-btn-left bf-btn-imp"
+                        }
+                    },
+                    {
+                        "component": "button",
+                        "type": "button",
+                        "label": "Save",
+                        "name": "save",
+                        "variant": "primary",
+                        "isRequired": true,
+                        "shouldNotRender":true,
+                        "styles": {
+                            "colWidth": "",
+                            "className": "bf-btn-login bf-btn-left bf-btn-imp"
+                        }
+                    }
+                ]
+            }
+        ],
+        "aviationFacts" : {
+            "aviationHeader" : "Did you know?",
+            "aviationFactsList": [
+              {
+                "fact":"The Lockheed SR-71 Blackbird flew from L.A. to Washington D.C. in just 64 minutes, setting a world record"
+              },
+              {
+                "fact":"Charles Lindbergh was the first pilot to solo a nonstop transatlantic flight"
+              },
+              {
+                "fact":"Some large private jets have a maximum range of nearly 8,000 nautical miles"
+              }
+            ]
+          },
+        "modal": [
+            {
+                "submitModal": {
+                    "title": "",
+                    "paragraph": "Success! An activation link has been emailed",
+                    "primaryButton": {
+                        "id": "17678",
+                        "href": "#",
+                        "name": "okButton",
+                        "text": "OK",
+                        "target": "_self"
+                    }
+                },
+                "errorModal": {
+                    "title": "",
+                    "paragraph": "Oops! This E-mail already exists",
+                    "primaryButton": {
+                        "id": "17680",
+                        "href": "#",
+                        "name": "okButton",
+                        "text": "OK",
+                        "target": "_self"
+                    }
+                },
+                "errorModal2": {
+                    "title": "",
+                    "paragraph": "Oops! This Company already exists",
+                    "primaryButton": {
+                        "id": "17681",
+                        "href": "#",
+                        "name": "okButton",
+                        "text": "OK",
+                        "target": "_self"
+                    }
+                },
+                "validateModal": {
+                    "title": "",
+                    "paragraph": "Please verify. A required field is missing information",
+                    "primaryButton": {
+                        "id": "17682",
+                        "href": "#",
+                        "name": "okButton",
+                        "text": "OK",
+                        "target": "_self"
+                    }
+                },
+                "duplicateModal": {
+                    "title": "",
+                    "paragraph": "Duplicate ICAO is found"
+                }
+            }
+            
+        ],
+        "emailBody": {
+            "title": "FBO Registeration Verification Email",
+            "fromEmailId":"vijay.krishnan@barrelfuel.com",
+            "paragraph": "Hello",
+            "redirectURI": "set-password?",
+            "html":"<br><br>We're happy you signed up! To start exploring the Barrel Fuel experience, please click the activate link below. <br> : <br><br>Welcome, from the Barrel Fuel team!<br><br>"
+        }
+    }
+}

@@ -1,0 +1,228 @@
+{
+    "multiLegSummaryData": [
+        {
+            "component": "multiLegSummary",
+            "id": "1",  
+            "headCells": [
+                {
+                    "id": "legID",
+                    "numeric": false,
+                    "disablePadding": true,
+                    "sortable": false,
+                    "label": "Leg"
+                },
+                {
+                    "id": "orderNumber",
+                    "numeric": false,
+                    "disablePadding": true,
+                    "sortable": false,
+                    "label": "Order ID"
+                },
+                {
+                    "id": "fuelingDate",
+                    "numeric": false,
+                    "disablePadding": false,
+                    "sortable": false,
+                    "label": "Fueling Date"
+                },
+                {
+                    "id": "ICAO",
+                    "numeric": false,
+                    "disablePadding": false,
+                    "sortable": false,
+                    "label": "Location"
+                },
+                {
+                    "id": "FBO",
+                    "numeric": false,
+                    "disablePadding": false,
+                    "sortable": false,
+                    "label": "Fixed Base Operator"
+                },
+                {
+                    "id": "gallons",
+                    "numeric": false,
+                    "disablePadding": false,
+                    "sortable": false,
+                    "label": "Gallons"
+                },
+                {
+                    "id": "finalPrice",
+                    "numeric": false,
+                    "disablePadding": false,
+                    "sortable": false,
+                    "label": "Value"
+                },
+                {
+                    "id": "order",
+                    "numeric": false,
+                    "disablePadding": false,
+                    "sortable": false,
+                    "label": "Status"
+                }
+            ],
+            "mobileHeadCells": [
+                {
+                    "id": "legID",
+                    "numeric": false,
+                    "disablePadding": true,
+                    "sortable": false,
+                    "label": "Leg"
+                },
+                {
+                    "id": "ICAO",
+                    "numeric": false,
+                    "disablePadding": false,
+                    "sortable": false,
+                    "label": "Location"
+                },
+                {
+                    "id": "order",
+                    "numeric": false,
+                    "disablePadding": false,
+                    "sortable": false,
+                    "label": "Status"
+                }
+            ],
+            "mobileAccordionLabels":[
+                {
+                    "id": "OrderNumber",
+                    "label": "Order ID"
+                },
+                {
+                    "id": "FuellingDate",
+                    "label": "Fueling Date"
+                },
+                {
+                    "id": "ICAO",
+                    "label": "Location"
+                },
+                {
+                    "id": "FBO",
+                    "label": "Fixed Base Operator"
+                },
+                {
+                    "id": "FuelQuantity",
+                    "label": "Gallons"
+                },
+                {
+                    "id": "FinalPrice",
+                    "label": "Value"
+                },
+                {
+                    "id": "OrderStatus",
+                    "label": "Status"
+                },
+                {
+                    "id": "paymentInfoRequest",
+                    "label": "Payment Method"
+                },
+                {
+                    "id": "FuelType",
+                    "label": "Flight Type"
+                },
+                {
+                    "id": "ArrivingFrom",
+                    "label": "Arriving From"
+                },
+                {
+                    "id": "Fuelupon",
+                    "label": "Fuel Upon"
+                },
+                {
+                    "id": "FuelType",
+                    "label": "Fuel Type"
+                },
+                {
+                    "id": "Services",
+                    "label": "Additional Services"
+                }
+            ],
+            "accordionData":{
+                "tableContent":[
+                    {
+                        "name":"paymentMethod",
+                        "key":"cardInfo",
+                        "label":"Payment Method"
+                    },
+                    {
+                        "name":"flightType",
+                        "key":"FlightType",
+                        "label":"Flight Type"
+                    },
+                    {
+                        "name":"arrivingFrom",
+                        "key":"ArrivingFrom",
+                        "label":"Arriving From"
+                    },
+                    {
+                        "name":"Fuelupon",
+                        "key":"Fuelupon",
+                        "label":"Fuel Upon"
+                    },
+                    {
+                        "name":"fuelType",
+                        "key":"FuelType",
+                        "label":"Fuel Type"
+                    }
+                ],
+                "boxContent":[
+                    {
+                        "name":"services",
+                        "nameKey":"Services",
+                        "key":"ServiceName",
+                        "label":"Additional Services"
+                    }
+                ]
+            },
+            "Buttons": [
+                {
+                    "Label": "Edit",
+                    "method": "onEditClick",
+                    "className": "btn btn-bf-primary"
+                },
+                {
+                    "Label": "Delete",
+                    "method": "onDeactivateClick",
+                    "className": "btn-bf-secondary bf-mrgl20"
+                }
+            ],
+            "addLegButton":[
+                {
+                    "Label": "Add Leg",
+                    "name":"addLeg",
+                    "method": "onEditClick",
+                    "className": "btn btn-bf-primary"
+                }
+            ],
+            "legButtons":[
+                {
+                    "Label": "Place Order",
+                    "name":"placeOrder",
+                    "method": "onEditClick",
+                    "className": "btn btn-bf-primary"
+                },
+                {
+                    "Label": "Cancel",
+                    "name":"cancel",
+                    "method": "onDeactivateClick",
+                    "className": "btn-bf-secondary bf-mrgl20"
+                }
+            ],
+            "modal": {
+                "deactivate": {
+                    "text": "Wait! Are you sure you want to delete Leg",
+                    "button1": "Yes",
+                    "button2": "Cancel"
+                },
+                "validate": {
+                    "text": "Please verify. A required field is missing information",
+                    "button1": "OK"
+                },
+                "fatNumber":{
+                    "text":"Wait! Please verify your selections before submitting."
+                }
+            }
+        }
+    ]
+}

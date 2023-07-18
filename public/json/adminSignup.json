@@ -1,0 +1,268 @@
+[
+  {
+    "pageName": "Add New Users",
+    "sections": [
+      {
+        "name": "adminSignup",
+        "header": "User Details",
+        "fieldsArray": [
+          {
+            "id":"1",
+            "fields":[
+              {
+                "component": "input",
+                "type": "text",
+                "label": "First Name",
+                "placeholder": "First Name",
+                "isRequired": true,
+                "styles": {
+                  "colWidth": "4",
+                  "className": ""
+                },
+                "maxLength": "35",
+                "name": "firstName",
+                "validations": [
+                  {
+                    "validation": "IsMandatory",
+                    "errorMessage": ""
+                  }
+                ]
+              },
+              {
+                "component": "input",
+                "type": "text",
+                "label": "Middle Name",
+                "placeholder": "Middle Name",
+                "styles": {
+                  "colWidth": "4",
+                  "className": ""
+                },
+                "maxLength": "25",
+                "name": "middleName"
+              },
+              {
+                "component": "input",
+                "type": "text",
+                "label": "Last Name",
+                "placeholder": "Last Name",
+                "isRequired": true,
+                "styles": {
+                  "colWidth": "4",
+                  "className": ""
+                },
+                "maxLength": "35",
+                "name": "lastName",
+                "validations": [
+                  {
+                    "validation": "IsMandatory",
+                    "errorMessage": ""
+                  }
+                ]
+              },
+              {
+                "component": "input",
+                "type": "email",
+                "label": "Email Address",
+                "placeholder": "Email Address",
+                "isRequired": true,
+                "styles": {
+                  "colWidth": "4",
+                  "className": ""
+                },
+                "maxLength": "50",
+                "name": "emailId",
+                "validations": [
+                  {
+                    "validation": "IsMandatory",
+                    "errorMessage": ""
+                  },
+                  {
+                    "validation": "IsDuplicated",
+                    "errorMessage": ""
+                  },
+                  {
+                    "validation": "CheckRegex",
+                    "validateRule": "^(([^<>()[\\]\\.,;:\\s@\"]+(\\.[^<>()[\\]\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$",
+                    "errorMessage": "Oops! Invalid E-mail"
+                  },
+                  {
+                    "validation": "CheckBFDomain",
+                    "errorMessage": "Email should contain @barrelfuel"
+                  }
+                ]
+              },
+              {
+                "component": "input",
+                "type": "text",
+                "label": "Mobile Number",
+                "placeholder": "Mobile Number",
+                "maxLength": "14",
+                "minLength": "14",
+                "name": "mobileNumber",
+                "isRequired": true,
+                "styles": {
+                  "colWidth": "4",
+                  "className": ""
+                },
+                "validations": [
+                  {
+                    "validation": "IsMandatory",
+                    "errorMessage": ""
+                  },
+                  {
+                    "validation": "CheckUSPhone",
+                    "errorMessage": "Enter a valid Mobile Number"
+                  }
+                ]
+              },
+              {
+                "component": "select",
+                "dynamicSelect": true,
+                "lookupReference": {
+                  "name": "accessLevels"
+                },
+                "tooltip": {
+                  "text": "Administrator - Administrator rights to Add/View/Edit FBO/Operator/ Internal Company details, Fuel Pricing, Taxes and Fees, and Users.<br>Basic - All Admin rights except adding New Internal Users."
+                },
+                "isAdmin": true,
+                "isRequired": true,
+                "type": "select",
+                "name": "accessLevel",
+                "label": "Level of Access",
+                "placeholder": "Level",
+                "accessLevel": true,
+                "styles": {
+                  "colWidth": "4",
+                  "className": ""
+                },
+                "validations": [
+                  {
+                    "validation": "IsMandatory",
+                    "errorMessage": ""
+                  }
+                ]
+              },
+              {
+              "component": "button",
+              "type": "button",
+              "label": "Add New",
+              "variant": "primary",
+              "name": "addNew",
+              "isRequired": true,
+              "styles": {
+                "colWidth": "2",
+                "className": "add-more"
+              }
+              },
+              {
+                "component": "button",
+                "type": "button",
+                "label": "Remove",
+                "variant": "primary",
+                "name": "remove",
+                "isRequired": true,
+                "styles": {
+                  "colWidth": "2",
+                  "className": "remove"
+                }
+              }
+            ]
+          }
+        ],
+        "aviationFacts" : {
+          "aviationHeader" : "Did you know?",
+          "aviationFactsList": [
+            {
+              "fact":"Roughly 40% of private jets in the sky fly without passengers"
+            },
+            {
+              "fact":"The first private jet charter flight was in 1963"
+            },
+            {
+              "fact":"One of the most popular events for private jet travel in the U.S. is the Super Bowl"
+            }
+          ]
+        },
+        "buttons": [
+          {
+            "component": "button",
+	          "type": "button",
+            "label": "Create User",
+            "name": "createUser",
+            "variant": "primary",
+            "styles": {
+              "colWidth": "",
+              "className": "bf-btn-login bf-btn-left bf-btn-left0i bf-btn-imp"
+            }
+          },
+          {
+            "component": "button",
+	          "type": "button",
+            "label": "Cancel",
+            "name": "clear",
+            "variant": "primary",
+            "styles": {
+              "colWidth": "",
+              "className": "bf-btn-login bf-btn-left bf-btn-imp"
+            }
+          }
+        ],
+        "modal": [
+          {
+            "duplicateModal": {
+              "title": "",
+              "paragraph": "Oops! Duplicate Entries Found. Please Check The Highlighted Fields.",
+              "primaryButton": {
+                  "id": "17678",
+                  "href": "#",
+                  "name": "okButton",
+                  "text": "OK",
+                  "target": "_self"
+              }
+          },
+            "successModal": {
+                        "title": "",
+                        "paragraph": "Success! User created. Activation link will be emailed",
+                        "primaryButton": {
+                            "id": "17678",
+                            "href": "#",
+                            "name": "okButton",
+                            "text": "OK",
+                            "target": "_self"
+                        }
+                    },
+            "failModal": {
+                        "title": "",
+                        "paragraph": "Oops! This E-mail Already Exists",
+                        "primaryButton": {
+                            "id": "17678",
+                            "href": "#",
+                            "name": "okButton",
+                            "text": "OK",
+                            "target": "_self"
+                        }
+                    },
+            "mandatoryModal": {
+                        "title": "",
+                        "paragraph": "Please verify. A required Field Is Missing Information",
+                        "primaryButton": {
+                            "id": "17678",
+                            "href": "#",
+                            "name": "okButton",
+                            "text": "OK",
+                            "target": "_self"
+                        }
+                    }
+          }
+        ],
+        "emailBody": {
+            "title": "Admin Signup Verification Email",
+            "fromEmailId":"vijay.krishnan@barrelfuel.com",
+            "redirectURI": "set-password?",
+            "paragraph": "Hello",
+            "html":"<br><br>We're happy you signed up! To start exploring the Barrel Fuel experience, please click the activate link below. <br> : <br><br>Welcome, from the Barrel Fuel team!<br><br>"
+        }
+      }
+    ]
+  }
+]

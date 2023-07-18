@@ -1,0 +1,525 @@
+{
+    "feeData": [
+        {
+            "component": "fee",
+            "id": "1",
+            "headCells": [
+                {
+                    "id": "location",
+                    "numeric": false,
+                    "disablePadding": true,
+                    "sortable": true,
+                    "label": "Location"
+                },
+                {
+                    "id": "name",
+                    "numeric": false,
+                    "disablePadding": false,
+                    "sortable": true,
+                    "label": "Name"
+                },
+                {
+                    "id": "status",
+                    "numeric": false,
+                    "disablePadding": false,
+                    "sortable": true,
+                    "label": "Status"
+                },
+                {
+                    "id": "addedBy",
+                    "numeric": false,
+                    "disablePadding": false,
+                    "sortable": true,
+                    "label": "Added By"
+                },
+                {
+                    "id": "criteria",
+                    "numeric": false,
+                    "disablePadding": false,
+                    "sortable": true,
+                    "label": "Criteria (gal)"
+                },
+                {
+                    "id": "amount",
+                    "numeric": false,
+                    "disablePadding": false,
+                    "sortable": true,
+                    "label": "Amount"
+                },
+                {
+                    "id": "Actions",
+                    "label": " "
+                }
+            ],
+            "Buttons": [
+                {
+                    "Label": "Edit",
+                    "method": "onEditClick",
+                    "className": "btn btn-bf-primary"
+                },
+                {
+                    "Label": "Delete",
+                    "method": "onDeactivateClick",
+                    "className": "btn-bf-secondary bf-mrgl20"
+                }
+            ],
+            "addNewBanking": {
+                "component": "button",
+                "type": "button",
+                "label": "Add New Fee",
+                "variant": "primary",
+                "name": "addNew",
+                "isRequired": true,
+                "styles": {
+                    "colWidth": "bf-add-right-top",
+                    "className": "add-more bf-width-auto"
+                }
+            },
+            "feesFields" :{
+                "fields" :[
+                    {
+                        "component": "header",
+                        "dynamicValue":["Fixed","Date Range","Tiered","S"],
+                        "type": "subheading",
+                        "label": "Edit Fee",
+                        "labelAdd": "Add New Fee",
+                        "isVisible": true
+                    },
+                    {
+                        "component": "id",
+                        "dateRange":false,
+                        "dynamicValue":["Fixed","Date Range","Tiered","S"],
+                        "name": "feeid",
+                        "isVisible": true
+                    },
+                    {
+                        "component": "input",
+                        "type":"text",
+                        "callback":false,
+                        "dynamicValue":["Fixed","Date Range","Tiered","S"],
+                        "name":"feeName",
+                        "label":"Fee Name",
+                        "disable": false,
+                        "placeholder": "Fee Name",
+                        "isRequired": true,
+                        "isVisible": true,
+                        "maxLength": "30",
+                        "styles": {
+                            "colWidth": "4",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "validation":"IsMandatory",
+                                "errorMessage":""
+                            },
+                            {
+                                "validation":"CheckRegex",
+                                "validateRule":"^\\d*[a-zA-Z][a-zA-Z\\d ]*$",
+                                "errorMessage":"Invalid Data"
+                             }
+                        ]
+                    },
+                    {
+                        "component": "multiSelectCheckbox",
+                        "type":"multiSelectCheckbox",
+                        "dynamicValue":["Fixed","Date Range","Tiered", "S"],
+                        "callback":false,
+                        "name": "locations",
+                        "id": "1.4",
+                        "group": "details",
+                        "dynamicSelect": true,
+                        "isRequired": true,
+                        "dependentField": "organizationName",
+                        "lookupReference": {
+                          "name": "location"
+                        },
+                        "label": "Location(s)",
+                        "placeholder": "Location",
+                        "isVisible": true,
+                        "styles": {
+                          "colWidth": "4",
+                          "className": "bf-text-left"
+                        },
+                        "validations": [
+                          {
+                            "validation": "IsMandatory",
+                            "errorMessage": ""
+                          }
+                        ]
+                    },
+                    {
+                        "component": "select",
+                        "type":"selecet",
+                        "dynamicValue":["Fixed","Date Range","Tiered","S"],
+                        "callback":false,
+                        "name":"pricingType",
+                        "label":"Pricing Type",
+                        "disable": false,
+                        "placeholder": "Select Pricing Type",
+                        "isRequired": true,
+                        "isVisible": true,
+                        "options":[
+                            {
+                                "value":"Fixed",
+                                "title":"Fixed"
+                            },
+                            {
+                                "value":"Tiered",
+                                "title":"Tierd"
+                            },
+                            {
+                                "value":"Date Range",
+                                "title":"Date Range"
+                            }
+                            
+                        ],
+                        "styles": {
+                            "colWidth": "4",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "validation":"IsMandatory",
+                                "errorMessage":""
+                            }
+                        ]
+                    },
+                    {   
+                        "dynamicValue":["Date Range"],
+                        "component": "date",
+                        "type":"date",
+                        "callback":false,
+                        "name":"startDate",
+                        "label":"Start Date",
+                        "user": ["fbo","internal"],
+                        "disable": false,
+                        "placeholder": "DD/MM/YYY",
+                        "isRequired": true,
+                        "isVisible": true,
+                        "styles": {
+                            "colWidth": "4",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "validation":"IsMandatory",
+                                "errorMessage":""
+                            },
+                            {
+                                "validation": "date",
+                                "errorMessage": "Oops! Valid Date Cannot Be Less Than The Current Date"
+                            },
+                            {
+                                "validation": "invalidDate",
+                                "errorMessage":"Invalid Date"
+                            }
+                        ]
+                    },
+                    {
+                        "dynamicValue":["Date Range"],
+                        "component": "date",
+                        "type":"date",
+                        "callback":false,
+                        "name":"endDate",
+                        "label":"Expire Date",
+                        "user": ["fbo","internal"],
+                        "disable": false,
+                        "placeholder": "DD/MM/YYY",
+                        "isRequired": true,
+                        "isVisible": true,
+                        "styles": {
+                            "colWidth": "4",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "validation":"IsMandatory",
+                                "errorMessage":""
+                            },
+                            {
+                                "validation": "date",
+                                "errorMessage": "Oops! Valid Date Cannot Be Less Than The Current Date"
+                            },
+                            {
+                                "validation": "invalidDate",
+                                "errorMessage":"Invalid Date"
+                            }
+                        ]
+                    },
+                    {
+                        "component": "input",
+                        "dynamicValue":["Fixed","Date Range"],
+                        "type":"text",
+                        "callback":false,
+                        "name":"amount",
+                        "label":"Amount",
+                        "disable": false,
+                        "isVisible": true,
+                        "placeholder": "Value",
+                        "isRequired": true,
+                        "styles": {
+                            "colWidth": "2",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "validation":"IsMandatory",
+                                "errorMessage":""
+                            }
+                        ]
+                    },
+                    {
+                        "component": "select",
+                        "dynamicValue":["Fixed","Date Range","Tiered"],
+                        "type":"selecet",
+                        "callback":false,
+                        "name":"unit",
+                        "maxLength":"5",
+                        "label":"Unit",
+                        "disable": false,
+                        "isVisible": true,
+                        "placeholder": "Value unit",
+                        "isRequired": false,
+                        "defaultValue":"$",
+                        "options":[
+                            {
+                                "value":"$",
+                                "title":"$"
+                            },
+                            {
+                                "value":"%",
+                                "title":"%"
+                            }
+                            
+                        ],
+                        "styles": {
+                            "colWidth": "2",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "validation":"IsMandatory",
+                                "errorMessage":""
+                            }
+                        ]
+                    },
+                    {
+                        "component": "header",
+                        "type": "subheading",
+                        "dynamicValue":["Tiered"],
+                        "label": "Fee Amount By Tiers",
+                        "labelAdd": "Fee Amount By Tiers",
+                        "isVisible": true
+                    },
+                    {
+                        "component": "input",
+                        "dynamicValue":["Tiered"],
+                        "type":"text",
+                        "callback":false,
+                        "name":"Tier 1",
+                        "update":"Tier 1",
+                        "isVisible": true,
+                        "label":"Tier 1 <br/> -",
+                        "disable": true,
+                        "placeholder": "-",
+                        "isRequired": false,
+                        "styles": {
+                            "colWidth": "2 bf-md-fee-tiers bf-tier-label-disable",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "validation":"IsMandatory",
+                                "errorMessage":""
+                            }
+                        ]
+                    },
+                    
+                    {
+                        "component": "input",
+                        "type":"text",
+                        "dynamicValue":["Tiered"],
+                        "callback":false,
+                        "name":"Tier 2",
+                        "update":"Tier 2",
+                        "isVisible": true,
+                        "label":"Tier 2 <br/> -",
+                        "disable": true,
+                        "placeholder": "-",
+                        "isRequired": false,
+                        "styles": {
+                            "colWidth": "2 bf-md-fee-tiers bf-tier-label-disable",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "validation":"IsMandatory",
+                                "errorMessage":""
+                            }
+                        ]
+                    },
+                    
+                    {
+                        "component": "input",
+                        "type":"text",
+                        "dynamicValue":["Tiered"],
+                        "callback":false,
+                        "name":"Tier 3",
+                        "update":"Tier 3",
+                        "isVisible": true,
+                        "label":"Tier 3 <br/> -",
+                        "disable": true,
+                        "placeholder": "-",
+                        "isRequired": false,
+                        "styles": {
+                            "colWidth": "2 bf-md-fee-tiers bf-tier-label-disable",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "validation":"IsMandatory",
+                                "errorMessage":""
+                            }
+                        ]
+                    },
+                    
+                    {
+                        "component": "input",
+                        "type":"text",
+                        "dynamicValue":["Tiered"],
+                        "callback":false,
+                        "name":"Tier 4",
+                        "update":"Tier 4",
+                        "isVisible": true,
+                        "label":"Tier 4 <br/> -",
+                        "disable": true,
+                        "placeholder": "-",
+                        "isRequired": false,
+                        "styles": {
+                            "colWidth": "2 bf-md-fee-tiers bf-tier-label-disable",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "validation":"IsMandatory",
+                                "errorMessage":""
+                            }
+                        ]
+                    },
+                    
+                    {
+                        "component": "input",
+                        "type":"text",
+                        "dynamicValue":["Tiered"],
+                        "callback":false,
+                        "name":"Tier 5",
+                        "update":"Tier 5",
+                        "isVisible": true,
+                        "label":"Tier 5 <br/> -",
+                        "disable": true,
+                        "placeholder": "-",
+                        "isRequired": false,
+                        "styles": {
+                            "colWidth": "2 bf-md-fee-tiers bf-tier-label-disable",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "validation":"IsMandatory",
+                                "errorMessage":""
+                            }
+                        ]
+                    },
+                    
+                    {
+                        "component": "input",
+                        "type":"text",
+                        "dynamicValue":["Tiered"],
+                        "callback":false,
+                        "name":"Tier 6",
+                        "update":"Tier 6",
+                        "isVisible": true,
+                        "label":"Tier 6 <br/> -",
+                        "disable": true,
+                        "placeholder": "-",
+                        "isRequired": false,
+                        "styles": {
+                            "colWidth": "2 bf-md-fee-tiers bf-tier-label-disable",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "validation":"IsMandatory",
+                                "errorMessage":""
+                            }
+                        ]
+                    },
+                    
+                    {
+                        "component": "input",
+                        "type":"text",
+                        "dynamicValue":["Tiered"],
+                        "callback":false,
+                        "name":"Tier 7",
+                        "update":"Tier 7",
+                        "isVisible": true,
+                        "label":"Tier 7 <br /> -",
+                        "disable": true,
+                        "placeholder": "-",
+                        "isRequired": false,
+                        "styles": {
+                            "colWidth": "2 bf-md-fee-tiers bf-tier-label-disable",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "validation":"IsMandatory",
+                                "errorMessage":""
+                            }
+                        ]
+                    },
+                    {
+                        "component": "button",
+                        "type":"button",
+                        "label":"Submit",
+                        "dynamicValue":["Fixed","Date Range","Tiered", "S"],
+                        "name":"submitform",
+                        "disabled":false,
+                        "isVisible": true,
+                        "variant":"primary",
+                        "call":"onClickSubmit",
+                        "isRequired": true,
+                        "styles": {
+                            "colWidth": "4",
+                            "className": "bf-btn-login bf-btn-imp"
+                        }
+                    }
+            ]
+            },
+            
+            "modal": {
+                "deactivate": {
+                    "text": "Wait! Are you sure you want to delete this information?",
+                    "button1": "Yes",
+                    "button2": "Cancel"
+                },
+                "validate": {
+                    "text": "Please verify. A required field is missing information",
+                    "button1": "OK"
+                },
+                "fatNumber":{
+                    "text":"Wait! Please verify your selections before submitting."
+                }
+            },
+            "notifyMessage":{
+                "msg1": "A new Fee",
+                "msg2": " has been added at ",
+                "msg3": "An Existing Fee ",
+                "msg4": " has been Updated at ",
+                "msg6": " Has Been Deleted at ",
+                "msg5": " by "
+            }
+        }
+    ]
+}

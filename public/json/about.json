@@ -1,0 +1,136 @@
+{
+    "aboutData":
+        {
+            "landingScreen":[
+                {
+                    "type": "image",
+                    "url": "./images/marketing/about_banner.png",
+                    "text": "About Barrel Fuel Technologies",
+                    "imageDetails": { 
+                        "url": "images/about_banner.png",
+                        "name": "about-banner"
+                    }
+                },
+                {
+                    "type" : "button",
+                    "itemLabel":"Sign Up",
+                    "url": "./signup"
+                }
+            ],
+            "aboutDetails": [
+                {
+                    "type": "heading",
+                    "text": "Our core values define the company we strive to be"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Barrel Fuel’s objective is to address the convoluted fueling process in the private aviation industry. We operate the honest and transparent way by eliminating layers of complexity from the process. Our new and innovate technology will connect our customer together worldwide. Our purpose guides us and that’s why our founders mission is to deliver an unmatched and simplified user experience. <br />Fuel should be simple."
+                }
+            ],
+            "videoSection":[
+                {
+                    "type": "video",
+                    "url": "./videos/about_video.webm",
+                    "imageDetails": { 
+                        "url": "images/about_video",
+                        "name": "about-video"
+                    }
+                }
+            ],
+            "missionVision": [
+                {
+                    "type": "heading",
+                    "text": "Mission & Vision"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Our mission is to deliver an automated and simplified technology experience that will fairly fuel the aviation industry. This technology will revolutionize how fuel is purchased in the private aviation industry."
+                }
+            ],
+            "moreDetails":{
+                "features":[
+                    {
+                        "image":"./images/marketing/about_more1.png",
+                        "heading": "Innovate",
+                        "information": "We understand the power of collaboration. Together we can raise expectation without overcomplication.",
+                        "type": "image",
+                        "imageDetails": { 
+                            "url": "images/about_more1.png",
+                            "name": "about-more1"
+                        }
+                    },
+                    {
+                        "image":"./images/marketing/about_more2.png",
+                        "heading": "Inspire",
+                        "information": "We are best when we work as a team. We continue to adapt and evolve to better serve our customers.",
+                        "type": "image",
+                        "imageDetails": { 
+                            "url": "images/about_more2.png",
+                            "name": "about-more2"
+                        }
+                    },
+                    {
+                        "image":"./images/marketing/about_more3.png",
+                        "heading": "Ignite",
+                        "information": "We are committed to making a difference everyday for our customers and our communities. A mission with momentum is unstoppable.",
+                        "type": "image",
+                        "imageDetails": { 
+                            "url": "images/about_more3.png",
+                            "name": "about-more3"
+                        }
+                    }
+                ]
+            },
+            "footer" : {
+                "logo" : "./images/marketing/bf-footer-logo.svg",
+                "links": [
+                    {
+                        "text": "Contact Us",
+                        "url": ""
+                    },
+                    {
+                        "text": "Request a Demo",
+                        "url": ""
+                    },
+                    {
+                        "text": "Careers",
+                        "url": ""
+                    },
+                    {
+                        "text": "Terms of Use",
+                        "url": ""
+                    },
+                    {
+                        "text": "Cookies",
+                        "url": ""
+                    },
+                    {
+                        "text": "Privacy",
+                        "url": "About"
+                    },
+                    {
+                        "text": "",
+                        "url": ""
+                    }
+                ],
+                "social":[
+                    {
+                        "logo": "./images/marketing/fb_logo.svg",
+                        "url": "www.facebook.com"
+                    },
+                    {
+                        "logo": "./images/marketing/insta_logo.svg",
+                        "url": "www.instagram.com"
+                    },
+                    {
+                        "logo": "./images/marketing/linkidin_logo.svg",
+                        "url": "www.linkidin.com"
+                    },
+                    {
+                        "logo": "./images/marketing/twitter_logo.svg",
+                        "url": "www.twitter.com"
+                    }
+                ]
+            }
+        }
+}

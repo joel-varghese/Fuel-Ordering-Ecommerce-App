@@ -1,0 +1,74 @@
+{
+    "headers": {
+        "menutabs": [
+          {
+            "id": "tab2",
+            "type": "link",
+            "label": "Feature",
+            "path": "/users",
+            "style": "nav-link"
+          },
+          {
+            "id": "tab4",
+            "type": "link",
+            "label": "About",
+            "path": "/users",
+            "style": "nav-link"
+          },
+          {
+            "id": "tab3",
+            "type": "link",
+            "label": "Contact",
+            "path": "/posts",
+            "style": "nav-link"
+          }],
+          "buttonTabs":[
+          {
+            "id": "tab3",
+            "type": "link",
+            "label": "Login",
+            "path": "login",
+            "style": "nav-link"
+          },
+          {
+            "id": "tab3",
+            "type": "link",
+            "label": "Sign Up",
+            "path": "signup",
+            "style": "nav-link"
+          }
+        ],
+        "logosection": {"logoURL":"https://www.devinfbf.devinfarch.com/images/LogoWithLabel.svg"},
+        "loginsection":[
+
+        ]
+      },
+    "body":
+      {
+      "page":[
+          {
+          "id": "section1",
+          "image01_url": "https://www.devinfbf.devinfarch.com/images/aircraft.png",
+          "text": [
+          {
+              "content": "Test Fuel Process",
+              "style": "content-style"
+          },
+          {
+              "content": "FUEL SHOPPING",
+              "style": "textStyle"
+          },
+          {
+              "content": "An automated and modernized fuel purchasing experience",
+              "style": "textStyle"
+          },
+          {
+              "content": "to transperently and fairly fuel the aviation industry",
+              "style": "textStyle"
+          }
+          ]
+          }
+      ]
+      },
+    "footer": []
+}

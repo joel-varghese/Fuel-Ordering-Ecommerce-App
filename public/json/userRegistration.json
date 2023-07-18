@@ -1,0 +1,257 @@
+{
+    "userRegister":{
+       "config":{
+          "id":"3977",
+          "align":"center",
+          "theme":"theme-background-light",
+          "height":"tall"
+       },
+       "content":{
+          "primaryFields":[
+             {
+                "fieldType":"input",
+                "dataType":"text",
+                "fieldLabel":"First Name",
+                "styles": {
+                   "colWidth": "12",
+                   "className": ""
+               },
+                "validations":[
+                   {
+                      "type":"empty",
+                      "validationRule":"",
+                      "errorMessage":""
+                   },
+                   {
+                      "type":"characterMismatch",
+                      "validationRule":"(?!^ +$)^.+$",
+                      "errorMessage":"Enter valid first name"
+                   }
+                ],
+                "placeHolder":"First Name",
+                "maxLength":"40",
+                "name":"firstName",
+                "isRequired":true,
+                "textAlign":"left",
+                "className":"extra-padding-right"
+             },
+             {
+               "fieldType":"input",
+               "dataType":"text",
+               "fieldLabel":"Middle Name",
+               "styles": {
+                  "colWidth": "12",
+                  "className": ""
+              },
+               "validations":[
+                  {
+                     "type":"characterMismatch",
+                     "validationRule":"(?!^ +$)^.+$",
+                     "errorMessage":"Enter valid first name"
+                  }
+               ],
+               "placeHolder":"Middle Name",
+               "maxLength":"40",
+               "name":"middleName",
+               "isRequired":false,
+               "textAlign":"left",
+               "className":"extra-padding-right"
+            },
+             {
+                "fieldType":"input",
+                "dataType":"text",
+                "fieldLabel":"Last Name",
+                "styles": {
+                   "colWidth": "12",
+                   "className": ""
+               },
+                "validations":[
+                   {
+                      "type":"empty",
+                      "validationRule":"",
+                      "errorMessage":""
+                   },
+                   {
+                      "type":"characterMismatch",
+                      "validationRule":"(?!^ +$)^.+$",
+                      "errorMessage":"Enter valid last name"
+                   }
+                ],
+                "placeHolder":"Last Name",
+                "maxLength":"40",
+                "name":"lastName",
+                "isRequired":true,
+                "textAlign":"left",
+                "className":"extra-padding-left"
+             },
+             {
+                 "fieldType": "input",
+                 "displayType":"input",
+                 "dataType": "text",
+                 "fieldLabel": "Mobile Number",
+                 "styles": {
+                   "colWidth": "12",
+                   "className": ""
+               },
+                 "validations": [								
+                     {
+                         "type": "empty",
+                         "validationRule": "",
+                         "errorMessage": ""
+                     },
+                     {
+                      "type": "CheckUSPhone",
+                      "errorMessage": "Provide a 10 digit mobile number"
+                     }
+                 ],
+                 "placeHolder": "Phone Number",
+                 "textAlign": "left",
+                 "defaultValue": "",
+                 "hint": "",
+                 "name": "mobileNumber",
+                 "isRequired": true,
+                 "prefix": "",
+                 "suffix": "",
+                 "options": [],
+                 "minLength": "",
+                 "maxLength": "14",
+                 "minValue": "",
+                 "maxValue": ""
+             },
+            {
+                "fieldType":"input",
+                "dataType":"password",
+                "fieldLabel":"New Password",
+                "showIcon": true,
+                "styles": {
+                   "colWidth": "12",
+                   "className": ""
+               },
+                "validations":[
+                   {
+                      "type":"empty",
+                      "validationRule":"",
+                      "errorMessage":""
+                   },
+                   {
+                      "type":"length",
+                      "validationRule":"^.{8,20}$",
+                      "errorMessage":""
+                   },
+                   {
+                     "type":"upper",
+                     "validationRule":"(?=.*[A-Z])",
+                     "errorMessage":""
+                  },
+                  {
+                     "type":"digit",
+                     "validationRule":"(?=.*[0-9])",
+                     "errorMessage":""
+                  },
+                  {
+                     "type":"special",
+                     "validationRule":"(?=.*[!@#$%^&])",
+                     "errorMessage":""
+                  }
+                ],
+                "placeHolder":"New Password",
+                "maxLength":"40",
+                "name":"password",
+                "isRequired":true,
+                "textAlign":"left",
+                "className":"extra-padding-left"
+             },
+             {
+               "fieldType":"list",
+               "dataType":"",
+               "fieldLabel":"",
+               "styles": {
+                  "colWidth": "12",
+                  "className": ""
+              },
+              "passwordGuidline" : {
+               "title": "Password Must Contain:",
+               "guidelines": [
+                 "Length-8 Min to 20 Max",
+                 "At least one Uppercase",
+                 "At least one Numeric",
+                 "At least one Special character (!@#$)"
+               ]             
+              },
+               "validations":[
+                  {
+                     "type":"",
+                     "validationRule":"",
+                     "errorMessage":""
+                  }
+               ],
+               "placeHolder":"",
+               "maxLength":"",
+               "name":"guidelines",
+               "isRequired":true,
+               "textAlign":"left",
+               "className":"extra-padding-left"
+            },
+             {
+                "fieldType":"input",
+                "dataType":"password",
+                "fieldLabel":"Confirm Password",
+                "showIcon": true,
+                "styles": {
+                   "colWidth": "12",
+                   "className": ""
+               },
+                "validations":[
+                   {
+                      "type":"empty",
+                      "validationRule":"",
+                      "errorMessage":""
+                   },
+                   {
+                     "type": "passwordMatch",
+                     "errorMessage": "Oops! These passwords don't match"
+                   }
+                ],
+                "placeHolder":"Confirm Password",
+                "maxLength":"40",
+                "name":"confirmPassword",
+                "isRequired":true,
+                "textAlign":"left",
+                "className":"extra-padding-left"
+             },
+             {
+               "fieldType":"button",
+               "displayType":"button",
+               "dataType":"button",
+               "className":"bf-btn-login",
+               "variant":"primary",
+               "type":"button",
+               "href":"",
+               "name":"submitButton",
+               "fieldLabel":"Confirm",
+               "target":""
+            }
+          ],
+          "headers":[
+             {
+                "type":"text",
+                "label":"Registration"
+             }
+          ],
+          "userModal":[
+            {
+               "id":"16931",
+               "title":"",
+               "paragraph":"Account enrolled successfully.Will connect shortly!",
+               "button":"OK"
+            },
+            {
+             "id": "16932",
+             "title": "",
+             "paragraph": "Please verify. A required field is missing information",
+             "button":"OK"
+            }
+         ]
+       }
+    }
+ }

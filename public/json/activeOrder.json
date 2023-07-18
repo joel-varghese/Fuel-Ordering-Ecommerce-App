@@ -1,0 +1,390 @@
+{
+    "active":{
+       "config":{
+          "id":"3977",
+          "align":"center",
+          "theme":"theme-background-light",
+          "height":"tall"
+       },
+       "content":{
+          "headers":{
+            "FboTab":[
+             {
+                "id": "orderid",
+                "label":"Order ID",
+                "sortable": true
+             },
+             {
+                "id": "aircraft",
+                "label":"Aircraft",
+                "sortable": true
+             },
+             {
+              "id": "date",
+              "label":"Fueling Date",
+              "sortable": true
+             },
+             {
+              "id": "location",
+              "label":"Location",
+              "sortable": true
+             },
+             {
+              "id": "operator",
+              "label":"Operator",
+              "sortable": true
+             },
+             {
+              "id": "estfuel",
+              "label":"Est. Fuel Gal",
+              "sortable": true
+             },
+             {
+              "id": "actualfuel",
+              "label":"Actual Fuel Gal"
+             },
+             {
+                "id": "totprice",
+                "label":"Total Price"
+            },
+            {
+                "id": "actions",
+                "label": ""
+            }
+            ],
+            "OperatorTab":[
+                {
+                    "id": "orderid",
+                    "label":"Order ID",
+                    "sortable": true
+                 },
+                 {
+                  "id": "date",
+                  "label":"Fueling Date",
+                  "sortable": true
+                 },
+                 {
+                  "id": "location",
+                  "label":"Location",
+                  "sortable": true
+                 },
+                 {
+                  "id": "fbo",
+                  "label":"FBO",
+                  "sortable": true
+                 },
+                 {
+                    "id": "aircraft",
+                    "label":"Aircraft",
+                    "sortable": true
+                 },
+                 {
+                    "id": "totprice",
+                    "label":"Total Price"
+                },
+                {
+                    "id": "actions",
+                    "label": ""
+                }
+            ],
+            "InternalTab":[
+                {
+                    "id": "orderid",
+                    "label":"Order ID",
+                    "sortable": true
+                 },
+                 {
+                  "id": "date",
+                  "label":"Fueling Date",
+                  "sortable": true
+                 },
+                 {
+                  "id": "location",
+                  "label":"Location",
+                  "sortable": true
+                 },
+                 {
+                    "id": "fbo",
+                    "label":"FBO",
+                    "sortable": true
+                   },
+                 {
+                  "id": "operator",
+                  "label":"Operator",
+                  "sortable": true
+                 },
+                 {
+                    "id": "totprice",
+                    "label":"Total Price"
+                },
+                {
+                    "id": "actions",
+                    "label": ""
+                }
+            ]
+           },
+           "mobileViewHeader":"Order Details",
+           "mobileHeadCells":[
+               {
+                  "id": "orderid",
+                  "label":"Order ID",
+                  "users":["operator","fbo"]
+               },
+               {
+                  "id": "date",
+                  "label":"Fueling Date",
+                  "users":["operator","fbo"]
+               },
+               {
+                  "id": "status",
+                  "label":"Status",
+                  "users":["operator"]
+               },
+               {
+                  "id": "actions",
+                  "label": "",
+                  "users":["operator","fbo"]
+               }
+            ],
+           "cancelEmailBody":{
+            "title": "Order [",
+            "title2":"] Has Been Canceled",
+            "paragraph": "Hi ",
+            "html1": "Your Order [",
+            "html2": "] Has Been Canceled. Please Log-In To Barrel Fuel For Additional Information. <br><br> Thanks, <br> The Barrel Fuel Team"
+           },
+           "declineEmailBody":{
+            "title": "Order [",
+            "title2":"] Has Been Declined",
+            "paragraph": "Hi ",
+            "html1": "Your Order [",
+            "html2": "] Has Been Declined By The Fbo. For Additional Information Please Log-In To Barrel Fuel Platform Or Contact The Fbo Directly.   <br><br> Thanks, <br> The Barrel Fuel Team"
+           },
+           "fuelPricePending":{
+               "text":"*Fuel Price Is Subject To Change Before Departure Date"
+           },
+           "validationCancelMessage":"Oops! Actual Fuel Taken Not Entered",
+           "validationMessage":"Please verify. A required field is missing information",
+           "acceptFields":{
+               "fields":[
+                  {
+                     "component": "modalhead",
+                     "users":["barrel fuel","operator"],
+                     "name":"acceptChange",
+                     "type": "subheading",
+                     "label": "Are You Sure You Want To Accept The Changes?",
+                     "className":"bf-place-order-label",
+                     "styles": {
+                        "colWidth": "4",
+                        "className": "bf-modal-head"
+                     }
+                  },
+                  {
+                     "component": "select",
+                     "name":"requestedBy",
+                     "label":"Requested By",
+                     "disable": false,
+                     "placeholder": "Email Address",
+                     "isRequired": true,
+                     "users":["barrel fuel"],
+                     "styles": {
+                        "colWidth": "12 bf-single-line-element bf-mrgb0 bf-label-absolute",
+                        "className": ""
+                     },
+                     "validations":[
+                        {
+                           "validation":"IsMandatory",
+                           "errorMessage":""
+                        }
+                     ]
+               }
+            ]
+           },
+           "acceptMessage":{
+               "text":"Are You Sure You Want To Accept The Changes?",
+               "button1":"Yes",
+               "button2":"Cancel"
+           },
+           "fields":[
+               {
+                  "component": "paragraph",
+                  "users":["barrel fuel","operator"],
+                  "type": "subheading",
+                  "label": "Reason for Canceling"
+               },
+               {
+                  "component": "select",
+                  "type":"select",
+                  "name": "StatusReason",
+                  "users":["barrel fuel","operator"],
+                  "fieldType":true,
+                  "id": "1.4",
+                  "group": "details",
+                  "dynamicSelect": false,
+                  "isRequired": true,
+                  "label": "Reason",
+                  "placeholder": "Reasons",
+                  "isVisible": true,
+                  "defaultValue":"",
+                  "styles": {
+                  "colWidth": "4",
+                  "className": ""
+                  },
+                  "validations": [
+                  {
+                     "validation": "IsMandatory",
+                     "errorMessage": ""
+                  }
+                  ],
+                  "options":[
+                     {
+                        "value":"Date/Time Change",
+                        "title":"Date/Time Change"
+                     },
+                     {
+                        "value":"Trip Canceled",
+                        "title":"Trip Canceled"
+                     },
+                     {
+                        "value":"Weather Related",
+                        "title":"Weather Related"
+                     },
+                     {
+                        "value":"Mechanical Issue",
+                        "title":"Mechanical Issue"
+                     },
+                     {
+                        "value":"Pricing Too High",
+                        "title":"Pricing Too High"
+                     },
+                     {
+                        "value":"Other",
+                        "title":"Other"
+                     }     
+                  ]
+               },
+               {
+                  "component": "textArea",
+                  "type":"text",
+                  "name": "StatusNotes",
+                  "users":["barrel fuel","operator"],
+                  "maxLength":"500",
+                  "dynamicSelect": false,
+                  "isRequired": false,
+                  "label": "Notes",
+                  "placeholder": "Notes",
+                  "lengthRestriction":true,
+                  "isVisible": true,
+                  "defaultValue":"",
+                  "rows":"4",
+                  "styles": {
+                  "colWidth": "4",
+                  "className": ""
+                  }
+               },
+               {
+                  "component": "select",
+                  "name":"requestedBy",
+                  "label":"Requested By",
+                  "disable": false,
+                  "placeholder": "Email Address",
+                  "isRequired": true,
+                  "users":["barrel fuel"],
+                  "styles": {
+                      "colWidth": "4",
+                      "className": ""
+                  },
+                  "validations":[
+                      {
+                          "validation":"IsMandatory",
+                          "errorMessage":""
+                      }
+                  ]
+              }
+           ],
+           "declineData":[
+            {
+            "errorMessage":"Please verify. A required field is missing information",  
+            "acceptMessage":"Are You Sure You Want To Accept The Changes?",  
+            "fields":[
+                {
+                   "component": "paragraph",
+                   "users":["barrel fuel","fbo","operator"],
+                   "type": "subheading",
+                   "label": "Reason For Declining"
+                },
+                {
+                   "component": "select",
+                   "type":"select",
+                   "name": "StatusReason",
+                   "users":["barrel fuel","fbo","operator"],
+                   "fieldType":true,
+                   "id": "1.4",
+                   "group": "details",
+                   "dynamicSelect": false,
+                   "isRequired": true,
+                   "label": "Reason",
+                   "placeholder": "Reasons",
+                   "isVisible": true,
+                   "defaultValue":"",
+                   "styles": {
+                   "colWidth": "4",
+                   "className": ""
+                   },
+                   "validations": [
+                   {
+                      "validation": "IsMandatory",
+                      "errorMessage": ""
+                   }
+                   ],
+                   "options":[
+                      {
+                         "value":"Date/Time Change",
+                         "title":"Date/Time Change"
+                      },
+                      {
+                         "value":"Other",
+                         "title":"Other"
+                      }     
+                   ]
+                },
+                {
+                   "component": "textArea",
+                   "type":"text",
+                   "name": "StatusNotes",
+                   "users":["barrel fuel","fbo","operator"],
+                   "maxLength":"500",
+                   "dynamicSelect": false,
+                   "isRequired": false,
+                   "label": "Notes",
+                   "placeholder": "Notes",
+                   "lengthRestriction":true,
+                   "isVisible": true,
+                   "defaultValue":"",
+                   "rows":"4",
+                   "styles": {
+                   "colWidth": "4 bf-mrgb-20i",
+                   "className": ""
+                   }
+                }
+            ]
+            }  
+        ]
+       },
+       "emailInvoice":{
+         "title": "Barrel Fuel Order Invoice - ",
+         "paragraph":"Hi ",
+         "html": "Thank You For Fueling With Barrel Fuel! Attached Is Your Invoice For Reference.  <br><br> Thanks, <br> The Barrel Fuel Team"
+       },
+       "notifyMessage":{
+         "msg1": " Has Been Accepted by the Operator",
+         "msg2": "Your Order ",
+         "msg3": " Has Been Successfully Completed. Thank You For Choosing BarrelFuel Service",
+         "msg4": "Hi ",
+         "msg5": ",Order ",
+         "msg6": " Has Been Cancelled",
+         "msg7": " Of Multi Leg Order ",
+         "msg8": " has been Completed "
+     }
+    }
+ }

@@ -1,0 +1,196 @@
+{
+    "accountEnroll":{
+       "config":{
+          "id":"3977",
+          "align":"center",
+          "theme":"theme-background-light",
+          "height":"tall"
+       },
+       "content":{
+          "primaryFields":[
+            {
+                "component": "radio",
+                "fieldType": "radio",
+                "name": "organizationType",
+                "defaultValue": "FBO",
+                "isRequired": true,
+                "styles": {
+                  "colWidth": "3",
+                  "className": ""
+                },
+                "options": [
+                  {
+                    "value": "FBO",
+                    "label": "FBO"
+                  },
+                  {
+                    "value": "Operator",
+                    "label": "Operator"
+                  }
+                ]
+              },
+              {
+                "fieldType": "table",
+                "name": "enrolltable"
+              }
+            ],
+          "userTabs":{
+                "name": "tab",
+                "tabs":[
+                    {
+                        "name": "New",
+                        "title": "New"
+                    },
+                    {
+                        "name": "Pending",
+                        "title": "Pending"
+                    },
+                    {
+                        "name": "Completed",
+                        "title": "Completed"
+                    }
+                ]
+            },
+          "headers":{
+            "NewFBO":[
+             {
+                 "id": "name",
+                "label":"Name",
+                "sortable": true
+             },
+             {
+              "id": "company",
+              "label":"Company Name",
+              "sortable": true
+             },
+             {
+              "id": "mode",
+              "label":"Communication Mode",
+              "sortable": true
+             },
+             {
+              "id": "email",
+              "label":"Email Address",
+              "sortable": true
+             },
+             {
+              "id": "phone",
+              "label":"Phone Number",
+              "sortable": true
+             },
+             {
+              "id": "action",
+              "label":"Action",
+              "sortable": true
+             }
+            ],
+            "NewOperator":[
+              {
+                  "id": "name",
+                 "label":"Name",
+                 "sortable": true
+              },
+              {
+               "id": "company",
+               "label":"Company Name",
+               "sortable": true
+              },
+              {
+                "id": "aircraft",
+                "label":"Aircraft",
+                "sortable": true
+               },
+              {
+               "id": "mode",
+               "label":"Communication Mode",
+               "sortable": true
+              },
+              {
+               "id": "email",
+               "label":"Email Address",
+               "sortable": true
+              },
+              {
+               "id": "phone",
+               "label":"Phone Number",
+               "sortable": true
+              },
+              {
+               "id": "action",
+               "label":"Action",
+               "sortable": true
+              }
+             ],
+            "Pending":[
+              {
+                "id": "name",
+                 "label":"Name",
+                 "sortable": true
+              },
+              {
+                "id": "company",
+               "label":"Company Name",
+               "sortable": true
+              },
+              {
+                "id": "mode",
+               "label":"Communication Mode",
+               "sortable": true
+              },
+              {
+                "id": "email",
+               "label":"Email Address",
+               "sortable": true
+              },
+              {
+                "id": "phone",
+               "label":"Phone Number",
+               "sortable": true
+              },
+              {
+                "id": "assign",
+                "label":"Assign To",
+                "sortable": true
+               },
+              {
+                "id": "fboaction",
+               "label":"Action",
+               "sortable": true
+              }
+             ],
+            "Completed":[
+              {
+                "id": "name",
+                 "label":"Name",
+                 "sortable": true
+              },
+              {
+                "id": "company",
+               "label":"Company Name",
+               "sortable": true
+              },
+              {
+                "id": "mode",
+               "label":"Communication Mode",
+               "sortable": true
+              },
+              {
+                "id": "email",
+               "label":"Email Address",
+               "sortable": true
+              },
+              {
+                "id": "phone",
+               "label":"Phone Number",
+               "sortable": true
+              },
+              {
+                "id": "assign",
+                "label":"Created By",
+                "sortable": true
+               }
+             ]
+           }
+       }
+    }
+ }

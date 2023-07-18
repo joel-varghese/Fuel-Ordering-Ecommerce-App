@@ -1,0 +1,39 @@
+{
+    "documentData":[
+        {
+            "component": "accountDocument",
+            "id":"1",
+            "headCells":[
+            ],
+            "deleteDocument":{
+                "label":"Delete Document(s)"
+            },
+            "addNewDocument" : {
+                "component": "input",
+                "type":"file",
+                "placeholder":"Upload Document",
+                "variant":"primary",
+                "name":"upload",
+                "styles": {
+                    "colWidth": "bf-add-right-top",
+                    "className": "add-more bf-width-auto"
+                }
+            },
+            "modal":{
+                "deactivate":{
+                    "text":"Are you sure you want to delete the document(s)?",
+                    "button1":"Yes",
+                    "button2":"Cancel"
+                },
+                "uploadError":{
+                    "text":"File Size Error > 5MB",
+                    "button1":"OK"
+                },
+                "uploadError2":{
+                    "text":"File format not supported",
+                    "button1":"OK"
+                }
+            }
+        }
+    ]
+}

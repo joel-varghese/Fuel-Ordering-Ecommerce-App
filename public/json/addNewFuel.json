@@ -1,0 +1,514 @@
+{
+    "addNewFuel":[
+    {
+        "pageName":"Add New Users",
+        "sections":{
+            "deactivationLink": "Request Account Deactivation",
+            "subSections":[
+                                
+                {                    
+                    "companyFieldsArray" :[
+                        {
+                            "id":"1",
+                            "fields":[
+                                {
+                                    "component": "paragraph",
+                                    "type":"subheading",
+                                    "label":"Details",
+                                    "isEditable":true
+                                },
+                                {
+                                    "component": "select",
+                                    "type":"select",
+                                    "id":"1.1",
+                                    "name":"name",
+                                    "group":"details",
+                                    "callback":false,
+                                    "label":"Company Name",
+                                    "placeholder": " Company Name",
+                                    "isRequired": true,
+                                    "disabled":false,
+                                    "styles": {
+                                        "colWidth": "3",
+                                        "className": ""
+                                    },
+                                    "validations":[
+                                        {
+                                            "validation":"IsMandatory",
+                                            "errorMessage":""
+                                        }
+                                        
+                                    ]
+                                },  
+                                {
+                                    "callback": false,
+                                    "component": "select",
+                                    "disabled": false,
+                                    "group": "details",
+                                    "id": "1.2",
+                                    "isRequired": true,
+                                    "label": "Primary Location",
+                                    "name": "primaryLocation",
+                                    "placeholder": "Location",
+                                    "maxLength": "50",
+                                    "styles": {
+                                        "className": "",
+                                        "colWidth": "3"
+                                    },
+                                    "type": "select",
+                                    "validations": [
+                                        {
+                                            "errorMessage": "",
+                                            "validation": "IsMandatory"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "callback": false,
+                                    "component": "date",
+                                    "disabled": false,
+                                    "group": "details",
+                                    "id": "1.3",
+                                    "isRequired": true,
+                                    "label": "Valid From",
+                                    "name": "validFrom",
+                                    "placeholder": "DD/MM/YYYY",
+                                    "styles": {
+                                        "className": "",
+                                        "colWidth": "3"
+                                    },
+                                    "type": "text",
+                                    "validations": [
+                                        {
+                                            "errorMessage": "",
+                                            "validation": "IsMandatory"
+                                        },
+                                        {
+                                              "validation": "date",
+                                              "errorMessage": "Oops! Valid From Cannot Be Less Than The Current Date"
+                                        },
+                                        {
+                                            "validation": "dateLessActive",
+                                            "errorMessage": "Oops! Valid From Date Less Than The Present Week Expiry Date"
+                                        },
+                                        {
+                                            "validation": "invalidDate",
+                                            "errorMessage": "Invalid Date"
+                                        }
+                                    ]
+                                }, 
+                                {
+                                    "callback": false,
+                                    "component": "date",
+                                    "disabled": false,
+                                    "group": "details",
+                                    "id": "1.3",
+                                    "isRequired": true,
+                                    "label": "Valid To",
+                                    "name": "validTo",
+                                    "placeholder": "DD/MM/YYYY",
+                                    "styles": {
+                                        "className": "",
+                                        "colWidth": "3"
+                                    },
+                                    "type": "text",
+                                    "validations": [
+                                        {
+                                            "errorMessage": "",
+                                            "validation": "IsMandatory"
+                                        },
+                                        {
+                                            "validation": "date",
+                                            "errorMessage": "Oops! Valid To Date Can Not Be Less Than The Current Date or Valid From Date"
+                                        },
+                                        {
+                                            "validation": "dateGreThirty",
+                                            "errorMessage": "Oops! Valid From Date Cannot Be More Than 30 days From the Current Date or Valid From Date"
+                                        },
+                                        {
+                                            "validation": "invalidDate",
+                                            "errorMessage": "Invalid Date"
+                                        }
+
+                                    ]
+                                },
+                                {
+                                    "component": "paragraph",
+                                    "type":"subheading",
+                                    "label":"Fuel Price*",
+                                    "isEditable":true,
+                                    "isClear":true,
+                                    "labelClearAll":"Clear All",
+                                    "labelRetailPrice":"Set Jet-A Retail Price"
+                                }                                                         
+                                                       
+                            ]
+                        }
+                    ]
+                    
+                },
+                { "fuelPrice":                
+                        
+                            {
+                                "callback": false,
+                                "component": "input",
+                                "disabled": false,
+                                "group": "details",
+                                "id": "1.3",
+                                "isRequired": true,
+                                "label": "",
+                                "name": "",
+                                "placeholder": "",
+                                "styles": {
+                                    "className": "",
+                                    "colWidth": "3"
+                                },
+                                "type": "text",
+                                "validations": [
+                                    {
+                                        "errorMessage": "",
+                                        "validation": "IsMandatory"
+                                    },
+                                    {
+                                        "validation": "checkTwoDigit",
+                                        "validateRule": "",
+                                        "errorMessage": ""
+                                    }
+                                ]
+                            } 
+                            
+                                                      
+                                                   
+                        
+                        
+                    
+                
+
+                },
+                { "finalPrice":                
+                        
+                {
+                    "callback": false,
+                    "component": "input",
+                    "disabled": true,
+                    "group": "details",
+                    "id": "1.3",
+                    "isRequired": false,
+                    "label": "",
+                    "name": "",
+                    "placeholder": "",
+                    "styles": {
+                        "className": "",
+                        "colWidth": "3"
+                    },
+                    "type": "text",
+                    "validations": [
+                        
+                    ]
+                } 
+                
+                                          
+                                       
+            
+            
+        
+    
+
+    },
+    { "reviewFinalPrice":[ 
+    {
+        "component": "paragraph",
+        "type":"subheading",
+        "label":"Verify Fuel Price -",
+        "isEditable":true
+    },                  
+    {"buttons":[{
+        "component": "button",
+        "label": "Confirm",
+        "type":"button",
+        "name": "save",
+        "variant":"primary",
+        "callback":false,
+        "isRequired": true,
+        "disabled":false,
+        "styles": {
+                "colWidth": "50",
+                "className": "bf-btn-left bf-btn-imp"
+        }
+    },
+    {
+        "component": "button",
+        "label": "Modify",
+        "type":"button",
+        "name": "cancel",
+        "callback":false,
+        "variant":"",
+        "isRequired": true,
+        "disabled":false,
+        "styles": {
+                "colWidth": "50",
+                "className": "bf-btn-left bf-btn-clear bf-btn-imp"
+        }
+        }
+
+    ]},
+    {
+        "Lable":"Please Verify Your Final Price."
+    }
+
+                              
+                           
+
+
+
+
+
+            ]},
+    {"buttons":[{
+        "component": "button",
+        "label": "Submit",
+        "type":"button",
+        "name": "save",
+        "variant":"primary",
+        "callback":false,
+        "isRequired": true,
+        "disabled":false,
+        "styles": {
+                "colWidth": "50",
+                "className": "bf-btn-left bf-btn-imp"
+        }
+        },
+        {
+        "component": "button",
+        "label": "Cancel",
+        "type":"button",
+        "name": "cancel",
+        "callback":false,
+        "variant":"",
+        "isRequired": true,
+        "disabled":false,
+        "styles": {
+                "colWidth": "50",
+                "className": "bf-btn-left bf-btn-clear bf-btn-imp"
+        }
+        }
+
+    ]},
+    {"editReview":[
+        {"buttons":[{
+            "component": "button",
+            "label": "Yes",
+            "type":"button",
+            "name": "save",
+            "variant":"primary",
+            "callback":false,
+            "isRequired": true,
+            "disabled":false,
+            "styles": {
+                    "colWidth": "50",
+                    "className": "bf-btn-left bf-btn-imp"
+            }
+        },
+        {
+            "component": "button",
+            "label": "Cancel",
+            "type":"button",
+            "name": "cancel",
+            "callback":false,
+            "variant":"",
+            "isRequired": true,
+            "disabled":false,
+            "styles": {
+                    "colWidth": "50",
+                    "className": "bf-btn-left bf-btn-clear bf-btn-imp"
+            }
+            }
+    
+        ]},
+        {
+            "lable":"Value Entered is Above <Threshold>, Do you want to proceed"
+        } 
+    ]
+
+    }
+                
+                
+            ], 
+            "retailPriceWarningMessage" : {
+                "text":"The Retail Price Formula Will Remain Active Until You Change The Formula Manually"
+            },
+            "retailPriceJson":{
+                "fields":[
+                    {
+                       "component": "header",
+                       "dynamicValue":["cost +","manual","flat"],
+                       "type": "subheading",
+                       "label": "Jet-A Retail Fuel Price"
+                    },
+                    {
+                       "component": "select",
+                       "name":"PriceDriver",
+                       "dynamicValue":["cost +","manual","flat"],
+                       "label":"Price Driver",
+                       "disable": false,
+                       "placeholder": "Price Driver",
+                       "defaultValue":"Cost +",
+                       "isRequired": false,
+                       "users":["barrel fuel"],
+                       "styles": {
+                          "colWidth": "4",
+                          "className": ""
+                       },
+                       "options":[
+                          {
+                             "value":"Cost +",
+                             "title":"Cost +"
+                          },
+                          {
+                             "value":"Manual",
+                             "title":"Manual"
+                          }    
+                       ]
+                    },
+                    {
+                       "component": "select",
+                       "name":"Formula",
+                       "dynamicValue":["cost +"],
+                       "label":"Formula",
+                       "defaultValue":"Final Price(Highest Tier) +",
+                       "disable": false,
+                       "placeholder": "Formula",
+                       "isRequired": false,
+                       "users":["barrel fuel"],
+                       "styles": {
+                          "colWidth": "4",
+                          "className": ""
+                       },
+                       "options":[
+                          {
+                             "value":"Base Price(Lowest Tier) +",
+                             "title":"Base Price(Lowest Tier) +"
+                          },
+                          {
+                             "value":"Final Price(Lowest Tier) +",
+                             "title":"Final Price(Lowest Tier) +"
+                          },
+                          {
+                             "value":"Base Price(Highest Tier) +",
+                             "title":"Base Price(Highest Tier) +"
+                          },
+                          {
+                             "value":"Final Price(Highest Tier) +",
+                             "title":"Final Price(Highest Tier) +"
+                          }    
+                       ]
+                    },
+                    {
+                        "component": "select",
+                        "name":"Formula",
+                        "dynamicValue":["flat"],
+                        "label":"Formula",
+                        "defaultValue":"Final Price +",
+                        "disable": false,
+                        "placeholder": "Formula",
+                        "isRequired": false,
+                        "users":["barrel fuel"],
+                        "styles": {
+                           "colWidth": "4",
+                           "className": ""
+                        },
+                        "options":[
+                           {
+                              "value":"Base Price +",
+                              "title":"Base Price +"
+                           },
+                           {
+                              "value":"Final Price +",
+                              "title":"Final Price +"
+                           }   
+                        ]
+                    },
+                    {
+                       "component": "input",
+                       "name":"Value",
+                       "dynamicValue":["cost +","flat"],
+                       "label":"Value",
+                       "disable": false,
+                       "defaultValue":"1.75",
+                       "placeholder": "Value",
+                       "isRequired": false,
+                       "users":["barrel fuel"],
+                       "styles": {
+                          "colWidth": "4",
+                          "className": ""
+                       }
+                    },
+                    {
+                       "component": "input",
+                       "name":"RetailPrice",
+                       "dynamicValue":["cost +","manual","flat"],
+                       "label":"Jet-A Retail Price",
+                       "disable": false,
+                       "placeholder": "Retail Price",
+                       "isRequired": false,
+                       "users":["barrel fuel"],
+                       "styles": {
+                          "colWidth": "4",
+                          "className": ""
+                       }
+                    }
+                ]
+            },
+            "modal": [
+                {
+                  "successModal": {
+                              "title": "",
+                              "paragraph": "Success! Company updated",
+                              "primaryButton": {
+                                  "id": "17678",
+                                  "href": "#",
+                                  "name": "okButton",
+                                  "text": "OK",
+                                  "target": "_self"
+                              }
+                          },
+                  "failModal": {
+                              "title": "",
+                              "paragraph": "Oops! This E-mail already exists",
+                              "primaryButton": {
+                                  "id": "17678",
+                                  "href": "#",
+                                  "name": "okButton",
+                                  "text": "OK",
+                                  "target": "_self"
+                              }
+                          },
+                  "mandatoryModal": {
+                              "title": "",
+                              "paragraph": "Please verify. A required field is missing information",
+                              "primaryButton": {
+                                  "id": "17678",
+                                  "href": "#",
+                                  "name": "okButton",
+                                  "text": "OK",
+                                  "target": "_self"
+                              }
+                          },
+                          "deactivate":{
+                            "text":"Are You Sure You Want To Deactivate This Company?",
+                            "button1":"Yes",
+                            "button2":"Cancel"
+                        }
+                        
+                }
+              ],
+            "notifyMessage":{
+                "msg1": "Fuel price has been updated by ",
+                "msg2": " For Location ",
+                "msg3": "Success! A new weekly fuel price has been added to ",
+                "msg4": " by "
+            }
+        }
+    }
+    ]
+}

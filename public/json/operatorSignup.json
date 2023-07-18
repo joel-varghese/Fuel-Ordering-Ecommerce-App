@@ -1,0 +1,1507 @@
+{
+    "operatorSignup" :
+        {
+            "headline":{
+                "type":"text",
+                "label":"Operator Sign Up Form"
+            },
+            "accordianHeading":{
+                "admin":"Administrator Details",
+                "additionalUser":"Additional User(s)",
+                "company":"Company Details",
+                "aircraft":"Aircraft Information",
+                "document":{
+                    "txt":"Supporting Documents",
+                    "txt2":"(Optional)"
+                },    
+                "payment":"Payment Information"
+            },
+            "sections":[{
+                "subSections":[
+                    {
+                        "fields" :[
+						{
+                                "component": "input",
+                                "type":"text",
+								"callback":false,
+                                "dataType":"numeric",
+                                "name":"numberOfAircrafts",
+                                "maxLength":"3",
+                                "label":"Number of Aircrafts",
+                                "placeholder": "Number of Aircrafts",
+                                "isRequired": true,
+								"disable": false,
+                                "defaultValue":"",
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+                                "validations":[
+                                    {
+                                        "type":"IsMandatory",
+                                        "errorMessage":""
+                                    }
+                                ]
+                            }
+							
+                        ],
+						"administratorDetails" :[
+						
+                       
+							{
+                                "component": "input",
+                                "type":"text",
+                                "name":"firstName",
+									"callback":false,
+                                "maxLength":"35",
+                                "label":"First Name",
+                                "placeholder": "First Name",
+                                "isRequired": true,
+								"disable": false,
+                                "defaultValue":"",
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+                                "validations":[
+                                    {
+                                        "type":"IsMandatory",
+                                         "errorMessage":""
+                                    }
+                                ]
+                            },
+							        {
+                                "component": "input",
+                                "type": "text",
+									"callback":false,
+								"name":"middleName",
+                                "label": "Middle Name",
+								"disable": false,
+                                "placeholder": "Middle Name",
+								 "isRequired": false,
+                                "styles": {
+                                  "colWidth": "4",
+                                  "className": ""
+                                },
+                                "maxLength": "25"
+                            },
+							{
+                                "component": "input",
+                                "type":"text",
+									"callback":false,
+                                "name":"lastName",
+                                "maxLength":"35",
+                                "label":"Last Name",
+								"disable": false,
+                                "placeholder": "Last Name",
+                                "isRequired": true,
+                                "defaultValue":"",
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+                                "validations":[
+                                    {
+                                        "type":"IsMandatory",
+                                        "errorMessage":""
+                                    }
+                                ]
+                            },
+                            {
+                                "component": "input",
+                                "type":"text",
+                                "name":"emailId",
+									"callback":false,
+                                "maxLength":"50",
+                                "label":"Email Address",
+								"disable": false,
+                                "placeholder": "Email Address",
+                                "isRequired": true,
+                                "defaultValue":"",
+                                "styles": {
+                                   "colWidth": "4",
+                                    "className": ""
+                                },
+                                "validations":[
+                                    {
+                                        "type":"IsMandatory",
+                                        "errorMessage":""
+                                    },
+                                    {
+                                        "type":"IsEmail",
+                                        "validateRule":"^(([^<>()[\\]\\.,;:\\s@\"]+(\\.[^<>()[\\]\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$",
+                                        "errorMessage":"Oops! Invalid E-mail"
+                                    }
+                                ]
+                            },
+							{
+                                "component": "input",
+                                "type":"text",
+									"callback":false,
+                                "name":"mobileNumber",
+                                "minlength":10,
+                                "maxLength":"14",
+                                "label":"Mobile Number",
+								"disable": false,
+                                "placeholder": "Mobile Number",
+                                "isRequired": true,
+                                "defaultValue":"",
+                                "styles": {
+                                  "colWidth": "4",
+                                    "className": ""
+                                },
+                                "validations":[
+                                    {
+                                        "type":"IsMandatory",
+                                        "errorMessage":""
+                                    },
+                                    {
+                                        "type": "CheckUSPhone",
+                                        "errorMessage": "Enter a valid Mobile Number"
+                                    }
+                                ]
+                            },
+							{
+                                 "component": "select",
+                                 "type":"select",
+                                 "dynamicSelect": true,
+                                 "lookupReference": {
+                                     "name": "roles"
+                                 },
+                                 "name":"role",
+                                 "label":"Role",
+                                 "placeholder": "Role",
+                                 "isRequired": true,
+                                 "defaultValue":"",
+                                 "dependentField": "userType",
+                                "dependentFieldVal": "Operator",
+                                 "styles": {
+                                     "colWidth": "4",
+                                     "className": ""
+                                 },
+                                 "validations":[
+                                     {
+                                         "type":"IsMandatory",
+                                         "errorMessage":""
+                                     }
+                                 ]                      
+                             }							
+                        ],
+
+						"additionalUser" :[
+						     {
+                        "fields" :[
+						{
+									 
+                      
+                                "component": "input",
+                                "type":"text",
+									"callback":false,
+                                "name":"additionalUserMail",
+                                "maxLength":"50",
+                                "label":"Email Address",
+                                "placeholder": "Email Address",
+								"disable": false,
+                                "isRequired": false,
+                                "defaultValue":"",
+                                "styles": {
+                                   "colWidth": "4",
+                                    "className": ""
+                                },
+                                "validations":[
+                                    {
+                                        "type": "IsDuplicated",
+                                        "errorMessage": ""
+                                    },
+                                    {
+                                        "type":"IsEmail",
+                                        "validateRule":"^(([^<>()[\\]\\.,;:\\s@\"]+(\\.[^<>()[\\]\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$",
+                                        "errorMessage":"Oops! Invalid E-mail"
+                                    }
+                                ]
+                            },
+							{
+                                 "component": "select",
+                                 "type":"select",
+                                 "dynamicSelect": true,
+                                 "lookupReference": {
+                                     "name": "roles"
+                                 },
+                                 "name":"additionalUserRole",
+                                 "label":"Role",
+								 "disable": false,
+                                 "placeholder": "Role",
+                                 "isRequired": false,
+                                 "dependentField": "userType",
+                                "dependentFieldVal": "Operator",
+                                 "defaultValue":"",
+                                 "styles": {
+                                     "colWidth": "4",
+                                     "className": ""
+                                     }
+                             },
+							 {
+                                 "component": "select",
+                                 "type":"select",
+                                 "dynamicSelect": true,
+                                 "lookupReference": {
+                                     "name": "accessLevels"
+                                 },
+                                 "tooltip": {
+                                   "text": "Super Administrator - All administrator rights to view or order fuel, edit all company users, registered aircraft and financial information.<br/> Administrator - Administrator rights to view or order fuel for specific aircraft and associated financial information.<br/> Basic - Rights to view or order fuel and view transaction history."
+                                 },
+                                 "name":"additionalUserLevelAccess",
+                                 "label":"Level of Access",
+								 "disable": false,
+                                 "placeholder": "Level of Access",
+                                 "isRequired": false,
+                                 "defaultValue":"",
+                                 "styles": {
+                                     "colWidth": "4",
+                                     "className": ""
+                                 }
+                                                
+                             },
+							 {
+                                "component": "button",
+                                "type":"button",
+                                "label":"Add New",
+                                "name": "additionalUserAddNew",
+                                "isRequired": true,
+								"call":"handleAddFormSubmit",
+                                "styles": {
+                                    "colWidth": "3",
+                                    "className": "add-more"
+                                }
+                            },
+                            {
+                               "component": "button",
+                               "type":"button",
+                               "label":"Remove",
+                               "name": "additionalUserRemove",
+							   "call":"handleRemoveFormSubmit",
+                               "isRequired": true,
+                               "styles": {
+                                   "colWidth": "3",
+                                   "className": "remove"
+                               }
+                           }
+					]
+					
+					}	
+                        ],
+						"companyDetails" :[
+						     {
+                        "fields" :[
+							 {
+                                "component": "input",
+                                "type":"text",
+									"callback":false,
+                                "name":"companyName",
+                                "maxLength":"100",
+                                "label":"Name",
+								"disable": false,
+                                "placeholder": "Company Name",
+                                "isRequired": true,
+                                "defaultValue":"",
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+                                "validations":[
+                                    {
+                                        "type":"IsMandatory",
+                                        "errorMessage":""
+                                    },
+                                    {
+                                       "type":"onlyspecial",
+                                       "validateRule":"[a-zA-Z0-9]+",
+                                       "errorMessage":"Invalid Data"
+                                    },
+                                    {
+                                       "type":"onlydigit",
+                                       "validateRule":"[a-zA-Z\\.?!#@_=$:]+",
+                                       "errorMessage":"Invalid Data"
+                                    }
+                                ]
+                            },
+							    {
+                                "component": "input",
+                                "type":"text",
+									"callback":false,
+								"name":"primaryLocation",
+                                "maxLength":"50",
+                                "label":"Primary Location",
+								"disable": false,
+                                "placeholder": "Company Primary Location",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+                                "validations":[
+                                    {
+                                        "type":"IsMandatory",
+                                        "errorMessage":""
+                                    }
+                                ]
+                            },
+							{
+                                "component": "input",
+                                "type":"text",
+									"callback":false,
+                                "name":"companyNumber",
+                                "minlength":10,
+                                "maxLength":"14",
+                                "label":"Phone Number",
+								"disable": false,
+                                "placeholder": "Company Number",
+                                "isRequired": true,
+                                "defaultValue":"",
+                                "styles": {
+                                  "colWidth": "4",
+                                    "className": ""
+                                },
+                                "validations":[
+                                    {
+                                        "type":"IsMandatory",
+                                        "errorMessage":""
+                                    },
+                                    {
+                                        "type": "CheckUSPhone",
+                                        "errorMessage": "Enter a valid Mobile Number"
+                                    }
+                                ]
+                            },
+							 {
+                                "component": "AsyncTypeahead",
+                                "type":"text",
+									"callback":false,
+								"name":"addressLine1",
+                                "maxLength":"50",
+                                "label":"Mailing Address Line 1",
+								"disable": false,
+                                "placeholder": "Company Mailing Address Line 1",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+									 "validations":[
+                                    {
+                                        "type":"IsMandatory",
+                                        "errorMessage":""
+                                    },
+                                    {
+                                       "type":"onlyspecial",
+                                       "validateRule":"[a-zA-Z0-9]+",
+                                       "errorMessage":"Invalid Data"
+                                    },
+                                    {
+                                       "type":"onlydigit",
+                                       "validateRule":"[a-zA-Z\\.?!#@_=$:]+",
+                                       "errorMessage":"Invalid Data"
+                                    }
+                                ]
+                            },
+                            {
+                                "component": "input",
+                                "type":"text",
+									"callback":false,
+								"name":"addressLine2",
+                                "maxLength":"50",
+                                "label":"Mailing Address Line 2",
+								"disable": false,
+                                "placeholder": "Company Mailing Address Line 2",
+                                "isRequired": false,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+									 "validations":[
+                                    {
+                                        "type":"IsMandatory",
+                                        "errorMessage":""
+                                    },
+                                    {
+                                       "type":"onlyspecial",
+                                       "validateRule":"[a-zA-Z0-9]+",
+                                       "errorMessage":"Invalid Data"
+                                    },
+                                    {
+                                       "type":"onlydigit",
+                                       "validateRule":"[a-zA-Z\\.?!#@_=$:]+",
+                                       "errorMessage":"Invalid Data"
+                                    }
+                                ]
+                            },
+							{
+                                "component": "input",
+                                "type":"text",
+									"callback":false,
+								"name":"city",
+                                "label":"City",
+                                "maxLength":"30",
+								"disable": false,
+                                "placeholder": "Company City",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+                                "validations":[
+                                    {
+                                        "type":"IsMandatory",
+                                        "errorMessage":""
+                                },
+                                {
+                                   "type":"CheckRegex",
+                                   "validateRule":"^\\d*[a-zA-Z][a-zA-Z\\d ]*$",
+                                   "errorMessage":"Invalid Data"
+                                }
+                                ]
+                            },
+                            {
+                                "component": "select",
+                                "type":"select",
+                                "callback":false,
+                                "dynamicSelect": false,
+                                "id":"companyState",
+                                "name":"stateName",
+                                "label":"State",
+                                "placeholder": "Company State",
+                                "isRequired": true,
+                                "defaultValue":"",
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+                                "validations":[
+                                    {
+                                        "type":"IsMandatory",
+                                        "errorMessage":""
+                                    }
+                                ],
+                                "options":[
+                                    {
+                                        "title": "Alabama",
+                                        "value": "AL"
+                                    },
+                                    {
+                                        "title": "Alaska",
+                                        "value": "AK"
+                                    },
+                                    {
+                                        "title": "Arizona",
+                                        "value": "AZ"
+                                    },
+                                    {
+                                        "title": "Arkansas",
+                                        "value": "AR"
+                                    },
+                                    {
+                                        "title": "California",
+                                        "value": "CA"
+                                    },
+                                    {
+                                        "title": "Colorado",
+                                        "value": "CO"
+                                    },
+                                    {
+                                        "title": "Connecticut",
+                                        "value": "CT"
+                                    },
+                                    {
+                                        "title": "Delaware",
+                                        "value": "DE"
+                                    },
+                                    {
+                                        "title": "District Of Columbia",
+                                        "value": "DC"
+                                    },
+                                    {
+                                        "title": "Florida",
+                                        "value": "FL"
+                                    },
+                                    {
+                                        "title": "Georgia",
+                                        "value": "GA"
+                                    },
+                                    {
+                                        "title": "Hawaii",
+                                        "value": "HI"
+                                    },
+                                    {
+                                        "title": "Idaho",
+                                        "value": "ID"
+                                    },
+                                    {
+                                        "title": "Illinois",
+                                        "value": "IL"
+                                    },
+                                    {
+                                        "title": "Indiana",
+                                        "value": "IN"
+                                    },
+                                    {
+                                        "title": "Iowa",
+                                        "value": "IA"
+                                    },
+                                    {
+                                        "title": "Kansas",
+                                        "value": "KS"
+                                    },
+                                    {
+                                        "title": "Kentucky",
+                                        "value": "KY"
+                                    },
+                                    {
+                                        "title": "Louisiana",
+                                        "value": "LA"
+                                    },
+                                    {
+                                        "title": "Maine",
+                                        "value": "ME"
+                                    },
+                                    {
+                                        "title": "Maryland",
+                                        "value": "MD"
+                                    },
+                                    {
+                                        "title": "Massachusetts",
+                                        "value": "MA"
+                                    },
+                                    {
+                                        "title": "Michigan",
+                                        "value": "MI"
+                                    },
+                                    {
+                                        "title": "Minnesota",
+                                        "value": "MN"
+                                    },
+                                    {
+                                        "title": "Mississippi",
+                                        "value": "MS"
+                                    },
+                                    {
+                                        "title": "Missouri",
+                                        "value": "MO"
+                                    },
+                                    {
+                                        "title": "Montana",
+                                        "value": "MT"
+                                    },
+                                    {
+                                        "title": "Nebraska",
+                                        "value": "NE"
+                                    },
+                                    {
+                                        "title": "Nevada",
+                                        "value": "NV"
+                                    },
+                                    {
+                                        "title": "New Hampshire",
+                                        "value": "NH"
+                                    },
+                                    {
+                                        "title": "New Jersey",
+                                        "value": "NJ"
+                                    },
+                                    {
+                                        "title": "New Mexico",
+                                        "value": "NM"
+                                    },
+                                    {
+                                        "title": "New York",
+                                        "value": "NY"
+                                    },
+                                    {
+                                        "title": "North Carolina",
+                                        "value": "NC"
+                                    },
+                                    {
+                                        "title": "North Dakota",
+                                        "value": "ND"
+                                    },
+                                    {
+                                        "title": "Ohio",
+                                        "value": "OH"
+                                    },
+                                    {
+                                        "title": "Oklahoma",
+                                        "value": "OK"
+                                    },
+                                    {
+                                        "title": "Oregon",
+                                        "value": "OR"
+                                    },
+                                    {
+                                        "title": "Pennsylvania",
+                                        "value": "PA"
+                                    },
+                                    {
+                                        "title": "Rhode Island",
+                                        "value": "RI"
+                                    },
+                                    {
+                                        "title": "South Carolina",
+                                        "value": "SC"
+                                    },
+                                    {
+                                        "title": "South Dakota",
+                                        "value": "SD"
+                                    },
+                                    {
+                                        "title": "Tennessee",
+                                        "value": "TN"
+                                    },
+                                    {
+                                        "title": "Texas",
+                                        "value": "TX"
+                                    },
+                                    {
+                                        "title": "Utah",
+                                        "value": "UT"
+                                    },
+                                    {
+                                        "title": "Vermont",
+                                        "value": "VT"
+                                    },
+                                    {
+                                        "title": "Virginia",
+                                        "value": "VA"
+                                    },
+                                    {
+                                        "title": "Washington",
+                                        "value": "WA"
+                                    },
+                                    {
+                                        "title": "West Virginia",
+                                        "value": "WV"
+                                    },
+                                    {
+                                        "title": "Wisconsin",
+                                        "value": "WI"
+                                    },
+                                    {
+                                        "title": "Wyoming",
+                                        "value": "WY"
+                                    }
+                                ]                      
+                            },	
+							{
+                                "component": "input",
+                                "type":"text",
+									"callback":false,
+								"name":"zip",
+                                "label":"Zip Code",
+                                "dataType":"numeric",
+                                "maxLength":"10",
+								"disable": false,
+                                "placeholder": "Company Zip",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+									 "validations":[
+                                    {
+                                        "type":"IsMandatory",
+                                        "errorMessage":""
+                                    },
+                                    {
+                                        "type": "CheckZIP",
+                                        "validateRule": "^\\d{5}(?:[-]\\d{4})?$",
+                                        "errorMessage": "Enter a valid Zip"
+                                    }
+                                ]
+                            },
+
+                            {
+                                "component": "select",
+                                "type":"select",
+                                "callback":false,
+                                "dynamicSelect": true,
+                                "lookupReference": {
+                                    "name": "country"
+                                },
+                                "name":"countryName",
+                                "id": "companyCountry",
+                                "label":"Country",
+                                "placeholder": "Company Country",
+                                "isRequired": true,
+                                "defaultValue":"",
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+                                "validations":[
+                                    {
+                                        "type":"IsMandatory",
+                                        "errorMessage":""
+                                    }
+                                ]                      
+                            },													 
+							{
+                                "component": "input",
+                                "type":"text",
+									"callback":false,
+								"name":"EIN",
+                                "label":"EIN",
+                                "maxLength":"11",
+								"disable": false,
+                                "placeholder": "Company EIN",
+                                "isRequired": false,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+                                "validations": [
+                                    {
+                                        "type": "CheckEIN",
+                                        "errorMessage": "Enter a valid EIN"
+                                    }
+                                ]
+                            },                           
+                            {
+                                "component": "input",
+                                "type":"text",
+									"callback":false,
+								"name":"fedralTaxExemptId",
+                                "maxLength":"11",
+                                "label":"Federal Tax Exempt ID",
+								"disable": false,
+                                "placeholder": "Federal Tax Exempt ID",
+                                "isRequired": false,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+                                "validations": [
+                                    {
+                                        "type": "CheckEIN",
+                                        "errorMessage": "Enter a valid ID"
+                                    }
+                                ]
+                            },
+							 {
+                                "component": "input",
+                                "type":"text",
+									"callback":false,
+								"name":"vatExemptId",
+                                "maxLength":"20",
+                                "label":"VAT Exempt ID",
+								"disable": false,
+                                "placeholder": "VAT Exempt ID",
+                                "isRequired": false,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+                                "validations": [
+                                    {
+                                       "type":"CheckRegex",
+                                       "validateRule":"^\\d*[a-zA-Z][a-zA-Z\\d ]*$",
+                                       "errorMessage":"Invalid Data"
+                                    }
+                                ]
+                            }
+                        ]
+                    }	
+                        ],
+						"aircraftInformation" :[
+						     {
+                        "fields" :[
+                   
+							{
+                                "component": "input",
+                                "type":"text",
+									"callback":false,
+								"name":"aircraftTailNumber",
+								"disable": false,
+                               "label":"Tail Number",
+                                "placeholder": "Aircraft Tail Number",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": "bf-mrg-r50p"
+                                },
+									 "validations":[
+                                    {
+                                        "type":"IsMandatory",
+                                        "errorMessage":""
+                                    },
+                                    {
+                                        "type": "IsAircraftDuplicated",
+                                        "errorMessage": ""
+                                    }
+                                ]
+                            },
+							{
+                                "component": "input",
+                                "type":"text",
+									"callback":false,
+								"name":"serialNumber",
+                                "label":"Serial Number",
+								"disable": false,
+                                "placeholder": "Aircraft Serial Number",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+								"validations":[
+                                    {
+                                        "type":"IsMandatory",
+                                        "errorMessage":""
+                                }
+                                ]
+                            },
+                            {
+                                "component": "input",
+                                "type":"text",
+									"callback":false,
+								"name":"manufacturerName",
+                                "label":"Manufacturer Name",
+								"disable": false,
+                                "placeholder": "Aircraft Manufacturer Name",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+								"validations":[
+                                    {
+                                        "type":"IsMandatory",
+                                        "errorMessage":""
+                                }
+                                ]
+                            },
+                            {
+                                "component": "input",
+                                "type":"text",
+									"callback":false,
+								"name":"aircraftModel",
+                                "label":"Aircraft Model",
+								"disable": false,
+                                "placeholder": "Aircraft Model",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+								"validations":[
+                                    {
+                                        "type":"IsMandatory",
+                                        "errorMessage":""
+                                }
+                                ]
+                            },
+                            {
+                                "component": "input",
+                                "type":"text",
+									"callback":false,
+								"name":"maxFuelCapacity",
+                                "maxLength":"5",
+                                "dataType":"numeric",
+                                "label":"Maximum Fuel Capacity",
+								"disable": false,
+                                "placeholder": "Maximum Fuel Capacity",
+                                "isRequired": false,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "input",
+                                "type":"text",
+									"callback":false,
+								"name":"homeBaseAirport",
+								"disable": false,
+                                "label":"Homebase Airport",
+                                "placeholder": "Homebase Airport",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+                                "validations":[
+                                    {
+                                        "type":"IsMandatory",
+                                        "errorMessage":""
+                                }
+                                ]
+                            },
+							 {
+                                "component": "button",
+                                "type":"button",
+                                "label":"Add New",
+                                "name":"aircraftAddNew",
+								"call":"handleAircraftSubmit",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "3",
+                                    "className": "add-more"
+                                }
+                            },
+                            {
+                               "component": "button",
+                               "type":"button",
+                               "label":"Remove",
+                               "name":"aircraftRemove",
+							     "call":"handleAircraftRemove",
+                               "isRequired": true,
+                               "styles": {
+                                   "colWidth": "3",
+                                   "className": "remove"
+                               }
+                           }
+                        ]
+                    }	
+                        ],
+						"uploadDocument" :[
+						     {
+                        "fields" :[
+                            {
+                                "component": "input",
+                                "type":"input",
+									"callback":false,
+                                "label":"Document Name",
+                                "placeholder": "Document Name",
+                                "name": "documentName",
+                                "isRequired": false,
+                                "maxLength": "20",
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "input",
+                                "type":"file",
+							"call":"handleFileFormSubmit",
+							"name":"DocumentUpload",										
+                                "label":"Document Upload",
+								"accept":".pdf,.jpeg,.png,.doc",
+                                "placeholder": "PDF, JPEG, PNG, DOC (MAX 5MB)",
+                                "successMessage": "Document uploaded",
+                                "isRequired": false,
+                                "length":"20",
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+                                "validations":[
+                                    {
+                                        "type":"fileSize",
+                                        "errorMessage":"File Size Error > 5MB"
+                                    },
+                                    {
+                                        "type":"fileType",
+                                        "errorMessage":"File format not supported"
+                                    }
+                                ]
+                            },
+								 {
+                                "component": "button",
+                                "type":"button",
+								"call":"handleFileAddSubmit",
+                                "label":"Add New",
+                                "name":"fileUploadAddNew",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "3",
+                                    "className": "add-more"
+                                }
+                            },
+                            {
+                               "component": "button",
+                               "type":"button",
+							   "call":"handleFileFormRemove",
+                               "label":"Remove",
+                               "name":"fileUploadRemove",
+                               "isRequired": true,
+                               "styles": {
+                                   "colWidth": "3",
+                                   "className": "remove"
+                               }
+                           }
+                        ]
+                    }	
+                        ],"cardSignup" :[
+						     {
+                        "fields" :[
+							{
+                                 "component": "select",
+                                 "type":"select",
+                                 "dynamicSelect": true,
+                                 "lookupReference": {
+                                     "name": "paymentModes"
+                                 },
+                                 "name":"paymentMode",
+                                 "label":"Payment Mode",
+                                 "placeholder": "Payment Mode",
+                                 "isRequired": false,
+                                 "defaultValue":"",
+                                 "styles": {
+                                     "colWidth": "4",
+                                     "className": ""
+                                 }                                             
+                             },
+							                             {
+                                "component": "input",
+                                "type":"input",
+								 "name":"nickName",
+									"callback":false,
+                                "label":"Nick Name",
+                                "placeholder": "Nick Name(optional)",
+                                "isRequired": false,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                }
+                            },
+							 {
+                                "component": "input",
+                                "type":"text",
+                                "name":"cardHolderName",
+								"callback":false,
+                                "maxLength":"35",
+                                 "label":"Card Holder",
+                                "placeholder": "Card Holder Name",
+								"disable": false,                        
+                                "isRequired": false,
+                                "defaultValue":"",
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                }
+							 },
+                            {
+                                "component": "input",
+                                "type":"text",
+								 "name":"cardNumber",
+								"callback":false,
+                                "label":"Credit/Debit Card Number",
+                                "placeholder": "Credit/Debit Card Number",
+                                "isRequired": false,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "select",
+                                "type":"select",
+								 "name":"expirationDate",
+                                "label":"Expiration Date",
+                                "placeholder": "Expiration Date",
+                                "isRequired": false,
+                                "styles": {
+                                    "colWidth": "2",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "select",
+                                "type":"select",
+                                "name":"ExpirationMonth",
+								"label":"Expiration Month",
+                                "placeholder": "Expiration Month",
+                                "isRequired": false,
+                                "styles": {
+                                    "colWidth": "2",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "input",
+                                "type":"input",
+								 "name":"securityCode",
+                                "label":"Security Code",
+                                "placeholder": "Security Code",
+                                "isRequired": false,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                }
+                            }
+                        ]
+                    },
+{
+                        "fields" :[
+                            {
+                                "component": "checkbox",
+                                "type":"companyAddress",
+								"id":"termanadcondition",
+                                "label":"Same as Company Address",
+                                "isRequired": false,
+                                "styles": {
+                                    "colWidth": "12",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "input",
+                                "type":"input",
+								"name":"ccmailling1",
+                                "label":"Address Line 1",
+                                "placeholder": "Address Line 1",
+                                "isRequired": false,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "input",
+                                "type":"input",
+								"name":"ccmailling2",
+                                "label":"Address Line 2",
+                                "placeholder": "Address Line 2",
+                                "isRequired": false,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "input",
+                                "type":"input",
+								"name":"ccCountry",
+                                "label":"Country",
+                                "placeholder": "Country",
+                                "isRequired": false,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "input",
+                                "type":"input",
+								"name":"ccCity",
+                                "label":"City",
+                                "placeholder": "City",
+                                "isRequired": false,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "input",
+                                "type":"input",
+								"name":"ccState",
+                                "label":"State",
+                                "placeholder": "State",
+                                "isRequired": false,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "input",
+                                "type":"input",
+								"name":"ccZip",
+                                "maxLength":"5",
+                                "label":"Zip Code",
+                                "placeholder": "Zip",
+                                "isRequired": false,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                }
+                            },
+							 {
+                                "component": "button",
+                                "type":"button",
+                                "label":"Add New",
+								"call":"handleCCSubmit",
+                                "name":"fileUploadAddNew",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "3",
+                                    "className": "add-more"
+                                }
+                            },
+                            {
+                               "component": "button",
+                               "type":"button",
+							    "call":"handleCCRemove",
+                               "label":"Remove",
+                               "name":"fileUploadRemove",
+                               "isRequired": true,
+                               "styles": {
+                                   "colWidth": "3",
+                                   "className": "remove"
+                               }
+                           }
+                      
+
+						  ]
+                    }					
+                        ],
+						
+                        "primaryButton":[
+                            {
+                                "component": "checkbox",
+                                "type":"checkbox",
+								"id":"termsAndCondition",
+                                "label":"",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "1",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "link",
+                                "type":"",
+								"id":"termanadcondition",
+                                "firstLabel":"Accept ",
+                                "label":"Terms and Condition",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "11",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "button",
+                                "type":"button",
+                                "label":"Create User",
+								"id":"submitform",
+								"disabled":true,
+                                "variant":"primary",
+								"call":"onClickSubmit",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": "bf-btn-left bf-btn-imp bf-mrgt20i"
+                                }
+                            },
+                            {
+                                "component": "button",
+                                "type":"reset",
+                                "label":"Clear",
+								 "name":"clear",
+									"call":"onClickSubmit",
+                                "variant":"primary",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "8",
+                                    "className": "bf-btn-clear bf-btn-left bf-btn-imp bf-mrgt20i"
+                                }
+                            }
+                        ],
+                        "saveImplement":[
+                            {
+                                "component": "button",
+                                "type":"button",
+                                "label":"Create User",
+								"id":"submitform",
+								"disabled":true,
+                                "variant":"primary",
+								"call":"onClickSubmit",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": "bf-btn-left bf-btn-imp bf-mrgt20i"
+                                }
+                            },
+                            {
+                                "component": "button",
+                                "type":"reset",
+                                "label":"Clear",
+								"name":"clear",
+								"call":"onClickSubmit",
+                                "variant":"primary",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "8",
+                                    "className": "bf-btn-clear bf-btn-left bf-btn-imp bf-mrgt20i"
+                                }
+                            },
+                            {
+                                "component": "button",
+                                "type":"button",
+                                "label":"Save",
+								 "name":"save",
+                                "variant":"primary",
+                                "isRequired": true,
+                                "shouldNotRender":true,
+                                "styles": {
+                                    "colWidth": "8",
+                                    "className": "bf-btn-left bf-btn-imp bf-mrgt20i"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }],
+            "aviationFacts" : {
+                "aviationHeader" : "Did you know?",
+                "aviationFactsList": [
+                  {
+                    "fact":"Approximately 33% of the business jet have been in operation for over 10 years"
+                  },
+                  {
+                    "fact":"The world's fastest private jet has a top speed of Mach 0.94"
+                  },
+                  {
+                    "fact":"Some private jets have an operating ceiling of 51,000 feet"
+                  }
+                ]
+            },
+            "modal": [
+                {
+                    "submitModal": {
+                        "title": "",
+                        "paragraph": "Success! An activation link has been emailed",
+                        "primaryButton": {
+                            "id": "17678",
+                            "href": "#",
+                            "name": "okButton",
+                            "text": "OK",
+                            "target": "_self"
+                        },
+                        "closeLink": {
+                            "id": "17679",
+                            "image_url": "\/src\/resources\/images\/modal_close.png",
+                            "url": "#closelink",
+                            "altText": "close",
+                            "title": ""
+                        }
+                    },
+					"addressModal": {
+                        "title": "",
+                        "paragraph": "When a address is enetered manually and a corresponding entry cant be found in the Geo location interface",
+                        "primaryButton": {
+                            "id": "17680",
+                            "href": "#",
+                            "name": "okButton",
+                            "text": "OK",
+                            "target": "_self"
+                        },
+                        "closeLink": {
+                            "id": "17681",
+                            "image_url": "\/src\/resources\/images\/modal_close.png",
+                            "url": "#closelink",
+                            "altText": "close",
+                            "title": ""
+                        }
+                    },
+					"uploadmodal": {
+                        "title": "",
+                        "paragraph": "File to be uploaded is more than 5MB",
+                        "primaryButton": {
+                            "id": "17682",
+                            "href": "#",
+                            "name": "okButton",
+                            "text": "OK",
+                            "target": "_self"
+                        },
+                        "closeLink": {
+                            "id": "17683",
+                            "image_url": "\/src\/resources\/images\/modal_close.png",
+                            "url": "#closelink",
+                            "altText": "close",
+                            "title": ""
+                        }
+                    },
+					"termsmodal": {
+                        "title": "Terms and Conditions",
+                        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et sollicitudin ac orci phasellus. Dui sapien eget mi proin sed libero enim sed faucibus. Adipiscing diam donec adipiscing tristique risus nec. Ultrices in iaculis nunc sed augue. Tristique risus nec feugiat in fermentum posuere urna nec tincidunt. Vitae tortor condimentum lacinia quis vel eros. Arcu non odio euismod lacinia at quis risus sed. Diam vulputate ut pharetra sit amet. Nam libero justo laoreet sit amet cursus sit amet.",
+                        "primaryButton": {
+                            "id": "17684",
+                            "href": "#",
+                            "name": "acceptButton",
+                            "text": "Accept",
+                            "target": "_self"
+                        },
+                        "secondaryButton": {
+                            "id": "176",
+                            "href": "#",
+                            "name": "declineButton",
+                            "text": "Decline",
+                            "target": "_self"
+                        }
+                    }
+					,
+                    "errorModal": {
+                        "title": "",
+                        "paragraph": "Oops! Unable to create Operator. Please verify all fields again.",
+                        "primaryButton": {
+                            "id": "17687",
+                            "href": "#",
+                            "name": "okButton",
+                            "text": "OK",
+                            "target": "_self"
+                        },
+                        "closeLink": {
+                            "id": "17688",
+                            "image_url": "\/src\/resources\/images\/modal_close.png",
+                            "url": "#closelink",
+                            "altText": "close",
+                            "title": ""
+                        }
+                    },
+                    "errorModal2": {
+                        "title": "",
+                        "paragraph": "Oops! This E-mail already exists",
+                        "primaryButton": {
+                            "id": "17680",
+                            "href": "#",
+                            "name": "okButton",
+                            "text": "OK",
+                            "target": "_self"
+                        }
+                    },
+                    "errorModal3": {
+                        "title": "",
+                        "paragraph": "Oops! This Company already exists",
+                        "primaryButton": {
+                            "id": "17681",
+                            "href": "#",
+                            "name": "okButton",
+                            "text": "OK",
+                            "target": "_self"
+                        }
+                    },
+                    "errorModal4": {
+                        "fileSize": "Uploaded file size is more than 5 MB",
+                        "paragraph": "File name is too large"
+                    },
+                    "errorModal5": {
+                        "title": "",
+                        "paragraph": "Oops! This additional user already exists"
+                    },
+					"validateModal": {
+                    "title": "",
+                    "paragraph": "Please verify. A required field is missing information",
+                    "primaryButton": {
+                        "id": "17692",
+                        "href": "#",
+                        "name": "okButton",
+                        "text": "OK",
+                        "target": "_self"
+                    }
+                },
+                "duplicateModal": {
+                    "paragraph": "Oops! Duplicate entries found. Please check the highlighted fields."
+                }
+                }
+            ],
+            "emailBody":{
+                "title": "Operator Registration Verification Email",
+                "fromEmailId":"vijay.krishnan@barrelfuel.com",
+                "paragraph": "Hello",
+                "redirectURI": "set-password?",
+                "registrationURI": "user-registration?",
+                "html":"<br><br>We're happy you signed up! To start exploring the Barrel Fuel experience, please click the activate link below. <br> : <br><br>Welcome, from the Barrel Fuel team!<br><br>"
+            }
+        }
+}

@@ -1,0 +1,270 @@
+{
+    "aircraftData":[
+        {
+            "component": "accountAircraft",
+            "id":"1",
+            "headCells":[
+                {
+                    "id": "aircraftTailNumber",
+                    "numeric": false,
+                    "disablePadding": true,
+                    "label": "Tail Number",
+                    "sortable": true
+                },
+                {
+                    "id": "serialNumber",
+                    "numeric": true,
+                    "disablePadding": false,
+                    "label": "Serial Number",
+                    "sortable": true
+                },
+                {
+                    "id": "manufacturerName",
+                    "numeric": true,
+                    "disablePadding": false,
+                    "label": "Manufacturer Name",
+                    "sortable": true
+                },
+                {
+                    "id": "aircraftModel",
+                    "numeric": true,
+                    "disablePadding": false,
+                    "label": "Aircraft Model",
+                    "sortable": true
+                },
+                {
+                    "id": "homeBaseAirport",
+                    "numeric": true,
+                    "disablePadding": false,
+                    "label": "Homebase Airport ID",
+                    "sortable": true
+                },
+                {
+                    "id": "actions",
+                    "numeric": true,
+                    "disablePadding": false,
+                    "label": ""
+                }
+            ],
+            "mobileViewHeader":"User Details",
+            "mobileHeadCells":[
+                {
+                    "id": "aircraftModel",
+                    "numeric": true,
+                    "disablePadding": false,
+                    "label": "Aircraft Model",
+                    "sortable": false
+                },
+                {
+                    "id": "tailNumber",
+                    "numeric": false,
+                    "disablePadding": true,
+                    "label": "Tail Number",
+                    "sortable": false
+                },
+                {
+                    "id": "actions",
+                    "numeric": true,
+                    "disablePadding": false,
+                    "label": ""
+                }
+            ],
+            "Buttons":[
+                {"Label":"Edit", 
+                    "method":"onEditClick",
+                    "className":"btn btn-bf-primary"
+                },
+                {"Label":"Delete", 
+                    "method":"onDeactivateClick",
+                    "className":"btn-bf-secondary bf-mrgl20"
+                }
+            ],
+            "addNewAircraft" : {
+                "component": "button",
+                "type":"button",
+                "label":"Add Aircraft",
+                "variant":"primary",
+                "name":"addNew",
+                "isRequired": true,
+                "styles": {
+                    "colWidth": "bf-add-right-top",
+                    "className": "add-more bf-width-auto"
+                }
+            },
+            "aircraftInformation" :{
+                "fields" :[
+                    {
+                        "component": "header",
+                        "type": "subheading",
+                        "label": "Edit Aircraft Information",
+                        "labelAdd": "Add Aircraft Information"
+                    },
+                    {
+                        "component": "id",
+                        "name": "aircraft_id"
+                    },
+                    {
+                        "component": "input",
+                        "type":"text",
+                        "callback":false,
+                        "name":"aircraftTailNumber",
+                        "disable": false,
+                        "label":"Tail Number",
+                        "placeholder": "Aircraft Tail Number",
+                        "isRequired": true,
+                        "styles": {
+                            "colWidth": "4",
+                            "className": "bf-mrg-r50p"
+                        },
+                        "validations":[
+                            {
+                                "validation":"IsMandatory",
+                                "errorMessage":""
+                            }
+                        ]
+                    },
+                    {
+                        "component": "input",
+                        "type":"text",
+                        "callback":false,
+                        "name":"serialNumber",
+                        "label":"Serial Number",
+                        "disable": false,
+                        "placeholder": "Aircraft Serial Number",
+                        "isRequired": true,
+                        "styles": {
+                            "colWidth": "4",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "validation":"IsMandatory",
+                                "errorMessage":""
+                            }
+                        ]
+                    },
+                    {
+                        "component": "input",
+                        "type":"text",
+                        "callback":false,
+                        "name":"manufacturerName",
+                        "label":"Manufacturer Name",
+                        "disable": false,
+                        "placeholder": "Manufacturer Name",
+                        "isRequired": true,
+                        "styles": {
+                            "colWidth": "4",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "validation":"IsMandatory",
+                                "errorMessage":""
+                            },
+                            {
+                               "validation":"onlyspecial",
+                               "validateRule":"[a-zA-Z0-9]+",
+                               "errorMessage":"Invalid Data"
+                            }
+                        ]
+                    },
+                    {
+                        "component": "input",
+                        "type":"text",
+                        "callback":false,
+                        "name":"aircraftModel",
+                        "label":"Aircraft Model",
+                        "disable": false,
+                        "placeholder": "Aircraft Model",
+                        "isRequired": true,
+                        "styles": {
+                            "colWidth": "4",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "validation":"IsMandatory",
+                                "errorMessage":""
+                            }
+                        ]
+                    },
+                    {
+                        "component": "input",
+                        "type":"text",
+                            "callback":false,
+                        "name":"maxFuelCapacity",
+                        "maxLength":"5",
+                        "dataType":"numeric",
+                        "label":"Maximum Fuel Capacity",
+                        "disable": false,
+                        "placeholder": "Maximum Fuel Capacity",
+                        "isRequired": false,
+                        "styles": {
+                            "colWidth": "4",
+                            "className": ""
+                        }
+                    },
+                    {
+                        "component": "input",
+                        "type":"text",
+                            "callback":false,
+                        "name":"homeBaseAirport",
+                        "disable": false,
+                        "label":"Homebase Airport",
+                        "placeholder": "Homebase Airport",
+                        "isRequired": false,
+                        "styles": {
+                            "colWidth": "4",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "validation":"onlyspecial",
+                                "validateRule":"[a-zA-Z0-9]+",
+                                "errorMessage":"Invalid Data"
+                             }
+                        ]
+                    },
+                    {
+                        "component": "button",
+                        "type":"button",
+                        "label":"Submit",
+                        "name":"submitform",
+                        "disabled":false,
+                        "variant":"primary",
+                        "call":"onClickSubmit",
+                        "isRequired": true,
+                        "styles": {
+                            "colWidth": "4",
+                            "className": "bf-btn-login bf-btn-imp"
+                        }
+                    }
+            ]
+            },
+            "modal":{
+                "deactivate":{
+                    "text":"Are you sure you want to delete the Aircraft?",
+                    "button1":"Yes",
+                    "button2":"Cancel"
+                },
+                "validate":{
+                    "text":"Please verify. A required field is missing information!",
+                    "button1":"OK"
+                },
+                "duplicate":{
+                    "text":"Oops! Aircraft already exists.",
+                    "button1":"OK"
+                }
+            },
+            "notifyMessage":{
+                "msg1": "Success! ",
+                "msg2": " has been added to this account.",
+                "msg3": " has been edited by ",
+                "msg4": "Aircraft ",
+                "msg5": " has been deleted by account by ",
+                "msg6": "An aircraft has details that do not match our database. ",
+                "msg7": " has modified the data"
+            }
+        }
+    ]
+}

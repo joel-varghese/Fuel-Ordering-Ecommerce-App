@@ -1,0 +1,914 @@
+{
+    "profileDetailsData": [
+        {
+            "pageName": "Update MyProfile",
+            "sections": {
+                "subSections": [
+                    {
+                        "name":"companyFieldsArray",
+                        "companyFieldsArray": [
+                            {
+                                "id": "1",
+                                "fields": [
+                                    {
+                                        "component": "paragraph",
+                                        "type": "subheading",
+                                        "label": "My Profile",
+                                        "users":["FBO", "Operator","Barrel Fuel"]
+                                    },
+                                    {
+                                        "component": "input",
+                                        "type": "input",
+                                        "id": "1.1",
+                                        "name": "firstName",
+                                        "group": "details",
+                                        "maxLength": "35",
+                                        "disabled":true,
+                                        "defaultValue":true,
+                                        "label": "First Name",
+                                        "placeholder": "First Name",
+                                        "isRequired": true,
+                                        "edit": true,
+                                        "users":["FBO", "Operator","Barrel Fuel"],
+                                        "styles": {
+                                            "colWidth": "3",
+                                            "className": ""
+                                        },
+                                        "validations": [
+                                            {
+                                                "validation": "IsMandatory",
+                                                "errorMessage": ""
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "component": "input",
+                                        "type": "input",
+                                        "id": "1.2",
+                                        "name": "middleName",
+                                        "group": "details",
+                                        "label": "Middle Name",
+                                        "placeholder": "Middle Name",
+                                        "maxLength": "25",
+                                        "isRequired": false,
+                                        "defaultValue":true,
+                                        "disabled":true,
+                                        "edit": true,
+                                        "users":["FBO", "Operator","Barrel Fuel"],
+                                        "styles": {
+                                            "colWidth": "3",
+                                            "className": ""
+                                        },
+                                        "validations": [
+                                            {
+                                                "validation": "IsMandatory",
+                                                "errorMessage": ""
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "component": "input",
+                                        "type": "input",
+                                        "id": "1.3",
+                                        "name": "lastName",
+                                        "group": "details",
+                                        "maxLength": "35",
+                                        "label": "Last Name",
+                                        "defaultValue":true,
+                                        "placeholder": "Last Name",
+                                        "isRequired": true,
+                                        "disabled":true,
+                                        "edit": true,
+                                        "users":["FBO", "Operator","Barrel Fuel"],
+                                        "styles": {
+                                            "colWidth": "3",
+                                            "className": ""
+                                        },
+                                        "validations": [
+                                            {
+                                                "validation": "IsMandatory",
+                                                "errorMessage": ""
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "component": "input",
+                                        "type": "input",
+                                        "id": "1.6",
+                                        "name": "levelOfAccess",
+                                        "group": "details",
+                                        "label": "Level of Access",
+                                        "placeholder": "Level of Access",
+                                        "defaultValue":true,
+                                        "isRequired": false,
+                                        "disabled":true,
+                                        "edit": false,
+                                        "users":["FBO", "Operator","Barrel Fuel"],
+                                        "styles": {
+                                            "colWidth": "3",
+                                            "className": ""
+                                        },
+                                        "validations": [
+                                            {
+                                                "validation": "IsMandatory",
+                                                "errorMessage": ""
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "component": "select",
+                                        "type": "select",
+                                        "id": "1.5",
+                                        "name": "roleType",
+                                        "group": "details",
+                                        "label": "Role",
+                                        "placeholder": "Role",
+                                        "isRequired": false,
+                                        "defaultValue":true,
+                                        "disabled":true,
+                                        "edit": false,
+                                        "dynamicSelect": true,
+                                        "userRole":true,
+                                        "lookupReference": {
+                                            "name": "roles"
+                                        },
+                                        "dependentField": "userType",
+                                        "users":["FBO","Operator"],
+                                        "styles": {
+                                            "colWidth": "3",
+                                            "className": ""
+                                        },
+                                        "validations": [
+                                            {
+                                                "validation": "IsMandatory",
+                                                "errorMessage": ""
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "component": "input",
+                                        "type": "input",
+                                        "id": "1.4",
+                                        "name": "companyName",
+                                        "group": "details",
+                                        "maxLength": "100",
+                                        "label": "Company Name",
+                                        "placeholder": "Company Name",
+                                        "defaultValue":true,
+                                        "disabled":true,
+                                        "isRequired": false,
+                                        "edit": false,
+                                        "tooltip": {
+                                            "text": "To Add/Modify company reach out to admin@bf.com or &ltPhone Number>"
+                                          },
+                                        "users":["FBO","Operator"],
+                                        "styles": {
+                                            "colWidth": "6",
+                                            "fboColWidth":"3",
+                                            "className": ""
+                                        },
+                                        "validations": [
+                                            {
+                                                "validation": "IsMandatory",
+                                                "errorMessage": ""
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "component": "input",
+                                        "type": "input",
+                                        "id": "1.7",
+                                        "name": "location",
+                                        "group": "details",
+                                        "label": "Location(s)",
+                                        "placeholder": "Location(s)",
+                                        "defaultValue":true,
+                                        "isRequired": false,
+                                        "disabled":true,
+                                        "edit": false,
+                                        "users":["FBO"],
+                                        "styles": {
+                                            "colWidth": "6",
+                                            "className": ""
+                                        },
+                                        "validations": [
+                                            {
+                                                "validation": "IsMandatory",
+                                                "errorMessage": ""
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "personalFieldsArray",
+                        "personalFieldsArray": [
+                            {
+                                "id": "1",
+                                "fields": [
+                                    {
+                                        "component": "paragraph",
+                                        "type": "subheading",
+                                        "label": "Personal"
+                                    },
+                                    {
+                                        "component": "input",
+                                        "type": "input",
+                                        "id": "1.10",
+                                        "name": "emailAddress",
+                                        "group": "details",
+                                        "label": "Email Address",
+                                        "placeholder": "Email Address",
+                                        "isRequired": false,
+                                        "disabled":true,
+                                        "editModal": true,
+                                        "editText":"Edit",
+                                        "styles": {
+                                            "colWidth": "3",
+                                            "className": ""
+                                        },
+                                        "validations": []
+                                    },
+                                    {
+                                        "component": "input",
+                                        "type": "input",
+                                        "id": "1.11",
+                                        "name": "mobileNumber",
+                                        "group": "details",
+                                        "label": "Mobile Number",
+                                        "placeholder": "Mobile Number",
+                                        "isRequired": false,
+                                        "disabled":true,
+                                        "editModal": true,
+                                        "editText":"Edit",
+                                        "styles": {
+                                            "colWidth": "3",
+                                            "className": ""
+                                        },
+                                        "validations": [
+                                            {
+                                                "validation": "IsMandatory",
+                                                "errorMessage": ""
+                                              },
+                                              {
+                                                "validation": "CheckUSPhone",
+                                                "errorMessage": "Enter a valid Mobile Number"
+                                              }
+                                        ]
+                                    },
+                                    {
+                                        "component": "input",
+                                        "type": "password",
+                                        "id": "1.12",
+                                        "name": "password",
+                                        "group": "details",
+                                        "label": "Password",
+                                        "placeholder": "Password",
+                                        "isRequired": false,
+                                        "disabled":true,
+                                        "editModal": true,
+                                        "editText":"Edit",
+                                        "styles": {
+                                            "colWidth": "3",
+                                            "className": "-webkit-text-security: square"
+                                        },
+                                        "validations": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "settingsFieldsArray",
+                        "settingsFieldsArray": [
+                            {
+                                "id": "1",
+                                "fields": [
+                                    {
+                                        "component": "paragraph",
+                                        "type": "subheading",
+                                        "label": "Settings"
+                                    },
+                                    {
+                                        "component": "checkbox",
+                                        "type": "checkbox",
+                                        "role":"switch",
+                                        "id": "1.10",
+                                        "name": "emailNotifications",
+                                        "group": "details",
+                                        "label": "Email Notifications",
+                                        "placeholder": "Email Notifications",
+                                        "isRequired": false,
+                                        "styles": {
+                                            "colWidth": "3",
+                                            "className": ""
+                                        },
+                                        "validations": []
+                                    },
+                                    {
+                                        "component": "checkbox",
+                                        "type": "checkbox",
+                                        "role":"switch",
+                                        "id": "1.11",
+                                        "name": "smsNotification",
+                                        "group": "details",
+                                        "label": "SMS Notifications",
+                                        "placeholder": "SMS Notifications",
+                                        "isRequired": false,
+                                        "styles": {
+                                            "colWidth": "3",
+                                            "className": ""
+                                        },
+                                        "validations": []
+                                    },
+                                    {
+                                        "component": "checkbox",
+                                        "type": "checkbox",
+                                        "role":"switch",
+                                        "id": "1.12",
+                                        "name": "localTime",
+                                        "group": "details",
+                                        "label": "Local Time",
+                                        "placeholder": "Local Time",
+                                        "isRequired": false,
+                                        "styles": {
+                                            "colWidth": "3",
+                                            "className": ""
+                                        },
+                                        "validations": []
+                                    },
+                                    {
+                                        "component": "checkbox",
+                                        "type": "checkbox",
+                                        "role":"switch",
+                                        "id": "1.12",
+                                        "name": "utc",
+                                        "group": "details",
+                                        "label": "UTC",
+                                        "placeholder": "UTC",
+                                        "isRequired": false,
+                                        "styles": {
+                                            "colWidth": "3",
+                                            "className": ""
+                                        },
+                                        "validations": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "modal": [
+                    {
+                        "name": "errorMessage",
+                        "successModal": {
+                            "title": "",
+                            "paragraph": "Success! User created. Activation link will be emailed",
+                            "primaryButton": {
+                                "id": "17678",
+                                "href": "#",
+                                "name": "okButton",
+                                "text": "OK",
+                                "target": "_self"
+                            }
+                        },
+                        "failModal": {
+                            "title": "",
+                            "paragraph": "Oops! This E-mail already exists",
+                            "primaryButton": {
+                                "id": "17678",
+                                "href": "#",
+                                "name": "okButton",
+                                "text": "OK",
+                                "target": "_self"
+                            }
+                        },
+                        "mandatoryModal": {
+                            "title": "",
+                            "paragraph": "Please verify. A required field is missing information",
+                            "primaryButton": {
+                                "id": "17678",
+                                "href": "#",
+                                "name": "okButton",
+                                "text": "OK",
+                                "target": "_self"
+                            }
+                        }
+                    },
+                    {
+                        "name": "emailAddress",
+                        "modal": [
+                            {
+                                "id": "1",
+                                "fields": [
+                                    {
+                                        "component": "paragraph",
+                                        "type": "subheading",
+                                        "label": "Enter New Email",
+                                        "hide":false,
+                                        "styles": {
+                                            "colWidth": "",
+                                            "className": "bf-mrgb20i"
+                                        }
+                                    },
+                                    {
+                                        "component": "input",
+                                        "type": "input",
+                                        "id": "1.10",
+                                        "name": "emailAddress",
+                                        "group": "details",
+                                        "hideLabel": true,
+                                        "placeholder": "Enter new email address",
+                                        "isRequired": false,
+                                        "disabled":true,
+                                        "editModal": true,
+                                        "maxLength":"50",
+                                        "hide":false,
+                                        "editText":"Edit",
+                                        "styles": {
+                                            "colWidth": "8",
+                                            "className": ""
+                                        },
+                                        "userExist": "Oops! This E-mail already exists",
+                                        "validations": [
+                                            {
+                                                "validation": "IsMandatory",
+                                                "message": ""
+                                            },
+                                            {
+                                                "validation": "CheckRegex",
+                                                "validateRule": "([A-Za-z0-9_\\-\\.])+\\@([A-Za-z0-9_\\-\\.])+\\.([A-Za-z]{2,4})$",
+                                                "message": "Oops! Invalid E-mail"
+                                            },
+                                            {
+                                              "validation": "CheckBFDomain",
+                                              "message": "Email should contain @barrelfuel"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "component": "button",
+                                        "type": "button",
+                                        "id": "1.3",
+                                        "name": "emailSubmit",
+                                        "sendTo":"emailAddress",
+                                        "group": "details",
+                                        "text": "Submit",
+                                        "label": "Submit",
+                                        "isRequired": false,
+                                        "disabled":true,
+                                        "hide":false,
+                                        "styles": {
+                                            "colWidth": "",
+                                            "className": "bf-btn-left bf-btn-height bf-btn-imp"
+                                        },
+                                        "validations": []
+                                    },
+                                    {
+                                        "component": "text",
+                                        "type": "paragraph",
+                                        "id": "1.3",
+                                        "name": "emailText",
+                                        "group": "details",
+                                        "isRequired": false,
+                                        "text": "Security Code sent to your new email address",
+                                        "disabled":true,
+                                        "hide":true,
+                                        "styles": {
+                                            "colWidth": "12",
+                                            "className": "bf-email-text"
+                                        },
+                                        "validations": []
+                                    },
+                                    {
+                                        "component": "input",
+                                        "type": "input",
+                                        "id": "1.11",
+                                        "name": "emailSecurityCode",
+                                        "maxLength":"6",
+                                        "group": "details",
+                                        "hideLabel": true,
+                                        "placeholder": "Enter Security Code",
+                                        "isRequired": false,
+                                        "editModal": true,
+                                        "hide":true,
+                                        "editText":"Edit",
+                                        "styles": {
+                                            "colWidth": "8",
+                                            "className": ""
+                                        },
+                                        "validations": []
+                                    },
+                                    {
+                                        "component": "validatebutton",
+                                        "type": "button",
+                                        "id": "1.3",
+                                        "name": "emailValidate",
+                                        "group": "details",
+                                        "sendTo":"emailSecurityCode",
+                                        "label": "Validate",
+                                        "text": "Validate",
+                                        "success":"Email Address Change Request Sent For Super Admin Approval",
+                                        "changeSuccess": "Success! Your Email Has Been Updated",
+                                        "validationFailed": "Oops! Please enter a valid code.",
+                                        "isRequired": false,
+                                        "disabled":true,
+                                        "hide":true,
+                                        "styles": {
+                                            "colWidth": "",
+                                            "className": "bf-btn-left bf-btn-height bf-btn-imp"
+                                        },
+                                        "validations": []
+                                    },
+                                    {
+                                        "component": "link",
+                                        "type": "link",
+                                        "id": "1.3",
+                                        "name": "emailResendCode",
+                                        "group": "details",
+                                        "text": "Resend Code",
+                                        "sendTo":"emailAddress",
+                                        "isRequired": false,
+                                        "disabled":true,
+                                        "success":"Code Sent Successfully",
+                                        "hide":true,
+                                        "styles": {
+                                            "colWidth": "8",
+                                            "className": "bf-trems-link bf-resend-link"
+                                        },
+                                        "validations": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "mobileNumber",
+                        "modal": [
+                            {
+                                "id": "1",
+                                "fields": [
+                                    {
+                                        "component": "paragraph",
+                                        "type": "subheading",
+                                        "label": "Enter New Mobile Number",
+                                        "hide":false,
+                                        "styles": {
+                                            "colWidth": "",
+                                            "className": "bf-mrgb20i"
+                                        }
+                                    },
+                                    {
+                                        "component": "input",
+                                        "type": "input",
+                                        "id": "1.10",
+                                        "name": "mobileNumber",
+                                        "minlength":14,
+                                        "maxLength":"14",
+                                        "group": "details",
+                                        "hideLabel": true,
+                                        "placeholder": "Enter new mobile number",
+                                        "mobileExist": "Oops! This Mobile Number already exists",
+                                        "isRequired": false,
+                                        "disabled":true,
+                                        "editModal": true,
+                                        "hide":false,
+                                        "editText":"Edit",
+                                        "styles": {
+                                            "colWidth": "8",
+                                            "className": ""
+                                        },
+                                        "validations": [
+                                            {
+                                                "validation": "IsMandatory",
+                                                "errorMessage": ""
+                                              },
+                                              {
+                                                "validation": "CheckUSPhone",
+                                                "errorMessage": "Enter a valid Mobile Number"
+                                              }
+                                        ]
+                                    },
+                                    {
+                                        "component": "button",
+                                        "type": "button",
+                                        "id": "1.3",
+                                        "name": "mobileSubmit",
+                                        "group": "details",
+                                        "sendTo": "mobileNumber",
+                                        "text": "Submit",
+                                        "label": "Submit",
+                                        "isRequired": false,
+                                        "disabled":true,
+                                        "hide":false,
+                                        "styles": {
+                                            "colWidth": "",
+                                            "className": "bf-btn-left bf-btn-height bf-btn-imp"
+                                        },
+                                        "validations": []
+                                    },
+                                    {
+                                        "component": "text",
+                                        "type": "paragraph",
+                                        "id": "1.3",
+                                        "name": "mobileText",
+                                        "group": "details",
+                                        "text": "Security Code Sent To Your New Mobile Number",
+                                        "disabled":true,
+                                        "hide":true,
+                                        "styles": {
+                                            "colWidth": "12",
+                                            "className": "bf-email-text"
+                                        },
+                                        "validations": []
+                                    },
+                                    {
+                                        "component": "input",
+                                        "type": "input",
+                                        "id": "1.11",
+                                        "name": "mobileSecurityCode",
+                                        "group": "details",
+                                        "maxLength":"6",
+                                        "hideLabel": true,
+                                        "placeholder": "Enter Security Code",
+                                        "isRequired": false,
+                                        "editModal": true,
+                                        "hide":true,
+                                        "editText":"Edit",
+                                        "styles": {
+                                            "colWidth": "8",
+                                            "className": ""
+                                        },
+                                        "validations": []
+                                    },
+                                    {
+                                        "component": "validatebutton",
+                                        "type": "button",
+                                        "id": "1.3",
+                                        "name": "mobileValidate",
+                                        "group": "details",
+                                        "sendTo":"mobileSecurityCode",
+                                        "validationFailed":"Oops! Please enter a valid code.",
+                                        "success": "Success!",
+                                        "label": "Validate",
+                                        "text": "Validate",
+                                        "isRequired": false,
+                                        "disabled":true,
+                                        "hide":true,
+                                        "styles": {
+                                            "colWidth": "",
+                                            "className": "bf-btn-left bf-btn-height bf-btn-imp"
+                                        },
+                                        "validations": []
+                                    },
+                                    {
+                                        "component": "link",
+                                        "type": "link",
+                                        "id": "1.3",
+                                        "name": "mobileResendCode",
+                                        "sendTo": "mobileNumber",
+                                        "group": "details",
+                                        "text": "Resend Code",
+                                        "isRequired": false,
+                                        "disabled":true,
+                                        "hide":true,
+                                        "success":"Code Sent Successfully",
+                                        "styles": {
+                                            "colWidth": "8",
+                                            "className": "bf-trems-link bf-resend-link"
+                                        },
+                                        "validations": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "password",
+                        "modal": [
+                            {
+                                "id": "1",
+                                "fields": [
+                                    {
+                                        "component": "paragraph",
+                                        "type": "subheading",
+                                        "label": "Security Code Sent To Your Email Address",
+                                        "labelPassword": "Security Code Sent To Your Email Address",
+                                        "validate":true,
+                                        "hide":false,
+                                        "styles": {
+                                            "colWidth": "",
+                                            "className": "bf-mrgb20i"
+                                        }
+                                    },
+                                    {
+                                        "component": "input",
+                                        "type": "input",
+                                        "id": "1.11",
+                                        "name": "passwordSecurityCode",
+                                        "maxLength":"6",
+                                        "group": "details",
+                                        "hideLabel": true,
+                                        "placeholder": "Enter Security Code",
+                                        "isRequired": false,
+                                        "editModal": true,
+                                        "hide":false,
+                                        "validate":true,
+                                        "editText":"Edit",
+                                        "styles": {
+                                            "colWidth": "8",
+                                            "className": ""
+                                        },
+                                        "validations": []
+                                    },
+                                    {
+                                        "component": "validatebutton",
+                                        "type": "button",
+                                        "id": "1.3",
+                                        "name": "passwordValidate",
+                                        "validationFailed":"Oops! Please enter a valid code.",
+                                        "group": "details",
+                                        "sendTo": "passwordSecurityCode",
+                                        "label": "Validate",
+                                        "text": "Validate",
+                                        "isRequired": false,
+                                        "disabled":true,
+                                        "validate":true,
+                                        "hide":false,
+                                        "styles": {
+                                            "colWidth": "bf-btn-imp",
+                                            "className": "bf-btn-left bf-btn-height bf-btn-imp"
+                                        },
+                                        "validations": []
+                                    },
+                                    {
+                                        "component": "link",
+                                        "type": "link",
+                                        "id": "1.3",
+                                        "name": "passwordResendCode",
+                                        "group": "details",
+                                        "text": "Resend Code",
+                                        "isRequired": false,
+                                        "disabled":true,
+                                        "validate":true,
+                                        "hide":false,
+                                        "success":"Code Sent Successfully",
+                                        "styles": {
+                                            "colWidth": "8",
+                                            "className": "bf-trems-link bf-resend-link"
+                                        },
+                                        "validations": []
+                                    },
+                                    {
+                                        "component": "paragraph",
+                                        "type": "subheading",
+                                        "label": "Create New Password",
+                                        "hide":true
+                                    },
+                                    {
+                                        "component": "input",
+                                        "id": "1.18",
+                                        "name": "newPassword",
+                                        "dataType": "password",
+                                        "group": "details",
+                                        "placeholder": "New Password",
+                                        "label":"New Password",
+                                        "isRequired": false,
+                                        "editModal": true,
+                                        "hide":true,
+                                        "editText":"Edit",
+                                        "styles": {
+                                            "colWidth": "12",
+                                            "className": ""
+                                        },
+                                        "validations": [
+                                          {
+                                            "validation": "IsMandatory",
+                                            "message": ""
+                                          },
+                                          {
+                                            "validation": "checkUpperCase",
+                                            "validationRule": "(?=.*[A-Z])",
+                                            "message": "Strong"
+                                          },
+                                          {
+                                            "validation": "checkNumber",
+                                            "validationRule": "(?=.*[0-9])",
+                                            "message": "Strong"
+                                          },
+                                          {
+                                            "validation": "checkSpecial",
+                                            "validationRule": "(?=.[!@#$%^&])",
+                                            "message": "Strong"
+                                          },
+                                          {
+                                            "validation": "checkLength",
+                                            "validationRule": "^.{8,20}$",
+                                            "message": "Length"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "component":"list",
+                                        "type": "list",
+                                        "validations": [],
+                                        "dataType": "text",
+                                        "hide": true,
+                                        "styles": {
+                                            "colWidth": "8",
+                                            "className": "bf-password-criteria"
+                                        },
+                                        "passwordGuidline" : {
+                                          "title": "Password Must Contain",
+                                          "guidelines": {
+                                            "checkLength" : "Length-8 Min To 20 Max",
+                                            "checkUpperCase": "At Least One Uppercase",
+                                            "checkNumber":"At Least One Numeric",
+                                            "checkSpecial" : "At Least One Special Character (!@#$)"
+                                          }         
+                                        }
+                                      },
+                                      {
+                                        "component": "input",
+                                        "dataType": "password",
+                                        "id": "1.11",
+                                        "name": "confirmPassword",
+                                        "group": "details",
+                                        "placeholder": "Confirm Password",
+                                        "label":"Confirm Password",
+                                        "isRequired": false,
+                                        "editModal": true,
+                                        "hide":true,
+                                        "styles": {
+                                            "colWidth": "12",
+                                            "className": ""
+                                        },
+                                        "validations": [
+                                          {
+                                            "validation": "passwordMatch",
+                                            "message": "Oops! These passwords don't match"
+                                          }
+                                        ]
+                                    },
+                                    {
+                                        "component": "button",
+                                        "type": "button",
+                                        "id": "1.3",
+                                        "name": "passwordSubmit",
+                                        "success":"Success!",
+                                        "group": "details",
+                                        "sendTo":"confirmPassword",
+                                        "text": "Submit",
+                                        "label": "Submit",
+                                        "isRequired": false,
+                                        "disabled":true,
+                                        "hide":true,
+                                        "styles": {
+                                            "colWidth": "4 bf-btn-imp",
+                                            "className": "bf-btn-imp"
+                                        },
+                                        "validations": []
+                                    }  
+                                ]
+                            }
+                        ]
+                    }
+                    
+                ]
+            },
+            "button":{
+                "component": "button",
+                "type": "submit",
+                "id": "10",
+                "name": "save",
+                "sendTo":"emailAddress",
+                "group": "details",
+                "text": "Save",
+                "label": "Save",
+                "disabled":true,
+                "hide":false,
+                "styles": {
+                    "colWidth": "4 bf-btn-imp",
+                    "className": "bf-btn-left bf-btn-imp"
+                },
+                "validations": []
+            },
+            "emailbodyPassword":{
+                "title": "Update Email",
+                "paragraph": "Hello",
+                "html": "Please enter the 6-digit security code   :  # to change your password. This code will expire after 2 Hours."
+            },
+            "emailbodyEmail":{
+                "title": "Update Email",
+                "paragraph": "Hello",
+                "html": "Please enter the 6-digit security code   :  # to change your email address. This code will expire after 2 Hours."
+            },
+            "mobileOTP":{
+                "text1":"Please enter the 6-digit security code",
+                "text2":"to change your email address. This code will expire after 2 Hours."
+            }
+        }
+    ]
+}

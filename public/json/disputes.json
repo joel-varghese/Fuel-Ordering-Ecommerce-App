@@ -1,0 +1,166 @@
+{
+    "disputes":{
+       "config":{
+          "id":"3977",
+          "align":"center",
+          "theme":"theme-background-light",
+          "height":"tall"
+       },
+       "content":{
+          "headers":{
+            "DisputeTab":[
+             {
+                "id": "orderid",
+                "label":"Order ID",
+                "sortable": true
+             },
+             {
+              "id": "date",
+              "label":"Date Disputed",
+              "sortable": true
+             },
+             {
+              "id": "location",
+              "label":"Location",
+              "sortable": true
+             },
+             {
+              "id": "raised",
+              "label":"Raised By",
+              "sortable": true
+             },
+             {
+              "id": "dispReason",
+              "label":"Reasons",
+              "sortable": true
+             },
+             {
+              "id": "status",
+              "label":"Status",
+              "sortable": true
+             },
+             {
+               "id": "Actions",
+               "label": " "
+           }
+            ]
+           },
+           "mobileViewHeader":"Order Details",
+           "mobileHeadCells":[
+               {
+                  "id": "orderid",
+                  "label":"Order ID"
+               },
+               {
+                  "id": "date",
+                  "label":"Date Disputed"
+               },
+               {
+                  "id": "status",
+                  "label":"Status"
+               },
+               {
+                  "id": "actions",
+                  "label": ""
+               }
+            ]
+       },
+       "modal": [
+         {
+           "message":"Are You Sure You Want To Cancel The Dispute?",
+           "text":"Yes",
+           "text2":"Back"
+         }
+       ],
+       "editmodal":{
+       "validationMessage":"Please verify. A required field is missing information",
+       "fields":[
+           {
+              "component": "paragraph",
+              "users":["barrel fuel","fbo","operator"],
+              "type": "subheading",
+              "label": "Reason For Reopening Dispute"
+           },
+           {
+              "component": "textArea",
+              "type":"text",
+              "name": "Notes",
+              "maxLength":"500",
+              "dynamicSelect": false,
+              "isRequired": true,
+              "label": "Reason",
+              "placeholder": "Notes",
+              "lengthRestriction":true,
+              "isVisible": true,
+              "defaultValue":"",
+              "rows":"4",
+              "styles": {
+              "colWidth": "4",
+              "className": ""
+              }
+           }
+       ]
+      },
+      "editmodalBF":{
+         "validationMessage":"Please verify. A required field is missing information",
+         "fields":[
+             {
+                "component": "paragraph",
+                "users":["barrel fuel","fbo","operator"],
+                "type": "subheading",
+                "label": "Reason For Reopening Dispute"
+             },
+             {
+                "component": "textArea",
+                "type":"text",
+                "name": "Notes",
+                "maxLength":"500",
+                "dynamicSelect": false,
+                "isRequired": true,
+                "label": "Reason",
+                "placeholder": "Notes",
+                "lengthRestriction":true,
+                "isVisible": true,
+                "defaultValue":"",
+                "rows":"4",
+                "styles": {
+                "colWidth": "4",
+                "className": ""
+                }
+             },
+             {
+               "component": "select",
+               "type":"select",
+               "name": "requestedBy",
+               "fieldType":true,
+               "id": "1.4",
+               "group": "details",
+               "dynamicSelect": false,
+               "isRequired": true,
+               "label": "Requested By",
+               "placeholder": "Email Address",
+               "isVisible": true,
+               "defaultValue":"",
+               "styles": {
+               "colWidth": "4",
+               "className": ""
+               },
+               "validations": [
+               {
+                  "validation": "IsMandatory",
+                  "errorMessage": ""
+               }
+               ],
+               "options":[
+
+               ]
+            }
+         ]
+        },
+        "notifyMessage":{
+         "msg1": "You Have Successfully Re-Opened A New Dispute For Order ",
+         "msg2": " And Will Be Contacted By The FBO With More Details",
+         "msg3": " And Will Be Contacted By The Barrel Fuel Representative with more details"
+        }
+    }
+ }

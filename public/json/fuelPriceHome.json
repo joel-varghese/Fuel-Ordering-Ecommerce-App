@@ -1,0 +1,930 @@
+{
+    "component": "accountHome",
+    "id":"1",
+    "user": {
+        "name": "selectUser",
+        "id": "1.1",
+        "component": "select",
+        "type":"select",
+        "initialValue":"internal",
+        "styles": {
+            "colWidth": "2",
+            "className": ""
+        },
+        "placeholder":"Select User",
+        "options":[
+            {
+                "value":"internal",
+                "title":"BF User"
+            },
+            {
+                "value":"fbo",
+                "title":"FBO"
+            }
+            
+        ]
+    },
+    "Component":"Fuel Price",
+    "userTypes":{
+        "name": "accounttabs",
+        "id": "1.2",
+        "internal":{
+            "name":"internal",
+            "tabs":[
+                
+                {
+                    "name": "active",
+                    "title": "Active"
+                },
+                {
+                    "name": "archive",
+                    "title": "Archive"
+                },
+                {
+                    "name": "fuel-tiers",
+                    "title": "Fuel Tiers"
+                }
+                
+            ]
+        },
+        "fbo": {
+            "name":"FBO",
+            "tabs":[
+                {
+                    "name": "active",
+                    "title": "Active"
+                },
+                {
+                    "name": "archive",
+                    "title": "Archive"
+                },
+                {
+                    "name": "fuel-tiers",
+                    "title": "Fuel Tiers"
+                }
+                
+            ]
+        }      
+        
+    },
+    "active":{
+        "headCells":[
+            {
+                "id": "location",
+                "numeric": false,
+                "disablePadding": true,
+                "label": "Location",
+                "sortable": true
+            },
+            {
+                "id": "validityRange",
+                "numeric": true,
+                "disablePadding": false,
+                "label": "Validity Range"                
+            },
+            {
+                "id": "addedby",
+                "numeric": false,
+                "disablePadding": false,
+                "label": "Added By"
+            },
+            {
+                "id": "criteria",
+                "numeric": true,
+                "disablePadding": false,
+                "label": "Criteria (gal)"
+            },
+            {
+                "id": "jetA",
+                "numeric": true,
+                "disablePadding": false,
+                "label": "Jet A*"
+            },
+            {
+                "id": "100ll",
+                "numeric": true,
+                "disablePadding": false,
+                "label": "100LL*"
+            },
+            {
+                "id": "saf",
+                "numeric": true,
+                "disablePadding": false,
+                "label": "SAF*"
+            },
+            {
+                "id": "jetaprist",
+                "numeric": true,
+                "disablePadding": false,
+                "label": "Jet-A+/Prist*"
+            },
+            {
+                "id": "Actions",
+                "numeric": true,
+                "disablePadding": false,
+                "label": ""
+            }
+        ],
+        "addNewFuelPrice" : {
+            "component": "button",
+            "type":"button",
+            "label":"Add New Pricing",
+            "variant":"primary",
+            "name":"addNew",
+            "isRequired": true,
+            "styles": {
+                "colWidth": "bf-add-right-top",
+                "className": "add-more bf-width-auto"
+            }
+        },
+        "modal":{
+            "deactivate":{
+                "text":"Are you sure you want to delete the user?",
+                "button1":"Yes",
+                "button2":"Cancel"
+            },
+            "validate":{
+                "text":"Please verify. A required field is missing information",
+                "button1":"OK"
+            }
+        },"Buttons":[
+            {"Label":"Edit", 
+                "method":"onEditClick",
+                "className":"btn btn-bf-primary"
+            },
+            {"Label":"Deactivate", 
+                "method":"onDeactivateClick",
+                "className":"btn-bf-secondary bf-mrgl20"
+            }
+        ]
+
+    },
+    "archive":{
+        "headCells":[
+            {
+                "id": "location",
+                "numeric": false,
+                "disablePadding": true,
+                "label": "Location",
+                "sortable": true
+            },
+            {
+                "id": "expirationDate",
+                "numeric": true,
+                "disablePadding": false,
+                "label": "Expiration Date",
+                "sortable": true
+            },
+            {
+                "id": "addedby",
+                "numeric": false,
+                "disablePadding": false,
+                "label": "Added By"
+            },
+            {
+                "id": "criteria",
+                "numeric": true,
+                "disablePadding": false,
+                "label": "Criteria (gal)"
+            },
+            {
+                "id": "jetA",
+                "numeric": true,
+                "disablePadding": false,
+                "label": "Jet A*"
+            },
+            {
+                "id": "100ll",
+                "numeric": true,
+                "disablePadding": false,
+                "label": "100LL*"
+            },
+            {
+                "id": "saf",
+                "numeric": true,
+                "disablePadding": false,
+                "label": "SAF*"
+            },
+            {
+                "id": "jetaprist",
+                "numeric": true,
+                "disablePadding": false,
+                "label": "Jet-A+/Prist*"
+            },
+            {
+                "id": "Actions",
+                "numeric": true,
+                "disablePadding": false,
+                "label": ""
+            }
+        ],
+        "addNewFuelPrice" : {
+            "component": "button",
+            "type":"button",
+            "label":"Add New Pricing",
+            "variant":"primary",
+            "name":"addNew",
+            "isRequired": true,
+            "styles": {
+                "colWidth": "bf-add-right-top",
+                "className": "add-more bf-width-auto"
+            }
+        },
+        "modal":{
+            "deactivate":{
+                "text":"Are you sure you want to delete the user?",
+                "button1":"Yes",
+                "button2":"Cancel"
+            },
+            "validate":{
+                "text":"Please verify. A required field is missing information",
+                "button1":"OK"
+            }
+        },"Buttons":[
+            {"Label":"Edit", 
+                "method":"onEditClick",
+                "className":"btn btn-bf-primary"
+            },
+            {"Label":"Deactivate", 
+                "method":"onDeactivateClick",
+                "className":"btn-bf-secondary bf-mrgl20"
+            }
+        ]
+
+    },
+    "fuelTiers":{
+        "headCells":[
+            {
+                "id": "airportId",
+                "numeric": false,
+                "disablePadding": true,
+                "label": "Airport ID"
+            },
+            {
+                "id": "jet-A",
+                "numeric": true,
+                "disablePadding": false,
+                "label": "Jet-A"
+            },
+            {
+                "id": "100ll",
+                "numeric": false,
+                "disablePadding": false,
+                "label": "100LL"
+            },
+            {
+                "id": "jetaprist",
+                "numeric": true,
+                "disablePadding": false,
+                "label": "Jet-A+/Prist"
+            },
+            {
+                "id": "SAF",
+                "numeric": true,
+                "disablePadding": false,
+                "label": "SAF"
+            },
+            
+            {
+                "id": "Actions",
+                "numeric": true,
+                "disablePadding": false,
+                "label": ""
+            }
+        ],
+        "addNewFuelPrice" : {
+            "component": "button",
+            "type":"button",
+            "label":"Add Location",
+            "variant":"primary",
+            "name":"addNew",
+            "isRequired": true,
+            "styles": {
+                "colWidth": "bf-add-right-top",
+                "className": "add-more bf-width-auto"
+            }
+        },
+        "aircraftInformation" :{
+            "fields" :[
+                {
+                    "component": "header",
+                    "type": "subheading",
+                    "label": "Edit Airport Information",
+                    "labelAdd": "Add Airport Information"
+                },
+                {
+                    "component": "input",
+                    "type":"text",
+                    "callback":false,
+                    "name":"airportIdentificationNumber",
+                    "disable": false,
+                    "label":"Airport ID",
+                    "placeholder": "Airport ID",
+                    "isRequired": true,
+                    "maxLength": "4",
+                    "styles": {
+                        "colWidth": "4",
+                        "className": ""
+                    },
+                    "validations": [
+                        {
+                            "type": "IsMandatory",
+                            "errorMessage": ""
+                        },
+                        {
+                           "type":"onlyspecial",
+                           "validateRule":"[a-zA-Z0-9]+",
+                           "errorMessage":"Invalid Data"
+                        }
+                    ]
+                },
+                {
+                    "component": "input",
+                    "type":"text",
+                    "callback":false,
+                    "name":"airportName",
+                    "disable": false,
+                    "label":"Airport Name",
+                    "placeholder": "Airport Name",
+                    "isRequired": true,
+                    "maxLength": "100",
+                    "styles": {
+                        "colWidth": "4",
+                        "className": ""
+                    },
+                    "validations":[
+                        {
+                            "type":"IsMandatory",
+                            "errorMessage":""
+                        }
+                    ]
+                },
+                {
+                    "component": "multiSelectCheckbox",
+                    "type":"multiSelectCheckbox",
+                    "callback":false,
+                    "name":"fuelService",
+                    "label":"Fuel Service Offered",
+                    "disable": false,
+                    "placeholder": "Fuel Type",
+                    "lookupReference": {
+                        "name": "fuelServices"
+                    },
+                    "isRequired": true,
+                    "dynamicSelect": true,
+                    "options":[
+                        
+                    ],
+                    "styles": {
+                        "colWidth": "4",
+                        "className": "bf-text-left"
+                    },
+                    "validations":[
+                        {
+                            "type":"IsMandatory",
+                            "errorMessage":""
+                        }
+                    ]
+                },
+                
+                {
+                    "component": "AsyncTypeahead",
+                    "type":"text",
+                    "id":"1.4",
+                    "name":"airportLocation",
+                    "callback":false,
+                    "group":"details",
+                    "label":"Address Line 1",
+                    "placeholder": "Airport Address Line 1",
+                    "isRequired": true,
+                    "maxLength": "50",
+                    "disabled":true,
+                    "styles": {
+                        "colWidth": "4",
+                        "className": ""
+                    },
+                    "validations":[
+                        {
+                            "type":"IsMandatory",
+                            "errorMessage":""
+                        },
+                        {
+                           "type":"onlyspecial",
+                           "validateRule":"[a-zA-Z0-9]+",
+                           "errorMessage":"Invalid Data"
+                        },
+                        {
+                           "type":"onlydigit",
+                           "validateRule":"[a-zA-Z\\.?!#@_=$:]+",
+                           "errorMessage":"Invalid Data"
+                        }
+                    ]
+                },
+                {
+                    "component": "input",
+                    "type":"input",
+                    "id":"1.5",
+                    "name":"airportLocation2",
+                    "callback":false,
+                    "group":"details",
+                    "label":"Address Line 2",
+                    "placeholder": "Airport Address Line 2",
+                    "isRequired": false,
+                    "maxLength": "50",
+                    "disabled":true,
+                    "styles": {
+                        "colWidth": "4",
+                        "className": ""
+                    },
+                    "validations":[
+                        {
+                            "type":"IsMandatory",
+                            "errorMessage":""
+                        }
+                    ]
+                },
+                
+                {
+                    "component": "input",
+                    "type":"input",
+                    "id":"1.7",
+                    "name":"city",
+                    "group":"details",
+                    "callback":false,
+                    "label":"City",
+                    "placeholder": "Airport City",
+                    "isRequired": true,
+                    "maxLength": "30",
+                    "disabled":true,
+                    "styles": {
+                        "colWidth": "4",
+                        "className": ""
+                    },
+                    "validations":[
+                        {
+                            "type":"IsMandatory",
+                            "errorMessage":""
+                        },
+                                {
+                                   "type":"CheckRegex",
+                                   "validateRule":"^\\d*[a-zA-Z][a-zA-Z\\d ]*$",
+                                   "errorMessage":"Invalid Data"
+                                }
+                    ]
+                },
+                {
+                    "component": "select",
+                    "type":"select",
+                    "id":"1.8",
+                    "name":"state",
+                    "group":"details",
+                    "callback":false,
+                    "dynamicSelect": false,
+                    "label":"State",
+                    "placeholder": "Airport State",
+                    "isRequired": true,
+                    "disabled":true,
+                    "styles": {
+                        "colWidth": "4",
+                        "className": ""
+                    },
+                    "validations":[
+                        {
+                            "type":"IsMandatory",
+                            "errorMessage":""
+                        }
+                    ],
+                    "options":[
+                        {
+                            "title": "Alabama",
+                            "value": "AL"
+                        },
+                        {
+                            "title": "Alaska",
+                            "value": "AK"
+                        },
+                        {
+                            "title": "Arizona",
+                            "value": "AZ"
+                        },
+                        {
+                            "title": "Arkansas",
+                            "value": "AR"
+                        },
+                        {
+                            "title": "California",
+                            "value": "CA"
+                        },
+                        {
+                            "title": "Colorado",
+                            "value": "CO"
+                        },
+                        {
+                            "title": "Connecticut",
+                            "value": "CT"
+                        },
+                        {
+                            "title": "Delaware",
+                            "value": "DE"
+                        },
+                        {
+                            "title": "District Of Columbia",
+                            "value": "DC"
+                        },
+                        {
+                            "title": "Florida",
+                            "value": "FL"
+                        },
+                        {
+                            "title": "Georgia",
+                            "value": "GA"
+                        },
+                        {
+                            "title": "Hawaii",
+                            "value": "HI"
+                        },
+                        {
+                            "title": "Idaho",
+                            "value": "ID"
+                        },
+                        {
+                            "title": "Illinois",
+                            "value": "IL"
+                        },
+                        {
+                            "title": "Indiana",
+                            "value": "IN"
+                        },
+                        {
+                            "title": "Iowa",
+                            "value": "IA"
+                        },
+                        {
+                            "title": "Kansas",
+                            "value": "KS"
+                        },
+                        {
+                            "title": "Kentucky",
+                            "value": "KY"
+                        },
+                        {
+                            "title": "Louisiana",
+                            "value": "LA"
+                        },
+                        {
+                            "title": "Maine",
+                            "value": "ME"
+                        },
+                        {
+                            "title": "Maryland",
+                            "value": "MD"
+                        },
+                        {
+                            "title": "Massachusetts",
+                            "value": "MA"
+                        },
+                        {
+                            "title": "Michigan",
+                            "value": "MI"
+                        },
+                        {
+                            "title": "Minnesota",
+                            "value": "MN"
+                        },
+                        {
+                            "title": "Mississippi",
+                            "value": "MS"
+                        },
+                        {
+                            "title": "Missouri",
+                            "value": "MO"
+                        },
+                        {
+                            "title": "Montana",
+                            "value": "MT"
+                        },
+                        {
+                            "title": "Nebraska",
+                            "value": "NE"
+                        },
+                        {
+                            "title": "Nevada",
+                            "value": "NV"
+                        },
+                        {
+                            "title": "New Hampshire",
+                            "value": "NH"
+                        },
+                        {
+                            "title": "New Jersey",
+                            "value": "NJ"
+                        },
+                        {
+                            "title": "New Mexico",
+                            "value": "NM"
+                        },
+                        {
+                            "title": "New York",
+                            "value": "NY"
+                        },
+                        {
+                            "title": "North Carolina",
+                            "value": "NC"
+                        },
+                        {
+                            "title": "North Dakota",
+                            "value": "ND"
+                        },
+                        {
+                            "title": "Ohio",
+                            "value": "OH"
+                        },
+                        {
+                            "title": "Oklahoma",
+                            "value": "OK"
+                        },
+                        {
+                            "title": "Oregon",
+                            "value": "OR"
+                        },
+                        {
+                            "title": "Pennsylvania",
+                            "value": "PA"
+                        },
+                        {
+                            "title": "Rhode Island",
+                            "value": "RI"
+                        },
+                        {
+                            "title": "South Carolina",
+                            "value": "SC"
+                        },
+                        {
+                            "title": "South Dakota",
+                            "value": "SD"
+                        },
+                        {
+                            "title": "Tennessee",
+                            "value": "TN"
+                        },
+                        {
+                            "title": "Texas",
+                            "value": "TX"
+                        },
+                        {
+                            "title": "Utah",
+                            "value": "UT"
+                        },
+                        {
+                            "title": "Vermont",
+                            "value": "VT"
+                        },
+                        {
+                            "title": "Virginia",
+                            "value": "VA"
+                        },
+                        {
+                            "title": "Washington",
+                            "value": "WA"
+                        },
+                        {
+                            "title": "West Virginia",
+                            "value": "WV"
+                        },
+                        {
+                            "title": "Wisconsin",
+                            "value": "WI"
+                        },
+                        {
+                            "title": "Wyoming",
+                            "value": "WY"
+                        }
+                    ]
+                },
+                {
+                    "component": "input",
+                    "type":"input",
+                    "id":"1.9",
+                    "name":"zip",
+                    "group":"details",
+                    "callback":false,
+                    "label":"Zip",
+                    "placeholder": "Airport Zip",
+                    "isRequired": true,
+                    "maxLength": "10",
+                    "disabled":true,
+                    "styles": {
+                        "colWidth": "4",
+                        "className": ""
+                    },
+                    "validations":[
+                        {
+                            "type":"IsMandatory",
+                            "errorMessage":""
+                        },
+                                    {
+                                        "type": "CheckZIP",
+                                        "validateRule": "^\\d{5}(?:[-]\\d{4})?$",
+                                        "errorMessage": "Enter a valid Zip"
+                                    }
+                    ]
+                },
+                {
+                    "component": "select",
+                    "type":"select",
+                    "id":"1.6",
+                    "name":"country",
+                    "group":"details",
+                    "callback":false,
+                    "lookupReference": {
+                        "name": "country"
+                    },
+                    "dynamicSelect": true,
+                    "label":"Country",
+                    "placeholder": "Airport Country",
+                    "isRequired": true,
+                    "disabled":true,
+                    "defaultValue":"",
+                    "styles": {
+                        "colWidth": "4",
+                        "className": ""
+                    },
+                    "validations":[
+                        {
+                            "type":"IsMandatory",
+                            "errorMessage":""
+                        }
+                    ]
+                },
+               
+               
+               
+                {
+                    "component": "button",
+                    "type":"button",
+                    "label":"Submit",
+                    "name":"submitform",
+                    "disabled":false,
+                    "variant":"primary",
+                    "call":"onClickSubmit",
+                    "isRequired": true,
+                    "styles": {
+                        "colWidth": "4",
+                        "className": "bf-btn-left bf-btn-imp"
+                    }
+                }
+        ]
+        },
+        "modal":{
+            "deactivate":{
+                "text":"Are you sure you want to delete the user?",
+                "button1":"Yes",
+                "button2":"Cancel"
+            },
+            "validate":{
+                "text":"Please verify. A required field is missing information",
+                "button1":"OK"
+            }
+        },
+        "Buttons":[
+            {"Label":"Edit", 
+                "method":"onEditClick",
+                "className":"btn btn-bf-primary"
+            },
+            {"Label":"Deactivate", 
+                "method":"onDeactivateClick",
+                "className":"btn-bf-secondary bf-mrgl20"
+            }
+        ],
+        "paragraph":{
+            "component": "paragraph",
+            "type":"subheading",
+            "label":"Fuel Tiers",
+            "isEditable":false
+        },
+        "editFuelTire":[{"EditLable":"Edit Fuel Tiers",
+        "verifyFuelTiers":"Verify Fuel Tiers",
+        "confirmMessage":"Please Note, These Changes Will Not Take Effect Until ",
+        "submit":"Submit",
+        "modify":"Modify",
+        "confirm":"Confirm"
+
+        }]
+
+    },
+    "addNewFuel":[{"id":"1",
+    "fields":[
+        {
+            "component": "paragraph",
+            "type":"subheading",
+            "label":"Company Details",
+            "isEditable":true
+        },
+        {
+            "component": "select",
+            "type":"select",
+            "id":"1.6",
+            "name":"country",
+            "group":"details",
+            "callback":false,
+            "lookupReference": {
+                "name": "country"
+            },
+            "dynamicSelect": true,
+            "label":"Country",
+            "placeholder": "Company Country",
+            "isRequired": true,
+            "disabled":true,
+            "defaultValue":"",
+            "styles": {
+                "colWidth": "3",
+                "className": ""
+            },
+            "validations":[
+                {
+                    "validation":"IsMandatory",
+                    "errorMessage":""
+                }
+            ]
+        },
+        {
+            "component": "select",
+            "type":"select",
+            "id":"1.6",
+            "name":"country",
+            "group":"details",
+            "callback":false,
+            "lookupReference": {
+                "name": "country"
+            },
+            "dynamicSelect": true,
+            "label":"Country",
+            "placeholder": "Company Country",
+            "isRequired": true,
+            "disabled":true,
+            "defaultValue":"",
+            "styles": {
+                "colWidth": "3",
+                "className": ""
+            },
+            "validations":[
+                {
+                    "validation":"IsMandatory",
+                    "errorMessage":""
+                }
+            ]
+        },
+        {
+            "component": "input",
+            "type":"input",
+            "id":"1.11",
+            "name":"membershipfee",
+            "group":"details",
+            "label":"Membership Fee",
+            "placeholder": "Membership Fee",
+            "isRequired": false,
+            "disabled":true,
+            "styles": {
+                "colWidth": "3",
+                "className": ""
+            },
+            "validations":[
+                
+            ]
+        },{
+            "component": "input",
+            "type":"input",
+            "id":"1.12",
+            "name":"serviceFee",
+            "group":"details",
+            "label":"Service charge",
+            "placeholder": "Service charge",
+            "isRequired": false,
+            "disabled":true,
+            "styles": {
+                "colWidth": "3",
+                "className": "bf-mrgr25p"
+            },
+            "validations":[
+                
+            ]
+        },
+        {
+            "component": "paragraph",
+            "type":"subheading",
+            "label":"Company Details",
+            "isEditable":true
+        } 
+    ]}],
+
+   
+    
+    "search":{
+        "name": "searchbar",
+        "id": "1.3",
+        "component": "searchbar",
+        "type":"text",
+        "placeholder": "Company Name"
+    }
+
+}

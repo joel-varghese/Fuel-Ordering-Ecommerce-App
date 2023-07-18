@@ -1,0 +1,84 @@
+{
+    "footerData": {
+        "footer" : {
+            "logo" : [
+                {
+                    "imageDetails": { 
+                        "url": "images/bf-mobile-footer.svg",
+                        "name": "bf-footer-mobile-logo"
+                    },
+                    "type": "image",
+                    "logo": "./images/marketing/bf-footer-logo.svg"
+                },
+                {
+                    "imageDetails": { 
+                        "url": "images/bf-footer-logo.svg",
+                        "name": "bf-footer-logo"
+                    },
+                    "type": "image",
+                    "logo": "./images/marketing/bf-footer-mobile-logo.svg"
+                }
+            ],
+            "links": [
+                {
+                    "text": "Contact Us",
+                    "url": "./contact"
+                },
+                {
+                    "text": "Request a Demo",
+                    "url": "./demo"
+                },
+                {
+                    "text": "Terms Of Service",
+                    "url": ""
+                },
+                {
+                    "text": "Privacy Policy",
+                    "url": ""
+                },
+                {
+                    "text": "About",
+                    "url": "./about"
+                }
+            ],
+            "social":[
+                {
+                    "imageDetails": { 
+                        "url": "images/fb_logo.svg",
+                        "name": "bf-fb-logo"
+                    },
+                    "type": "image",
+                    "logo": "./images/marketing/fb_logo.svg",
+                    "url": "www.facebook.com"
+                },
+                {
+                    "imageDetails": { 
+                        "url": "images/insta_logo.svg",
+                        "name": "bf-insta-logo"
+                    },
+                    "type": "image",
+                    "logo": "./images/marketing/insta_logo.svg",
+                    "url": "www.instagram.com"
+                },
+                {
+                    "imageDetails": { 
+                        "url": "images/linkidin_logo.svg",
+                        "name": "bf-lin-logo"
+                    },
+                    "type": "image",
+                    "logo": "./images/marketing/linkidin_logo.svg",
+                    "url": "www.linkidin.com"
+                },
+                {
+                    "imageDetails": { 
+                        "url": "images/twitter_logo.svg",
+                        "name": "bf-twitter-logo"
+                    },
+                    "type": "image",
+                    "logo": "./images/marketing/twitter_logo.svg",
+                    "url": "www.twitter.com"
+                }
+            ]
+        }
+    }
+}

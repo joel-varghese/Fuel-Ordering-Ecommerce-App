@@ -1,0 +1,316 @@
+{
+    "landingPageData":
+        {
+            "navigation": {
+                "logo":"./LogoWithLabel.svg",
+                "navLinks":[
+                    {
+                        "text": "Home",
+                        "url": "./home"
+                    },
+                    {
+                        "text": "About",
+                        "url": "./about"
+                    },
+                    {
+                        "text": "Demo",
+                        "url": "./demo"
+                    },
+                    {
+                        "text": "Contact",
+                        "url": "./contact"
+                    },
+                    {
+                        "text": "Login",
+                        "url": "./login"
+                    }
+                ]
+            },
+            "landingScreen":[
+                {
+                    "type": "video",
+                    "url": "./videos/jet-executive-beh.webm",
+                    "imageDetails": { 
+                        "url": "images/jet-executive-beh",
+                        "name": "bf-jet-video"
+                    }
+                },
+                {
+                    "type": "heading",
+                    "itemLabel":"Join the Barrel Fuel Revolution"
+                },
+                {
+                    "type" : "button",
+                    "itemLabel":"Sign Up",
+                    "url": "./signup"
+                }
+            ],
+            "bfOfferings":{
+                "graph": {
+                    "type":"image",
+                    "image":"./images/marketing/bf-offerings-graph.png",
+                    "imageDetails": { 
+                        "url": "images/bf-offerings-graph.png",
+                        "name": "bf-offerings-graph"
+                    }
+                },
+                "offeringContent" :[
+                    {
+                        "type": "question",
+                        "itemLabel":"Why Join the Barrel Fuel Revolution?"
+                    },
+                    {
+                        "type": "heading",
+                        "itemLabel":"A SIMPLE AND EFFICIENT WAY TO PURCHASE FUEL"
+                    },
+                    {
+                        "type": "paragraph",
+                        "itemLabel":"Barrel’s innovative technology will revolutionize the private aviation industry by connecting customers and FBOs together."
+                    },
+                    {
+                        "type": "listImage",
+                        "imageDetails": { 
+                            "url": "images/list_flite_icon.png",
+                            "name": "bf-offering-icon"
+                        },
+                        "icon": "./images/marketing/list_flite_icon.png",
+                        "listData" : ["Free to Use", "Fuel Price Transparency", "Direct Fuel Deals", "Digital Wallets", "Real Time Payments", "Integrated Invoicing"]
+                    },
+                    {
+                        "type": "imageStore",
+                        "imageDetails": { 
+                            "url": "images/appstore_icon.png",
+                            "name": "appstore_icon"
+                        },
+                        "storeList" : ["./images/marketing/appstore_icon.png", "./images/marketing/googleplay_icon.png"]
+                    },
+                    {
+                        "type": "imageStore",
+                        "imageDetails": { 
+                            "url": "images/googleplay_icon.png",
+                            "name": "googleplay_icon"
+                        },
+                        "storeList" : ["./images/marketing/appstore_icon.png", "./images/marketing/googleplay_icon.png"]
+                    }
+                ],
+                "bfMobileDeals": [
+                    {
+                        "type":"image",
+                        "bgImage": "./images/marketing/fbo_Deals_mobile.png",
+                        "heading": "FOR FBOS",
+                        "imageDetails": { 
+                            "url": "images/fbo_Deals_mobile.png",
+                            "name": "fbo_deals_mobile"
+                        },
+                        "information": "Offer direct fuel deals with digital transactions and real time payments"
+                    },
+                    {
+                        "type":"image",
+                        "bgImage": "./images/marketing/operator_Deals_mobile.png",
+                        "heading": "FOR OPERATORS",
+                        "imageDetails": { 
+                            "url": "images/operator_Deals_mobile.png",
+                            "name": "operator_deals_mobile"
+                        },
+                        "information": "Save time and money by digitally shopping direct and transparent fuel deals"
+                    },
+                    {
+                        "type":"image",
+                        "bgImage": "./images/marketing/pilot_Deals_mobile.png",
+                        "heading": "FOR PILOTS",
+                        "imageDetails": { 
+                            "url": "images/pilot_Deals_mobile.png",
+                            "name": "pilot_deals_mobile"
+                        },
+                        "information": "Simpler and contactless checkouts with no more paper fuel receipts"
+                    }
+                ],
+                "bfDeals": [
+                    {
+                        "type":"image",
+                        "bgImage": "./images/marketing/fbo_Deals.png",
+                        "heading": "FOR FBOS",
+                        "imageDetails": { 
+                            "url": "images/fbo_Deals.png",
+                            "name": "fbo_deals"
+                        },
+                        "information": "Offer direct fuel deals with digital transactions and real time payments"
+                    },
+                    {
+                        "type":"image",
+                        "bgImage": "./images/marketing/operator_Deals.png",
+                        "heading": "FOR OPERATORS",
+                        "imageDetails": { 
+                            "url": "images/operator_Deals.png",
+                            "name": "operator_deals"
+                        },
+                        "information": "Save time and money by digitally shopping direct and transparent fuel deals"
+                    },
+                    {
+                        "type":"image",
+                        "bgImage": "./images/marketing/pilot_Deals.png",
+                        "heading": "FOR PILOTS",
+                        "imageDetails": { 
+                            "url": "images/pilot_Deals.png",
+                            "name": "pilot_deals"
+                        },
+                        "information": "Simpler and contactless checkouts with no more paper fuel receipts"
+                    }
+                ],
+                "bfSaving" : {
+                    "bgImage": "./images/marketing/bf-savings-bg.png",
+                    "imageDetails": { 
+                        "url": "images/bf-savings-bg.png",
+                        "name": "bf-savings-bg"
+                    },
+                    "mobileImage" : {
+                        "imageDetails": { 
+                            "url": "images/bf-mobile-savings-bg.png",
+                            "name": "bf-mobile-savings-bg"
+                        }
+                    },
+                    "heading": "Start Saving Today",
+                    "buttons": [
+                        {
+                            "component": "button",
+                            "type": "button",
+                            "label": "Sign Up",
+                            "name": "createUser",
+                            "variant": "primary",
+                            "url": "./signup",
+                            "styles": {
+                            "colWidth": "",
+                            "className": "bf-btn-login bf-btn-left bf-btn-left0i bf-btn-imp"
+                            }
+                        },
+                        {
+                            "component": "button",
+                            "type": "button",
+                            "label": "Learn More",
+                            "name": "clear",
+                            "variant": "primary",
+                            "url": "./demo",
+                            "styles": {
+                            "colWidth": "",
+                            "className": "bf-btn-login bf-btn-left bf-btn-imp"
+                            }
+                        }
+                    ]
+                }
+            },
+            "bfFeatures":{
+                "features":[
+                    {
+                        "type":"image",
+                        "image":"./images/marketing/feature_image4.png",
+                        "heading": "A CONNECTED <br/>AVIATION EXPERIENCE",
+                        "information": "Our marketplace technology enables FBOs and Operators direct connection to efficiently shop and uplift fuel.",
+                        "imageDetails": { 
+                            "url": "images/feature_image4.png",
+                            "name": "feature_iamge4"
+                        }
+                    },
+                    {
+                        "type":"image",
+                        "image":"./images/marketing/feature_image3.png",
+                        "heading": "THE SIMPLIFIED <br/>FUEL MARKETPLACE",
+                        "information": "Connect directly to a network of FBOs where you can purchase fuel online at the most competitive price.",
+                        "imageDetails": { 
+                            "url": "images/feature_image3.png",
+                            "name": "feature_iamge3"
+                        }
+                    },
+                    {
+                        "type":"image",
+                        "image":"./images/marketing/feature_image2.png",
+                        "heading": "DIGITAL PAYMENTS &<br/>SIMPLE CHECKOUTS",
+                        "information": "Easy checkouts with secure, real time payments from your mobile wallet allowing you to focus on your flight.",
+                        "imageDetails": { 
+                            "url": "images/feature_image2.png",
+                            "name": "feature_iamge2"
+                        }
+                    },
+                    {
+                        "type":"image",
+                        "image":"./images/marketing/feature_image1.png",
+                        "heading": "SUSTAINABLE FUEL<br/>ON DEMAND",
+                        "information": "Begin your journey on creating a greener future for the next generation with ability to utilize sustainable fuels.",
+                        "imageDetails": { 
+                            "url": "images/feature_image1.png",
+                            "name": "feature_iamge1"
+                        }
+                    }
+                ]
+            },
+            "footerScreen":[
+                {
+                    "type": "video",
+                    "url": "./videos/connect-video.webm",
+                    "imageDetails": { 
+                        "url": "images/connect-video",
+                        "name": "bf-contact-video"
+                    }
+                },
+                {
+                    "type": "heading",
+                    "itemLabel":"Start Saving Today"
+                },
+                {
+                    "type" : "button",
+                    "itemLabel":"Connect",
+                    "url": "./contact"
+                }
+            ],
+            "footer" : {
+                "logo" : "./images/marketing/bf-footer-logo.svg",
+                "links": [
+                    {
+                        "text": "Contact Us",
+                        "url": ""
+                    },
+                    {
+                        "text": "Request a Demo",
+                        "url": ""
+                    },
+                    {
+                        "text": "Careers",
+                        "url": ""
+                    },
+                    {
+                        "text": "Terms of Use",
+                        "url": ""
+                    },
+                    {
+                        "text": "Cookies",
+                        "url": ""
+                    },
+                    {
+                        "text": "Privacy",
+                        "url": "About"
+                    },
+                    {
+                        "text": "",
+                        "url": ""
+                    }
+                ],
+                "social":[
+                    {
+                        "logo": "./images/marketing/fb_logo.svg",
+                        "url": "www.facebook.com"
+                    },
+                    {
+                        "logo": "./images/marketing/insta_logo.svg",
+                        "url": "www.instagram.com"
+                    },
+                    {
+                        "logo": "./images/marketing/linkidin_logo.svg",
+                        "url": "www.linkidin.com"
+                    },
+                    {
+                        "logo": "./images/marketing/twitter_logo.svg",
+                        "url": "www.twitter.com"
+                    }
+                ]
+            }
+        }
+}

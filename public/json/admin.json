@@ -1,0 +1,173 @@
+{
+    "component": "admin",
+    "id":"10",
+    "tabs":[
+        {
+            "name": "company",
+            "title": "Company Change"
+        },
+        {
+            "name": "deactivate",
+            "title": "Deactivate"
+        },
+        {
+            "name": "system",
+            "title": "System Variables"
+        }
+    ],
+    "CompanyChange":{
+        "fields":[
+            {
+                "component": "AsyncTypeahead",
+                "type": "text",
+                "name": "userId",
+                "id": "1.2",
+                "users":["internal"],
+                "label": "User ID",
+                "placeholder": "User ID",
+                "isRequired": true,
+                "defaultValue": "",
+                "styles": {
+                    "colWidth": "4",
+                    "className": ""
+                },
+                "validations":[
+                    {
+                        "validation":"IsMandatory",
+                        "errorMessage":""
+                    }
+                ]
+            },
+            {
+                "component": "button",
+                "type":"button",
+                "label":"Update",
+                "name":"submit",
+                "disable": false,
+                "variant":"primary",
+                "styles": {
+                 "colWidth": "6",
+                 "className": "bf-btn-imp bf-mrgt20i bf-mrgb20i"
+                }
+             }
+        ],
+        "companySection":[
+            {
+            "fields":[
+                {
+                "component": "AsyncTypeahead",
+                "type": "text",
+                "name": "company",
+                "id": "1.2",
+                "users":["internal"],
+                "label": "Company",
+                "placeholder": "Company Name",
+                "isRequired": true,
+                "defaultValue": "",
+                "styles": {
+                    "colWidth": "4",
+                    "className": ""
+                },
+                "validations":[
+                    {
+                        "validation":"IsMandatory",
+                        "errorMessage":""
+                    }
+                ]
+                },
+                {
+                    "component": "button",
+                    "type": "button",
+                    "label": "Remove",
+                    "name": "remove",
+                    "isRequired": true,
+                    "styles": {
+                        "colWidth": "3",
+                        "className": "remove"
+                    }
+                },
+                {
+                    "component": "button",
+                    "type": "button",
+                    "label": "Add New",
+                    "name": "addNew",
+                    "isRequired": true,
+                    "styles": {
+                        "colWidth": "3",
+                        "className": "add-more"
+                    }
+                }
+            ]
+        }
+        ]
+    },
+    "Deactivate":{
+        "headers":{
+            "Deactivate":[
+             {
+                "id": "company",
+                "label":"Company Name"
+             },
+             {
+              "id": "email",
+              "label":"Email Address"
+             },
+             {
+              "id": "phone",
+              "label":"Phone Number"
+             },
+             {
+              "id": "request",
+              "label":"Requested On"
+             },
+             {
+              "id": "reasonDeactive",
+              "label":"Reason"
+             },
+             {
+               "id": "Actions",
+               "label": " "
+           }
+            ]
+           }
+    },
+    "systemvariables":{
+            "system":
+            {
+                "component": "button",
+                "type":"button",
+                "label":"Save",
+                "name":"submit",
+                "disable": false,
+                "variant":"primary",
+                "styles": {
+                "colWidth": "6",
+                "className": "bf-btn-imp bf-mrgt20i bf-mrgb20i"
+                }
+            },
+            "model":{
+                "message":"Wait! Are You Sure Want To Save The Changes.",
+                "component": "button",
+                "type":"button",
+                "label1":"Yes",
+                "label2":"Cancel",
+                "name":"submit",
+                "disable": false,
+                "variant":"primary",
+                "failedmessage":"Please verify.A required field is missing information",
+                "failedlabel":"OK",
+                "styles": {
+                "colWidth": "6",
+                "className": "bf-btn-imp bf-mrgt20i bf-mrgb20i"
+                }
+                
+            }
+        
+    },
+    "modal": [
+        {
+          "message":"Please verify. A required field is missing information",
+          "text":"OK"
+        }
+    ]
+}

@@ -1,0 +1,105 @@
+{
+    "multiLegData": [
+        {
+            "component": "multiLeg",
+            "id": "1",
+            "headCells": [
+                {
+                    "id": "legID",
+                    "numeric": false,
+                    "disablePadding": true,
+                    "sortable": false,
+                    "label": "Leg"
+                },
+                {
+                    "id": "fuelingDate",
+                    "numeric": false,
+                    "disablePadding": false,
+                    "sortable": false,
+                    "label": "Date"
+                },
+                {
+                    "id": "ICAO",
+                    "numeric": false,
+                    "disablePadding": false,
+                    "user":["internal"],
+                    "sortable": false,
+                    "label": "Airport"
+                },
+                {
+                    "id": "finalPrice",
+                    "numeric": false,
+                    "disablePadding": false,
+                    "user":["fbo"],
+                    "sortable": false,
+                    "label": "Value"
+                },
+                {
+                    "id": "Actions",
+                    "user":["fbo","internal"],
+                    "label": " "
+                }
+            ],
+            "Buttons": [
+                {
+                    "label": "Edit",
+                    "method": "onEditClick",
+                    "className": "btn btn-bf-primary"
+                },
+                {
+                    "label": "Delete",
+                    "method": "onDeactivateClick",
+                    "className": "btn-bf-secondary bf-mrgl20"
+                }
+            ],
+            "addLegButton":[
+                {
+                    "label": "Add Leg",
+                    "name":"addLeg",
+                    "method": "onEditClick",
+                    "className": "bf-add-leg"
+                }
+            ],
+            "legButtons":[
+                {
+                    "label": "Place Order",
+                    "name":"placeOrder",
+                    "method": "onEditClick",
+                    "className": "btn btn-bf-primary"
+                },
+                {
+                    "label": "Cancel",
+                    "labelBack":"Back",
+                    "name":"cancel",
+                    "method": "onDeactivateClick",
+                    "className": "btn-bf-secondary bf-mrgl20"
+                }
+            ],
+            "pricePendingText":{
+                "text": "Fuel Price is Subject To Change Before Departure Date",
+                "styles": {
+                    "className": "bf-min-height bf-info-text bf-show-excamet"
+                }
+            },
+            "modal": {
+                "delete": {
+                    "text": "Wait! Are You Sure You Want To Delete Leg ",
+                    "button1": "Yes",
+                    "button2": "Cancel"
+                },
+                "editConfirm": {
+                    "text": "Wait! Current Leg Progress Will Be Lost, Are You Sure You Want To Proceed?",
+                    "button1": "Yes",
+                    "button2": "Cancel"
+                },
+                "validate": {
+                    "text": "Please verify. A required field is missing information",
+                    "button1": "OK"
+                },
+                "fatNumber":{
+                    "text":"Wait! Please verify your selections before submitting."
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,172 @@
+{
+    "contactData":
+        {
+            "landingScreen":[
+                {
+                    "type": "image",
+                    "imageDetails": { 
+                        "url": "contact_banner.png",
+                        "name": "contact_image"
+                    }
+                }
+            ],
+            "contactDetails": [
+                {
+                    "type":"heading",
+                    "text": "Let’s Elevate Your Business"
+                },
+                {
+                    "type":"info",
+                    "text": "Need More Information?"
+                }
+            ],
+            "contactFormDetails": [
+                {
+                    "type": "input",
+                    "placeholder":"Name *",
+                    "label": "Name",
+                    "isRequired": true,
+                    "styles": {
+                    "colWidth": "12",
+                    "className": ""
+                    },
+                    "maxLength": "35",
+                    "name": "name",
+                    "validations": [
+                        {
+                            "validation": "IsMandatory",
+                            "errorMessage": ""
+                        }
+                    ]
+                },
+                {
+                    "type":"input",
+                    "name":"emailaddress",
+                    "maxLength":"50",
+                    "label":"Email Address",
+                    "placeholder": "Email Address *",
+                    "isRequired": true,
+                    "defaultValue":"",
+                    "styles": {
+                        "colWidth": "12",
+                        "className": ""
+                    },
+                    "validations":[
+                        {
+                            "validation":"IsMandatory",
+                            "errorMessage":""
+                        },
+                        {
+                            "validation":"CheckRegex",
+                            "validateRule":"^(([^<>()[\\]\\.,;:\\s@\"]+(\\.[^<>()[\\]\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$",
+                            "errorMessage":"Oops! Invalid E-mail"
+                        }
+                    ]
+                },
+                {
+                    "type": "input",
+                    "id": "1.3",
+                    "isRequired": true,
+                    "label": "Phone Number",
+                    "name": "phoneNo",
+                    "placeholder": "Phone *",
+                    "styles": {
+                        "className": "",
+                        "colWidth": "12"
+                    },
+                    "validations": [
+                        {
+                            "errorMessage": "",
+                            "validation": "IsMandatory"
+                        },
+                        {
+                            "validation": "CheckUSPhone",
+                            "errorMessage": "Enter a valid Mobile Number"
+                          }
+                    ]
+                }, 
+                {
+                    "type": "textarea",
+                    "name": "msgTxt",
+                    "placeholder":"Message"
+                },
+                {
+                    "component": "button",
+                    "type":"button",
+                    "label":"Submit",
+                    "name":"submitform",
+                    "disabled":false,
+                    "variant":"primary",
+                    "isRequired": true,
+                    "styles": {
+                        "colWidth": "4",
+                        "className": "bf-btn-login bf-btn-imp"
+                    }
+                }
+            ],
+            "modal":{
+                "Success":{
+                    "text":"Thank you for contacting with us",
+                    "button":"OK"
+                }
+            },
+            "footer" : {
+                "logo" : "./images/marketing/bf-footer-logo.svg",
+                "links": [
+                    {
+                        "text": "Contact Us",
+                        "url": ""
+                    },
+                    {
+                        "text": "Request a Demo",
+                        "url": ""
+                    },
+                    {
+                        "text": "Careers",
+                        "url": ""
+                    },
+                    {
+                        "text": "Terms of Use",
+                        "url": ""
+                    },
+                    {
+                        "text": "Cookies",
+                        "url": ""
+                    },
+                    {
+                        "text": "Privacy",
+                        "url": "About"
+                    },
+                    {
+                        "text": "",
+                        "url": ""
+                    }
+                ],
+                "social":[
+                    {
+                        "logo": "./images/marketing/fb_logo.svg",
+                        "url": "www.facebook.com"
+                    },
+                    {
+                        "logo": "./images/marketing/insta_logo.svg",
+                        "url": "www.instagram.com"
+                    },
+                    {
+                        "logo": "./images/marketing/linkidin_logo.svg",
+                        "url": "www.linkidin.com"
+                    },
+                    {
+                        "logo": "./images/marketing/twitter_logo.svg",
+                        "url": "www.twitter.com"
+                    }
+                ]
+            },
+
+            "emailBody":{
+                "title": "Contact Verification Email",
+                "fromEmailId":"vijay.krishnan@barrelfuel.com",
+                "paragraph": "Hello",
+                "html":"<br><br>We're happy you contact with us! "
+            }
+        }
+}

@@ -1,0 +1,363 @@
+{
+    "orderPlacementData":{
+        "orderHeadersData":{
+            "fields":[
+                {
+                    "name":"icao",
+                    "component":"header",
+                    "type": "text",
+                    "screen":["data"]
+
+                },
+                {
+                    "name":"fboName",
+                    "component":"header",
+                    "type": "text",
+                    "screen":["data","summary"]
+                },
+                {
+                    "name":"phoneNumber",
+                    "component":"subheader",
+                    "type": "text",
+                    "label": "Phone Number",
+                    "screen":["data","summary"]
+                },
+                {
+                    "name":"address",
+                    "component":"subheader",
+                    "type": "text",
+                    "screen":["data","summary"]
+                }
+            ]
+        },
+        "ordersFields":{
+            "fields":[
+                {
+                    "component": "subheading",
+                    "id": "1.1",
+                    "styles": {
+                        "colWidth": "",
+                        "className": "bf-mrgb-10"
+                    },
+                    "users":["operator","internal"],
+                    "label": "Flight Details"
+                },
+                {
+                    "component": "AsyncTypeahead",
+                    "type": "text",
+                    "name": "tailNumber",
+                    "id": "1.2",
+                    "users":["internal"],
+                    "label": "Tail Number",
+                    "placeholder": "Tail Number",
+                    "isFboDisable":true,
+                    "addinfo": true,
+                    "infoText":"Add Tail",
+                    "isRequired": true,
+                    "defaultValue": "",
+                    "styles": {
+                        "colWidth": "4",
+                        "className": ""
+                    },
+                    "validations":[
+                        {
+                            "validation":"IsMandatory",
+                            "errorMessage":""
+                        }
+                    ]
+                },
+                {
+                    "component": "select",
+                    "type": "text",
+                    "name": "tailNumber",
+                    "id": "1.2",
+                    "label": "Tail Number",
+                    "isFboDisable":true,
+                    "placeholder": "Tail Number",
+                    "users":["operator"],
+                    "addinfo": true,
+                    "infoText":"Add Tail",
+                    "isRequired": true,
+                    "defaultValue": "",
+                    "styles": {
+                        "colWidth": "4",
+                        "className": ""
+                    },
+                    "validations":[
+                        {
+                            "validation":"IsMandatory",
+                            "errorMessage":""
+                        }
+                    ]
+                },
+                {
+                    "component": "select",
+                    "type": "select",
+                    "name": "flightType",
+                    "id": "1.3",
+                    "label": "Flight Type",
+                    "isFboDisable":true,
+                    "placeholder": "Flight Type",
+                    "users":["operator","internal"],
+                    "defaultValue": "",
+                    "isRequired": true,
+                    "options":[
+                        {
+                            "value":"Private",
+                            "title":"Private"
+                        },
+                        {
+                            "value":"Government",
+                            "title":"Government"
+                        },
+                        {
+                            "value":"Charter",
+                            "title":"Charter"
+                        }
+                    ],
+                    "styles": {
+                        "colWidth": "4",
+                        "className": ""
+                    },
+                    "validations":[
+                        {
+                            "validation":"IsMandatory",
+                            "errorMessage":""
+                        }
+                    ]
+                },
+                {
+                    "component": "AsyncTypeahead",
+                    "type":"text",
+                    "callback":false,
+                    "name":"arrivingFrom",
+                    "disable": false,
+                    "label":"Arriving From",
+                    "isFboDisable":true,
+                    "users":["operator","internal"],
+                    "placeholder": "Airport ID or City",
+                    "isRequired": true,
+                    "styles": {
+                        "colWidth": "4",
+                        "className": ""
+                    },
+                    "validations":[
+                        {
+                            "validation":"IsMandatory",
+                            "errorMessage":""
+                        }
+                    ]
+                },
+                {   
+                    "component": "date",
+                    "type":"date",
+                    "isEdit" : true,
+                    "callback":false,
+                    "name":"fuelingDate",
+                    "label":"Date Of Fueling",
+                    "users":["operator","internal"],
+                    "disable": false,
+                    "placeholder": "MM/DD/YYY",
+                    "isRequired": true,
+                    "styles": {
+                        "colWidth": "4",
+                        "className": ""
+                    },
+                    "validations":[
+                        {
+                            "validation":"IsMandatory",
+                            "errorMessage":""
+                        }, {
+                            "validation": "date",
+                            "errorMessage": "Oops! Fueling Date Cannot Be Less Than The Current Date"
+                        },
+                        {
+                            "validation": "invalidDate",
+                            "errorMessage":"Invalid Date"
+                        }
+                    ]
+                },
+                {
+                    "component": "select",
+                    "type": "select",
+                    "name": "fuelUpon",
+                    "isRequired": true,
+                    "isFboDisable":true,
+                    "id": "1.3",
+                    "label": "Fuel Upon",
+                    "placeholder": "Fuel Upon",
+                    "users":["operator","internal"],
+                    "defaultValue": "",
+                    "options":[
+                        {
+                            "value":"On Arrival",
+                            "title":"On Arrival"
+                        },
+                        {
+                            "value":"On Departure",
+                            "title":"On Departure"
+                        }
+                    ],
+                    "styles": {
+                        "colWidth": "4",
+                        "className": ""
+                    },
+                    "validations":[
+                        {
+                            "validation":"IsMandatory",
+                            "errorMessage":""
+                        }
+                    ]
+                },
+                {
+                    "component": "input",
+                    "type":"text",
+                    "callback":false,
+                    "name":"quantity",
+                    "disable": false,
+                    "label":"Fuel Quantity",
+                    "users":["operator","internal"],
+                    "placeholder": "Fuel Quantity",
+                    "isRequired": true,
+                    "addinfo": true,
+                    "infoText":"Tiers",
+                    "mobileInfoText":"Tiers", 
+                    "styles": {
+                        "colWidth": "2 bf-relative bf-multiline-smd",
+                        "className": ""
+                    },
+                    "validations":[
+                        {
+                            "validation":"IsMandatory",
+                            "errorMessage":""
+                        }
+                    ]
+                },
+                {
+                    "component": "select",
+                    "type": "select",
+                    "name": "unit",
+                    "id": "1.3",
+                    "callback":false,
+                    "isRequired":true,
+                    "users":["operator","internal"],
+                    "label": "Unit",
+                    "placeholder": "Unit",
+                    "defaultValue": "Gallon",
+                    "options":[
+                        {
+                            "value":"Gallons",
+                            "title":"Gallons"
+                        },
+                        {
+                            "value":"Pounds",
+                            "title":"Pounds"
+                        },
+                        {
+                            "value":"Kilograms",
+                            "title":"Kilograms"
+                        },
+                        {
+                            "value":"Liters",
+                            "title":"Liters"
+                        }
+                    ],
+                    "styles": {
+                        "colWidth": "2",
+                        "className": ""
+                    },
+                    "validations":[
+                        {
+                            "validation":"IsMandatory",
+                            "errorMessage":""
+                        }
+                    ]
+                },
+                {
+                    "component": "subheading",
+                    "id": "2.1",
+                    "users":["operator","internal"],
+                    "label": "Additional Services",
+                    "styles": {
+                        "colWidth": "",
+                        "className": "bf-mrgtn5"
+                    }
+                }
+            ]
+        },
+        "orderPayments":{
+            "fields" : [
+                {
+                    "component": "subheading",
+                    "id": "2.1",
+                    "label": "Payment Information",
+                    "isRequired":"true",
+                    "tooltip":{
+                        "text":"Order Funds Would Be Deducted From The Payment Method Selected"
+                    },
+                    "styles": {
+                        "className":"bf-payment-tooltip"
+                    }
+                },
+                {
+                    "component": "input",
+                    "type":"text",
+                    "callback":false,
+                    "name":"nickname",
+                    "disable": false,
+                    "label":"Nickname",
+                    "users":["operator","internal"],
+                    "placeholder": "Nickname",
+                    "isRequired": false,
+                    "addinfo": true,
+                    "infoText":"Add New Payment",
+                    "styles": {
+                        "colWidth": "4 bf-relative",
+                        "className": ""
+                    }
+                },
+                {
+                    "component": "input",
+                    "type":"text",
+                    "callback":false,
+                    "name":"paymentMode",
+                    "disable": false,
+                    "label":"Payment mode",
+                    "users":["operator","internal"],
+                    "placeholder": "Payment Mode",
+                    "isRequired": false,
+                    "styles": {
+                        "colWidth": "4 bf-relative",
+                        "className": ""
+                    }
+                },
+                {
+                    "component": "input",
+                    "type":"text",
+                    "callback":false,
+                    "name":"cardAccountNumber",
+                    "disable": false,
+                    "label":"Card / Account Number",
+                    "users":["operator","internal"],
+                    "placeholder": "Card / Account Number",
+                    "isRequired": false,
+                    "styles": {
+                        "colWidth": "4 bf-relative",
+                        "className": ""
+                    }
+                },
+                {
+                    "component": "stripe",
+                    "name":"stripe",
+                    "disable": false,
+                    "isRequired": false,
+                    "styles": {
+                        "colWidth": "12 bf-relative",
+                        "className": ""
+                    }
+                }
+            ]
+        }
+        
+    }
+}

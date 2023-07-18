@@ -1,0 +1,139 @@
+{
+   "operatorSignup":{
+      "headline":{
+                "type":"text",
+                "label":"Operator Sign Up Form"
+            },
+      "sections":[{
+             "subSections":[ 
+			                     {
+                        "fields" :[
+                   
+							{
+                                "component": "input",
+                                "type":"text",
+								"name":"tailNumber",
+								"disable": false,
+                               "label":"Tail Number",
+                                "placeholder": "Aircraft Tail Number",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+									 "validations":[
+                                    {
+                                        "type":"IsMandatory",
+                                        "errorMessage":"Tail Number is required"
+                                    }
+                                ]
+                            },
+							{
+                                "component": "input",
+                                "type":"text",
+								"name":"serialNumber",
+                                "label":"Serial Number",
+								"disable": true,
+                                "placeholder": "Aircraft Serial Number",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "input",
+                                "type":"text",
+								"name":"manufactureName",
+                                "label":"Manufacturer Name",
+								"disable": true,
+                                "placeholder": "Manufacturer Name",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "input",
+                                "type":"text",
+								"name":"aircrafttype",
+                                "label":"Aircraft Model",
+								"disable": true,
+                                "placeholder": "Aircraft Model",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "input",
+                                "type":"text",
+								"name":"maxfuel",
+                                "label":"Maximum Fuel Capacity",
+								"disable": false,
+                                "placeholder": "Maximum Fuel Capacity",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "input",
+                                "type":"text",
+								"name":"homebaseairport",
+								"disable": false,
+                                "label":"Homebase Airport",
+                                "placeholder": "Homebase Airport",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "checkbox",
+                                "type":"checkbox",
+								"id":"aircraftInfo",
+                                "label":"Check this if the details are not correct",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "12",
+                                    "className": ""
+                                }
+                            },
+							 {
+                                "component": "button",
+                                "type":"button",
+                                "label":"Add New",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "3",
+                                    "className": "add-more"
+                                }
+                            },
+                            {
+                               "component": "button",
+                               "type":"button",
+                               "label":"Remove",
+                               "isRequired": true,
+                               "styles": {
+                                   "colWidth": "3",
+                                   "className": "remove"
+                               }
+                           }
+                        ]
+                    }
+                    
+                    
+
+
+         ]
+        
+      }
+   ]
+   }
+}
+

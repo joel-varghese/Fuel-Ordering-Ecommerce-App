@@ -1,0 +1,203 @@
+{
+   "operatorCreditCard":{
+      "headline":{
+                "type":"text",
+                "label":"Operator Sign Up Form"
+            },
+      "sections":[{
+             "subSections":[
+            
+                    {
+                        "fields" :[
+                            {
+                                "component": "paragraph",
+                                "type":"subheading",
+                                "label":"Payment Information"
+                            },
+                            {
+                                "component": "select",
+                                "type":"select",
+                                "label":"Payment Mode",
+                                "placeholder":  "Document Type",
+                                "isRequired": false,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "input",
+                                "type":"input",
+                                "label":"Card Holder",
+                                "placeholder": "Card Holder Name",
+                                "isRequired": false,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "input",
+                                "type":"input",
+                                "label":"Credit/Debit Card Number",
+                                "placeholder": "Credit/Debit Card Number",
+                                "isRequired": false,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "select",
+                                "type":"select",
+                                "label":"Expiration Date",
+                                "placeholder": "Credit/Debit Card Number",
+                                "isRequired": false,
+                                "styles": {
+                                    "colWidth": "2",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "select",
+                                "type":"select",
+                                "label":"",
+                                "placeholder": "Credit/Debit Card Number",
+                                "isRequired": false,
+                                "styles": {
+                                    "colWidth": "2",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "input",
+                                "type":"input",
+                                "label":"Security Code",
+                                "placeholder": "Security Code",
+                                "isRequired": false,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "input",
+                                "type":"input",
+                                "label":"Nick Name",
+                                "placeholder": "Nick Name(optional)",
+                                "isRequired": false,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "button",
+                                "type":"button",
+                                "label":"Add New",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "fields" :[
+                            {
+                                "component": "checkbox",
+                                "type":"checkbox",
+                                "label":"Same as Company Address",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "12",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "input",
+                                "type":"input",
+                                "label":"Address Line 1",
+                                "placeholder": "Address Line 1",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "input",
+                                "type":"input",
+                                "label":"Address Line 2",
+                                "placeholder": "Address Line 2",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "input",
+                                "type":"input",
+                                "label":"Country",
+                                "placeholder": "Country",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "input",
+                                "type":"input",
+                                "label":"City",
+                                "placeholder": "City",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "input",
+                                "type":"input",
+                                "label":"State",
+                                "placeholder": "State",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "input",
+                                "type":"input",
+                                "label":"Zip",
+                                "placeholder": "Zip",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "checkbox",
+                                "type":"checkbox",
+                                "label":"Accept Terms and Conditions",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "12",
+                                    "className": ""
+                                }
+                            }
+                        ]
+                    }
+
+
+         ]
+        
+      }
+   ]
+   }
+}

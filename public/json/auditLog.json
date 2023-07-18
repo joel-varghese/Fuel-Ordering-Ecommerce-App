@@ -1,0 +1,201 @@
+{
+    "auditLogData": [
+        {
+            "component": "auditLog",
+            "id": "1",
+            "headCells": [
+                {
+                    "id": "validFromA",
+                    "numeric": false,
+                    "disablePadding": true,
+                    "label": "Date",
+                    "sortable": true
+                },
+                {
+                    "id": "company",
+                    "numeric": true,
+                    "disablePadding": false,
+                    "label": "Company",
+                    "sortable": true
+                },
+                {
+                    "id": "category",
+                    "numeric": true,
+                    "disablePadding": false,
+                    "label": "Category",
+                    "sortable": true
+                },
+                {
+                    "id": "userName",
+                    "numeric": true,
+                    "disablePadding": false,
+                    "label": "User Name",
+                    "sortable": true
+                },
+                {
+                    "id": "actionPerformed",
+                    "numeric": true,
+                    "disablePadding": false,
+                    "label": "Action Performed",
+                    "sortable": true
+                }
+            ],
+            "Buttons": [
+                {
+                    "Label": "Edit",
+                    "method": "onEditClick",
+                    "className": "btn btn-bf-primary"
+                },
+                {
+                    "Label": "Delete",
+                    "method": "onDeleteClick",
+                    "className": "btn-bf-secondary bf-mrgl20",
+                    "checkAdminAccess": true
+                }
+            ],
+            "fields": [
+                {
+                    "callback": false,
+                    "component": "date",
+                    "disabled": false,
+                    "group": "details",
+                    "id": "1.3",
+                    "isRequired": false,
+                    "label": "Date",
+                    "name": "validFromA",
+                    "placeholder": "From",
+                    "styles": {
+                        "className": "",
+                        "colWidth": "0"
+                    },
+                    "type": "text",
+                    "validations": [
+                        {
+                            "errorMessage": "",
+                            "validation": "IsMandatory"
+                        },
+                        {
+                            "validation": "date",
+                            "errorMessage": "Oops! Valid Date Cannot Be Less Than The Current Date"
+                        }
+                    ]
+                },
+                {
+                    "callback": false,
+                    "component": "date",
+                    "disabled": false,
+                    "group": "details",
+                    "id": "1.3",
+                    "isRequired": false,
+                    "label": "",
+                    "name": "validTo",
+                    "placeholder": "To",
+                    "styles": {
+                        "className": "",
+                        "colWidth": "0"
+                    },
+                    "type": "text",
+                    "validations": [
+                        {
+                            "errorMessage": "",
+                            "validation": "IsMandatory"
+                        },
+                        {
+                            "validation": "date",
+                            "errorMessage": "Oops! Valid Date Cannot Be Less Than The Current Date"
+                        }
+                    ]
+                },
+                {
+                    "component": "select",
+                    "type": "select",
+                    "id": "1.1",
+                    "name": "company",
+                    "group": "details",
+                    "callback": false,
+                    "label": "Company Name",
+                    "placeholder": " Company Name",
+                    "isRequired": false,
+                    "disabled": false,
+                    "styles": {
+                        "colWidth": "0",
+                        "className": ""
+                    },
+                    "validations": [
+                        {
+                            "validation": "IsMandatory",
+                            "errorMessage": ""
+                        }
+                    ]
+                },
+                {
+                    "component": "select",
+                    "type": "select",
+                    "id": "1.1",
+                    "name": "category",
+                    "group": "details",
+                    "callback": false,
+                    "label": "Category",
+                    "placeholder": "Category",
+                    "isRequired": false,
+                    "disabled": false,
+                    "styles": {
+                        "colWidth": "0",
+                        "className": ""
+                    },
+                    "validations": [
+                        {
+                            "validation": "IsMandatory",
+                            "errorMessage": ""
+                        }
+                    ]
+                },
+                {
+                    "component": "select",
+                    "type": "select",
+                    "id": "1.1",
+                    "name": "userName",
+                    "group": "details",
+                    "callback": false,
+                    "label": "User Name",
+                    "placeholder": " User Name",
+                    "isRequired": false,
+                    "disabled": false,
+                    "styles": {
+                        "colWidth": "0",
+                        "className": ""
+                    },
+                    "validations": [
+                        {
+                            "validation": "IsMandatory",
+                            "errorMessage": ""
+                        }
+                    ]
+                }
+            ],
+            "modal": {
+                "deactivate": {
+                    "text": "Wait! Are you sure you want to delete this information?",
+                    "button1": "Yes",
+                    "button2": "Cancel"
+                },
+                "validate": {
+                    "text": "Please verify. A required field is missing information"
+                },
+                "submit": {
+                    "title": "",
+                    "button": "OK"
+                },
+                "fatNumber": {
+                    "text": "Wait! Please verify your selections before submitting."
+                }
+            },
+            "notifyMessage": {
+                "msg1": "An existing discount has been modified at ",
+                "msg2": " by the ",
+                "msg3": "A new discount has been added at ",
+                "msg4": "An existing discount has been deleted at "
+            }
+        }
+    ]
+}

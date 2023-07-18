@@ -1,0 +1,153 @@
+{
+    "dashboardData": [
+        {
+            "dashboard": [
+                {
+                    "name": "dashboard",
+                    "text": "Dashboard",
+                    "id": "1",
+                    "users":["FBO", "Operator","Barrel Fuel"],
+                    "link":"home",
+                    "hideOnMobileFBO": true
+                },
+                {
+                    "name": "account",
+                    "text": "Account",
+                    "id": "2",
+                    "subfields":[
+                        {
+                            "user":"internal",
+                            "fields":[
+                                {
+                                    "fieldName" : "Add New User",
+                                    "actions" : "user"
+                                }
+                            ]
+                        },
+                        {
+                            "user":"FBO",
+                            "fields":[
+                                {
+                                    "fieldName" : "Add New User",
+                                    "actions" : "user"
+                                },
+                                {
+                                    "fieldName" : "Add Location",
+                                    "actions" : "location"
+                                },
+                                {
+                                    "fieldName" : "Add Document",
+                                    "actions" : "documents"
+                                }
+                            ]
+                        },
+                        {
+                            "user":"Operator",
+                            "fields":[
+                                {
+                                    "fieldName" : "Add New User",
+                                    "actions" : "user"
+                                },
+                                {
+                                    "fieldName" : "Add Aircraft",
+                                    "actions" : "aircraft"
+                                },
+                                {
+                                    "fieldName" : "Add Document",
+                                    "actions" : "documents"
+                                }
+                            ]
+                        }
+                    ],
+                    "users":["FBO", "Operator","Barrel Fuel"],
+                    "link":"account"
+
+                },
+                {
+                    "name": "order",
+                    "text": "Orders",
+                    "id": "3",
+                    "users":["FBO", "Operator","Barrel Fuel"],
+                    "link":"order",
+                    "hideOnMobile":true
+                },
+                {
+                    "name": "clientOnboarding",
+                    "text": "Client Onboarding",
+                    "id": "4",
+                    "users":["Barrel Fuel"],
+                    "link":"client-onboarding"
+
+                },
+                {
+                    "name": "fuelPricing",
+                    "text": "Fuel Price",
+                    "id": "5",
+                    "users":["FBO","Barrel Fuel"],
+                    "link":"fuel-pricing",
+                    "hideOnMobile":true
+
+                },
+                {
+                    "name": "taxFeeManager",
+                    "text": "Taxes & Fees",
+                    "id": "6",
+                    "users":["FBO","Barrel Fuel"],
+                    "link":"tax-fees",
+                    "hideOnMobile":true
+                },
+                {
+                    "name": "clientPortal",
+                    "text": "Client Portal",
+                    "id": "7",
+                    "users":["FBO", "Barrel Fuel"],
+                    "link":"client-portal",
+                    "hideOnMobile":true
+                },
+                {
+                    "name": "reports",
+                    "text": "Reports",
+                    "id": "8",
+                    "users":["FBO", "Operator","Barrel Fuel"],
+                    "link":"reports"
+                },
+                {
+                    "name": "admin",
+                    "text": "Admin",
+                    "id": "8",
+                    "users":["Barrel Fuel"],
+                    "link":"admin"
+                },
+                {
+                    "name": "auditLogs",
+                    "text": "Audit Logs",
+                    "id": "8",
+                    "users":["FBO", "Operator","Barrel Fuel"],
+                    "link":"audit-logs"
+                }
+            ],
+            "orderButton":{
+                "text":"New Fuel Order",
+                "text2":"View Fuel Order"
+            },
+            "header":{
+                "search":{
+                    "text": "Search",
+                    "type":"text"
+                },
+                "profile":{
+                    "menuItems":[
+                        {
+                            "name": "profile",
+                            "text": "Profile"
+                        },
+                        {
+                            "name": "logout",
+                            "text": "Log Out"
+                }
+            ]
+        }
+            }
+        }
+    ]
+}

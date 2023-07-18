@@ -1,0 +1,278 @@
+{
+    "operatorSignup":{
+       "headline":{
+                 "type":"text",
+                 "label":"Operator Sign Up Form"
+             },
+       "sections":[{
+              "subSections":[ 
+                     {
+                         "fields" :[
+                              {
+                                 "component": "input",
+                                 "callback":false,
+                                 "type":"text",
+                                 "name":"companyName",
+                                 "maxLength":"35",
+                                 "label":"Company Name",
+                                 "disable": false,
+                                 "placeholder": "Company Name",
+                                 "isRequired": true,
+                                 "defaultValue":"",
+                                 "styles": {
+                                     "colWidth": "4",
+                                     "className": ""
+                                 },
+                                 "validations":[
+                                     {
+                                         "type":"IsMandatory",
+                                         "errorMessage":"Company name required"
+                                     }
+                                 ]
+                             },
+                                 {
+                                 "component": "input",
+                                 "type":"text",
+                                 "callback":false,
+                                 "name":"primaryLocation",
+                                 "label":"Primary Location",
+                                 "disable": false,
+                                 "placeholder": "Company Primary Location",
+                                 "isRequired": false,
+                                 "styles": {
+                                     "colWidth": "4",
+                                     "className": ""
+                                 }
+                             },
+                             {
+                                 "component": "input",
+                                 "type":"text",
+                                 "callback":false,
+                                 "name":"company_contact_number",
+                                 "minlength":10,
+                                 "maxLength":"10",
+                                 "label":"Phone Number",
+                                 "disable": false,
+                                 "placeholder": "Phone Number",
+                                 "isRequired": false,
+                                 "defaultValue":"",
+                                 "styles": {
+                                   "colWidth": "4",
+                                     "className": ""
+                                 },
+                                 "validations":[
+                                     {
+                                         "type":"IsMandatory",
+                                         "errorMessage":"Phone Number required"
+                                     },
+                                     {
+                                         "type": "CheckRegex",
+                                         "validateRule": "^\\d{10}$",
+                                         "errorMessage": "Enter a valid Mobile Number"
+                                       }
+                                 ]
+                             },
+                              {
+                                 "component": "input",
+                                 "type":"text",
+                             "callback":true,
+                                 "name":"mailling1",
+                                 "label":"Mailling Address Line 1",
+                                 "disable": false,
+                                 "placeholder": "Company Address Line 1",
+                                 "isRequired": true,
+                                 "styles": {
+                                     "colWidth": "4",
+                                     "className": ""
+                                 },
+                                  "validations":[
+                                     {
+                                         "type":"IsMandatory",
+                                         "errorMessage":"Mailling Address 1 required"
+                                     }
+                                 ]
+                             },
+                             {
+                                 "component": "input",
+                                 "type":"text",
+                                 "callback":false,
+                                 "name":"mailling2",
+                                 "label":"Mailling Address Line 2",
+                                 "disable": false,
+                                 "placeholder": "Company Address Line 2",
+                                 "isRequired": true,
+                                 "styles": {
+                                     "colWidth": "4",
+                                     "className": ""
+                                 },
+                                      "validations":[
+                                     {
+                                         "type":"IsMandatory",
+                                         "errorMessage":"Mailling Address 2 required"
+                                     }
+                                 ]
+                             },
+                             {
+                                  "component": "select",
+                                  "type":"select",
+                                  "dynamicSelect": true,
+                                  "lookupReference": {
+                                      "name": "country"
+                                  },
+                                  "name":"country",
+                                  "label":"Country",
+                                  "placeholder": "Country",
+                                  "isRequired": true,
+                                  "defaultValue":"",
+                                  "styles": {
+                                      "colWidth": "4",
+                                      "className": ""
+                                  },
+                                  "validations":[
+                                      {
+                                          "type":"IsMandatory",
+                                          "errorMessage":"country required"
+                                      }
+                                  ] 
+                             },
+                             {
+                                 "component": "input",
+                                 "type":"text",
+                                 "callback":false,
+                                 "name":"city",
+                                 "label":"City",
+                                 "disable": false,
+                                 "placeholder": "City",
+                                 "isRequired": false,
+                                 "styles": {
+                                     "colWidth": "4",
+                                     "className": ""
+                                 }
+                             },
+                                 {
+                                  "component": "select",
+                                  "type":"select",
+                                  "dynamicSelect": true,
+                                  "lookupReference": {
+                                      "name": "state"
+                                  },
+                                  "name":"State",
+                                  "label":"State",
+                                  "placeholder": "State",
+                                  "isRequired": true,
+                                  "defaultValue":"",
+                                  "styles": {
+                                      "colWidth": "4",
+                                      "className": ""
+                                  },
+                                  "validations":[
+                                      {
+                                          "type":"IsMandatory",
+                                          "errorMessage":"country required"
+                                      }
+                                  ] 
+                             },
+                              {
+                                 "component": "input",
+                                 "type":"text",
+                                 "callback":false,
+                                 "name":"zip",
+                                 "label":"Zip",
+                                 "disable": false,
+                                 "placeholder": "Company Zip",
+                                 "isRequired": true,
+                                 "styles": {
+                                     "colWidth": "4",
+                                     "className": ""
+                                 },
+                                      "validations":[
+                                     {
+                                         "type":"IsMandatory",
+                                         "errorMessage":"Zip code is required"
+                                     }
+                                 ]
+                             },
+                             {
+                                 "component": "input",
+                                 "type":"text",
+                                 "callback":false,
+                                 "name":"ein",
+                                 "label":"EIN",
+                                 "disable": false,
+                                 "placeholder": "Company EIN",
+                                 "isRequired": false,
+                                 "styles": {
+                                     "colWidth": "4",
+                                     "className": ""
+                                 }
+                             },
+                             {
+                                 "component": "input",
+                                 "type":"text",
+                                 "callback":false,
+                                 "name":"incorporation",
+                                 "label":"State Incorporation",
+                                 "disable": false,
+                                 "placeholder": "State Incorporation",
+                                 "isRequired": false,
+                                 "styles": {
+                                     "colWidth": "4",
+                                     "className": ""
+                                 }
+                             },
+                             {
+                                 "component": "input",
+                                 "callback":false,
+                                 "type":"text",
+                                 "name":"federalTax",
+                                 "label":"Federal Tax Exempt ID",
+                                 "disable": false,
+                                 "placeholder": "Federal Tax Exempt ID",
+                                 "isRequired": false,
+                                 "styles": {
+                                     "colWidth": "4",
+                                     "className": ""
+                                 }
+                             },
+                             {
+                                "component": "button",
+                                "label": "Save",
+                                "type":"button",
+                                "name": "save",
+                                "variant":"primary",
+                                "callback":false,
+                                "isRequired": true,
+                                "disabled":false,
+                                "styles": {
+                                        "colWidth": "4",
+                                        "className": ""
+                                }
+                                },
+                                {
+                                "component": "button",
+                                "label": "cancel",
+                                "type":"button",
+                                "name": "cancel",
+                                "callback":false,
+                                "variant":"",
+                                "isRequired": true,
+                                "disabled":false,
+                                "styles": {
+                                        "colWidth": "4",
+                                        "className": ""
+                                }
+                                }
+                         ]
+                     }
+                     
+                     
+ 
+ 
+          ]
+         
+       }
+    ]
+    }
+ }
+ 
+ 

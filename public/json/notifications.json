@@ -1,0 +1,146 @@
+{
+    "notifications":{
+       "config":{
+          "id":"3977",
+          "align":"center",
+          "theme":"theme-background-light",
+          "height":"tall"
+       },
+       "content":{
+          "primaryFields":[
+            {
+                "type": "text",
+                "label": "Notifications"
+            }
+          ],
+          "headers":[
+            {
+                "id": "message",
+               "label":"Message"
+               
+            },
+            {
+             "id": "category",
+             "label":"Category",
+             "sortable": true,
+             "fieldType":"select",
+             "placeHolder":"Category",
+             "options":[
+              {
+                 "value":"user",
+                 "title":"User"
+              }, 
+              {
+                 "value":"account",
+                 "title":"Account"
+              }, 
+              {
+                 "value":"orders",
+                 "title":"Orders"
+              }
+              ],
+              "styles": {
+                "colWidth": "4",
+                "className": ""
+              }
+            }
+           ],
+           "modalField":{
+              "User":[
+                {
+                  "name":"header",
+                  "label":"Details",
+                  "field":""
+                },
+                {
+                  "name":"email",
+                  "label":"Email Address",
+                  "field":""
+                },
+                {
+                  "name":"mobile",
+                  "label":"Mobile Number",
+                  "field":""
+                },
+                {
+                  "name":"access",
+                  "label":"Level of Access",
+                  "field":""
+                },
+                {
+                  "name":"message",
+                  "label":"",
+                  "field":""
+                },
+                {
+                  "name":"button",
+                  "label":"Dismiss",
+                  "field":"",
+                  "styles": {
+                    "colWidth": "4",
+                    "className": "bf-btn-center"
+                  }
+                },
+                {
+                  "name":"action",
+                  "type":"button",
+                  "label1":"Accept",
+                  "label2":"Decline",
+                  "field":"",
+                  "styles": {
+                    "colWidth": "4",
+                    "className": "bf-btn-center"
+                  }
+                }
+              ],
+              "Update":[
+                {
+                  "name":"header",
+                  "label":"Details",
+                  "field":""
+                },
+                {
+                  "name":"email",
+                  "label":"Email Address",
+                  "field":""
+                },
+                {
+                  "name":"oldemail",
+                  "label":"Old Email Address",
+                  "field":""
+                },
+                {
+                  "name":"newemail",
+                  "label":"New Email Address",
+                  "field":""
+                },
+                {
+                  "name":"message",
+                  "label":"",
+                  "field":""
+                },
+                {
+                  "name":"button",
+                  "label":"Dismiss",
+                  "field":"",
+                  "styles": {
+                    "colWidth": "4",
+                    "className": "bf-btn-center"
+                  }
+                },
+                {
+                  "name":"action",
+                  "type":"button",
+                  "label1":"Accept",
+                  "label2":"Decline",
+                  "field":"",
+                  "styles": {
+                    "colWidth": "4",
+                    "className": "bf-btn-center"
+                  }
+                }
+              ]
+          }
+       }
+    }
+}

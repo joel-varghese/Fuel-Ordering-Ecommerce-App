@@ -1,0 +1,337 @@
+{
+   "operatorEnroll":{
+      "config":{
+         "id":"3977",
+         "align":"center",
+         "theme":"theme-background-light",
+         "height":"tall"
+      },
+      "content":{
+         "primaryFields":[
+            {
+                "fieldType":"input",
+                "displayType":"input",
+                "dataType":"numeric",
+                "dynamicSelect": false,
+                "fieldLabel":"Number of Aircrafts",
+                "styles": {
+                  "colWidth": "4",
+                  "className": ""
+                },
+                "shouldNotRender": false,
+                "validations":[
+                   {
+                      "type":"empty",
+                      "errorMessage":""
+                   }
+                ],
+                "placeHolder":"Number of Aircrafts",
+                "maxLength":"3",
+                "name":"numberOfAircrafts",
+                "isRequired":true,
+                "textAlign":"left",
+                "className":"extra-padding-right"
+             },
+             {
+               "component": "button",
+               "fieldType":"input",
+               "displayType":"button",
+               "fieldLabel":"Next",
+               "name":"next",
+               "variant":"primary",
+               "shouldNotRender": false,
+               "className": "bf-btn-left bf-btn-imp bf-mrgt20i",
+               "styles": {
+                   "colWidth": "8"
+                   
+               }
+           },
+            {
+               "fieldType":"",
+               "displayType":"header",
+               "type":"",
+               "label":"Enrollment Details",
+               "shouldNotRender": true,
+               "maxLength":"40",
+               "name":"header",
+               "textAlign":"left",
+               "className":"extra-padding-right"
+            },
+            {
+               "fieldType":"input",
+               "displayType":"input",
+               "dataType":"text",
+               "fieldLabel":"Company Name",
+               "styles": {
+                  "colWidth": "4",
+                  "className": ""
+              },
+              "shouldNotRender": true,
+               "validations":[
+                  {
+                     "type":"empty",
+                     "validationRule":"",
+                     "errorMessage":""
+                  },
+                  {
+                     "type":"onlyspecial",
+                     "validationRule":"[a-zA-Z0-9]+",
+                     "errorMessage":"Invalid Data"
+                  },
+                  {
+                     "type":"onlydigit",
+                     "validationRule":"[a-zA-Z\\.?!#@_=$:]+",
+                     "errorMessage":"Invalid Data"
+                  }
+               ],
+               "placeHolder":"Company Name",
+               "maxLength":"100",
+               "name":"companyName",
+               "isRequired":true,
+               "textAlign":"left",
+               "className":"extra-padding-right"
+            },
+            {
+               "fieldType":"input",
+               "displayType":"input",
+               "dataType":"text",
+               "fieldLabel":"First Name",
+               "styles": {
+                  "colWidth": "4",
+                  "className": ""
+              },
+              "shouldNotRender": true,
+               "validations":[
+                  {
+                     "type":"empty",
+                     "validationRule":"",
+                     "errorMessage":""
+                  },
+                  {
+                     "type":"IsMandatory",
+                      "errorMessage":""
+                 }
+               ],
+               "placeHolder":"First Name",
+               "maxLength":"35",
+               "name":"firstName",
+               "isRequired":true,
+               "textAlign":"left",  
+               "className":"extra-padding-right"
+            },
+            {
+               "fieldType":"input",
+               "displayType":"input",
+               "dataType":"text",
+               "fieldLabel":"Last Name",
+               "styles": {
+                  "colWidth": "4",
+                  "className": ""
+              },
+              "shouldNotRender": true,
+               "validations":[
+                  {
+                     "type":"empty",
+                     "validationRule":"",
+                     "errorMessage":""
+                  },
+                  {
+                     "type":"IsMandatory",
+                      "errorMessage":""
+                 }
+               ],
+               "placeHolder":"Last Name",
+               "maxLength":"35",
+               "name":"lastName",
+               "isRequired":true,
+               "textAlign":"left",
+               "className":"extra-padding-left"
+            },
+            {
+                "fieldType": "input",
+                "displayType":"input",
+                "dataType": "text",
+                "fieldLabel": "Email Address",
+                "styles": {
+                  "colWidth": "4",
+                  "className": ""
+              },
+              "shouldNotRender": true,
+                "validations": [
+                    {
+                        "type": "empty",
+                        "validationRule": "",
+                        "errorMessage": ""
+                    },
+                    {
+                        "type": "email",
+                        "validationRule": "^(\\w+((-\\w+)|(\\.\\w+))*\\@[A-Za-z0-9]+((\\.)[A-Za-z0-9]+)*\\.[A-Za-z0-9]{2,4})$",
+                        "errorMessage": "Oops! Invalid E-mail"
+                    }
+                ],
+                "placeHolder": "Email Address",
+                "textAlign": "left",
+                "defaultValue": "",
+                "hint": "",
+                "name": "emailId",
+                "isRequired": true,
+                "prefix": "",
+                "suffix": "",
+                "options": [],
+                "minLength": "",
+                "maxLength": "50",
+                "minValue": "",
+                "maxValue": ""
+            },
+            {
+                "fieldType": "input",
+                "displayType":"input",
+                "dataType": "text",
+                "fieldLabel": "Phone Number",
+                "styles": {
+                  "colWidth": "4",
+                  "className": ""
+              },
+              "shouldNotRender": true,
+                "validations": [								
+                    {
+                        "type": "empty",
+                        "validationRule": "",
+                        "errorMessage": ""
+                    },
+                    {
+                     "type": "CheckUSPhone",
+                     "errorMessage": "Enter a valid Mobile Number"
+                  }
+                ],
+                "placeHolder": "Phone Number",
+                "textAlign": "left",
+                "defaultValue": "",
+                "hint": "",
+                "name": "contact_number",
+                "isRequired": true,
+                "prefix": "",
+                "suffix": "",
+                "options": [],
+                "minLength": "",
+                "maxLength": "14",
+                "minValue": "",
+                "maxValue": ""
+            },
+            {
+               "fieldType":"select",
+               "displayType":"select",
+               "dataType":"",
+               "fieldLabel":"Preferred Mode of Communication",
+               "placeHolder":"Email Or Phone",
+               "name":"preferred_mode_communication",
+               "dynamicSelect": true,
+               "lookupReference": {
+                 "name": "modeOfCommunication"
+               },
+               "shouldNotRender": true,
+               "options":[
+                  {
+                     "value":"email",
+                     "title":"email"
+                  }, 
+                  {
+                     "value":"phone",
+                     "title":"phone"
+                  }
+               ],
+               "validations": [								
+                  {
+                      "type": "empty",
+                      "validationRule": "",
+                      "errorMessage": ""
+                  }
+              ],
+               "isRequired":true,
+               "styles": {
+                  "colWidth": "4 bf-mobile-mrgb1rem",
+                  "className": ""
+              },
+               "textAlign":"left",
+               "className":"extra-padding-right"
+            },
+            {
+              "fieldType":"button",
+              "displayType":"button",
+              "dataType":"button",
+              "className":"bf-btn-login bf-btn-left",
+              "variant":"primary",
+              "shouldNotRender": true,
+              "type":"button",
+              "href":"",
+              "name":"submitButton",
+              "fieldLabel":"Submit",
+              "target":""
+           }
+
+
+         ],
+         "navigationLInks":[
+            {
+               "id": "tab4",
+               "type": "link",
+               "label": "Home",
+               "path": "/bfdev",
+               "style": "nav-link"
+             }
+         ],
+         "headers":[
+            {
+               "type":"text",
+               "label":"Operator Enrollment"
+            }
+         ],
+         "operatorEmail":{
+            "subject": "Operator Enrollment verification mail",
+            "text": "Hello",
+            "html": "You're Almost Done…A verification email was sent to: . Open this email and click the link to complete the process."
+
+         },
+         "links":{
+            "label":"HOME",
+            "target":"_blank"
+         },
+         "operatorModal":[
+               {
+                  "id":"16931",
+                  "title":"",
+                  "paragraph":"Success! We'll be in touch soon!",
+                  "button":"OK"
+               },
+               {
+                "id": "16932",
+                "title": "",
+                "paragraph": "Please verify. A required field is missing information",
+                "button":"OK"
+               },
+               {
+                  "id": "169",
+                  "title": "",
+                  "paragraph": "Oops! This E-mail already exists",
+                  "button":"OK"
+                 },
+                 {
+                  "id": "1687",
+                  "title": "",
+                  "paragraph": "Oops! This company already exists",
+                  "button":"OK"
+                 },
+                 {
+                  "id": "745",
+                  "title": "",
+                  "paragraph": "Wow, that’s a lot of planes! Would you like our assistance in signing up?",
+                  "button":"Yes",
+                  "button2":"No Continue"
+                 }
+            ]
+      },
+      "notifyMessage":{
+         "msg1": "Let's go! New operator enrollment request received " 
+     }
+   }
+}

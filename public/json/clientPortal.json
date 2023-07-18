@@ -1,0 +1,383 @@
+{
+    "dicountData":[
+        { 
+            "component": "clientPortal",
+            "id":"1",
+            "portalTabs": {
+                "name": "portalTabs",
+                "id": "1.2",
+                "tabs":[
+                    {
+                        "name": "clientPortal",
+                        "title": "Client Portal"
+                    }
+                ],
+                "users" :["FBO"]
+            },
+            "search":{
+                "name": "searchbar",
+                "id": "1.3",
+                "component": "searchbar",
+                "type":"text",
+                "placeholder": "Company Name"
+            },
+            "portalTitle":"Client Portal",
+            "headCells":[
+                    {
+                        "id": "tailNumber",
+                        "numeric": false,
+                        "disablePadding": true,
+                        "label": "Tail Number",
+                        "sortable": true
+                    },
+                    {
+                        "id": "location",
+                        "numeric": true,
+                        "disablePadding": false,
+                        "label": "Location",
+                        "sortable": true
+                    },
+                    {
+                        "id": "criteria",
+                        "numeric": true,
+                        "disablePadding": false,
+                        "label": "Criteria",
+                        "sortable": true
+                    },
+                    {
+                        "id": "value",
+                        "numeric": true,
+                        "disablePadding": false,
+                        "label": "Value",
+                        "sortable": true
+                    },
+                    {
+                        "id": "status",
+                        "numeric": true,
+                        "disablePadding": false,
+                        "label": "Status",
+                        "sortable": true
+                    },
+                    {
+                        "id": "addedBy",
+                        "numeric": true,
+                        "disablePadding": false,
+                        "label": "Added By",
+                        "sortable": true
+                    }
+                ],
+                "Buttons":[
+                    {
+                        "Label":"Edit", 
+                        "method":"onEditClick",
+                        "className":"btn btn-bf-primary"
+                    },
+                    {
+                        "Label":"Delete", 
+                        "method":"onDeleteClick",
+                        "className":"btn-bf-secondary bf-mrgl20",
+                        "checkAdminAccess" :true 
+                    }
+                ],
+                "addNewDiscount" : {
+                    "component": "button",
+                    "type":"button",
+                    "label":"Add New Discount",
+                    "variant":"primary",
+                    "name":"addNew",
+                    "isRequired": true,
+                    "styles": {
+                        "colWidth": "bf-add-right-top",
+                        "className": "add-more bf-width-auto"
+                    }
+                },
+                "addNewDiscountInformation":[
+                    {
+                    "id":"4",
+                    "fields":[ 
+                            {
+                                "component": "header",
+                                "type":"subheading",
+                                "label":"Edit Discount",
+                                "labelAdd":"Add New Discount",
+                                "isNew":false
+                            },
+                            {
+                                "component": "input",
+                                "type": "file",
+                                "name": "bulkUpload",
+                                "label": "Bulk Upload",
+                                "accept": ".xls,.csv,.xlsx",
+                                "placeholder": "XLS,XLSX,CSV",
+                                "styles": {
+                                  "colWidth": "4",
+                                  "className": "bulk-upload"
+                                },
+                                "isNew":true,
+                                "validations": [
+                                  {
+                                      "type": "fileType",
+                                      "errorMessage": "File format not supported"
+                                  }
+                                ]
+                              },
+                              {
+                                "component": "link",
+                                "type":"link",
+                                "name":"downloadTemplate",
+                                "label":"Download Template",
+                                "isNew":true,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "header",
+                                "type":"subheading",
+                                "labelAdd":"Or",
+                                "isNew":true,
+                                "styles": {
+                                    "className": "bf-mrgb20i"
+                                }
+                            },
+                            {
+                                "component": "multiselectcheckbox",
+                                "type": "multiselectcheckbox",
+                                "name": "location",
+                                "label": "Location(s)",
+                                "dynamicSelect": true,
+                                "dependentField": "organizationName",
+                                "lookupReference": {
+                                  "name": "location"
+                                },
+                                "placeholder": "Location",
+                                "styles": {
+                                  "colWidth": "4",
+                                  "className": "bf-text-left"
+                                },
+                                "isRequired": true,
+                                "validations":[
+                                    {
+                                        "type":"IsMandatory",
+                                        "errorMessage":" "
+                                    }
+                                ]
+                              },  
+                              {
+                                "component": "select",
+                                "type":"select",
+                                "callback":false,
+                                "name":"criteria",
+                                "label":"Criteria",
+                                "disable": false,
+                                "tooltip": {
+                                    "text": "Per order – Set discount over the total order value <br/>Per gallon – Set discount over each fuel gallon<br/>Cost plus – Adjusted FBO profit margin"
+                                },
+                                "dynamicSelect": false,
+                                "placeholder":"Criteria",
+                                "lookupReference": {
+                                    "name": "criteria"
+                                },
+                                "options": [
+                                    {
+                                      "value": "Per Order",
+                                      "title": "Per Order"
+                                    },
+                                    {
+                                      "value": "Per Gallon",
+                                      "title": "Per Gallon"
+                                    },
+                                    {
+                                        "value": "Cost Plus",
+                                        "title": "Cost Plus"
+                                    }
+                                  ],
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+                                "validations":[
+                                    {
+                                        "type":"IsMandatory",
+                                        "errorMessage":" "
+                                    }
+                                ]
+                            },
+                            {
+                                "component": "input",
+                                "type":"text",
+                                "dataType":"numeric",
+                                "callback":false,
+                                "name":"amount",
+                                "label":"Amount",
+                                "disable": false,
+                                "placeholder": "Value",
+                                "isRequired": true,
+                                "defaultValue":"",
+                                "styles": {
+                                  "colWidth": "2",
+                                    "className": ""
+                                },
+                                "validations":[
+                                    {
+                                        "type":"IsMandatory",
+                                        "errorMessage":" "
+                                    },
+                                    {
+                                        "type": "amount",
+                                        "errorMessage": "% should be less than 100"
+                                    }
+                                ]
+                            },
+                            {
+                                "component": "select",
+                                "type":"select",
+                                "callback":false,
+                                "name":"unit",
+                                "label":"Unit",
+                                "disable": false,
+                                "dynamicSelect": false,
+                                "placeholder": "Value unit",
+                                "defaultValue":"%",
+                                "options": [
+                                    {
+                                      "value": "$",
+                                      "title": "$"
+                                    },
+                                    {
+                                      "value": "%",
+                                      "title": "%"
+                                    }
+                                  ],
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "2",
+                                    "className": ""
+                                },
+                                "validations":[
+                                    {
+                                        "type":"IsMandatory",
+                                        "errorMessage":" "
+                                    }
+                                ]
+                            },
+                            {
+                                "component": "select",
+                                "type":"select",
+                                "callback":false,
+                                "name":"operator",
+                                "label":"Operator",
+                                "disable": false,
+                                "dynamicSelect":true,
+                                "dependentField": "userType",
+                                "dependentFieldVal":"operator",
+                                "lookupReference": {
+                                  "name": "companyName"
+                                },
+                                "placeholder": "Operator",
+                                "isRequired": false,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "AsyncTypeahead",
+                                "type": "text",
+                                "name": "tailNumbers",
+                                "maxLength": "6",
+                                "label": "Tail Number",
+                                "disable": false,
+                                "placeholder": "Tail Number",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+                                "validations": [
+                                    {
+                                        "type": "IsMandatory",
+                                        "errorMessage": ""
+                                    }
+                                ]
+                            },
+                            {
+                                "component": "Checkbox",
+                                "type": "checkbox",
+                                "id": "allTailNums",
+                                "label": "Click Here To Add Multiple Tail Numbers",
+                                "name": "allTailNums",
+                                "value": "check",
+                                "isNew":false,
+                                "isRequired": false,
+                                "styles": {
+                                    "colWidth": "4 bf-tailnumber-checkbox",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component":"creatableSelect",
+                                "type":"creatableSelect",
+                                "callback":true,
+                                "name":"addedTailNumbers",
+                                "label":"Added Tail Numbers",
+                                "disable": false,
+                                "placeholder":"",
+                                "isNew":false,
+                                "isRequired": false,
+                                "components":{ "DropdownIndicator": null},
+                                "menuIsOpen":false,
+                                "styles": {
+                                    "colWidth": "12 bf-text-left",
+                                    "className": ""
+                                },
+                                "validations":[
+                                    {
+                                        "type":"IsMandatory",
+                                        "errorMessage":""
+                                    }
+                                ]
+                            },
+                            {
+                                "component": "button",
+                                "type":"button",
+                                "label":"Submit",
+                                "variant":"primary",
+                                "name":"submit",
+                                "isRequired": true,
+                                "isNew":false,
+                                "styles": {
+                                    "className": "bf-btn-left bf-btn-imp"
+                                }
+                            }
+                        ]
+                    }
+                  ],
+                "modal":{
+                    "deactivate":{
+                        "text":"Wait! Are you sure you want to delete this information?",
+                        "button1":"Yes",
+                        "button2":"Cancel"
+                    },
+                    "validate":{
+                        "text":"Please verify. A required field is missing information"
+                    },
+                    "submit":{
+                        "title": "",
+                        "button":"OK"
+                    },
+                    "fatNumber":{
+                        "text":"Wait! Please verify your selections before submitting."
+                    }
+               },
+               "notifyMessage":{
+                "msg1": "An existing discount has been modified at ",
+                "msg2": " by the ",
+                "msg3": "A new discount has been added at ",
+                "msg4": "An existing discount has been deleted at "
+            }
+        }
+    ]
+}

@@ -1,0 +1,264 @@
+{
+    "aircraftData":[
+        {
+            "aircraftInformation" :{
+                "orderCriteriaFields" :[
+                    {
+                        "component": "paragraph",
+                        "type": "subheading",
+                        "users": ["operator","barrel fuel"],
+                        "label": "Order Criteria"
+                    },
+                    {
+                        "component": "radio",
+                        "type": "radio",
+                        "users": ["operator","barrel fuel"],
+                        "name": "legType",
+                        "defaultValue": "Single Leg",
+                        "label": "Single Leg",
+                        "isRequired": true,
+                        "styles": {
+                          "colWidth": "12",
+                          "className": "d-flex bf-mrg-b5rem bf-order-search-radio"
+                        },
+                        "options": [
+                          
+                          {
+                            "value": "Single Leg",
+                            "label": "Single Leg"
+                          },
+                          {
+                            "value": "Multiple Leg",
+                            "label": "Multiple Leg"
+                          }
+                        ]
+                      },
+                      {
+                        "component": "AsyncTypeahead",
+                        "type": "text",
+                        "id": "1.2",
+                        "users": ["operator","barrel fuel"],
+                        "name": "searchFuel",
+                        "maxLength": "50",
+                        "label": "Fueling Location",
+                        "disable": false,
+                        "placeholder": "ICAO,City,Airport Name",
+                        "isRequired": true,
+                        "styles": {
+                            "colWidth": "12 bf-mrg-tn10",
+                            "className": ""
+                        }
+                    },
+                    {
+                        "component": "date",
+                        "disabled": false,
+                        "id": "1.3",
+                        "users": ["operator","barrel fuel"],
+                        "isRequired": true,
+                        "name": "dateOfOrder",
+                        "placeholder": "DD/MM/YYYY",
+                        "styles": {
+                            "className": "",
+                            "colWidth": "6"
+                        },
+                        "type": "text"
+                    },
+                    {
+                        "component": "select",
+                        "type": "select",
+                        "dynamicSelect": true,
+                        "users": ["operator","barrel fuel"],
+                        "lookupReference": {
+                            "name": "fuelServices"
+                        },
+                        "name": "fuelservice",
+                        "placeholder": "Fuel Service",
+                        "defaultValue": "Jet A",
+                        "styles": {
+                            "colWidth": "6 bf-fuel-services",
+                            "className": ""
+                        }
+                    },
+                    {
+                        "component": "AsyncTypeahead",
+                        "type": "text",
+                        "name": "tailNumber",
+                        "users": ["barrel fuel"],
+                        "id": "1.5",
+                        "label": "Tail Number",
+                        "placeholder": "Tail Number",
+                        "defaultValue": "",
+                        "styles": {
+                            "colWidth": "12",
+                            "className": ""
+                        }
+                    },
+                    {
+                      "component": "select",
+                      "type": "select",
+                      "name": "tailNumber",
+                      "users": ["operator"],
+                      "id": "1.5",
+                      "label": "Tail Number",
+                      "placeholder": "Tail Number",
+                      "defaultValue": "",
+                      "styles": {
+                          "colWidth": "12",
+                          "className": ""
+                      }
+                  }
+            ],
+            "fuelordersheader":
+              {
+                "favoriteslabel": "Favorites",
+                "newfuelorderlabel":"New Fuel Order",
+                "preferredfboheading":"Preferred FBO",
+                "favoritefboheading":"Your Favorite FBOs"               
+              },
+            "searchErrorMsg":"Please verify. A required field is missing information!",
+            "filterByFields":[
+                {
+                    "component": "paragraph",
+                    "type": "subheading",
+                    "label": "Filter By"
+                },
+                {
+                    "component": "link",
+                    "type": "link",
+                    "label": "Clear All"
+                },
+                {
+                    "component": "input",
+                    "type": "text",
+                    "name": "quantity",
+                    "label": "Fuel Quantity",
+                    "placeholder": "99,999",
+                    "isRequired": false,
+                    "styles": {
+                      "colWidth": "6 bf-mrgb-0",
+                      "className": "d-flex"
+                    }
+                  },
+                  {
+                    "component": "select",
+                    "type": "select",
+                    "dynamicSelect": false,
+                    "lookupReference": {
+                        "name": "fuelServices"
+                    },
+                    "name": "unit",
+                    "label": "Unit",
+                    "placeholder": "Unit",
+                    "defaultValue": "Gallon",
+                    "styles": {
+                        "colWidth": "6 bf-mrgb-0",
+                        "className": ""
+                    },
+                    "options": [
+                      
+                      {
+                        "value": "Gallon",
+                        "title": "Gallons"
+                      },
+                      {
+                        "value": "Pound",
+                        "title": "Pounds"
+                      },
+                      {
+                        "value": "Kilogram",
+                        "title": "Kilograms"
+                      },
+                      {
+                        "value": "Liter",
+                        "title": "Liters"
+                      }
+                    ]
+                },
+                {
+                    "component": "range",
+                    "disabled": false,
+                    "isRequired": true,
+                    "name": "priceRange",
+                    "group": "filter",
+                    "label":"Fuel Price Range",
+                    "styles": {
+                        "className": "",
+                        "colWidth": "12 bf-range-input"
+                    }
+                },
+                {
+                    "component": "select",
+                    "type": "select",
+                    "name": "fboBrand",
+                    "group": "filter",
+                    "label": "FBO Brand",
+                    "placeholder": "FBO Brand",
+                    "defaultValue": "",
+                    "styles": {
+                        "colWidth": "12",
+                        "className": ""
+                    }
+                }
+            ],
+            "sortFboBy":{
+                "component": "select",
+                "type": "select",
+                "dynamicSelect": false,
+                "lookupReference": {
+                    "name": "fuelServices"
+                },
+                "name": "sortFboBy",
+                "label": "",
+                "placeholder": "Sort By",
+                "defaultValue": "",
+                "styles": {
+                    "colWidth": "3",
+                    "colWidth2":"11",
+                    "className": ""
+                },
+                "options": [
+                  
+                  {
+                    "value": "BF Partner",
+                    "title": "BF Partner"
+                  },
+                  {
+                    "value": "Lowest Price",
+                    "title": "Lowest Price"
+                  },
+                  {
+                    "value": "Highest Price",
+                    "title": "Highest Price"
+                  },
+                  {
+                    "value": "Name(A-Z)",
+                    "title": "Name (A-Z)"
+                  },
+                  {
+                    "value": "Name(Z-A)",
+                    "title": "Name (Z-A)"
+                  }
+                ]
+            }
+            },
+            "dateError":{
+              "message":"Oops! Invalid Date"
+            },
+            "modal":{
+                "deactivate":{
+                    "text":"Are you sure you want to delete the Aircraft?",
+                    "button1":"Yes",
+                    "button2":"Cancel"
+                },
+                "validate":{
+                    "text":"Please verify. A required field is missing information",
+                    "button1":"OK"
+                },
+                "duplicate":{
+                    "text":"Oops! Aircraft already exists.",
+                    "button1":"OK"
+                }
+            }
+        }
+    ]
+}

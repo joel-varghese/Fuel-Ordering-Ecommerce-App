@@ -1,0 +1,166 @@
+{
+   "operatorSignup":{
+      "headline":{
+                "type":"text",
+                "label":"Operator Sign Up Form"
+            },
+      "sections":[{
+             "subSections":[ 
+                    {
+                        "fields" :[
+							{
+                                "component": "input",
+                                "type":"text",
+                                "name":"firstName",
+                                "maxLength":"35",
+                                "label":"First name",
+                                "placeholder": "First Name",
+                                "isRequired": true,
+								"disable": false,
+                                "defaultValue":"",
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+                                "validations":[
+                                    {
+                                        "type":"IsMandatory",
+                                        "errorMessage":"First Name required"
+                                    }
+                                ]
+                            },
+							        {
+                                "component": "input",
+                                "type": "text",
+                                "label": "Middle Name",
+								"disable": false,
+                                "placeholder": "Middle Name",
+                                "styles": {
+                                  "colWidth": "4",
+                                  "className": ""
+                                },
+                                "maxLength": "25",
+                                "name": "middleName"
+                            },
+							{
+                                "component": "input",
+                                "type":"text",
+                                "name":"lastName",
+                                "maxLength":"35",
+                                "label":"Last Name",
+								"disable": false,
+                                "placeholder": "Last Name",
+                                "isRequired": true,
+                                "defaultValue":"",
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                },
+                                "validations":[
+                                    {
+                                        "type":"IsMandatory",
+                                        "errorMessage":"Last Name required"
+                                    }
+                                ]
+                            },
+                            {
+                                "component": "input",
+                                "type":"text",
+                                "name":"emailId",
+                                "maxLength":"50",
+                                "label":"Email",
+								"disable": false,
+                                "placeholder": "Email",
+                                "isRequired": true,
+                                "defaultValue":"",
+                                "styles": {
+                                   "colWidth": "4",
+                                    "className": ""
+                                },
+                                "validations":[
+                                    {
+                                        "type":"IsMandatory",
+                                        "errorMessage":"Email required"
+                                    },
+                                    {
+                                        "type":"IsEmail",
+                                        "validateRule":"([A-Za-z0-9_\\-\\.])+\\@([A-Za-z0-9_\\-\\.])+\\.([A-Za-z]{2,4})$",
+                                        "errorMessage":"Oops! Invalid E-mail"
+                                    }
+                                ]
+                            },
+							{
+                                 "component": "select",
+                                 "type":"select",
+                                 "dynamicSelect": true,
+                                 "lookupReference": {
+                                     "name": "roles"
+                                 },
+                                 "name":"Role",
+                                 "label":"Role",
+                                 "placeholder": "Role",
+                                 "isRequired": true,
+                                 "defaultValue":"",
+                                 "styles": {
+                                     "colWidth": "4",
+                                     "className": ""
+                                 },
+                                 "validations":[
+                                     {
+                                         "type":"IsMandatory",
+                                         "errorMessage":"Role required"
+                                     }
+                                 ]                      
+                             },
+							      {
+                                "component": "input",
+                                "type":"text",
+                                "label":"Custom Role",
+                                "placeholder": "Custom Role",
+                                "isRequired": false,
+								"disable": false,
+                                "styles": {
+                                    "colWidth": "4",
+                                    "className": ""
+                                }
+                            },
+                            {
+                                "component": "input",
+                                "type":"text",
+                                "name":"contact_number",
+                                "minlength":10,
+                                "maxLength":"10",
+                                "label":"Phone Number",
+								"disable": false,
+                                "placeholder": "Phone Number",
+                                "isRequired": true,
+                                "defaultValue":"",
+                                "styles": {
+                                  "colWidth": "4",
+                                    "className": ""
+                                },
+                                "validations":[
+                                    {
+                                        "type":"IsMandatory",
+                                        "errorMessage":"Phone Number required"
+                                    },
+                                    {
+                                        "type": "CheckRegex",
+                                        "validateRule": "^\\d{10}$",
+                                        "errorMessage": "Enter a valid Mobile Number"
+                                      }
+                                ]
+                            }
+                        ]
+                    }
+                    
+                    
+
+
+         ]
+        
+      }
+   ]
+   }
+}
+

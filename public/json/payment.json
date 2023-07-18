@@ -1,0 +1,466 @@
+{
+    "paymentData":[
+        {
+            "component": "accountpayment",
+            "id":"1",
+            "headCells":[
+                {
+                    "id": "paymentMode",
+                    "numeric": false,
+                    "disablePadding": true,
+                    "label": "Payment Mode"
+                },
+                {
+                    "id": "nickName",
+                    "numeric": true,
+                    "disablePadding": false,
+                    "label": "Nickname"
+                },
+                {
+                    "id": "dateUploaded",
+                    "numeric": true,
+                    "disablePadding": false,
+                    "label": "Date Uploaded"
+                },
+                {
+                    "id": "cardAccountNumber",
+                    "numeric": true,
+                    "disablePadding": false,
+                    "label": "Card/AccountNumber "
+                }
+            ],
+            "mobileViewHeader":"Payment Information",
+            "mobileHeadCells":[
+                {
+                    "id": "paymentMode",
+                    "numeric": false,
+                    "disablePadding": true,
+                    "label": "Payment Mode",
+                    "sortable": false
+                },
+                {
+                    "id": "nickName",
+                    "numeric": true,
+                    "disablePadding": false,
+                    "label": "Nickname",
+                    "sortable": false
+                },
+                {
+                    "id": "actions",
+                    "numeric": true,
+                    "disablePadding": false,
+                    "label": ""
+                }
+            ],
+            "Buttons":[
+                
+            ],
+            "addNewPayment" : {
+                "component": "button",
+                "type":"button",
+                "label":"Add Payment",
+                "variant":"primary",
+                "name":"addNew",
+                "isRequired": true,
+                "styles": {
+                    "colWidth": "bf-add-right-top",
+                    "className": "add-more bf-width-auto"
+                }
+                
+            },
+            "paymentInformation" :{
+                "fields":[
+                    {
+                        "component": "header",
+                        "type":"subheading",
+                        "label":"Payment Information"
+                    },
+                    {
+                        "component": "select",
+                        "type":"select",
+                        "callback":false,
+                        "name":"paymentMode",
+                        "id":"paymentMode",
+                        "label":"Payment Mode",
+                        "disable": true,
+                        "placeholder": "Credit/Debit Card",
+                        "options":[
+                            {
+                                "value":"Bank Account (ACH)",
+                                "title":"Bank Account (ACH)"
+                            },
+                            {
+                                "value":"Credit/ Debit Card",
+                                "title":"Credit/ Debit Card"
+                            },
+                            {
+                                "value":"AVCard",
+                                "title":"AVCard"
+                            },
+                            {
+                                "value":"Wire",
+                                "title":"Wire"
+                            }
+                        ],
+                        "isRequired": false,
+                        "styles": {
+                            "colWidth": "4",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "type":"IsMandatory",
+                                "errorMessage":""
+                            }
+                        ]
+                    },
+                    {
+                        "component": "input",
+                        "type":"input",
+                        "id":"1.1",
+                        "name":"nickName",
+                        "group":"details",
+                        "callback":false,
+                        "label":"Nickname",
+                        "placeholder": "Nickname(Optional)",
+                        "isRequired": false,
+                        "disabled":true,
+                        "styles": {
+                            "colWidth": "4",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "validation":"IsMandatory",
+                                "errorMessage":""
+                            },{
+                                "validation": "checkUpperCase",
+                                "validationRule": "(?=.*[A-Z])",
+                                "errorMessage": "Strong"
+                              }
+                            
+                        ]
+                    },  
+                    {
+                        "component": "input",
+                        "type":"text",
+                        "callback":false,
+                        "name":"cardHolder",
+                        "label":"Card Holder Name",
+                        "disable": false,
+                        "placeholder": "Card Holder Name",
+                        "isRequired": false,
+                        "styles": {
+                            "colWidth": "4",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "type":"IsMandatory",
+                                "errorMessage":""
+                            }
+                        ]
+                    },
+                    {
+                        "component": "input",
+                        "type":"text",
+                        "callback":false,
+                        "name":"cardNumber",
+                        "dataType":"numeric",
+                        "label":"Credit/Debit Card Number",
+                        "disable": false,
+                        "placeholder": "Credit Card Number",
+                        "isRequired": false,
+                        "styles": {
+                            "colWidth": "4",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "type":"IsMandatory",
+                                "errorMessage":""
+                            },
+                            {
+                            "validateRule": "(?=.*[0-12])"
+                            }
+                        ]
+                    },
+                    {
+                        "component": "select",
+                        "type":"select",
+                        "callback":false,
+                        "name":"expireMonth",
+                        "label":"Expiration Date",
+                        
+                        "disable": false,
+                        "placeholder": "MM",
+                        "options":[
+                            {
+                                "value":"1",
+                                "title":"1"
+                            },
+                            {
+                                "value":"2",
+                                "title":"2"
+                            },
+                            {
+                                "value":"3",
+                                "title":"3"
+                            },
+                            {
+                                "value":"4",
+                                "title":"4"
+                            }
+                        ],
+                        
+
+                        "isRequired": false,
+                        "styles": {
+                            "colWidth": "4",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "type":"IsMandatory",
+                                "errorMessage":""
+                            }
+                        ]
+                    },
+                    {
+                        "component": "select",
+                        "type":"select",
+                        "callback":false,
+                        "name":"expireYear",
+                        "label":"Expiration Date",
+                        
+                        
+                        "disable": false,
+                        "placeholder": "YYYY",
+                        "options":[
+                            {
+                                "value":"2023",
+                                "title":"2023"
+                            },
+                            {
+                                "value":"2024",
+                                "title":"2024"
+                            },
+                            {
+                                "value":"2025",
+                                "title":"2025"
+                            },
+                            {
+                                "value":"2026",
+                                "title":"2026"
+                            }
+                        ],
+                        
+
+                        "isRequired": false,
+                        "styles": {
+                            "colWidth": "4",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "type":"IsMandatory",
+                                "errorMessage":""
+                            }
+                        ]
+                    },
+
+                    
+                    
+                    {
+                        "component": "input",
+                        "type":"input",
+                        "id":"1.3",
+                        "name":"securityCode",
+                        "group":"details",
+                        "callback":false,
+                        "label":"Security Code",
+                        "placeholder": "Code ",
+                        "isRequired": false,
+                        "disabled":true,
+                        "styles": {
+                            "colWidth": "4",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "validation": "CheckRegex",
+                                "validationRule": "(?=.*[0-9])",
+                                "errorMessage": "Strong"
+                              }
+                        ]
+                    },
+                    
+                    {
+                        "component": "input",
+                        "type":"input",
+                        "id":"1.4",
+                        "name":"addrLine1",
+                        "callback":false,
+                        "group":"details",
+                        "label":"Address Line 1",
+                        "placeholder": "Address Line 1",
+                        "isRequired": false,
+                        "disabled":true,
+                        "styles": {
+                            "colWidth": "4",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "validation":"IsMandatory",
+                                "errorMessage":""
+                            }
+                        ]
+                    },
+                    {
+                        "component": "input",
+                        "type":"input",
+                        "id":"1.5",
+                        "name":"addrLine2",
+                        "callback":false,
+                        "group":"details",
+                        "label":"Address Line 2",
+                        "placeholder": "Address Line 2",
+                        "isRequired": false,
+                        "disabled":true,
+                        "styles": {
+                            "colWidth": "4",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "validation":"IsMandatory",
+                                "errorMessage":""
+                            }
+                        ]
+                    },
+                    {
+                        "component": "input",
+                        "type":"input",
+                        "id":"1.6",
+                        "name":"country",
+                        "group":"details",
+                        "callback":false,
+                        "label":"Country",
+                        "placeholder": "Country",
+                        "isRequired": false,
+                        "disabled":true,
+                        "styles": {
+                            "colWidth": "4",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "validation":"IsMandatory",
+                                "errorMessage":""
+                            }
+                        ]
+                    },
+                    {
+                        "component": "input",
+                        "type":"input",
+                        "id":"1.7",
+                        "name":"city",
+                        "group":"details",
+                        "callback":false,
+                        "label":"City",
+                        "placeholder": "City",
+                        "isRequired": false,
+                        "disabled":true,
+                        "styles": {
+                            "colWidth": "4",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "validation":"IsMandatory",
+                                "errorMessage":""
+                            }
+                        ]
+                    },
+                    {
+                        "component": "input",
+                        "type":"input",
+                        "id":"1.8",
+                        "name":"state",
+                        "group":"details",
+                        "callback":false,
+                        "label":"State",
+                        "placeholder": "State",
+                        "isRequired": false,
+                        "disabled":true,
+                        "styles": {
+                            "colWidth": "4",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "validation":"IsMandatory",
+                                "errorMessage":""
+                            }
+                        ]
+                    },
+                    {
+                        "component": "input",
+                        "type":"input",
+                        "id":"1.9",
+                        "name":"zip",
+                        "group":"details",
+                        "callback":false,
+                        "label":"Zip",
+                        "placeholder": "Zip",
+                        "isRequired": false,
+                        "disabled":true,
+                        "styles": {
+                            "colWidth": "4",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "validation":"IsMandatory",
+                                "errorMessage":""
+                            },
+                            {
+                                "validation": "CheckRegex",
+                                "validateRule": "(?=.*[0-9])",
+                                "errorMessage": "Invalid ZIP code"
+                            }
+                        ]
+                    },
+                    {
+                        "component": "button",
+                        "label": "Submit",
+                        "type":"button",
+                        "name": "submit",
+                        "variant":"primary",
+                        "callback":false,
+                        "isRequired": true,
+                        "disabled":true,
+                        "styles": {
+                                "colWidth": "50",
+                                "className": "bf-btn-login bf-btn-imp"
+                        }
+                        }
+                   
+            
+                ]
+            },
+            "modal":{
+                "deactivate":{
+                    "text":"Are you sure you want to delete the Aircraft?",
+                    "button1":"Yes",
+                    "button2":"Cancel"
+                },
+                "validate":{
+                    "text":"Please verify. A required field is missing information!",
+                    "button1":"OK"
+                }
+            }
+        }
+    ]
+}

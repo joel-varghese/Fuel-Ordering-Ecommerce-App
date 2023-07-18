@@ -1,0 +1,513 @@
+{
+    "reports":{
+       "config":{
+          "id":"3977",
+          "align":"center",
+          "theme":"theme-background-light",
+          "height":"tall"
+       },
+       "content":{
+          "usersHeaders":{
+            "Users":[
+             {
+                "id": "firstName",
+                "label":"First Name"
+             },
+             {
+              "id": "middleName",
+              "label":"Middle Name"
+             },
+             {
+              "id": "lastName",
+              "label":"Last Name"
+             },
+             {
+              "id": "access",
+              "label":"Access Level"
+             },
+             {
+              "id": "role",
+              "label":"Role"
+             },
+             {
+              "id": "email",
+              "label":"Email Address"
+             },
+             {
+               "id": "company",
+               "label": "Company Name"
+             },
+             {
+               "id": "location",
+               "label":"Locations"
+              },
+              {
+               "id": "status",
+               "label":"Status"
+              },
+              {
+                "id": "phone",
+                "label": "Phone Number"
+              }
+            ]
+           },
+           "TransactionHeaders":{
+            "Transaction":[
+             {
+                "id": "orderid",
+                "label":"Order ID"
+             },
+             {
+               "id": "fbo",
+               "label":"FBO Name"
+            },
+             {
+              "id": "operator",
+              "label":"Operator Name"
+             },
+             {
+              "id": "tail",
+              "label":"Tail Number"
+             },
+             {
+              "id": "flight",
+              "label":"Flight Type"
+             },
+             {
+              "id": "fuelDate",
+              "label":"Fueling Date"
+             },
+             {
+              "id": "orderDate",
+              "label":"Order Date"
+             },
+             {
+               "id": "arriving",
+               "label": "Arriving From"
+            },
+            {
+               "id": "fuelQuantity",
+               "label":"Fuel Quantity"
+            },
+            {
+             "id": "paymantName",
+             "label":"Payment Nickname"
+            },
+            {
+             "id": "paymentMode",
+             "label":"Payment Mode"
+            },
+            {
+             "id": "cardAccount",
+             "label":"Card / Account Number"
+            },
+            {
+             "id": "tax",
+             "label":"Tax 1 Name"
+            },
+            {
+               "id": "tax_val",
+               "label":"Tax 1 Value"
+            },
+            {
+             "id": "fee",
+             "label":"Fee 1 Name"
+            },
+            {
+               "id": "fee_val",
+               "label":"Fee 1 Value"
+              },
+            {
+              "id": "addService",
+              "label": "Additional Service 1"
+           },
+           {
+            "id": "service",
+            "label": "Service 1 Value"
+            },
+            {
+               "id": "addTax",
+               "label":"Additional Tax 1 Name"
+              },
+              {
+               "id": "taxVal",
+               "label":"Additional Tax 1 Value"
+              },
+              {
+                "id": "addFee",
+                "label": "Additional Fee 1 Name"
+             },
+             {
+              "id": "feeVal",
+              "label": "Additional Fee 1 Value"
+            },
+            {
+               "id": "product",
+               "label":"Product"
+            },
+            {
+             "id": "basePrice",
+             "label":"Base Price"
+            },
+            {
+             "id": "finalPrice",
+             "label":"Final Price"
+            },
+            {
+             "id": "savings",
+             "label":"Savings"
+            }
+            ]
+           },
+           "TableFields":[
+               {
+               "component": "paragraph",
+               "type": "subheading",
+               "users": [],
+               "label1": "Number of Users",
+               "label2": "Transaction Summary"
+               },
+               {
+                  "component": "button",
+                  "type":"button",
+                  "label":"Download as CSV",
+                  "name":"submit",
+                  "variant":"primary",
+                  "styles": {
+                   "colWidth": "6",
+                   "className": "bf-btn-left bf-btn-imp bf-mrgt20i bf-mrgb20i"
+                  }
+               }
+             ]
+       },
+       "ReportCriteriaFields" :[
+         {
+            "component": "select",
+            "type":"select",
+            "name": "reporttype",
+            "fieldType":true,
+            "id": "1.4",
+            "dynamicSelect": false,
+            "isRequired": false,
+            "label": "Report Type",
+            "reportType":"both",
+            "placeholder": "Report Type",
+            "isVisible": true,
+            "defaultValue":"Number of Users",
+            "styles": {
+            "colWidth": "12",
+            "className": ""
+            },
+            "options":[
+               {
+                  "value":"Number of Users",
+                  "title":"Number of Users"
+               },
+               {
+                  "value":"Transaction Summary",
+                  "title":"Transaction Summary"
+               }    
+            ]
+         },
+         {
+            "component": "paragraph",
+            "type": "subheading",
+            "users": ["operator","barrel fuel"],
+            "label": "Report Criteria"
+        },
+        {
+            "component": "span",
+            "name": "label",
+            "reportType":"user",
+            "type": "fieldLabel",
+            "label": "User Creation Date"
+        },
+        {
+         "component": "span",
+         "name": "label",
+         "reportType":"trans",
+         "type": "fieldLabel",
+         "label": "Fueling Date Range"
+     },
+        {
+         "component": "date",
+         "disabled": false,
+         "id": "1.3",
+         "users": [],
+         "isRequired": true,
+         "name": "fromdate",
+         "placeholder": "From",
+         "label": "Fueling Date Range",
+         "styles": {
+             "className": "",
+             "colWidth": "6"
+         },
+         "type": "text"
+     },
+     {
+         "component": "date",
+         "disabled": false,
+         "id": "1.3",
+         "users": [],
+         "isRequired": true,
+         "name": "todate",
+         "label": "",
+         "placeholder": "To",
+         "styles": {
+          "className": "",
+          "colWidth": "6"
+         },
+         "type": "text"
+      },
+      {
+         "component": "select",
+         "type":"select",
+         "name": "userLevel",
+         "fieldType":true,
+         "id": "1.4",
+         "dynamicSelect": false,
+         "isRequired": false,
+         "reportType":"user",
+         "label": "User Level",
+         "placeholder": "User Level",
+         "isVisible": true,
+         "defaultValue":"",
+         "styles": {
+         "colWidth": "12",
+         "className": ""
+         },
+         "options":[
+            {
+               "value":"Level 1 (Admin)",
+               "title":"Level 1"
+            },
+            {
+               "value":"Level 2 (Standard)",
+               "title":"Level 2"
+            },
+            {
+               "value":"Level 3 (Basic)",
+               "title":"Level 3"
+            } 
+         ]
+      },
+      {
+         "component": "select",
+         "type":"select",
+         "name": "userstatus",
+         "fieldType":true,
+         "id": "1.4",
+         "dynamicSelect": false,
+         "isRequired": false,
+         "label": "Status",
+         "reportType":"user",
+         "placeholder": "Status",
+         "isVisible": true,
+         "defaultValue":"",
+         "styles": {
+         "colWidth": "12",
+         "className": ""
+         },
+         "options":[
+            {
+               "value":"Active",
+               "title":"Active"
+            },
+            {
+               "value":"Inactive",
+               "title":"Inactive"
+            }
+         ]
+      },
+      {
+         "component": "select",
+         "type":"select",
+         "name": "company",
+         "fieldType":true,
+         "id": "1.4",
+         "dynamicSelect": false,
+         "isRequired": false,
+         "reportType":"user",
+         "label": "Company Name",
+         "placeholder": "Company Name",
+         "isVisible": true,
+         "defaultValue":"",
+         "styles": {
+         "colWidth": "12",
+         "className": ""
+         },
+         "options":[
+
+         ]
+      },
+      {
+         "component": "multiSelectCheckbox",
+         "type": "multiSelectCheckbox",
+         "name": "tailNumber",
+         "id": "1.4",
+         "isEdit" : true,
+         "group": "details",
+         "reportType":"trans",
+         "dynamicSelect": false,
+         "isRequired": false,
+         "disable": false,
+         "dependentField": "",
+         "options":[
+   
+         ],
+         "label": "Tail Number",
+         "placeholder": "Tail Number",
+         "styles": {
+           "colWidth": "12",
+           "className": ""
+         }
+       },
+      {
+         "component": "select",
+         "type":"select",
+         "name": "fboName",
+         "fieldType":true,
+         "id": "1.4",
+         "dynamicSelect": false,
+         "isRequired": false,
+         "label": "FBO Name",
+         "reportType":"trans",
+         "placeholder": "FBO Name",
+         "isVisible": true,
+         "defaultValue":"",
+         "styles": {
+         "colWidth": "12",
+         "className": ""
+         },
+         "options":[
+   
+         ]
+      },
+      {
+         "component": "select",
+         "type":"select",
+         "name": "operator",
+         "fieldType":true,
+         "id": "1.4",
+         "dynamicSelect": false,
+         "isRequired": false,
+         "label": "Operator Name",
+         "reportType":"trans",
+         "placeholder": "Operator Name",
+         "isVisible": true,
+         "defaultValue":"",
+         "styles": {
+         "colWidth": "12",
+         "className": ""
+         },
+         "options":[
+   
+         ]
+      },
+      {
+         "component": "select",
+         "type":"select",
+         "name": "fuelType",
+         "fieldType":true,
+         "id": "1.4",
+         "dynamicSelect": false,
+         "isRequired": false,
+         "reportType":"trans",
+         "label": "Fuel Type",
+         "placeholder": "Fuel Type",
+         "isVisible": true,
+         "defaultValue":"",
+         "styles": {
+         "colWidth": "12",
+         "className": ""
+         },
+         "options":[
+            {
+               "value":"Jet A",
+               "title":"Jet A"
+           },
+           {
+               "value":"100LL",
+               "title":"100LL"
+           },
+           {
+               "value":"SAF",
+               "title":"SAF"
+           },
+           {
+               "value":"Jet-A+/Prist",
+               "title":"Jet-A+/Prist"
+           }
+         ]
+      },
+      {
+         "component": "select",
+         "type":"select",
+         "name": "location",
+         "fieldType":true,
+         "id": "1.4",
+         "dynamicSelect": false,
+         "isRequired": false,
+         "label": "Fueling Location",
+         "reportType":"trans",
+         "placeholder": "Fueling Location",
+         "isVisible": true,
+         "defaultValue":"",
+         "styles": {
+         "colWidth": "12",
+         "className": ""
+         },
+         "options":[
+   
+         ]
+      },
+      {
+         "component": "select",
+         "type":"select",
+         "name": "transtatus",
+         "fieldType":true,
+         "id": "1.4",
+         "dynamicSelect": false,
+         "isRequired": false,
+         "label": "Status",
+         "reportType":"trans",
+         "placeholder": "Status",
+         "isVisible": true,
+         "defaultValue":"",
+         "styles": {
+         "colWidth": "12",
+         "className": ""
+         },
+         "options":[
+            {
+               "value":"Active",
+               "title":"Active"
+            },
+            {
+               "value":"Paid",
+               "title":"Paid"
+            },
+            {
+               "value":"Unpaid",
+               "title":"Unpaid"
+            },
+            {
+               "value":"Disputed",
+               "title":"Disputed"
+            }
+         ]
+      },
+      {
+         "component": "button",
+         "type":"button",
+         "label":"Generate Report",
+         "name":"submit",
+         "variant":"primary",
+         "styles": {
+          "colWidth": "6",
+          "className": "bf-btn-imp bf-mrgt20i bf-mrgb20i"
+         }
+      }
+       ]
+    }
+}

@@ -1,0 +1,451 @@
+{
+    "additionalServiceData": [
+        {
+            "component": "additionalService",
+            "id": "1",
+            "headCells": [
+                {
+                    "id": "service",
+                    "numeric": false,
+                    "disablePadding": true,
+                    "label": "Service"
+                },
+                {
+                    "id": "location",
+                    "numeric": false,
+                    "disablePadding": false,
+                    "label": "Location"
+                },
+                {
+                    "id": "fee",
+                    "numeric": false,
+                    "disablePadding": false,
+                    "label": "Fee"
+                },
+                {
+                    "id": "wavier",
+                    "numeric": false,
+                    "disablePadding": false,
+                    "label": "Waiver"
+                },
+                {
+                    "id": "addedBy",
+                    "numeric": false,
+                    "disablePadding": false,
+                    "label": "Added By"
+                },
+                {
+                    "id": "Actions",
+                    "label": ""
+                }
+            ],
+            "Buttons": [
+                {
+                    "Label": "Edit",
+                    "method": "onEditClick",
+                    "className": "btn btn-bf-primary"
+                },
+                {
+                    "Label": "Delete",
+                    "method": "onDeactivateClick",
+                    "className": "btn-bf-secondary bf-mrgl20"
+                }
+            ],
+            "addNewBanking": {
+                "component": "button",
+                "type": "button",
+                "label": "Add New Service",
+                "variant": "primary",
+                "name": "addNew",
+                "isRequired": true,
+                "styles": {
+                    "colWidth": "bf-add-right-top",
+                    "className": "add-more bf-width-auto"
+                }
+            },
+            "additionalServiceInformation": {
+                "fields": [
+                    {
+                        "service" : "Tail Number 01",
+                        "location" : "Juneau",
+                        "fee" : "4000",
+                        "wavier": "NA",
+                        "addedBy" : "username1"
+                    },
+                    {
+                        "service" : "Tail Number 02",
+                        "location" : "Tax_Name 01",
+                        "fee" : "Active",
+                        "wavier": "50%",
+                        "addedBy" : "username1"
+                    },
+                    {
+                        "service" : "Tail Number 03",
+                        "location" : "Tax_Name 01",
+                        "fee" : "Active",
+                        "wavier": "100%",
+                        "addedBy" : "username1"
+                    },
+                    {
+                        "service" : "Tail Number 04",
+                        "location" : "Tax_Name 01",
+                        "fee" : "Active",
+                        "wavier": "50%",
+                        "addedBy" : "username1"
+                    },
+                    {
+                        "service" : "Tail Number 05",
+                        "location" : "Tax_Name 01",
+                        "fee" : "Active",
+                        "wavier": "active",
+                        "addedBy" : "username1"
+                    },
+                    {
+                        "service" : "Tail Number 06",
+                        "location" : "Tax_Name 01",
+                        "fee" : "Active",
+                        "wavier": "inactive",
+                        "addedBy" : "username1"
+                    },
+                    {
+                        "service" : "Tail Number 07",
+                        "location" : "Tax_Name 01",
+                        "fee" : "Active",
+                        "wavier": "100%",
+                        "addedBy" : "username1"
+                    },
+                    {
+                        "service" : "Tail Number 08",
+                        "location" : "Tax_Name 01",
+                        "fee" : "Active",
+                        "wavier": "active",
+                        "addedBy" : "username1"
+                    },
+                    {
+                        "service" : "Tail Number 09",
+                        "location" : "Tax_Name 01",
+                        "fee" : "Active",
+                        "wavier": "100%",
+                        "addedBy" : "username1"
+                    },
+                    {
+                        "service" : "Tail Number 10",
+                        "location" : "Tax_Name 01",
+                        "fee" : "Active",
+                        "wavier": "active",
+                        "addedBy" : "username1"
+                    },
+                    {
+                        "service" : "Tail Number 11",
+                        "location" : "Tax_Name 01",
+                        "fee" : "Active",
+                        "wavier": "100%",
+                        "addedBy" : "username1"
+                    },
+                    {
+                        "service" : "Tail Number 12",
+                        "location" : "Tax_Name 01",
+                        "fee" : "Active",
+                        "wavier": "50%",
+                        "addedBy" : "username1"
+                    },
+                    {
+                        "service" : "Tail Number 13",
+                        "location" : "Tax_Name 01",
+                        "fee" : "Active",
+                        "wavier": "inactive",
+                        "addedBy" : "username1"
+                    },
+                    {
+                        "service" : "Tail Number 14",
+                        "location" : "Tax_Name 01",
+                        "fee" : "Active",
+                        "wavier": "100%",
+                        "addedBy" : "username1"
+                    },
+                    {
+                        "service" : "Tail Number 15",
+                        "location" : "Tax_Name 01",
+                        "fee" : "Active",
+                        "wavier": "inactive",
+                        "addedBy" : "username1"
+                    }
+                ]
+            },
+            "aircraftInformation" :{
+                "fields" :[
+                    {
+                        "component": "header",
+                        "type": "subheading",
+                        "waiverType":["N/A","FuelGallons","OrderValue"],
+                        "label": "Edit Service",
+                        "labelAdd": "Add New Service"
+                    },
+                    {
+                        "component": "id",
+                        "waiverType":["N/A","FuelGallons","OrderValue"],
+                        "name": "fboaddlserviceid"
+                    },
+                    {
+                        "component": "input",
+                        "type":"text",
+                        "callback":false,
+                        "waiverType":["N/A","FuelGallons","OrderValue"],
+                        "name":"servicetype",
+                        "maxLength":"30",
+                        "disable": true,
+                        "label":"Service Type",
+                        "placeholder": "Service Type",
+                        "isRequired": true,
+                        "styles": {
+                            "colWidth": "4",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "validation":"IsMandatory",
+                                "errorMessage":""
+                            }
+                        ]
+                    },
+                    {
+                        "component": "multiSelectCheckbox",
+                        "type": "multiSelectCheckbox",
+                        "waiverType":["N/A","FuelGallons","OrderValue"],
+                        "name": "locations",
+                        "id": "1.4",
+                        "group": "details",
+                        "disable": true,
+                        "dynamicSelect": true,
+                        "isRequired": true,
+                        "dependentField": "organizationName",
+                        "lookupReference": {
+                          "name": "location"
+                        },
+                        "label": "Location(s)",
+                        "placeholder": "Location",
+                        "styles": {
+                          "colWidth": "4",
+                          "className": "bf-text-left"
+                        },
+                        "validations": [
+                          {
+                            "validation": "IsMandatory",
+                            "errorMessage": ""
+                          }
+                        ]
+                      },
+                    {
+                        "component": "input",
+                        "type":"text",
+                        "callback":false,
+                        "waiverType":["N/A","FuelGallons","OrderValue"],
+                        "name":"amount",
+                        "label":"Amount",
+                        "disable": false,
+                        "placeholder": "Amount",
+                        "isRequired": true,
+                        "styles": {
+                            "colWidth": "4 bf-dollor-label",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "validation":"IsMandatory",
+                                "errorMessage":""
+                            }
+                        ]
+                    },
+                    {
+                        "component": "select",
+                        "type":"select",
+                        "callback":false,
+                        "waiverType":["N/A","FuelGallons","OrderValue"],
+                        "name":"thresholdtowaive",
+                        "label":"Threshold to Waive",
+                        "disable": false,
+                        "placeholder": "Threshold to Waive",
+                        "isRequired": true,
+                        "defaultValue":"N/A",
+                        "styles": {
+                            "colWidth": "4",
+                            "className": ""
+                        },
+                        "options":[
+                            {
+                                "value":"FuelGallons",
+                                "title":"Fuel Gallons"
+                            },
+                            {
+                                "value":"OrderValue",
+                                "title":"Order Value"
+                            },
+                            {
+                                "value":"N/A",
+                                "title":"Not Applicable"
+                            }
+                        ],
+                        "validations":[
+                            {
+                                "validation":"IsMandatory",
+                                "errorMessage":""
+                            }
+                        ]
+                    },
+                    {
+                        "component": "input",
+                        "type":"text",
+                            "callback":false,
+                        "name":"minordervalue",
+                        "waiverType":["OrderValue"],
+                        "maxLength":"5",
+                        "dataType":"numeric",
+                        "label":"Minimum Order Value",
+                        "disable": false,
+                        "placeholder": "",
+                        "isRequired": true,
+                        "styles": {
+                            "colWidth": "4 bf-dollor-label",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "validation":"IsMandatory",
+                                "errorMessage":""
+                            }
+                        ]
+                    },
+                    {
+                        "component": "input",
+                        "type":"text",
+                            "callback":false,
+                        "name":"mingallons",
+                        "waiverType":["FuelGallons"],
+                        "maxLength":"4",
+                        "dataType":"numeric",
+                        "label":"Minimum Gallons",
+                        "disable": false,
+                        "placeholder": "Fuel Gallons",
+                        "isRequired": true,
+                        "styles": {
+                            "colWidth": "4",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "validation":"IsMandatory",
+                                "errorMessage":""
+                            }
+                        ]
+                    },
+                    {
+                        "component": "input",
+                        "type":"text",
+                        "callback":false,
+                        "name":"actualamount",
+                        "disable": false,
+                        "waiverType":["FuelGallons","OrderValue"],
+                        "label":"Amount Waived",
+                        "placeholder": "Value",
+                        "isRequired": true,
+                        "styles": {
+                            "colWidth": "2",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "validation":"IsMandatory",
+                                "errorMessage":""
+                            },
+                            {
+                                "validation":"amount",
+                                "errorMessage": "Oops! Please Validate The Amount"
+                            }
+                        ]
+                    },
+                    {
+                        "component": "select",
+                        "type":"select",
+                        "callback":false,
+                        "name":"unit",
+                        "waiverType":["FuelGallons","OrderValue"],
+                        "label":"Unit",
+                        "disable": false,
+                        "placeholder": "Value Unit",
+                        "isRequired": true,
+                        "defaultValue":"%",
+                        "styles": {
+                            "colWidth": "2",
+                            "className": ""
+                        },
+                        "options":[
+                            {
+                                "name":"dollar",
+                                "title":"$"
+                            },
+                            {
+                                "name":"percentage",
+                                "title":"%"
+                            }
+                        ],
+                        "validations":[
+                            {
+                                "validation":"IsMandatory",
+                                "errorMessage":""
+                            }
+                        ]
+                    },
+                    {
+                        "component": "button",
+                        "type":"button",
+                        "label":"Submit",
+                        "waiverType":["N/A","FuelGallons","OrderValue"],
+                        "name":"submitform",
+                        "disabled":false,
+                        "variant":"primary",
+                        "call":"onClickSubmit",
+                        "isRequired": true,
+                        "styles": {
+                            "colWidth": "4",
+                            "className": "bf-btn-login bf-btn-imp"
+                        }
+                    },
+                    {
+                        "component": "info",
+                        "type": "info",
+                        "waiverType":["N/A","FuelGallons","OrderValue"],
+                        "label": "All values are in USD"
+                    }
+            ]
+            },
+            "modal": {
+                "deactivate": {
+                    "text": "Wait! Are you sure you want to delete this information?",
+                    "button1": "Yes",
+                    "button2": "Cancel"
+                },
+                "validate": {
+                    "text": "Please verify. A required field is missing information",
+                    "button1": "OK"
+                },
+                "fatNumber":{
+                    "text":"Wait! Please Verify Your Selections Before Submitting."
+                },
+                "threshold":{
+                    "text":"Oops! Please Validate The Amount"
+                }
+            },
+            "notifyMessage":{
+                "msg1": "A new additional service",
+                "msg2": " has been added ",
+                "msg3": "An Existing Additional Services ",
+                "msg4": " has been modified at ",
+                "msg6": " Has Been Deleted at ",
+                "msg5": " by the ",
+                "msg7": "An existing Additional Service ",
+                "msg8": " by "
+
+            }
+        }
+    ]
+}

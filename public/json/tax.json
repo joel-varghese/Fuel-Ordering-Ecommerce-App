@@ -1,0 +1,474 @@
+{
+    "taxData": [
+        {
+            "component": "tax",
+            "id": "1",
+            "headCells": [
+                {
+                    "id": "taxtype",
+                    "numeric": false,
+                    "disablePadding": true,
+                    "user":["internal"],
+                    "sortable": true,
+                    "label": "Type"
+                },
+                {
+                    "id": "taxname",
+                    "numeric": false,
+                    "disablePadding": false,
+                    "user":["fbo","internal"],
+                    "sortable": true,
+                    "label": "Name"
+                },
+                {
+                    "id": "status",
+                    "numeric": false,
+                    "disablePadding": false,
+                    "user":["internal"],
+                    "sortable": true,
+                    "label": "Status"
+                },
+                {
+                    "id": "location",
+                    "numeric": false,
+                    "disablePadding": false,
+                    "user":["fbo"],
+                    "sortable": true,
+                    "label": "Location"
+                },
+                {
+                    "id": "addedBy",
+                    "numeric": false,
+                    "disablePadding": false,
+                    "user":["fbo","internal"],
+                    "sortable": true,
+                    "label": "Added By"
+                },
+                {
+                    "id": "criteria",
+                    "numeric": false,
+                    "disablePadding": false,
+                    "sortable": true,
+                    "user":["fbo","internal"],
+                    "label": "Criteria"
+                },
+                {
+                    "id": "taxAmount",
+                    "numeric": false,
+                    "disablePadding": false,
+                    "user":["fbo","internal"],
+                    "sortable": true,
+                    "label": "Amount"
+                },
+                {
+                    "id": "Actions",
+                    "user":["fbo","internal"],
+                    "label": " "
+                }
+            ],
+            "Buttons": [
+                {
+                    "Label": "Edit",
+                    "method": "onEditClick",
+                    "className": "btn btn-bf-primary"
+                },
+                {
+                    "Label": "Delete",
+                    "method": "onDeactivateClick",
+                    "className": "btn-bf-secondary bf-mrgl20"
+                }
+            ],
+            "addNewBanking": {
+                "component": "button",
+                "type": "button",
+                "label": "Add New Tax",
+                "variant": "primary",
+                "name": "addNew",
+                "isRequired": true,
+                "styles": {
+                    "colWidth": "bf-add-right-top",
+                    "className": "add-more bf-width-auto"
+                }
+            },
+            "taxFields" :{
+                "fields" :[
+                    {
+                        "component": "header",
+                        "type": "subheading",
+                        "label": "Edit Tax",
+                        "isEdit" : true,
+                        "user": ["fbo","internal"],
+                        "dateRange":["Date Range","Fixed","S"],
+                        "labelAdd": "Add New Tax"
+                    },
+                    {
+                        "component": "id",
+                        "user": ["fbo","internal"],
+                        "isEdit" : true,
+                        "dateRange":["Date Range","Fixed","S"],
+                        "name": "taxid"
+                    },
+                    {
+                        "component": "select",
+                        "type":"text",
+                        "user": ["fbo"],
+                        "isEdit" : false,
+                        "dateRange":["Date Range","Fixed","S"],
+                        "callback":false,
+                        "name":"type",
+                        "disable": true,
+                        "label":"Select Type",
+                        "placeholder": "Select Type",
+                        "isRequired": true,
+                        "defaultValue":"Create From Tax Template",
+                        "options":[
+                            {
+                                "value":"Create From Tax Template",
+                                "title":"Create From Tax Template"
+                            },
+                            {
+                                "value":"Create New Tax",
+                                "title":"Create New Tax"
+                            },
+                            {
+                                "value":"Create New Additional Services Tax",
+                                "title":"Create New Additional Services Tax"
+                            }
+                            
+                        ],
+                        "styles": {
+                            "colWidth": "4",
+                            "className": "bf-mrg-r50p"
+                        },
+                        "validations":[
+                            {
+                                "validation":"IsMandatory",
+                                "errorMessage":""
+                            }
+                        ]
+                    },
+                    {
+                        "component": "select",
+                        "type":"text",
+                        "isEdit" : false,
+                        "user": ["fbo"],
+                        "dateRange":["Date Range","Fixed","S"],
+                        "callback":false,
+                        "name":"taxTemplate",
+                        "disable": true,
+                        "label":"Select Template",
+                        "placeholder": "Select Template",
+                        "isRequired": true,
+                        "options":[
+                            
+                        ],
+                        "styles": {
+                            "colWidth": "4",
+                            "className": "bf-mrg-r50p"
+                        },
+                        "validations":[
+                            {
+                                "validation":"IsMandatory",
+                                "errorMessage":""
+                            }
+                        ]
+                    },
+                    {
+                        "component": "select",
+                        "type":"text",
+                        "dateRange":["Date Range","Fixed","S"],
+                        "callback":false,
+                        "isEdit" : true,
+                        "name":"taxtype",
+                        "disable": true,
+                        "user": ["internal"],
+                        "label":"Select Type",
+                        "placeholder": "Select Type",
+                        "isRequired": true,
+                        "defaultValue":"Federal/State Tax",
+                        "options":[
+                            {
+                                "value":"Federal/State Tax",
+                                "title":"Federal / State Tax"
+                            },
+                            {
+                                "value":"Custom Tax",
+                                "title":"Custom Tax"
+                            }
+                            
+                        ],
+                        "styles": {
+                            "colWidth": "4",
+                            "className": "bf-mrg-r50p"
+                        },
+                        "validations":[
+                            {
+                                "validation":"IsMandatory",
+                                "errorMessage":""
+                            }
+                        ]
+                    },
+                    {
+                        "component": "input",
+                        "type":"text",
+                        "isEdit" : true,
+                        "dateRange":["Date Range","Fixed","S"],
+                        "callback":false,
+                        "name":"taxname",
+                        "label":"Tax Name",
+                        "user": ["fbo","internal"],
+                        "disable": false,
+                        "placeholder": "Tax Name",
+                        "isRequired": true,
+                        "maxLength": "30",
+                        "styles": {
+                            "colWidth": "4",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "validation":"IsMandatory",
+                                "errorMessage":""
+                            },
+                            {
+                                "validation":"CheckRegex",
+                                "validateRule":"^\\d*[a-zA-Z][a-zA-Z\\d ]*$",
+                                "errorMessage":"Invalid Data"
+                             }
+                        ]
+                    },
+                    {
+                        "component": "multiSelectCheckbox",
+                        "type": "multiSelectCheckbox",
+                        "user":["fbo"],
+                        "dateRange":["Date Range","Fixed","S"],
+                        "name": "locations",
+                        "id": "1.4",
+                        "isEdit" : true,
+                        "group": "details",
+                        "dynamicSelect": true,
+                        "isRequired": true,
+                        "dependentField": "organizationName",
+                        "lookupReference": {
+                          "name": "location"
+                        },
+                        "label": "Location (s)",
+                        "placeholder": "Location",
+                        "styles": {
+                          "colWidth": "4",
+                          "className": "bf-text-left"
+                        },
+                        "validations": [
+                          {
+                            "validation": "IsMandatory",
+                            "errorMessage": ""
+                          }
+                        ]
+                      },
+                    {
+                        "component": "select",
+                        "type":"select",
+                        "callback":false,
+                        "dateRange":["Date Range","Fixed","S"],
+                        "name":"pricingType",
+                        "label":"Pricing Type",
+                        "user": ["fbo","internal"],
+                        "disable": false,
+                        "isEdit" : true,
+                        "placeholder": "Select Pricing Type",
+                        "isRequired": true,
+                        "options":[
+                            {
+                                "value":"Fixed",
+                                "title":"Fixed"
+                            },
+                            {
+                                "value":"Date Range",
+                                "title":"Date Range"
+                            }
+                            
+                        ],
+                        "styles": {
+                            "colWidth": "4",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "validation":"IsMandatory",
+                                "errorMessage":""
+                            }
+                        ]
+                    },
+                    {   
+                        "dateRange":["Date Range"],
+                        "component": "date",
+                        "type":"date",
+                        "isEdit" : true,
+                        "callback":false,
+                        "name":"startDate",
+                        "label":"Valid From",
+                        "user": ["fbo","internal"],
+                        "disable": false,
+                        "placeholder": "DD/MM/YYY",
+                        "isRequired": true,
+                        "styles": {
+                            "colWidth": "4",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "validation":"IsMandatory",
+                                "errorMessage":""
+                            },
+                            {
+                                  "validation": "date",
+                                  "errorMessage": "Oops! Valid Date Cannot Be Less Than The Current Date"
+                            },
+                            {
+                                "validation": "invalidDate",
+                                "errorMessage":"Invalid Date"
+                            }
+                        ]
+                    },
+                    {
+                        "dateRange":["Date Range"],
+                        "component": "date",
+                        "type":"date",
+                        "callback":false,
+                        "isEdit" : true,
+                        "name":"endDate",
+                        "label":"Valid To",
+                        "user": ["fbo","internal"],
+                        "disable": false,
+                        "placeholder": "DD/MM/YYY",
+                        "isRequired": true,
+                        "styles": {
+                            "colWidth": "4",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "validation":"IsMandatory",
+                                "errorMessage":""
+                            },
+                            {
+                                  "validation": "date",
+                                  "errorMessage": "Oops! Valid Date Cannot Be Less Than The Current Date"
+                            },
+                            {
+                                "validation": "invalidDate",
+                                "errorMessage":"Invalid Date"
+                            }
+                        ]
+                    },
+                    {
+                        "component": "input",
+                        "type":"text",
+                        "callback":false,
+                        "isEdit" : true,
+                        "name":"amount",
+                        "dateRange":["Date Range","Fixed"],
+                        "label":"Amount",
+                        "disable": false,
+                        "placeholder": "Value",
+                        "user": ["fbo","internal"],
+                        "isRequired": true,
+                        "styles": {
+                            "colWidth": "2",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "validation":"IsMandatory",
+                                "errorMessage":""
+                            }
+                        ]
+                    },
+                    {
+                        "component": "select",
+                        "type":"selecet",
+                        "callback":false,
+                        "name":"unit",
+                        "maxLength":"5",
+                        "dataType":"numeric",
+                        "isEdit" : true,
+                        "label":"Unit",
+                        "dateRange":["Date Range","Fixed"],
+                        "disable": false,
+                        "placeholder": "Value Unit",
+                        "user": ["fbo","internal"],
+                        "defaultValue":"%",
+                        "isRequired": true,
+                        "options":[
+                            {
+                                "value":"$",
+                                "title":"$"
+                            },
+                            {
+                                "value":"%",
+                                "title":"%"
+                            }
+                            
+                        ],
+                        "styles": {
+                            "colWidth": "2",
+                            "className": ""
+                        },
+                        "validations":[
+                            {
+                                "validation":"IsMandatory",
+                                "errorMessage":""
+                            }
+                        ]
+                    },
+                    {
+                        "component": "button",
+                        "type":"button",
+                        "label":"Submit",
+                        "name":"submitform",
+                        "isEdit" : true,
+                        "dateRange":["Date Range","Fixed","S"],
+                        "disabled":false,
+                        "variant":"primary",
+                        "call":"onClickSubmit",
+                        "user": ["fbo","internal"],
+                        "isRequired": true,
+                        "styles": {
+                            "colWidth": "4",
+                            "className": "bf-btn-login bf-btn-imp"
+                        }
+                    }
+            ]
+            },
+            "modal": {
+                "deactivate": {
+                    "text": "Wait! Are You Sure You Want To Delete This Information?",
+                    "button1": "Yes",
+                    "button2": "Cancel"
+                },
+                "validate": {
+                    "text": "Please Verify. A Required Field Is Missing Information",
+                    "button1": "OK"
+                },
+                "fatNumber":{
+                    "text":"Wait! Please Verify The Changes In The Highlighted Field As They Will Affect The Final Fuel Price."
+                }
+            },
+            "notifyMessage":{
+                "msg1": "A new Federal/State Tax ",
+                "newTax": "A New Tax ",
+                "newTax1":" has been added at ",
+                "exsitingTax":" An Existing Tax ",
+                "exsitingTax1":" has been Updated at ",
+                "deleteTax":" Has Been Deleted at ",
+                "deleteTax1":" Has Been Deleted by  ",
+                "msg2": " has been added by ",
+                "msg3": "A existing Federal/State Tax ",
+                "msg4": " has been modified at ",
+                "msg5": " by ",
+                "msg6": " has been modified by "
+
+            }
+        }
+    ]
+}

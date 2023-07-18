@@ -1,0 +1,63 @@
+{
+    "component": "orders",
+    "id":"10",
+    "tabs":[
+        {
+            "name": "active",
+            "title": "Active"
+        },
+        {
+            "name": "dispute",
+            "title": "Disputes"
+        },
+        {
+            "name": "completed",
+            "title": "Completed"
+        }
+    ],
+    "search":{
+        "name": "searchbar",
+        "id": "1.3",
+        "component": "searchbar",
+        "type":"text",
+        "placeholder": "Order ID Or Company Name Or Tail Number"
+    },
+    "resetBttton":{
+        "type":"button",
+        "label":"Reset",
+        "name":"reset",
+        "variant":"",
+        "styles": {
+            "colWidth": "bf-add-right-top",
+            "className": "bf-width-auto reset-button"
+        }
+    },
+    "dateFields":[
+        {   
+           "component": "date",
+           "type":"date",
+           "isEdit" : true,
+           "callback":false,
+           "name":"fromDate",
+           "disable": false,
+           "placeholder": "From",
+           "styles": {
+              "colWidth": "8",
+              "className": "add-more bf-width-auto"
+          }
+        }, 
+        {   
+           "component": "date",
+           "type":"date",
+           "isEdit" : true,
+           "callback":false,
+           "name":"toDate",
+           "disable": false,
+           "placeholder": "To",
+           "styles": {
+              "colWidth": "8",
+              "className": "add-more bf-width-auto"
+          }
+        }
+       ]
+}

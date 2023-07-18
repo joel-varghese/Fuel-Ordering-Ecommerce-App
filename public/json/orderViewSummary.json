@@ -1,0 +1,214 @@
+{
+    "orderViewSummary":{
+        "placeholder":{
+            "text":"Order Placed",
+            "textUpdate":"Order Updated",
+            "textClose":"Order Complete" 
+        },
+        "fields":[
+            {
+                "name":"orderMessage",
+                "component":"header",
+                "text": "Thanks For Your Order! ",
+                "textEditOrder": "Order Updated Successfully",
+                "textAccepted":"Order Changes Accepted",
+                "textClosed":"Order Completed Successfully",
+                "textResolve":"Order Resolved Successfully"
+            },
+            {
+                "name":"OrderNumber",
+                "component":"data",
+                "text": "Order Number:",
+                "text2":"Invoice Number:",
+                "styles": {
+                    "className" : "bf-bold bf-mrgb"
+                }
+            },
+            {
+                "name":"OrderDate",
+                "component":"data",
+                "text": "Order Date: ",
+                "styles": {
+                    "className" : "bf-bold bf-mrgb"
+                }
+            },
+            {
+                "name":"emailInfo",
+                "component":"text",
+                "text": "Your Order Details Have Been Emailed To",
+                "styles": {
+                    "className" : "bf-mrgb"
+                }
+            },
+            {
+                "name":"RequestBy",
+                "component":"value",
+                "text": "email",
+                "styles": {
+                    "className" : "bf-mrgb"
+                }
+            },
+            {
+                "name":"viewInvoice",
+                "component":"link",
+                "text": "Click to View/ Edit Now",
+                "styles": {
+                    "className" : "bf-mrgb bf-order-link"
+                }
+            },
+            {
+                "name":"icon",
+                "component":"icon",
+                "styles": {
+                    "className" : "bf-mrgb"
+                }
+            },
+            {
+                "name":"TotalOrderValue",
+                "component":"value",
+                "styles": {
+                    "className" : "bf-mrgb bf-value"
+                }
+            },
+            {
+                "name":"endText",
+                "component":"text",
+                "textPending":"Order Pending",
+                "textClose":"Fund Transfer Initiated",
+                "text": "Sit Back And Relax While We Take Care Of The Rest",
+                "styles": {
+                    "className" : "bf-mrgb"
+                }
+            },
+            {
+                "component": "button",
+                "type":"button",
+                "label":"Place A New Order",
+                "labelOkay":"Okay",
+                "labelDone":"Done",
+                "name":"placeOrder",
+                "disabled":false,
+                "variant":"primary",
+                "styles": {
+                    "colWidth": "4",
+                    "className": "bf-btn-login bf-btn-imp"
+                }
+            },
+            {
+                "name":"contactInfo",
+                "component":"text",
+                "text": "Questions? Email support@barrelfuel.com",
+                "styles": {
+                    "className" : "bf-mrgt"
+                }
+            }
+        ],
+        "errorMessage":"Please verify. A required field is missing information",
+        "cancelEmailBody":{
+            "title": "Order [",
+            "title2":"] Has Been Canceled",
+            "paragraph": "Hi ",
+            "html1": "Your Order [",
+            "html2": "] Has Been Canceled. Please Log-In To Barrel Fuel For Additional Information. <br><br> Thanks, <br> The Barrel Fuel Team"
+        },
+        "cancelOrder":{
+            "fields":[
+                {
+                   "component": "paragraph",
+                   "users":["operator","barrel fuel"],
+                   "type": "subheading",
+                   "label": "Reason for Canceling"
+                },
+                {
+                   "component": "select",
+                   "type":"select",
+                   "name": "StatusReason",
+                   "users":["operator","barrel fuel"],
+                   "fieldType":true,
+                   "id": "1.4",
+                   "group": "details",
+                   "dynamicSelect": false,
+                   "isRequired": true,
+                   "label": "Reason",
+                   "placeholder": "Reasons",
+                   "isVisible": true,
+                   "defaultValue":"",
+                   "styles": {
+                   "colWidth": "4",
+                   "className": ""
+                   },
+                   "validations": [
+                   {
+                      "validation": "IsMandatory",
+                      "errorMessage": ""
+                   }
+                   ],
+                   "options":[
+                      {
+                         "value":"Date/Time Change",
+                         "title":"Date/Time Change"
+                      },
+                      {
+                         "value":"Trip Canceled",
+                         "title":"Trip Canceled"
+                      },
+                      {
+                         "value":"Weather Related",
+                         "title":"Weather Related"
+                      },
+                      {
+                         "value":"Mechanical Issue",
+                         "title":"Mechanical Issue"
+                      },
+                      {
+                         "value":"Pricing Too High",
+                         "title":"Pricing Too High"
+                      },
+                      {
+                         "value":"Other",
+                         "title":"Other"
+                      }     
+                   ]
+                },
+                {
+                   "component": "textArea",
+                   "type":"text",
+                   "name": "StatusNotes",
+                   "users":["operator","barrel fuel"],
+                   "maxLength":"500",
+                   "dynamicSelect": false,
+                   "isRequired": false,
+                   "label": "Notes",
+                   "placeholder": "Notes",
+                   "lengthRestriction":true,
+                   "isVisible": true,
+                   "defaultValue":"",
+                   "rows":"4",
+                   "styles": {
+                   "colWidth": "4",
+                   "className": ""
+                   }
+                },
+                {
+                    "component": "select",
+                    "name":"requestedBy",
+                    "label":"Requested By",
+                    "disable": false,
+                    "placeholder": "Email Address",
+                    "isRequired": true,
+                    "users":["barrel fuel"],
+                    "styles": {
+                        "colWidth": "4",
+                        "className": ""
+                    },
+                    "validations":[
+                        {
+                            "validation":"IsMandatory",
+                            "errorMessage":""
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

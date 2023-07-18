@@ -1,0 +1,297 @@
+{
+    "orderViewData":{
+        "orderHeadersData":{
+            "fields":[
+                {
+                    "name":"ICAO",
+                    "component":"header",
+                    "type": "text",
+                    "screen":["data"]
+
+                },
+                {
+                    "name":"FBO",
+                    "component":"header",
+                    "type": "text",
+                    "screen":["data","summary"]
+                },
+                {
+                    "name":"FBO_ContactNumber",
+                    "component":"subheader",
+                    "type": "text",
+                    "label": "Phone Number",
+                    "screen":["data","summary"]
+                },
+                {
+                    "name":"address",
+                    "component":"subheader",
+                    "type": "text",
+                    "screen":["data","summary"]
+                }
+            ]
+        },
+        "ordersFields":{
+            "fields":[
+                {
+                    "component": "subheading",
+                    "id": "1.1",
+                    "label": "Operator Details"
+                },
+                {
+                    "component": "input",
+                    "type": "text",
+                    "name": "OperatorName",
+                    "id": "1.2",
+                    "label": "Operator Name",
+                    "placeholder": "Operator Name",
+                    "defaultValue": "",
+                    "disable": true,
+                    "styles": {
+                        "colWidth": "4",
+                        "className": ""
+                    }
+                },
+                {
+                    "component": "input",
+                    "type": "text",
+                    "name": "CreatedBy",
+                    "id": "1.3",
+                    "label": "Placed By",
+                    "placeholder": "Placed By",
+                    "defaultValue": "",
+                    "styles": {
+                        "colWidth": "4",
+                        "className": ""
+                    }
+                },
+                {
+                    "component": "input",
+                    "type":"text",
+                    "name":"PhoneNumber",
+                    "disable": true,
+                    "label":"Phone Number",
+                    "placeholder": "Phone Number",
+                    "styles": {
+                        "colWidth": "2 bf-mobile-width100",
+                        "className": "bf-placeorder-phone-number"
+                    },
+                    "validations":[
+                        {
+                            "validation":"IsMandatory",
+                            "errorMessage":""
+                        }
+                    ]
+                },
+                {
+                    "component": "input",
+                    "type":"text",
+                    "name":"OrderDate",
+                    "disable": true,
+                    "label":"Order Date",
+                    "placeholder": "Order Date",
+                    "styles": {
+                        "colWidth": "2 bf-mobile-width100",
+                        "className": ""
+                    },
+                    "validations":[
+                        {
+                            "validation":"IsMandatory",
+                            "errorMessage":""
+                        }
+                    ]
+                },
+                {
+                    "component": "subheading",
+                    "id": "1.1",
+                    "label": "Flight Details"
+                },
+                {
+                    "component": "input",
+                    "type": "text",
+                    "name": "TailNumber",
+                    "id": "1.2",
+                    "label": "Tail Number",
+                    "placeholder": "Tail Number",
+                    "defaultValue": "",
+                    "styles": {
+                        "colWidth": "4",
+                        "className": ""
+                    }
+                },
+                {
+                    "component": "input",
+                    "type": "text",
+                    "name": "FlightType",
+                    "id": "1.3",
+                    "label": "Flight Type",
+                    "placeholder": "Flight Type",
+                    "defaultValue": "",
+                    "styles": {
+                        "colWidth": "4",
+                        "className": ""
+                    }
+                },
+                {
+                    "component": "input",
+                    "type":"text",
+                    "callback":false,
+                    "name":"ArrivingFrom",
+                    "disable": true,
+                    "label":"Arriving From",
+                    "placeholder": "AirportID, City",
+                    "styles": {
+                        "colWidth": "4",
+                        "className": ""
+                    },
+                    "validations":[
+                        {
+                            "validation":"IsMandatory",
+                            "errorMessage":""
+                        }
+                    ]
+                },
+                {   
+                    "component": "input",
+                    "type":"text",
+                    "isEdit" : true,
+                    "callback":false,
+                    "name":"FuellingDate",
+                    "label":"Date Of Fueling",
+                    "disable": false,
+                    "placeholder": "MM/DD/YYY",
+                    "styles": {
+                        "colWidth": "4",
+                        "className": ""
+                    },
+                    "validations":[
+                        {
+                            "validation":"IsMandatory",
+                            "errorMessage":""
+                        },
+                        {
+                              "validation": "date",
+                              "errorMessage": "Oops! Fueling Date Cannot Be Less Than The Current Date"
+                        }
+                    ]
+                },
+                {
+                    "component": "input",
+                    "type": "text",
+                    "name": "Fuelupon",
+                    "id": "1.3",
+                    "label": "Fuel Upon",
+                    "placeholder": "Fuel Upon",
+                    "defaultValue": "",
+                    "styles": {
+                        "colWidth": "4",
+                        "className": ""
+                    }
+                },
+                {
+                    "component": "input",
+                    "type":"text",
+                    "callback":false,
+                    "name":"FuelQuantity",
+                    "disable": true,
+                    "label":"Fuel Quantity",
+                    "placeholder": "Fuel Quantity",
+                    "styles": {
+                        "colWidth": "2 bf-relative",
+                        "className": ""
+                    },
+                    "validations":[
+                        {
+                            "validation":"IsMandatory",
+                            "errorMessage":""
+                        }
+                    ]
+                },
+                {
+                    "component": "input",
+                    "type": "text",
+                    "name": "Unit",
+                    "id": "1.3",
+                    "callback":false,
+                    "label": "Unit",
+                    "placeholder": "Unit",
+                    "defaultValue": "Gallons",
+                    "styles": {
+                        "colWidth": "2",
+                        "className": ""
+                    }
+                }
+            ]
+        },
+        "orderPayments":{
+            "fields" : [
+                {
+                    "component": "subheading",
+                    "id": "2.1",
+                    "label": "Payment Information"
+                },
+                {
+                    "component": "input",
+                    "type":"text",
+                    "callback":false,
+                    "name":"nickname",
+                    "disable": false,
+                    "label":"Nickname",
+                    "users":["operator","internal"],
+                    "placeholder": "Nickname",
+                    "isRequired": false,
+                    "styles": {
+                        "colWidth": "4 bf-relative",
+                        "className": ""
+                    }
+                },
+                {
+                    "component": "input",
+                    "type":"text",
+                    "callback":false,
+                    "name":"paymentMode",
+                    "disable": false,
+                    "label":"Payment mode",
+                    "users":["operator","internal"],
+                    "placeholder": "Payment Mode",
+                    "isRequired": false,
+                    "styles": {
+                        "colWidth": "4 bf-relative",
+                        "className": ""
+                    }
+                },
+                {
+                    "component": "input",
+                    "type":"text",
+                    "callback":false,
+                    "name":"cardAccountNumber",
+                    "disable": false,
+                    "label":"Card / AccountNumber",
+                    "users":["operator","internal"],
+                    "placeholder": "Card / AccountNumber",
+                    "isRequired": false,
+                    "styles": {
+                        "colWidth": "4 bf-relative",
+                        "className": ""
+                    }
+                }
+            ]
+        },
+        "orderedServices":{
+            "fields" : [
+                {
+                    "component": "subheading",
+                    "id": "3.1",
+                    "label": "Additional Services"
+                },
+                {
+                    "component": "box",
+                    "name":"Services",
+                    "key":"ServiceName",
+                    "id": "3.2",
+                    "label": "Additional Services"
+                }
+            ]
+        }
+
+    }
+}
