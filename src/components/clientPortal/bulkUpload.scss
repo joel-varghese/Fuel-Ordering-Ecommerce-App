@@ -1,0 +1,42 @@
+@import "../../assets/styles/constants.scss";
+
+.bf-bulk-upload-container {
+    background-color: $dashboard-bg-clr;
+    width: 100%;
+    height: 100%;
+    .form-section{
+        height: 100%;
+        .tab-details-container {
+            height: calc(100% - 60px);
+            overflow: auto;
+            position: relative;
+            width: calc(100% + 3.5vw);
+            > div {
+                height: 100%;
+            }
+            .bf-table-container {
+                &.bf-discount-table-container {
+                    .bf-table-column { 
+                        .MuiTableHead-root {
+                            .MuiTableRow-root {
+                                
+                            }
+                        }
+                    }
+                }
+                .MuiBox-root {
+                    padding: 0 !important;
+                }
+            }
+            .bf-add-right-top {
+                position: absolute;
+                right: 3.2vw;
+                top: -38px;
+                display: flex;
+                align-items: self-end;
+                justify-content: flex-end;
+                 height: 36px;
+            }
+        }
+    }
+}

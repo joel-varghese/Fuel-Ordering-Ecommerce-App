@@ -1,0 +1,392 @@
+@import "../../assets/styles/constants.scss";
+
+.admin-signup {
+    height: calc(100vh - 120px);
+    .btn {
+        &.btn-signup {
+            width: 180px;
+            background-color: $btn-primary-clr;
+            border-color: $btn-primary-clr;
+            margin-bottom: 10px;
+        }
+    }
+}
+.bf-account-home{
+    .bf-user-table-container {
+        .css-ahj2mt-MuiTypography-root {
+            font-family: $font-family;
+        }
+        .bf-user-tab-search {
+            padding-top: 10px !important;
+        }
+            .btn-bf-primary,
+            .btn-bf-secondary {
+                padding-top: 8px;
+            }
+    }
+}
+
+.bf-account-home-container {
+    .bf-operator-enrollment-section.login-section .login-form {
+        padding-top: 0 !important;
+        padding-left: initial !important;
+        form {
+           .bf-company-input-container-section {
+            > .row {
+                padding-left: 5px !important;
+                padding-top: 30px !important;
+            }
+            .bf-subheading {
+                font-size: 16px;
+            }
+           }
+        }
+    }
+}
+.signup-section {
+    .login-form {
+        justify-content: initial !important;
+        height: 100% !important;
+    }
+    form {
+        padding: 35px;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 100%;
+        overflow-y: hidden;
+        .btn-group {
+            justify-content: flex-start;
+            button {
+                width: 150px !important;
+                flex: 0 0 150px !important;
+            }
+        }
+        .bf-mrgb-0{
+            &.row {
+                padding: 0 !important;
+            }
+        }
+    }
+    .add-new-button {
+        background-color: transparent !important;
+        max-height: 40px;
+    }
+}
+.bf-nobf {
+    position: relative;
+    padding-bottom: 20px;
+    .bf-deactivate-company {
+        bottom: -15px;
+        &.bf-operator-merber-details {
+            @media screen and (max-width:1205px) {
+                bottom: -125px;
+            }
+            @media screen and (max-width:1365px) {
+                bottom: -125px;
+            }
+        }
+        a {
+            text-decoration: none !important;
+            color: #014e9b;
+        }
+    }
+}
+.bf-mrgb-0 {
+    .mb-4 {
+        margin-bottom: 0 !important;
+    }
+}
+.bf-buttons-section {
+    margin-top: 20px !important;
+}
+.table-loader {
+    background-color: white;
+    height: 100%;
+    width: calc(100% - 3.5vw);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bf-mrgt-0 {
+    .mb-4 {
+        margin-bottom: 0 !important;
+    } 
+}
+@media screen and (min-width:1366px) and (max-width:1599px) {
+    .bf-deactivate-company {
+        bottom: -120px !important;    
+        padding-bottom: 20px !important;
+    }
+}
+.bf-mobile-show {
+    display: none;
+}
+@media screen and (min-width:350px) and (max-width:767px) {
+    .bf-mobile-show {
+        display: inline-block;
+    }
+    .bf-desktop-show {
+        display: none;
+    }
+    .bf-account-home-container {
+        .bf-operator-enrollment-section.login-section .login-form {
+            padding-top: 0 !important;
+            padding-left: initial !important;
+            form {
+               .bf-company-input-container-section {
+                > .row {
+                    padding-left: 5px !important;
+                    padding-top: 0px !important;
+                }
+               }
+            }
+        }
+        .bf-account-home {
+            .tab-details-container {
+                .bf-add-right-top {
+                    right: -15px;
+                    top: initial;
+                    bottom: 50px;
+                    z-index: 2;
+                    margin-bottom: 10px;
+                }
+                .bf-company-section {
+                    .rbt-input-main,
+                    select {
+                        margin-bottom: 1rem;
+                    }
+                    .btn-primary {
+                        margin-left: 0 !important;
+                    }
+                    .bf-company-tab {
+                        .bf-mrgb-0.row {
+                            .bf-mrgb-0.row {
+                                .bf-heading.bf-subheading {
+                                    &:first-child {
+                                        position: fixed;
+                                        top: 205px;
+                                        width: calc(100% - 65px);
+                                        font-size: 16px;
+                                        letter-spacing: 1px;
+                                        font-weight: 600;
+                                    }
+                                }
+                            }
+                        }
+                        .mb-4.col-md-3 {
+                            margin-bottom: 0 !important;
+                        }
+                        .btn-group button {
+                            flex: 0 0 120px !important;
+                            width: 120px !important;
+                            height: 30px !important;
+                            padding: 0 !important
+                        }
+                        .bf-deactivate-company {
+                            width: calc(100% - 120px);
+                            text-align: right;
+                            margin-top: -48px !important;
+                            a {
+                                height: 38px;
+                                width: 120px;
+                                border: 1px solid ;
+                            }
+                        }
+                    }
+                }
+                .bf-add-right-top {
+                    right: -15px;
+                    top: initial;
+                    bottom: 50px;
+                    z-index: 2;
+                }
+            }
+        }
+    }
+    .bf-dashboard-body {
+        .bf-show-mobile {
+            display: flex !important;
+        }
+    }
+    .bf-account-home-container {
+        .bf-account-home {
+            .tab-details-container {
+                .login-section {
+                    form {
+                        .bf-company-section {
+                            .login-form{
+                                > div:last-child {
+                                    margin-bottom: 0;
+                                    display: inline-flex;
+                                    justify-content: right;
+                                    text-align: center;
+                                    width: 100%;
+                                    a {
+                                        margin-top: 18px !important;
+                                        background-color: $clr-white;
+                                        border-color:  $btn-primary-clr; 
+                                        width: 120px !important;
+                                        margin-right: 25px;
+                                        height: 30px;
+                                        padding-top: 0;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        .bf-mobile-show {
+                                            color:  $btn-primary-clr;     
+                                        }
+                                    }
+                                }
+                                .bf-company-input-container-section {
+                                    .btn-group {
+                                        &:last-child {
+                                            margin-left: 25px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .MuiBox-root {
+            .MuiPaper-root {
+                .MuiTableContainer-root {
+                    margin-top: -15px;
+                }
+                .MuiTextField-root > div {
+                    padding-left: 5px;
+                    border: 1px solid $border-clr;
+                    margin-top: -23px;
+                    height: 44px;
+                    margin-right: 0px;
+                }
+            }
+        }
+    }
+    .bf-paginarion-seciton {
+        .MuiPagination-ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 15px;
+        }
+    }
+    .mb-4.col-md-3 {
+        margin-bottom: 0px !important;
+        width: 100% !important;
+        margin-right: 1%;
+    }
+    .modal-content {
+        .bf-subheading {
+            font-weight: 600 !important;
+            font-size: 16px;
+            margin-bottom: 0px !important;
+        }
+    }
+    .bf-upload-doc {
+        label {
+            font-size: 12px;
+            img {
+                height: 22px;
+            }
+        }
+    }
+    .bt-document-table-container {
+         .MuiTable-root {
+            max-width: 600px;
+            min-width: 265px;
+        }
+        .bf-delete-doc {
+            font-size: 12px;
+            margin-right: 10px;
+            img {
+                height: 17.95px;
+            }
+        }
+    }
+    .bf-mrgb1rem {
+        .bf-multi-select-checkbox {
+            margin-bottom: 20px;
+        }
+    }
+    .bf-dashboard-tabs-container {
+        .bf-dashboard-signup {
+            &.bf-dashboard-fbo-signup {
+                h1 {
+                    &.bf-heading {
+                        display: none !important;
+                    }
+                }
+            }
+        }
+    }
+    .bf-dashboard-tabs-container {
+        .bf-dashboard-signup {
+            &.bf-dashboard-fbo-signup {
+                .admin-add-user {
+                    .bf-heading.bf-subheading {
+                        margin-top: 0 !important;
+                    }
+                    .bf-download-sample-xl {
+                        a {
+                            margin-top: 0 !important;
+                        }
+                    }
+                    .bf-dashboard-signup-body {
+                        height: calc(100% - 92px - 75px - 10px) !important;
+                        > div {
+                            .mb-2.row {
+                                .bf-mrgb-0.row {
+                                    padding-right: 12px !important;
+                                    padding-left: 10px;
+                                    &:last-child {
+                                        .bf-buttons-section.row.bf-operator-add-remove {
+                                            margin-bottom: 0 !important;
+                                        }
+                                    }
+                                }
+                                &:last-child {
+                                    .mb-4.col-md-4 {
+                                        margin-bottom: 8px !important;
+                                        select {
+                                            margin-bottom: 8px !important;
+                                        }
+                                        .mb-3 {
+                                            margin-bottom: 0 !important;
+                                        }
+                                    }
+                                    .bf-buttons-section.row.bf-operator-add-remove {
+                                        margin-top: 0 !important;
+                                    }
+                                    .bf-subheading::after {
+                                        width: 94%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    >div {
+                        &.mb-3.row {
+                            display: none;
+                        }
+                        &.add-user-buttons.d-grid {
+                            padding-left: 0;
+                            align-items: center;
+                            justify-content: center;
+                            margin-bottom: 0 !important;
+                            margin-top: 0 !important;
+                            button {
+                                width: 120px !important;
+                                height: 30px !important;
+                                padding: 0 !important;
+                                flex: 0 0 120px !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

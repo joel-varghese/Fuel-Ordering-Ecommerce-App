@@ -1,0 +1,520 @@
+@import "../../assets/styles/constants.scss";
+
+.bf-account-home-container{
+    background-color: $dashboard-bg-clr;
+    width: 100%;
+    height: 100%;
+    .bf-home-company-name{
+        font-size: 2rem;
+        text-transform: capitalize;
+    }
+    .bf-search-result-name{
+        text-transform: initial !important;
+    }
+    .bf-account-home{
+        height: 100%;
+        .row {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        .bf-userBar{
+            display: flex;
+            align-items: center;
+            padding-left: 0;
+            .mb-4 {
+                margin-bottom: 0 !important;
+                margin-right: -1px;
+                > div {
+                    display: none !important;
+                }
+                select {
+                    height: 42px;
+                }
+            }
+            .search{
+                position: relative;
+                .search-icon{
+                    position: absolute;
+                    font-size: 22px;
+                    top: 9px;
+                    left: 7px;
+                }
+                .search-input{
+                    width: 36vw;
+                    padding: 8px 30px;
+                    background-color: rgba(255,255,255,0.7) !important;
+                    &.search-input-fuel-pricing {
+                        width: 34vw;
+                    }
+                }
+                .bf-down-arrow {
+                    position: absolute;
+                    right: 8px;
+                    top: 20px;
+                }
+            }
+        }
+        .reset-button{
+            position: absolute;
+            top:0;
+            right: 0;
+            transition: none !important;
+            border: none !important;
+            color: $help-clr;
+            padding: 0 !important;
+            .btn:hover{
+                border: none;
+            }
+        }
+        .display-none{
+            display: none;
+        }
+        .tab-details-container {
+            height: calc(100% - 104px);
+            position: relative;
+            width: calc(100% + 3.5vw);
+            > div {
+                height: 100%;
+            }
+            .bf-table-container {
+                &.bf-user-table-container {
+                    .bf-table-column { 
+                        .MuiTableHead-root {
+                            .MuiTableRow-root {
+                                
+                            }
+                        }
+                    }
+                }
+                .MuiBox-root {
+                    padding: 0 !important;
+                }
+            }
+            .bf-add-right-top {
+                position: absolute;
+                right: 3.2vw;
+                top: -38px;
+                display: flex;
+                align-items: self-end;
+                justify-content: flex-end;
+                 height: 36px !important;
+                 button {
+                    padding-right: 5px !important;
+                 }
+                 .date-flds{
+                    //padding-left:5px !important;
+                 }
+            }
+            .login-section {
+                height: 100% !important;
+                form {
+                    padding: 0 3.2vw 0 0;
+                    > div {
+                        background-color: $clr-white;
+                        &.bf-company-section {
+                            height: 100%;
+                            width: 100%;
+                            background-color: transparent !important;
+                            > div {
+                                height: 100%;
+                                > div {
+                                    height: 100%;
+                                    > div {
+                                        &.login-form {
+                                            padding: 25px 20px 20px 20px;
+                                            height: 100% !important;
+                                            justify-content: space-between !important;
+                                            background-color: $clr-white;
+                                            overflow-y: auto;
+                                            &.bf-company-tab {
+                                                justify-content: flex-start !important;
+                                            }
+                                            >div:last-child {
+                                                margin-bottom: 0;
+                                                a {
+                                                    margin-top: 15px;
+                                                    text-decoration: none !important;
+                                                    color: #014e9b;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .bf-upload-docs {
+                .bf-upload-doc {
+                    font-size: 14px;
+                    img {
+                        height: 18px;
+                    }
+                }
+            }
+        }
+        .bf-mrgt20 {
+            margin-top: 20px;
+        }
+    }
+    .bf-calender-container{
+        display: flex;
+        position: relative;
+        margin-top: -10px;
+    }
+}
+
+
+.bf-upload-doc {
+    margin-right: 4px;
+    input {
+        visibility: hidden;
+        width: 1px;
+        height: 1px;
+    }
+}
+.bt-document-table-container {
+    .MuiBox-root .MuiPaper-root .MuiTableContainer-root {
+        margin-top: 20px !important;
+        height: calc(100% - 110px);
+    }
+    .bf-delete-doc {
+        position: absolute;
+        right: 3.6vw;
+        width: auto !important;
+        background-color: transparent !important;
+        border: none !important;
+        color: $btn-primary-clr !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 8px;
+        img {
+            margin-right: 5px;
+        }
+        svg {
+            fill: $btn-primary-clr !important;
+        }
+        &:hover, &:active, &:visited {
+            background-color: transparent !important;
+        }
+    }
+    tbody {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        tr {
+            display: flex;
+            width: max(21%, 185px);
+            margin-right: 5%;
+            &:nth-child(4n) {
+                margin-right: 0;
+            }
+            th {
+                width: 100%;
+                border-bottom: none;
+                > div:first-child {
+                    border: 1px solid #707070;
+                    padding-top: 20%;
+                    padding-bottom: 20%;
+                    position: relative;
+                    img {
+                        height: max(85px, 6vw);
+                        cursor: pointer;
+                    }
+                    .bf-delete-image-cb {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                    }
+                }
+                .bf-doc-name {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    margin-top: 7px;
+                    > span {
+                        color: rgba(0,0,0,0.3);
+                        max-width: 95%;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+            }
+        }
+    }
+}
+.bf-accout-sugesstion-dropdown {
+    position: absolute;
+    z-index: 22;
+    background: $clr-white;
+    width: 100%;
+    max-height: 30vh;
+    overflow-y: auto;
+    border: 1px solid $dashboard-bg-clr;
+    list-style-type: none;
+    padding-left: 0;
+    li {
+        padding: 3px 5px;
+        &:hover {
+            background-color: $primary-clr;
+            color: $clr-white;
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (min-width:350px) and (max-width:767px) {
+    .bf-account-home-container {
+        background-color: $clr-white;
+        padding-top: 30px;
+        .bf-mobile-tabs-dropdown {
+            select {
+                border: 1px solid $border-clr;
+                border-radius: 0;
+                height: 44px;
+            }
+        }
+        .bf-home-company-name {
+            display: none;
+        }
+        .login-form {
+            &.bf-company-tab {
+                padding: 0 !important;
+            }
+            .bf-mrgb-0.row {
+                .bf-mrgb-0.row {
+                    flex-direction: column;
+                    &>* {
+                        padding-left: 0;
+                        padding-right: 0;
+                    }
+                    > div {
+                        width: 100%;
+                        input, select {
+                            height: 44px;
+                        }
+                    }
+                }
+            }
+        }
+        .bf-account-home {          
+            .tab-details-container {
+                width: 100%;
+                height: calc(100% - 84px);
+                > div {
+                    width: 100%;
+                    > div {
+                        &.login-form {
+                            width: 100%;
+                            form {
+                                padding-right: 0;
+                                .bf-company-section {
+                                    > div {
+                                        > div {
+                                            width: 100%;
+                                            > div {
+                                                padding-left: 30px !important;
+                                                padding-right: 15px !important;
+                                                width: 100%;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .bf-orders-home {
+            .bf-userBar {
+                flex-direction: column;
+                 .bf-mobile-tabs-dropdown {
+                    width: 100%;
+                 }
+                 .search {
+                    width: calc(100% - 60px);
+                    margin-top: -21px;
+                    input {
+                        width: 100% !important;
+                    }
+                 }
+            }
+            .bf-tabs-calender-filter {
+                position: relative;
+                margin-top: 20px;
+                width: calc(100% - 60px) !important;
+                margin-left: auto;
+                margin-right: auto;
+                padding-right: 0;
+                .bf-relative {
+                    width: 100%;
+                }
+                &.bf-fbo-details-calender {
+                    display: none;
+                }
+                .bf-calender-container {
+                    justify-content: space-between;
+                    .date-flds {
+                        .col-md-8 {
+                            margin-left: 0 !important;
+                            margin-bottom: 20px !important;
+                        }
+                        &:last-child {
+                            &::before{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+            .bf-tabs-container {
+                display: none;
+            }
+        }
+
+    }
+}
+
+@media only screen
+and (min-device-width : 350px)
+and (max-device-width : 767px)
+and (orientation : portrait)
+and (-webkit-min-device-pixel-ratio: 1) {
+    .bf-account-home-container {
+        .bf-account-home {
+            .tab-details-container {
+                > div {
+                    > div {
+                        &.login-form {
+                            form {
+                                .bf-company-section {
+                                    > div {
+                                        > div {
+                                            > div {
+                                                padding-right: 30px !important;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.bf-tabs-calender-filter {
+    position: absolute;
+    right: 0;
+    display: flex;
+    height: auto !important;
+    margin-top: -55px;
+    padding-right: 3.5vw;
+    .date-flds {
+        .col-md-8 {
+            width: 100% !important;
+            margin-left: 15px !important;
+            max-width: 148px;
+        }
+        &:first-child {
+            margin-right: 15px;
+        }
+        &:last-child {
+            &::before {
+                content: '-';
+                margin-left: -3px;
+                position: absolute;
+                font-weight: bold;
+                font-size: 22px;
+                top: 28px;
+            }
+
+        }
+    }
+    .bf-date-picker.MuiTextField-root input {
+        height: 35px !important;
+    }
+    .reset-button {
+        position: absolute;
+        z-index: 2;
+        font-size: 14px;
+        top: -5px !important;
+        right: 0 !important;
+    }
+}
+
+@media screen and (min-width:1700px) {
+    .bf-account-home-container  {
+        .bf-account-home  {
+            .tab-details-container {
+                .bf-operator-enrollment-section {
+                    .bf-company-section {
+                        .bf-company-input-container-section {
+                            .bf-heading.bf-subheading {
+                                width: 98%;
+                            }
+                            .btn-group {
+                                .bf-btn-login.btn {
+                                    width: 200px !important;
+                                    flex: 0 0 200px !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .bf-userBar { 
+                .search {
+                    .search-input {
+                        height: 51px;
+                        padding: 8px 30px 8px 35px ;
+                    } 
+                    .search-icon {
+                        top: 15px;
+                    }
+                }
+                .mb-4 select {
+                    height: 51px;
+                }
+            }
+            .tab-details-container {
+                height: calc(100% - 134px);
+            }
+            .tab-details-container .login-section form > div.bf-company-section > div > div > div.login-form {
+                padding-right: 10px;
+                > div:last-child {
+                    .bf-heading.bf-subheading {
+                        width: 99%;
+                        &::after {
+                            width: 93%;
+                        }
+                    }
+                    .mb-4.col-md-3 {
+                        width: 25%;
+                        margin-right: 0;
+                    }
+                    .btn-group {
+                        .bf-btn-login {
+                            width: 200px !important;
+                            flex: 0 0 200px !important;
+                        }
+                        .bf-btn-clear {
+                            margin-left: 50px !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .bt-document-table-container .bf-delete-doc {
+        top: 17px;
+        right: calc(3.6vw + 37px);
+    }
+  }

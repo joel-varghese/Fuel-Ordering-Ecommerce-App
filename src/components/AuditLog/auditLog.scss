@@ -1,0 +1,143 @@
+@import "../../assets/styles/constants.scss";
+
+.bf-client-portal-home-container {
+    &.bf-auditlogs-containter {
+        .bf-client-portal-home {
+            height: calc(100% - 77px - 48px);
+            .tab-details-container {
+                height: 100%;
+                .MuiBox-root .MuiPaper-root .MuiTableContainer-root {
+                    height: calc(100% - 50px);
+                }
+            }
+        }
+        .bf-audit-log-heading{
+            color:$btn-primary-clr;
+            font-weight: 600;
+            font-size: 2rem;
+
+        }
+        .bf-audit-log-input-fields{
+            background-color:  $clr-white !important;
+            padding-top: 10px;
+            padding-left: 20px;
+            .mb-4>{
+                margin-bottom: 0;
+            }
+            .bf-audit-select{
+                width: 22%;
+                margin-left: 1%;
+                margin-bottom: 0 !important;
+            
+            }
+            .bf-audit-date-select{
+                width: 13%;
+                margin-left: 1%;
+                margin-bottom: 0 !important;
+                label{
+                    margin-bottom: 0;
+                }
+                input{
+                    width: 100%;
+                    height: 10%;
+                    border: 1px solid $border-clr;
+                    background-color: $gray-clr !important;
+                    margin-top: 0.3rem;
+                    padding: 0.4rem 1.5rem 0.4rem 0.3rem;
+                    margin-bottom: 0!important;
+                    background-position: right 0.75rem center;
+                }
+                .react-datepicker__tab-loop{
+                    .react-datepicker-popper{
+                        .react-datepicker{
+                            .react-datepicker__month-container{
+                                .react-datepicker__header.react-datepicker__header--custom{
+                                    >div{
+                                        justify-content: space-between !important;
+
+                                        button {
+                                            border: none;
+                                            background-color: $clr-white;
+                                            .bf-down-arrow {
+                                                &.bf-auditlog-calendar-leftarrow{
+                                                    transform: rotate(90deg);
+                                                }
+                                                &.bf-auditlog-calendar-rightarrow{
+                                                    transform: rotate(-90deg);
+                                                }
+                                            }
+                                            
+                                        }
+                                        select {
+                                            border: none;
+                                        }
+                                    }
+                                    .react-datepicker__day-names{
+                                        border-top:  1px solid $border-clr;
+                                        border-bottom: 1px solid $border-clr !important;
+                                        .react-datepicker__day-name{
+                                            color:$border-clr !important;
+                                        }
+                                    }
+                                    .react-datepicker__day--selected{
+                                        background-color: $btn-primary-clr !important;
+                                        border-radius: 50% !important;
+                                        &:hover {
+                                            background-color: $btn-primary-clr !important;
+                                        border-radius: 50% !important;
+                                        }
+                                    }
+                                }
+
+                            }
+
+                        }
+                       
+                    }
+                }
+            
+            }
+        }
+    }
+}
+@media screen and (min-width:1366px) and (max-width:1517px) {
+    .bf-client-portal-home-container {
+        &.bf-oditlogs-containter {
+            .bf-audit-log-input-fields{
+                .bf-audit-date-select{
+                    input{
+                        font-size: 0.9rem !important;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width:1500px) {
+    .bf-client-portal-home-container {
+        &.bf-auditlogs-containter {
+            .bf-audit-log-input-fields {
+                .bf-audit-date-select {
+                    width: 11%;
+                }
+                .bf-audit-select {
+                    width: 23.5%;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width:1800px) {
+    .bf-client-portal-home-container {
+        &.bf-auditlogs-containter {
+            .bf-audit-log-input-fields {
+                .bf-audit-date-select {
+                    width: 10%;
+                }
+                .bf-audit-select {
+                    width: 24.2%;
+                }
+            }
+        }
+    }
+}

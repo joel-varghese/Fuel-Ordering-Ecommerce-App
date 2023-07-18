@@ -1,0 +1,84 @@
+@import "../../assets/styles/constants.scss";
+
+.bf-account-enroll-container{
+    background-color: $dashboard-bg-clr;
+    width: 100%;
+    height: 100%;
+    //padding: 20px 40px;
+    .bf-checkbox{
+        //padding-left: 15%;
+        padding-right: 5%;
+        border: 0px !important;
+        margin: 0;
+        width: 100%;
+        .form-check-label {
+            // font-size: 14px;
+            letter-spacing: 1px;
+        }
+    }
+    .tab-details-container {
+        background-color: $clr-white;
+        height: calc(100% - 124px);
+        overflow-y: auto;
+    }
+    .bf-mrgt20 {
+        margin-top: 20px;
+    }
+    .bf-tabs-container{
+        display: flex;
+        //padding-left: 15%;
+        .bf-tabs {
+            width: fit-content;
+            text-align: center;
+            line-height: 40px;
+            font-size: 16px;
+            min-width: 75px;
+            border-bottom: none !important;
+            
+            cursor: pointer;
+            a {
+                color: $primary-clr;
+                padding-top: 0;
+                padding-bottom: 0;
+                border-radius: 0;
+                &:hover, &:focus {
+                    border-bottom-color: transparent !important;
+                }
+            }
+            .bf-active-tab {
+                background-color: $clr-white;
+            }
+          }
+    }
+    .bf-table{
+        //padding-left: 15%;
+        padding-right: 5%;
+        
+    }
+    .form-check-input:checked[type=radio] {
+        background-size: 137%;
+    }
+    .bf-fbo-enroll-New {
+        .btn-bf-primary {
+            padding-top: 8px;
+        }
+    }
+    .bf-operator-enroll-New {
+        .btn-bf-primary {
+            padding-top: 8px;
+        }
+    }
+    .bf-fbo-enroll-Pending,
+    .bf-operator-enroll-Pending {
+        .btn-bf-primary {
+            padding-top: 8px;
+        }
+    }
+}
+.bf-operator-enrollment-section {
+    .operator-form {
+        .bf-heading {
+            letter-spacing: 4px;
+        }
+    }
+}

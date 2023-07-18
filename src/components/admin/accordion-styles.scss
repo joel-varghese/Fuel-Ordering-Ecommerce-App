@@ -1,0 +1,54 @@
+@import "../../assets/styles/constants.scss";
+
+.accordion {
+    border: none !important;
+    .accordion-item {
+        border: none !important;
+        .accordion-header {
+            position: relative;
+            button {
+                padding-left: 0;
+                span {
+                    background-color: #FFF;
+                    z-index: 1;
+                    padding-right: 20px;
+                    font-size: 18px;
+                    letter-spacing: 2px;
+                    font-weight: 600;
+                    position: relative;
+                }
+                &:not(.collapsed)::after {
+                    // background-color: red !;
+                }
+                &:hover {
+                    background-color: transparent !important;
+                }
+                &.accordion-button:not(.collapsed) {
+                    background-color: transparent !important;
+                    box-shadow: none !important;
+                    span {
+                        color: #212529;
+                    }
+                }
+            }
+            &::after {
+                content: '';
+                background: linear-gradient(to right, rgba(5,27,46,1), rgba(128,128,128,0));
+                width: 90%;
+                height: 2px;
+                position: absolute;
+                top: 28px;
+                left: 30px;
+            }
+        }
+        .accordion-body {
+            padding-left: 0 !important;
+            .row {
+                position: relative;
+            }
+        }
+        form {
+            padding: 0 !important;
+        }
+    }
+}

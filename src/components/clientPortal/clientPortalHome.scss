@@ -1,0 +1,114 @@
+@import "../../assets/styles/constants.scss";
+
+.bf-client-portal-home-container{
+    background-color: $dashboard-bg-clr;
+    width: 100%;
+    height: 100%;
+    .bf-client-portal-home{
+        height: 100%;
+        .bf-userBar{
+            display: flex;
+            align-items: center;
+            padding-left: 0;
+            .mb-4 {
+                margin-bottom: 0 !important;
+                > div {
+                    display: none !important;
+                }
+                select {
+                    height: 42px;
+                }
+            }
+            .search{
+                position: relative;
+                .search-icon{
+                    position: absolute;
+                    font-size: 22px;
+                    top: 9px;
+                    left: 7px;
+                }
+                .search-input{
+                    width: 36vw;
+                    padding: 8px 30px;
+                }
+                .bf-down-arrow {
+                    position: absolute;
+                    right: 8px;
+                    top: 20px;
+                }
+            }
+        }
+        .bf-tabs-container{
+            display: flex;
+            .bf-tabs {
+                width: fit-content;
+                text-align: center;
+                line-height: 40px;
+                font-size: 16px;
+                min-width: 75px;
+                border-bottom: none !important;
+            }
+            .bf-active-tab {
+                background-color: $clr-white;
+            }
+        }
+        .tab-details-container {
+            height: calc(100% - 104px);
+            position: relative;
+            width: calc(100% + 3.5vw);
+            > div {
+                height: 100%;
+            }
+            .bf-table-container {
+                &.bf-discount-table-container {
+                    .bf-table-column { 
+                        .MuiTableHead-root {
+                            .MuiTableRow-root {
+                                
+                            }
+                        }
+                    }
+                }
+                .MuiBox-root {
+                    padding: 0 !important;
+                }
+            }
+            .bf-add-right-top {
+                position: absolute;
+                right: 3.2vw;
+                top: -38px;
+                display: flex;
+                align-items: self-end;
+                justify-content: flex-end;
+                 height: 36px;
+            }
+        }
+        .bf-mrgt20{
+            margin-top: 20px;
+        }
+        .portal-title{
+            font-size: 2rem;
+            color: $primary-clr;
+            font-weight: 600;
+        }
+    }
+}
+.bf-sugesstion-dropdown {
+    position: absolute;
+    z-index: 22;
+    background: $clr-white;
+    width: 100%;
+    max-height: 30vh;
+    overflow-y: auto;
+    border: 1px solid $dashboard-bg-clr;
+    list-style-type: none;
+    padding-left: 0;
+    li {
+        padding: 3px 5px;
+        &:hover {
+            background-color: $primary-clr;
+            color: $clr-white;
+            cursor: pointer;
+        }
+    }
+}

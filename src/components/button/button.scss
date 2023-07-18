@@ -1,0 +1,107 @@
+@import "../../assets/styles/constants.scss";
+
+.btn-primary {
+    &.bf-btn-login {
+        width: 150px !important;
+        margin: 0 auto;
+        background-color: $btn-primary-clr;
+        border-color: $btn-primary-clr;
+        &:hover, &:focus {
+            background-color: $btn-primary-clr !important;
+            border-color: $btn-primary-clr !important;
+            color: $clr-white !important;
+        }
+        &.bf-btn-imp {
+            &:hover {
+                background-color: $hover-clr !important;
+                color: $primary-clr !important;
+                border-color: $primary-clr !important;
+                box-shadow: none !important;
+            }
+        }
+        &:disabled {
+            background-color: $disabled-clr !important;
+            color: $clr-white !important;
+            border-color: $disabled-clr !important;
+            &:hover, &:focus {
+                background-color: $disabled-clr !important;
+                color: $clr-white !important;
+                border-color: $disabled-clr !important;
+            }
+        }
+        
+        &.add-more, &.remove {
+            &:hover,&:focus {
+                background-color: transparent !important;
+                color: $add-more-btn-clr !important;
+            }
+        }
+        &.bf-btn-height {
+            height: 38px !important;
+        }
+        &.bf-btn-decline {
+            background-color: $clr-white;
+            border-color: $btn-primary-clr;
+            color: $btn-primary-clr !important;
+        }
+    }
+    &.bf-btn-clear {
+        width: 150px !important;
+        margin: 0 auto;
+        background-color: $clr-white !important;
+        border-color: $btn-primary-clr;
+        color: $btn-primary-clr !important;
+        &:active, &:focus {
+            background-color: $clr-white !important;
+            border-color: $btn-primary-clr !important;
+            color: $btn-primary-clr !important;
+        }
+    }
+    &:hover {
+        background-color: $hover-clr !important;
+        color: $primary-clr !important;
+        border-color: $primary-clr !important;
+        box-shadow: none !important;
+    }
+    .btn-disabled {
+        background-color: $disabled-clr !important;
+        color: $clr-white !important;
+        border-color: $disabled-clr !important;
+        &:hover, &:focus {
+            background-color: $disabled-clr !important;
+            color: $clr-white !important;
+            border-color: $disabled-clr !important;
+        }
+    }
+    &.add-more, &.remove {
+        width: 150px !important;
+        background-color: transparent !important;
+        border: transparent !important;
+        color: $add-more-btn-clr !important;
+        display: flex;
+        align-items: center;
+        left: 0;
+        bottom: 0;
+        margin-left: 0px !important;
+        &.bf-width-auto {
+          width: auto !important;
+        }
+        img {
+            margin-right: 10px;
+            width: 22px;
+            height: 22px;
+        }
+        &:hover,&:focus {
+            background-color: transparent !important;
+            color: $add-more-btn-clr !important;
+        }
+    }
+}
+.bf-add-right-top {
+    .btn-primary.bf-btn-login:disabled {
+        background-color: transparent !important;
+        color: $btn-primary-clr !important;
+        border-color: transparent !important;
+        opacity: 0.5;
+    }
+}
