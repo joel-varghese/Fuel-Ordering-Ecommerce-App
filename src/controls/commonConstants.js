@@ -1,0 +1,11 @@
+export const rowsPerPage_Table = 25;
+export const rowsPerPage_Options = [25,50,100];
+export const sender_Email = "vijay.krishnan@barrelfuel.com";
+export const fuel_Types = ['Jet-A', '100LL', 'prist','saf']
+export const fuel_Types_label = [{label:"Jet A", value:'Jet-A'}, {label:"100LL",value:'100LL'}, {label:"Jet A+ / Prist",value:'Prist'},{label:"Sustainable Aviation Fuel (SAF)",value:'SAF'}]
+export const rowsPerPage_FP_Table = 25;
+export const rowsPerPage_FP_Options = [25,50,100];
+export const roles = ["Barrel Fuel","FBO",'Operator']
+export const roleWiseOptionInt = [{title:"Level 2 (Standard)",value:"Admin"},{title:"Level 3 (Basic)",value:"Basic"}]
+export const roleWiseOption = [{title:"Level 1 (Admin)",value:"Level 1"},{title:"Level 2 (Standard)",value:"Level 2"},{title:"Level 3 (Basic)",value:"Level 3"}]
+export const superLevelSideMenus = ['auditLogs', "reports", "clientPortal","taxFeeManager","fuelPricing","clientOnboarding","order","account"]

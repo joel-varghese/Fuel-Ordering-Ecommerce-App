@@ -1,0 +1,185 @@
+@import "../../assets/css/constants.scss";
+
+.landing-screen {
+    margin-top: max(0px, 5.05%);
+    width: 100%;
+    height: 74vh;
+    position: relative;
+    font-size: 16px; 
+    &.footer-video {
+        height: 95vh;
+        margin-top: 35px;
+        video {
+            object-fit: fill;
+        }
+        .bf-signup-button-sec {
+            bottom: calc(50% - 3rem);
+        }
+        .landing-information {
+            text-transform: initial !important;
+        }
+    }
+    
+    @media screen and (min-width:1600px) and (max-width:1720px) {
+        font-size: 20px;    
+    }
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .landing-information {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        top: 6.5vh;
+        font-size: 2.5em;
+        color: rgba(255,255,255,0.6);
+        text-transform: uppercase;
+        @media screen and (min-width:350px) and (max-width:767px) {
+            top: 39px;
+            text-align: center;
+            font-size: 19.5px;
+            width: 98%;
+            left: 1%;
+        }
+    }
+    @media screen and (min-width: 1720px) {
+        &.footer-video .landing-information {
+            top: 120px
+        }
+    }
+    @media screen and (min-width:350px) and (max-width:767px) {
+        font-size: 12px;    
+        height: auto;
+        margin-top: 60px;
+        min-height: 230px;
+        width: 100%;
+        video {
+            min-height: 230px;
+        }
+        &.footer-video {
+            height: auto;
+            min-height: 240px;
+            margin-left: -10px;
+            width: calc(100% + 20px);
+            margin-bottom: -6px;
+            margin-top: 15px !important;
+            video {
+                object-fit: cover;
+            }
+            .landing-information {
+                top: 5.5vh;
+                height: auto;
+                font-size: 20px;
+            }
+            .bf-signup-button-sec {
+                bottom: calc(50% - 5rem) !important;
+            }
+        }
+        .bf-signup-button-sec {
+            bottom: 15px;
+        }
+    }
+    @media screen and (min-width:350px) and (max-width:400px) {
+        .landing-information {
+            @media screen and (min-width:350px) and (max-width:767px) {
+                font-size: 17.5px !important;
+            }
+        }
+        &.footer-video {
+            .landing-information {
+                font-size: 18.5px !important;
+            }
+        }
+    }
+    @media screen and (min-width:768px) and (max-width:1024px) {
+        font-size: 12px;    
+        height: 75vh;   
+        margin-top: 65px;
+        .landing-information {
+            top:10vh;
+        }
+        &.footer-video {
+            height: 85vh;
+            video {
+                object-fit: cover;
+            }
+        }
+    }
+    @media screen and (min-device-width : 768px)
+    and (max-device-width : 1024px)
+    and (orientation : portrait)
+    and (-webkit-min-device-pixel-ratio: 1) {
+        height: 75vh;   
+        .landing-information {
+            top:10vh;
+        }
+        &.footer-video {
+            height: 75vh;
+            video {
+                object-fit: cover;
+            }
+        }
+    }
+    @media screen and (min-device-width : 768px)
+    and (max-device-width : 1024px)
+    and (orientation : landscape)
+    and (-webkit-min-device-pixel-ratio: 1) {
+        height: 75vh;   
+        .landing-information {
+            top:10vh;
+        }
+        &.footer-video {
+            height: 85vh;
+            video {
+                object-fit: cover;
+            }
+        }
+    }
+    @media screen and (min-width:1721px) {
+        font-size: 20px;    
+    }
+}
+
+.bf-signup-button-sec {
+    position: absolute;
+    align-items: center !important; 
+    justify-content: center !important;
+    display: flex !important;
+    bottom: 2rem;
+    width: 100%;
+    .bf-signup-button {
+        width: 9em;
+        max-width: 300px;
+        height: 3rem;
+        background: $bf-mrkt-primary-clr;
+        border: 1px solid $button-border-color;
+        border-radius: 3px;
+        font-size: 1.2em !important;
+        color: $button-text-color !important;
+        align-items: center !important; 
+        justify-content: center !important;
+        display: flex !important;
+        letter-spacing: 2px;
+        @media screen and (min-width:350px) and (max-width:767px) {
+            width: 120px;
+            height: 30px;
+            font-size: 16px !important;
+            letter-spacing: 0.2em;
+        }
+        @media screen and (min-width: 1721px) {
+            height: 4rem;
+            width: 9em;
+            font-size: 1.5em !important;
+        }
+        &:hover {
+            background-color: $button-border-color;
+            color: $bf-mrkt-primary-clr !important;
+        }
+    }
+}

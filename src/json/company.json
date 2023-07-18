@@ -1,0 +1,203 @@
+{
+    "addAdminUserData":[
+    {
+        "pageName":"Add New Users",
+        "sections":{
+            "subSections":[
+                {
+                    "fields" :[
+                        {
+                            "component": "checkbox",
+                            "type":"radio",
+                            "label":"Operator",
+                            "name":"companyType",
+                            "isRequired": true,
+                            "styles": {
+                                "colWidth": "3",
+                                "className": ""
+                            }
+                        },
+                        {
+                            "component": "checkbox",
+                            "type":"radio",
+                            "name":"companyType",
+                            "label":"FBO",
+                            "isRequired": true,
+                            "styles": {
+                                "colWidth": "3",
+                                "className": ""
+                            }
+                        }
+                        
+                    ]
+                },
+                {
+                   
+                },
+                {
+                    "fieldsArray" :[
+                        {
+                            "id":"1",
+                            "fields":[
+                                {
+                                    "component": "input",
+                                    "type":"input",
+                                    "id":"1.1",
+                                    "name":"emailId",
+                                    "group":"details",
+                                    "label":"Email Address",
+                                    "placeholder": "Email Address",
+                                    "isRequired": true,
+                                    "styles": {
+                                        "colWidth": "4",
+                                        "className": ""
+                                    },
+                                    "validations":[
+                                        {
+                                            "validation":"IsMandatory",
+                                            "errorMessage":""
+                                        },
+                                        {
+                                            "validation":"CheckRegex",
+                                            "validateRule":"([A-Za-z0-9_\\-\\.])+\\@([A-Za-z0-9_\\-\\.])+\\.([A-Za-z]{2,4})$",
+                                            "errorMessage":"Oops! Invalid E-mail"
+                                        }
+                                    ]
+                                },  
+                                {
+                                    "component": "input",
+                                    "type":"input",
+                                    "id":"1.1",
+                                    "name":"emailId",
+                                    "group":"details",
+                                    "label":"Email Address",
+                                    "placeholder": "Email Address",
+                                    "isRequired": true,
+                                    "styles": {
+                                        "colWidth": "4",
+                                        "className": ""
+                                    },
+                                    "validations":[
+                                        {
+                                            "validation":"IsMandatory",
+                                            "errorMessage":""
+                                        },
+                                        {
+                                            "validation":"CheckRegex",
+                                            "validateRule":"([A-Za-z0-9_\\-\\.])+\\@([A-Za-z0-9_\\-\\.])+\\.([A-Za-z]{2,4})$",
+                                            "errorMessage":"Oops! Invalid E-mail"
+                                        }
+                                    ]
+                                }, 
+                                {
+                                    "component": "input",
+                                    "type":"input",
+                                    "id":"1.1",
+                                    "name":"emailId",
+                                    "group":"details",
+                                    "label":"Email Address",
+                                    "placeholder": "Email Address",
+                                    "isRequired": true,
+                                    "styles": {
+                                        "colWidth": "4",
+                                        "className": ""
+                                    },
+                                    "validations":[
+                                        {
+                                            "validation":"IsMandatory",
+                                            "errorMessage":""
+                                        },
+                                        {
+                                            "validation":"CheckRegex",
+                                            "validateRule":"([A-Za-z0-9_\\-\\.])+\\@([A-Za-z0-9_\\-\\.])+\\.([A-Za-z]{2,4})$",
+                                            "errorMessage":"Oops! Invalid E-mail"
+                                        }
+                                    ]
+                                }, 
+                                {
+                                    "component": "input",
+                                    "type":"input",
+                                    "id":"1.1",
+                                    "name":"emailId",
+                                    "group":"details",
+                                    "label":"Email Address",
+                                    "placeholder": "Email Address",
+                                    "isRequired": true,
+                                    "styles": {
+                                        "colWidth": "4",
+                                        "className": ""
+                                    },
+                                    "validations":[
+                                        {
+                                            "validation":"IsMandatory",
+                                            "errorMessage":""
+                                        },
+                                        {
+                                            "validation":"CheckRegex",
+                                            "validateRule":"([A-Za-z0-9_\\-\\.])+\\@([A-Za-z0-9_\\-\\.])+\\.([A-Za-z]{2,4})$",
+                                            "errorMessage":"Oops! Invalid E-mail"
+                                        }
+                                    ]
+                                }, 
+                                {
+                                    "component": "button",
+                                    "type":"button",
+                                    "label":"Remove",
+                                    "variant":"primary",
+                                    "name":"remove",
+                                    "isRequired": true,
+                                    "styles": {
+                                        "colWidth": "2",
+                                        "className": "bf-btn-login"
+                                    }
+                                }
+                        
+                            ]
+                        }
+                    ],
+                    "buttons": [
+                        {
+                            "component": "button",
+                            "type":"button",
+                            "label":"Add New",
+                            "variant":"primary",
+                            "name":"addNew",
+                            "isRequired": true,
+                            "styles": {
+                                "colWidth": "2",
+                                "className": "bf-btn-login"
+                            }
+                        }
+                    ]
+                }
+            ], 
+            "buttons": [
+                {
+                "component": "button",
+                "label": "Create User",
+                "type":"button",
+                "name": "createUser",
+                "variant":"primary",
+                "isRequired": true,
+                "styles": {
+                        "colWidth": "",
+                        "className": "bf-btn-login"
+                }
+                },
+                {
+                "component": "button",
+                "label": "Clear",
+                "type":"button",
+                "name": "clear",
+                "variant":"primary",
+                "isRequired": true,
+                "styles": {
+                        "colWidth": "",
+                        "className": "bf-btn-login"
+                }
+                }
+            ]
+        }
+    }
+    ]
+}

@@ -1,0 +1,151 @@
+{
+    "fboEnrollData" :
+        {
+            "headline":{
+                "type":"text",
+                "label":"FBO Enrollment"
+            },
+            "sections":[{
+                "subSections":[
+                    {
+                        "fields" :[
+                            {
+                                "component": "input",
+                                "type":"input",
+                                "label":"Company Name",
+                                "placeholder": "Company Name",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "6 bf-mrgb-1rem",
+                                    "className": ""
+                                },
+                                "validations":[
+                                    {
+                                        "type":"isMandatory",
+                                        "errorMessage":"Company name required"
+                                    }
+                                ]
+                            },
+                            {
+                                "component": "input",
+                                "type":"input",
+                                "label":"No of Locations",
+                                "placeholder": "No of Locations",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "6",
+                                    "className": ""
+                                },
+                                "validations":[
+                                    {
+                                        "type":"isMandatory",
+                                        "errorMessage":"No of Locations required"
+                                    }
+                                ]
+                            },
+                            {
+                                "component": "input",
+                                "type":"input",
+                                "label":"First name",
+                                "placeholder": "First Name",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "6",
+                                    "className": ""
+                                },
+                                "validations":[
+                                    {
+                                        "type":"isMandatory",
+                                        "errorMessage":"First Name required"
+                                    }
+                                ]
+                            },
+                            {
+                                "component": "input",
+                                "type":"input",
+                                "label":"Last Name",
+                                "placeholder": "Last Name",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "6",
+                                    "className": ""
+                                },
+                                "validations":[
+                                    {
+                                        "type":"isMandatory",
+                                        "errorMessage":"Last Name required"
+                                    }
+                                ]
+                            },
+                            {
+                                "component": "input",
+                                "type":"input",
+                                "label":"Email Address",
+                                "placeholder": "Email Address",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "6",
+                                    "className": ""
+                                },
+                                "validations":[
+                                    {
+                                        "type":"isMandatory",
+                                        "errorMessage":"Email Address required"
+                                    },
+                                    {
+                                        "type":"checkEmail",
+                                        "errorMessage":"Email Address required"
+                                    }
+                                ]
+                            },
+                            {
+                                "component": "input",
+                                "type":"input",
+                                "label":"Mobile Number",
+                                "placeholder": "Mobile Number",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "6",
+                                    "className": ""
+                                },
+                                "validations":[
+                                    {
+                                        "type":"isMandatory",
+                                        "errorMessage":"Mobile Number required"
+                                    }
+                                ]
+                            },
+                            {
+                                "component": "select",
+                                "type":"select",
+                                "label":"Preferred Mode of Communication",
+                                "placeholder": "Mode of Communication",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "6",
+                                    "className": ""
+                                },
+                                "validations":[
+                                    {
+                                        "type":"isMandatory",
+                                        "errorMessage":"Mode of Communication required"
+                                    }
+                                ]
+                            }
+                        ],
+                        "primaryButton":[{
+                                "component": "button",
+                                "type":"submit",
+                                "label":"Submit",
+                                "variant":"primary",
+                                "isRequired": true,
+                                "styles": {
+                                    "colWidth": "",
+                                    "className": "bf-btn-login"
+                                }
+                        }]
+                    }
+                ]
+            }]
+        }
+}

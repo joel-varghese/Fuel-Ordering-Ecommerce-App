@@ -1,0 +1,18 @@
+@font-face {
+    font-family: metropolis;
+    src: url(metropolis.regular.otf);
+  }
+@font-face {
+    font-family: metropolisBold;
+    src: url(metropolis.bold.otf);
+  }
+$bf-signup-button-width : 200px;
+$bf-mrkt-primary-clr : #051B31;
+$button-border-color: #D8AD8B;
+$button-text-color: #FDFFF4;
+$font-family: proxima-nova, sans-serif !important;
+$font-metro-family: metropolis, sans-serif !important;
+$font-metro-family-bold: metropolisBold, sans-serif !important;
+$grey-color: #F6f6F6;
+$size-50: 50px;
+$size-30: 30px;

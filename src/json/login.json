@@ -1,0 +1,116 @@
+{
+  "module": {
+    "id": "1A",
+    "value": "login",
+    "name": "Login"
+  },
+  "content": {
+    "loginData": {
+      "content": {
+        "loginHeadingOne": {
+          "headline": {
+            "text": "Welcome" 
+          }
+        },
+        "primaryFields": [
+          {
+            "fieldType": "input",
+            "dataType": "email",
+            "fieldLabel": "Email Address",
+            "placeHolder": "Email Address",
+            "maxLength": "50",
+            "name": "emailaddress",
+            "isRequired": true,
+            "textAlign": "left",
+            "className": "extra-padding-left",
+            "validations": [
+              {
+                "validation": "IsMandatory",
+                "message": ""
+              },
+              {
+                "validation": "CheckRegex",
+                "validateRule": "([A-Za-z0-9_\\-\\.])+\\@([A-Za-z0-9_\\-\\.])+\\.([A-Za-z]{2,4})$",
+                "message": "Oops! Invalid E-mail"
+              }
+            ]
+          },
+          {
+            "fieldType": "input",
+            "dataType": "password",
+            "fieldLabel": "Password",
+            "placeHolder": "Password",
+            "minLength":"8",
+            "maxLength": "20",
+            "name": "password",
+            "isRequired": true,
+            "textAlign": "left",
+            "className": "extra-padding-left",
+            "validations": [
+              {
+                "validation": "IsMandatory",
+                "message": ""
+              }
+            ]
+          }         
+        ],
+        "externallink" : {
+          "rememberme": {
+            "fieldType":"checkbox",
+            "dataType":"",
+            "fieldLabel":"Remember Me",
+            "validations":[
+            ],
+            "placeHolder":"",
+            "maxLength":"",
+            "minLength":"",
+            "minValue":"",
+            "maxValue":"",
+            "prefix":"",
+            "suffix":"",
+            "name":"rememberMe",
+            "isRequired":0,
+            "options":[ 
+            ]
+          },
+          "forgotLink":{
+            "fieldType":"link",
+            "dataType":"",
+            "fieldLabel":"Forget Password?",
+            "href":"/bfhome/forget-password"
+          },
+          "loginBtn":{
+            "fieldType": "Button",
+            "dataType": "text",
+            "fieldLabel": "Login",
+            "validations": [],
+            "placeHolder": "Login",
+            "tooltip": {
+              "text": ""
+            },
+            "name": "loginBtn"
+          } ,
+          "signupLink":{
+            "text":"Sign up",
+            "link":"/bfhome/signup"
+          },
+          "notRegister" : {
+            "text": "Not Registered Yet? "
+          },
+          "serviceMessage":{
+            "emailNotFound": "Oops! E-mail not found",
+            "passwordNotFound":"Password Invalid",
+            "mandatoryField":"Please verify. A required field is missing information",
+            "invalidCredentials":"incorrect username or password"
+          },
+          "copyright": {
+            "text":"Copyright © 2022 Barrel Fuel"
+          },
+          "modalContent" : {
+            "modalBtn": "Ok"
+          }
+        }
+      }
+    }
+  }
+}
