@@ -1,0 +1,53 @@
+@import "../../assets/styles/constants.scss";
+
+.bf-multiselect {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    input {
+        margin-right: 10px;
+        height: 17px;
+        width: 17px;
+        border-radius: 0 !important;
+    }
+}
+.bf-mc-mtn2 {
+    margin-top: -2.2px !important;
+}
+
+.multi-select-label {
+    max-width: 85%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.css-1s2u09g-control, .css-1pahdxg-control, .css-1insrsq-control {
+    background-color: #F6F6F6 !important;
+    border-radius: 0 !important;
+    border-color:  $border-clr !important;
+}
+
+.css-1pahdxg-control {
+    box-shadow: 0 0 0 3px #2684ff59 !important;
+}
+
+.bf-multiselect-error {
+    .css-1s2u09g-control, .css-1insrsq-control {
+        border: 1.5px solid #a3000094 !important;
+    }
+}
+.bf-multiselect-hide-all{
+    > div {
+        > div{
+            > div:nth-last-child(2) {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1700px) {
+    .css-1s2u09g-control, .css-1pahdxg-control, .css-1insrsq-control {
+        height: 50px;
+    }
+}

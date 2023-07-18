@@ -1,0 +1,308 @@
+@import "../../assets/styles/constants.scss";
+#invoicePDF {
+    color: $btn-primary-clr;
+    .bf-invoice {
+        display: flex;
+        z-index: 1;
+        width: 100%;
+        height: 80% !important;
+        overflow: scroll;
+        background-color: $clr-white;
+        .bf-invoice-left {
+            padding-right: 10px;
+            padding-left: 10px;
+            padding-top: 30px;
+            border-right: 3px solid $btn-primary-clr;
+            min-width: 260px !important;
+            .bf-invoice-logo {
+                margin-bottom: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .bf-order-date-details,
+            .bf-bill-to,
+            .bf-fueling-location-detils,
+            .bf-flight-details,
+            .bf-payment-method {
+                margin-bottom: 30px;
+            }
+            .bf-order-date-details,
+            .bf-flight-details {
+                span {
+                    font-weight: 600;
+                }
+            }
+            .bf-invoice-heading {
+                font-size: 20px;
+                font-weight: 700;
+            }
+            .bf-fueling-location-detils {
+
+            }
+            .bf-payment-method {
+                span {
+                    font-weight: 600;
+                }
+            }
+            .bf-bill-to {
+
+            }   
+        }
+        .bf-invoice-right {
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 35px;
+            h1 {
+                font-weight: 900;
+            }
+            .bf-gal-text {
+                font-size: 14px;
+                margin-left: 3px;
+            }
+            .bf-invoice-table-header {
+                width: 100%;
+                height: 50px;
+                background-color: $btn-primary-clr;
+                color: $clr-white;
+                display: flex;
+                align-items: center;
+                font-size: 18px;
+                padding-left: 20px;
+                padding-right: 20px;
+                > div {
+                    &:first-child {
+                        width: 40%;
+                    }
+                    &:nth-child(2) {
+                        width: 20%;
+                    }
+                    &:nth-child(3) {
+                        width: 20%;
+                        text-align: center;
+                    }
+                    &:last-child {
+                        width: 20%;
+                        text-align: right;
+                    }
+                }
+            }
+            .bf-fuel-details {
+                display: flex;
+                align-items: center;
+                font-size: 16px;
+                padding-left: 20px;
+                padding-right: 20px;
+                height: 55px;
+                border-bottom: 1px solid #051b2e70;
+                > div {
+                    &:first-child {
+                        width: 40%;
+                        padding-left: 25px;
+                    }
+                    &:nth-child(2) {
+                        width: 20%;
+                    }
+                    &:nth-child(3) {
+                        width: 20%;
+                        text-align: center;
+                    }
+                    &:last-child {
+                        width: 20%;
+                        text-align: right;
+                    }
+                }
+            }
+            .bf-invoice-services,
+            .bf-invoice-taxfees {
+                position: relative;
+                overflow: hidden;
+                min-height: 110px;
+                margin-top: 10px;
+                .bf-rotate-heading {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 45px;
+                    border-right: 5px solid $clr-white;
+                    height: 100%;
+                    background-color: #e8e8e8;
+                    color: $btn-primary-clr;
+                    font-weight: 600;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 18px;
+                    letter-spacing: 1px;
+                    img {
+                        transform: rotate(-90deg);                        
+                    }
+                }
+                .bf-invoice-row-item {
+                    display: flex;
+                    align-items: center;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    height: 35px;
+                    border-bottom: 1px solid #e8e8e8;
+                    > div {
+                        &:first-child {
+                            width: 40%;
+                            padding-left: 25px;
+                        }
+                        &:nth-child(2) {
+                            width: 20%;
+                        }
+                        &:nth-child(3) {
+                            width: 20%;
+                            text-align: center;
+                        }
+                        &:last-child {
+                            width: 20%;
+                            text-align: right;
+                            position: relative;
+                            &::after {
+                                content: '';
+                                width: 20px;
+                                height: 100%;
+                                position: absolute;
+                                right: -22px;
+                                top: 6px;
+                                background-color: $clr-white;
+                            }
+                        }
+                    }
+                }
+            }
+            .bf-invoice-taxfees {
+                margin-bottom: 10px;
+                border-top: 1px solid #e8e8e8;
+                padding-top: 20px;
+                .bf-rotate-heading {
+                    height: calc(100% - 20px);
+                    top: 20px;
+                }
+                .bf-invoice-row-item {
+                    &:last-child {
+                        border-bottom: 0;
+                    }
+                }
+            }
+            .bf-total-details {
+                display: flex;
+                align-items: center;
+                padding-left: 20px;
+                padding-right: 20px;
+                height: 30px;
+                &.bf-subtotal {
+                    padding-top: 2px;
+                    line-height: 34px;
+                    >div {
+                        &:nth-child(2) {
+                            border-top: 1px solid rgba(5, 27, 46, 0.4392156863);
+                        }
+                        &:last-child {
+                            border-top: 1px solid rgba(5, 27, 46, 0.4392156863);
+                        }
+                    }
+                }
+                > div {
+                    &:first-child {
+                        width: 40%;
+                        padding-left: 25px;
+                    }
+                    &:nth-child(2) {
+                        width: 30%;
+                    }
+                    &:last-child {
+                        width: 30%;
+                        text-align: right;
+                        position: relative;
+                        &::after {
+                            content: '';
+                            width: 21px;
+                            height: 100%;
+                            position: absolute;
+                            right: -22px;
+                            top: 6px;
+                            background-color: $clr-white;
+                        }
+                    }
+                }
+                &.bf-total-paid {
+                    margin-top: 5px;
+                    > div {
+                        height: 35px;
+                        display: flex;
+                        align-items: center;
+                        font-size: 18px;
+                        &:nth-child(2) {
+                            padding-left: 10px;
+                            &::after {
+                                width: 4px;
+                                right: -2px;
+                                background-color: $btn-primary-clr;
+                                top: 0;
+                            }
+                        }
+
+                        &:nth-child(2),
+                        &:last-child {
+                            background-color: $btn-primary-clr;
+                            color: $clr-white;
+                        }
+                        &:last-child {
+                            font-weight: 600;
+                            justify-content: flex-end;
+                            &::after {
+                                right: -20.9px;
+                                background-color: $btn-primary-clr;
+                                top: 0;
+                            }
+                            &::before {
+                                content: '';
+                                width: 5px;
+                                height: 100%;
+                                position: absolute;
+                                left: -3px;
+                                top: 0;
+                                background-color: $btn-primary-clr;
+                            }
+                        }
+                    }
+                }
+                &.bf-you-saved {
+                    color: #0aaa2a;
+                    font-size: 14px;
+                    margin-top: 5px;
+                    > div {
+                        &:nth-child(2) {
+                            padding-left: 10px;
+                        }
+                        &:last-child {
+                            &::after {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+            .bf-invoice-comments {
+                border: 1px solid #e8e8e8;
+                min-height: 70px;
+                padding: 5px;
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+            .bf-invoice-text-lic {
+                font-size: 10px;
+                text-align: center;
+                font-weight:600;
+                line-height: 16px;
+                &:last-child {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}

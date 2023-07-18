@@ -1,0 +1,10 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+.btn-disabled {
+  color: black !important;
+  background-color: #cfcfcf !important;
+}
+button.bf-btn-left.btn-disabled.bf-btn-login.btn.btn-primary:hover  { color: black !important; background-color: #cfcfcf !important;
+}

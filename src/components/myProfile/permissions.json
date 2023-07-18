@@ -1,0 +1,8 @@
+{
+    "profileView": {
+        "permission": ["InternalUsers", "FBO", "OperatorUsers"]
+    },
+    "profileEdit": {
+        "permission": ["InternalUsers", "FBO"]
+    }
+}

@@ -1,0 +1,12 @@
+
+
+.bf-dashboard-operatorsignupform{
+    .bg-image-container {
+        display: none !important;
+    }
+    .operator-form {
+        &.w-70p {
+            width: 100% !important;
+        }
+    }
+}

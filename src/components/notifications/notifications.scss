@@ -1,0 +1,238 @@
+@import "../../assets/styles/constants.scss";
+
+.bf-notification-container{
+    background-color: $dashboard-bg-clr;
+    width: 100%;
+    height: 100%;
+    .menu-list {
+        width: 20%;
+        max-width: 230px;
+        max-width: 350px;
+        .menu-item {
+          color: #6A7B89;
+          font-size: 13px;
+        }
+      }
+    .bf-table {
+        height: calc(100% - 70px);
+        .MuiBox-root {
+            padding: 0;
+            .MuiPaper-root {
+                width: 100%;
+            }
+        }
+        thead {
+            th {
+                letter-spacing: 2px;
+            }
+        }
+        th{
+            &.bf-message {
+                min-width: max(40vw, 400px);
+                max-width: max(40vw, 400px);
+            }
+            &.bf-categry, &.bf-category{
+                min-width: max(15vw, 120px);
+                max-width: max(15vw, 120px);
+            }
+        }
+        .MuiBox-root .MuiPaper-root .MuiTableContainer-root {
+            height: calc(100% - 50px) !important;
+        }
+        tbody {
+            tr {
+                cursor: pointer;
+            }
+            th {
+                &.bf-message {
+                    text-align: left !important;
+                }
+            }
+        }
+    }
+    .bf-header{
+        margin: 0 0 20px 0;
+        width: 100%;
+    }
+    .bf-mrgt20 {
+        margin-top: 20px;
+    }
+}
+.bf-notify-subheading {
+    >span {
+        font-size: 15px;
+    }
+}
+.bf-row-text {
+    align-items: center;
+    justify-content: flex-start;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    &.col-md-4 {
+        width: 31% !important;
+        display: flex;
+        max-width: 31%;
+    }
+    &.col-md-6 {
+        width: 42% !important;
+        display: flex;
+        max-width: 42%;
+    }
+    &.col-md-2 {
+        width: 27%;
+        display: flex;
+        max-width: 27%;
+    }
+    > span {
+        font-size: 15px;
+        &:first-child {
+            margin-right: 3px;
+        }
+        &:last-child {
+            margin-left: 3px;
+        }
+    }
+}
+.bf-notification-msg {
+    font-size: 15px;
+}
+.bf-notify-subheading {
+    &::after {
+        width: 85%;
+    }
+    > span {
+        &:last-child {
+            position: absolute;
+            right: 0;
+            top: 6px;
+            font-size: 12px;
+        }
+    }
+}
+.bf-modal-notify {
+    button {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        z-index: 2;
+    }
+}
+.modal.show .modal-dialog {
+    min-width: 75vw;
+}
+.bf-dismiss-cross {
+    display: none;
+}
+@media screen and (min-width:350px) and (max-width:767px) {
+    
+    .bf-notification-container {
+        .bf-table {
+            height: 100%;
+            .bf-paginarion-seciton {
+                margin-top: -10px !important;
+            }
+        }
+        .bf-buttons {
+            display: none;
+            margin-top: 0px !important;
+        }
+        .bf-dismiss-cross {
+            display: inline-block;
+            
+        }
+        .notification-dismiss-btn {
+            background: none !important;
+            color:$btn-primary-clr;
+            font-size: 20px;
+        }
+        h1{
+            display: none !important;
+        }
+        .bf-notifications-table {
+            th.bf-category{
+                min-width: 0px !important;
+                max-width: max(15vw, 150px);
+            }
+            tbody tr{
+                position: relative;
+            }
+            .css-h6w51p-MuiTable-root {
+                display: table;
+                width: 100%;
+                border-collapse: separate;
+                border-spacing: 0;
+                min-width: 0px !important
+                
+            }
+            table tbody .btn-bf-primary {
+                margin-top: 6px !important;
+            }
+            
+        }
+        .bf-table th.bf-message {
+            max-width: max(10vw, 150px);
+            min-width: 0px !important;
+            text-align: left;
+        }
+        .bf-paginarion-seciton .bf-pagination-dropdown {
+            display: none !important;
+        }
+        .MuiTable-root tbody tr td:last-child.action-buttons {
+            text-align: left;
+            width: 30px;
+            right: 0;
+            top: 0px;
+        }
+
+        button{
+            padding-top: 14px;
+        }
+        td {
+            &:last-child {
+                &.action-buttons {
+                    button{
+                        background: none !important;
+                        border:none !important
+                    }
+                    
+                }
+            }
+        }
+
+    }
+    #bf-notification-modal {
+        .modal-content {
+            .modal-body {
+                form {
+                    .bf-notify-subheading {
+                        align-items: flex-start;
+                    }
+                    .bf-row-text {
+                        &.col-md-6,
+                        &.col-md-4,
+                        &.col-md-2 {
+                            width: 100% !important;
+                            max-width: 100% !important;
+                            font-weight: 600;
+                            > span {
+                                &:last-child {
+                                    font-weight: 400;
+                                }
+                            }
+                        }
+                    }
+                    button {
+                        &.bf-btn-login {
+                            width: 120px !important;
+                            min-width: 120px !important;
+                            padding: 0 !important;
+                            height: 30px !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

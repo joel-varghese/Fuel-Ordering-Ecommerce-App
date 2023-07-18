@@ -1,0 +1,183 @@
+@import "../../assets/styles/constants.scss";
+.bf-report-container {
+    .bf-report-filter-section {
+        height: calc(100% - 50px);        
+        .bf-report-filter-container {
+            background-color: $clr-white;
+            width: 25%;
+            min-width: 290px;
+            height: 100%;
+            overflow: hidden;
+            overflow-y: auto;
+            padding-top: 10px;
+            .d-flex.bf-heading.bf-subheading {
+                &::after {
+                    display: none;
+                }
+            }
+            > div {
+                width: 100%;
+            }
+            .bf-mrgb-0 {
+                margin-bottom: 0 !important;
+            }
+            .bf-date-picker {
+                margin-bottom: 14px !important;
+                .bf-date-label {
+                    display: none;
+                }
+            }
+            .bf-fuel-services {
+                > div {
+                    display: none !important;
+                }
+            }
+            .bf-hide-label-visible {
+                label {
+                    visibility: hidden;
+                }
+            }
+            .bf-btn-section {
+                justify-content: center !important;
+                display: flex;
+                button {
+                    &.btn-primary.bf-btn-login {
+                        padding-left: 0 !important;
+                        padding-right: 0 !important;
+                    }
+                }
+            }
+            .mb-4.col-md-12{
+                margin-bottom: 14px !important;
+            }
+            .bf-heading.bf-subheading {
+                text-align: center;
+                justify-content: center;
+            } 
+            p {
+                margin-bottom: 7px !important;
+                font-size: 14px !important;
+            }
+        }
+    }
+    .bf-table-container {
+        &.bf-report-table-container {
+            background-color: $clr-white;
+            width: calc(100% - 25%);
+            height: 100%;
+            margin-left: 15px;
+            position: relative;
+            & th {
+                height: 10px;
+                &.bf-savings {
+                    box-shadow: none;
+                }
+            }
+            &.bf-btn-section {
+                &button {
+                    position: absolute;
+                    bottom: 0;
+                }
+            }
+            .bf-btn-section {
+                justify-content: right !important;
+                display: flex;
+                padding-right: 100px;
+                button {
+                    &.btn-primary.bf-btn-login {
+                        padding-left: 0 !important;
+                        padding-right: 0 !important;
+                        position: absolute;
+                        bottom: -14px;
+                        right: 20px;
+                    }
+                }
+            }
+            .bf-table-column { 
+                .MuiTableHead-root {
+                    .MuiTableRow-root {
+                        
+                    }
+                }
+            }
+            .MuiBox-root {
+                padding-right: 1px !important;
+                .MuiPaper-root {
+                    height: 100%;
+                    width: 100%;
+                    margin-right: 0px !important;
+                }
+            }
+            .bf-heading{
+                &.bf-subheading{
+                    margin-left: 30px !important;
+                    width: calc(100% - 30px) !important;
+                    margin-top: 5px;
+                }
+            }
+        }
+        .MuiBox-root {
+            padding: 0px 35px 35px 0px;
+            .MuiPaper-root {
+                .MuiTableContainer-root {
+                    height: calc(100% - 50px);
+                    overflow-x: scroll;
+                    padding-right: 15px;
+                    padding-left: 0px;
+                }
+            }
+        }
+    }
+    .bf-report-result-container {
+        background-color: $clr-white;
+        margin-left: 20px;
+        height: 100%;
+    }
+}
+
+@media screen and (min-width:1600px) {
+    .bf-report-container {
+        .bf-report-filter-section {       
+            .bf-report-filter-container {
+                .form-select {
+                    height: 51px;
+                }
+                .bf-date-picker {
+                    input {
+                        height: 51px !important;
+                    }
+                }
+                .bf-btn-section {
+                    button {
+                        height: 51px !important;
+                    }
+                }
+            }
+        }
+        .bf-table-container {
+            &.bf-report-table-container {
+                .MuiBox-root {
+                    .MuiPaper-root {
+                        .MuiTableContainer-root {
+                            height: calc(100% - 70px);
+                        }
+                    }
+                }
+                .bf-paginarion-seciton{
+                    .MuiPagination-ul.css-wjh20t-MuiPagination-ul {
+                        margin-top: 20px !important;
+                    }
+                } 
+            }
+        }
+        .bf-btn-section {
+            button {
+                &.btn-primary.bf-btn-login {
+                    height: 51px !important;
+                    width: 200px !important;
+                    margin-bottom: 25px !important;
+                }
+            }
+        }
+    }
+}

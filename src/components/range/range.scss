@@ -1,0 +1,31 @@
+.bf-range-label {
+    margin-bottom: 0 !important;
+}
+.bf-range-slider {
+    margin-bottom: -7px;
+}
+.bf-range-value {
+    margin-bottom: -10px;
+}
+
+.custom-range::-webkit-slider-thumb {
+    background: gray;
+  }
+  
+  .custom-range::-moz-range-thumb {
+    background: gray;
+  }
+  
+  .custom-range::-ms-thumb {
+    background: gray;
+  }
+
+  -webkit-slider-thumb:active {
+    background-color: red;
+}
+-webkit-slider-thumb,
+.custom-range:focus::-webkit-slider-thumb, 
+.custom-range:focus::-moz-range-thumb,
+.custom-range:focus::-ms-thumb {
+    box-shadow: red;
+}
