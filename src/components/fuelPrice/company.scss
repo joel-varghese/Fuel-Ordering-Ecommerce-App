@@ -1,0 +1,780 @@
+@import "../../assets/styles/constants.scss";
+
+.admin-signup {
+    height: calc(100vh - 120px);
+    .btn {
+        &.btn-signup {
+            width: 180px;
+            background-color: #051B2E;
+            border-color: #051B2E;
+            margin-bottom: 10px;
+        }
+    }
+}
+.bf-flex-h100 {
+    height: 100%;
+    .bf-edit-fuel-pricing-container {
+        position: relative;
+        width: 100%;
+        .bf-head-label {
+            margin-top: -15px;
+            font-size: 2rem;
+            color: $primary-clr;
+            margin-bottom: 5px;
+        }
+        .bf-edit-fuel-pricing {
+            background-color: $clr-white;
+            display: block;
+            width: 100%;
+            max-width: initial;
+            height: calc(100% - 3vw);
+            overflow-y: hidden;
+            margin-left: 0;
+            position: relative;
+            .bf-date-picker {
+                margin-top: -4px;
+            }
+        }
+        .bf-fuel-price-details {
+            margin-top: -10px;
+            input {
+                padding-left: 2px;
+                padding-right: 2px;
+                text-align: center;
+            }
+            >.row, .bf-add-fuel-taxes-fees .row {
+                flex-wrap: nowrap !important;
+                align-items: center;
+                > div {
+                    &.col {
+                        text-align: center;
+                        flex: initial;
+                        display: flex;
+                        &:first-child {
+                            text-align: left;
+                            width: 15% !important;
+                            font-size: 14px;
+                        }
+                        &:not(:first-child) {
+                            padding-left: 0;
+                            padding-right: 0;
+                        }
+                        input {
+                            margin-right: 5px;
+                            height: 25px;
+                            color: $btn-primary-clr;
+                        }
+                        .col-md-md3 {
+                            margin-bottom: 0 !important;
+                        }
+                    }
+                }
+                &.bf-final-price {
+                    padding-top: 5px;
+                    background-color: $btn-primary-clr;
+                    font-weight: 600;
+                    > div {
+                        &:first-child {
+                            color: $clr-white;
+                        }
+                    }
+                    .mb-3 {
+                        margin-bottom: 5px !important;
+                    }
+                }
+                &.bf-weekly-charges {
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    background-color: $gray-c2;
+                    font-weight: 600;
+                    > div {
+                        &:first-child {
+                            font-style: italic;
+                        }
+                    }
+                    .mb-3 {
+                        margin-bottom: 0 !important;
+                    }
+                }
+            }
+            .bf-pertax-price,.bf-weekly-charges, .bf-tax-fees-accordion {
+                input {
+                    border: none;
+                    text-align: center;
+                    background-color: transparent !important;
+                }
+            }
+            .bf-add-fuel-taxes-fees {
+                flex-direction: column;
+                align-items: flex-start;
+                height: 60px;
+                overflow-y: auto;
+                margin-right: 0;
+                margin-left: 0;
+                
+                &.bf-taxlist-1 {
+                    height: 33px;
+                }
+                &.bf-taxList6plus, 
+                &.bf-taxlist-4,
+                &.bf-taxlist-5, 
+                &.bf-taxlist-6, 
+                &.bf-taxlist-3,
+                &.bf-taxlist-2 {
+                    height: 57px;
+                    width: calc(100% + 18px);
+                    height: initial !important;
+                    max-height: calc(100% - 280px);
+                } 
+                &.bf-taxlist-0 {
+                    height: 0 !important;
+                }
+                > div {
+                    &:first-child {
+                        width: 100% !important;
+                        text-align: initial;
+                        font-size: initial;
+                    }
+                    width: 100% !important;
+
+                    > div {
+                        &:first-child {
+                            text-align: left;
+                            width: 15% !important;
+                            font-size: 14px;
+                        }
+                    }
+                }
+                .bf-add-fuel-tax-sec {
+                    display: flex;
+                    width: 100%;
+                    margin-right: 0 !important;
+                    margin-left: 0 !important;
+                    padding-right: 0;
+                    padding-left: 0;
+                    > div {
+                        max-width: initial;
+                        display: flex;
+                        &:last-child {
+                            padding-right: 0 !important;
+                        }
+
+                    }
+
+                }
+            }
+            .bf-hidetaxnfees {
+                display: none;
+            }
+            .bf-showtaxnfees {
+                display: flex;
+            }
+        }
+    }
+    .bf-base-fuel-cost,
+    .bf-pertax-price {
+        > div {
+            &:first-child {
+                padding-left: 20px;
+            }
+        }
+    }
+    .bf-final-price ,
+    .bf-weekly-charges {
+        > div {
+            &:first-child {
+                padding-left: 20px;
+                padding-right: 0;
+            }
+        }
+    }
+    .bf-pertax-price,
+    .bf-tax-fees-accordion {
+        > div {
+            &:not(:first-child) {
+                input {
+                    font-style: italic;
+                }
+            }
+        }
+    }
+    .bf-base-fuel-cost,
+    .bf-pertax-price,
+    .bf-tax-fees-accordion {
+        .bf-accordion-column {
+            display: flex;
+            align-items: center;
+            padding-left: 5px;
+            cursor: pointer;
+        }
+        > div {
+            position: relative;
+            &:not(:first-child) {
+                &:not(:last-child) {
+                    &::after {
+                        content: '';
+                        width: 1px;
+                        height: 100%;
+                        right: -4px;
+                        border-right: 1px solid $gray-c2;
+                        position: absolute;
+                    }
+                }
+            }
+        }
+    }
+    .bf-tax-fees-accordion {
+        > div {
+            &:not(:first-child) {
+                &:not(:last-child) {
+                    &::after {
+                        border-right: 1px solid transparent;
+                        right: -4.1px;
+                    }
+                }
+            }
+        }
+    }
+    .bf-tax-fees-accordion.bf-expanded-accordion {
+        > div {
+            &:not(:first-child) {
+                &:not(:last-child) {
+                    &::after {
+                        border-right: 1px solid $gray-c2;
+                    }
+                }
+            }
+        }
+    }
+    .bf-add-fuel-tax-sec {
+        > div {
+            position: relative;
+            &:first-child {
+                padding-left: 25px;
+                width: calc(15% - 13px) !important;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    width: 20px;
+                    top:11px;
+                    border-top: 1px solid $gray-c2;
+                }
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    width: 1px;
+                    height: 150%;
+                    border-left: 1px solid $gray-c2;
+                }
+            }
+        }
+    }
+}
+.bf-flex-h100 .bf-edit-fuel-pricing-container .bf-fuel-price-details .bf-add-fuel-taxes-fees .row.bf-add-fuel-tax-sec> div.col:first-child {
+    width: calc(15% - 11px) !important;
+}
+.bf-final-price.row {
+    margin-top: 10px;
+}
+.bf-fuel-price-details {
+    margin-left: 12px;
+    &.bf-col-1 {
+        width: calc(100% - 30px);
+        > div {
+            > div {
+                margin-right: 12px;
+                &:first-child {
+                    margin-right: 0;
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+    &.bf-col-2 {
+        width: calc(100% - 35px);
+        > div {
+            > div {
+                margin-right: 12px;
+                &:first-child {
+                    margin-right: 0;
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+    &.bf-col-3 {
+        width: calc(100% - 35px);
+        > div {
+            > div {
+                margin-right: 12px;
+                &:first-child {
+                    margin-right: 0;
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+    &.bf-col-4 {
+        width: calc(100% - 33px);
+        > div {
+            > div {
+                margin-right: 12px;
+                &:first-child {
+                    margin-right: 0;
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+    height: calc(100% - 120px);
+    @media screen and (min-width:1520px) {
+        height: calc(100% - 120px);
+    }
+}
+.bf-addFuel-buttons {
+    margin-top: 10px;
+    button {
+        &:first-child {
+            margin-left: -10px !important;
+        }
+    }
+}
+.bf-add-fuel-taxes-fees::-webkit-scrollbar {
+    width: 6px;
+}
+
+.bf-add-fuel-taxes-fees::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3); 
+    border-radius: 8px;
+}
+
+.bf-add-fuel-taxes-fees::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.8); 
+}
+.signup-section {
+    .login-form {
+        justify-content: initial !important;
+        height: 100% !important;
+    }
+    form {
+        padding: 35px;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 100%;
+        overflow-y: auto;
+        .btn-group {
+            justify-content: flex-start;
+            button {
+                width: 150px !important;
+                flex: 0 0 150px !important;
+            }
+        }
+        .bf-mrgb-0{
+            &.row {
+                padding: 0 !important;
+            }
+        }
+    }
+    .add-new-button {
+        background-color: transparent !important;
+        max-height: 40px;
+    }
+}
+.bf-mrgb-0 {
+    .mb-4 {
+        margin-bottom: 0 !important;
+    }
+}
+.bf-buttons-section {
+    margin-top: 20px !important;
+}
+.bf-mrgt-0 {
+    .mb-4 {
+        margin-bottom: 0 !important;
+    } 
+}
+
+.bf-subheading {
+    margin-bottom: 5px !important;
+    height: 25px !important;
+}
+
+.mb-4.col-md-3 {
+    margin-bottom: 5px !important;
+    width: 24%;
+    margin-right: 1%;
+}
+.bf-add-fuel-tax-sec {
+    > div {
+        &:not(:first-child) {
+            padding-left: 5px !important;
+            padding-right: 10px !important;
+        }
+
+        &:nth-child(2) {
+            padding-left: 0px !important;
+        }
+        &:nth-child(3) {
+            padding-left: 10px;
+            padding-right: 0px;
+        }
+        &:nth-child(4) {
+            padding-left: 12px;
+            padding-right: 0px;
+        }
+        &:last-child {
+            padding-left: 18px;
+            padding-right: 0px;
+        }
+    }
+}
+.bf-fee-positive {
+    input{
+        color: #56a12c !important;
+    }
+    
+
+}
+.bf-fee-negative {
+    input{
+        color: $bf-error-clr !important;
+    }
+    
+}
+
+.bf-accordion-tax-details {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 5px;
+        width: 100%;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+.bf-fuel-price-details {
+    margin-top: -5px;
+    .mb-3.input-group {
+        margin-bottom: 5px !important;
+    }
+    // .bf-base-fuel-cost,
+    // .bf-final-price {
+    //     .mb-3.input-group {
+    //         margin-bottom: 5px !important;
+    
+    //         position: relative;
+    //         &::after {
+    //             position: absolute;
+    //             left: 5px;
+    //             top: 6px;
+    //             content: '$';
+    //         }
+    //     }
+    // }
+    .mb-4.col-md-md3 {
+        > div {
+            &:first-child {
+                &.d-flex.d-flex-row  {
+                    display: none !important;
+                }
+            }
+        }
+    }
+    .bf-block {
+        display: block !important;
+        text-align: center;
+    }
+
+}
+@media screen and (min-width: 1400px) {
+    .bf-fuel-price-details {
+        margin-top: 5px;
+        .mb-3.input-group {
+            margin-bottom: 5px !important;
+            input {
+                height: 30px !important;
+            }
+        }
+        .bf-add-fuel-taxes-fees {
+            height: 75px !important;
+        }
+    }
+}
+.bf-fuel-price-details .bf-oil-types {
+    font-weight: 600;
+    color: $btn-primary-clr;
+}
+@media screen and (min-width: 1366px) {
+    .bf-fuel-price-details {
+        margin-top: 5px;
+        .bf-oil-types {
+            margin-bottom: 5px;
+        }
+        .mb-3.input-group {
+            margin-bottom: 5px !important;
+            input {
+                height: 30px !important;
+            }
+        }
+        .bf-add-fuel-taxes-fees {
+            height: 65px !important;
+            &.bf-taxList6plus, 
+            &.bf-taxlist-4,
+            &.bf-taxlist-5, 
+            &.bf-taxlist-6   {
+                height: 88px !important;
+                width: calc(100% + 18px);
+                height: initial !important;
+                max-height: calc(100% - 329px) !important;
+            }
+            &.bf-taxlist-1 {
+                height: 33px !important;
+                height: initial !important;
+                max-height: calc(100% - 320px) !important;
+            }
+            &.bf-taxlist-2 {
+                height: 57px !important;
+                height: initial !important;
+                max-height: calc(100% - 320px) !important;
+            }
+            &.bf-taxlist-3 {
+                height: 81px !important;
+                height: initial !important;
+                max-height: calc(100% - 320px) !important;
+            }
+        }
+    }
+    .bf-addFuel-buttons {
+        margin-top: 20px;
+    }
+}
+@media screen and (min-width: 1520px) {
+    .bf-fuel-price-details {
+        .bf-add-fuel-taxes-fees {
+            height: 65px !important;
+            &.bf-taxList6plus, 
+            &.bf-taxlist-4,
+            &.bf-taxlist-5, 
+            &.bf-taxlist-6   {
+                height: 88px !important;
+                width: calc(100% + 18px);
+                height: initial !important;
+                max-height: calc(100% - 360px) !important;
+            }
+            &.bf-taxlist-1 {
+                height: 33px !important;
+                height: initial !important;
+                max-height: calc(100% - 360px) !important;
+            }
+            &.bf-taxlist-2 {
+                height: 57px !important;
+                height: initial !important;
+                max-height: calc(100% - 360px) !important;
+            }
+            &.bf-taxlist-3 {
+                height: 81px !important;
+                height: initial !important;
+                max-height: calc(100% - 360px) !important;
+            }
+        }
+    }
+}
+@media screen and (min-width: 1600px) {
+
+    .bf-fuel-price-details {
+        .bf-fuel-price-details {
+            margin-top: 5px;
+            .bf-oil-types {
+                margin-bottom: 5px;
+            }
+            .mb-3.input-group {
+                margin-bottom: 10px !important;
+                input {
+                    height: 35px !important;
+                }
+            }
+            .bf-add-fuel-taxes-fees {
+                height: 90px !important;
+                height: initial !important;
+                max-height: calc(100% - 420px);
+            }
+        }
+    }
+}
+@media screen and (min-width: 1700px) {
+    .bf-fuel-price-details {
+        margin-top: 5px;
+        .bf-oil-types {
+            margin-bottom: 5px;
+        }
+        .mb-3.input-group {
+            margin-bottom: 10px !important;
+            input {
+                height: 35px !important;
+            }
+        }
+        .bf-add-fuel-taxes-fees {
+            height: 65px !important;
+            &.bf-taxList6plus, 
+            &.bf-taxlist-4,
+            &.bf-taxlist-5, 
+            &.bf-taxlist-6   {
+                height: 88px !important;
+                width: calc(100% + 18px);
+                height: initial !important;
+                max-height: calc(100% - 400px) !important;
+            }
+            &.bf-taxlist-1 {
+                height: 33px !important;
+                height: initial !important;
+                max-height: calc(100% - 400px) !important;
+            }
+            &.bf-taxlist-2 {
+                height: 57px !important;
+                height: initial !important;
+                max-height: calc(100% - 400px) !important;
+            }
+            &.bf-taxlist-3 {
+                height: 81px !important;
+                height: initial !important;
+                max-height: calc(100% - 400px) !important;
+            }
+        }
+    }
+    .bf-addFuel-buttons {
+        margin-top: 30px;
+    }
+}
+@media screen and (min-width: 1920px) {
+    .bf-edit-fuel-pricing {
+        padding-top: 10px;
+        .bf-subheading {
+            margin-bottom: 10px !important;
+        }
+    }
+    .bf-fuel-price-details {
+        margin-top: 5px;
+        .bf-oil-types {
+            margin-bottom: 10px;
+        }
+        .mb-3.input-group {
+            margin-bottom: 10px !important;
+            input {
+                height: 35px !important;
+            }
+        }
+        .bf-add-fuel-taxes-fees {
+            height: 65px !important;
+            &.bf-taxList6plus, 
+            &.bf-taxlist-4,
+            &.bf-taxlist-5, 
+            &.bf-taxlist-6   {
+                height: 88px !important;
+                width: calc(100% + 18px);
+                height: initial !important;
+                max-height: calc(100% - 420px) !important;
+            }
+            &.bf-taxlist-1 {
+                height: 33px !important;
+                height: initial !important;
+                max-height: calc(100% - 420px) !important;
+            }
+            &.bf-taxlist-2 {
+                height: 57px !important;
+                height: initial !important;
+                max-height: calc(100% - 420px) !important;
+            }
+            &.bf-taxlist-3 {
+                height: 81px !important;
+                height: initial !important;
+                max-height: calc(100% - 420px) !important;
+            }
+        }
+    }
+    .bf-addFuel-buttons {
+        margin-top: 30px;
+    }
+}
+
+.bf-review-tirs-section {
+    .bf-review-tirs-container {
+        width: 100%;
+        .bf-review-tirs-label {
+            width: 100%;
+            margin-left: 0;
+            margin-top: 10px;
+            > div {
+                font-size: 14px;
+                color: $btn-primary-clr;
+                margin-left: 25px;
+                &:first-child {
+                    max-width: 90px;
+                    margin-left: 0;
+                }
+            }
+        }
+
+        .bf-tirs-list {
+            width: 100%;
+            margin-left: 0;
+            > div {
+                margin-bottom: 18px;
+                height: 28px;
+                margin-left: 25px;
+                text-align: center;
+                &:first-child {
+                    max-width: 90px;
+                    background-color: $btn-primary-clr;
+                    color: $clr-white;
+                    margin-left: 0;
+                }
+                &.bf-tirs-value {
+                    background-color: $gray-clr;
+                    border: 1px solid $btn-primary-clr;
+                }
+            }
+        }
+    }
+    .bf-verify-text {
+        color: $bf-error-clr;
+        font-weight: 600;
+    }
+    .bf-verify-tire-buttons {
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .btn-group {
+            &:first-child {
+                button {
+                    margin-left: 0 !important;
+                    margin-right: 15px !important;
+                }
+            }
+        }
+    }
+}
+.bf-absolute-usd {
+    position: absolute;
+    right: 17px;
+    color: $btn-primary-clr;
+    font-size: 12px;
+    text-align: right;
+    bottom: 10px;
+}

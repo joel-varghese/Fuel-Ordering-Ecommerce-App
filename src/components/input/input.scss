@@ -1,0 +1,164 @@
+@import "../../assets/styles/constants.scss";
+
+
+.input-group {
+    input {
+        width: 100% !important;
+        &:disabled {
+            background-color: $clr-white !important;
+        }
+    }
+    .password-icon {
+        background-color: transparent !important;
+        border: transparent !important;
+        position: absolute !important;
+        right: 0;
+        z-index: 4 !important;
+        img {
+            width: 18px;
+        }
+    }
+    &.bf-file-input {
+        .bf-file-component {
+            width: 100%;
+            border: 1px solid $border-clr;
+            padding: 0 10px;
+            background-color: $gray-clr;
+            > div {
+                max-width: 100%;
+                height: 38px;
+                display: flex;
+                align-items: center;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                min-width: 0;
+            }
+            img {
+                height: 80%;
+            }
+        }
+        input {
+            opacity: 0 !important;
+            position: absolute;
+            left: 0;
+        }
+    }
+}
+.modal-body {
+    .bf-md-fee-tiers {
+        width: 14.28% !important;
+        .form-label {
+            width: 100%;
+            position: relative;
+            span {
+                &.bf-required {
+                    display: none;
+                }
+            }
+            &::after {
+                position: absolute;
+                width: 2px;
+                height: 50%;
+                border-right: 2px solid $gray-c2;
+                right: -10px;
+                top: 25%;
+                content: '';
+            }
+
+        }
+        .input-group {
+            input {
+                text-align: center;
+            }
+        }
+        &.bf-last-tier {
+            .form-label {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    form {
+        .row {
+            > div:nth-last-child(2) {
+                .form-label {
+                    &::after {
+                        display: none !important;
+                    }
+                }
+            }
+            .bf-tier-label-disable {
+                opacity: 0.65;
+                input {
+                    background-color: #f6f6f6 !important;
+                }
+            }
+        }
+    }
+    .bf-fuel-qmm {
+        label {
+            margin-top: -20px !important;
+            @media screen and (min-width:1320px) {
+                &.form-label {
+                    margin-top: 0 !important;
+                }
+            }
+            @media screen and (min-width:1366px) and (max-width: 1466px) {
+                // &.form-label {
+                //     width: 90%;
+                // }
+            }
+            @media screen and (min-width:1467px) {
+                &.form-label {
+                    margin-top: 0 !important;
+                }
+            }
+        }
+    }
+
+}
+
+.edit_icon {
+    position: absolute;
+    right: 0;
+    padding-left: 10px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding-right: 0;
+    top: 3px;
+    img {
+        margin-left: 5px;
+    }
+    span {
+        padding-right: 0 !important;
+    }
+}
+
+.bf-uploadfile {
+    margin-top: -40px;
+    width: 100%;
+    padding-top: 8px;
+    padding-left: 12px;
+    padding-right: 40px;
+    overflow: hidden;
+    height: 39px;
+}
+
+.bf-hideen {
+    visibility: hidden;
+}
+.system-variables-units{
+    position: absolute;
+    right:5px;
+    font-size: 14px;
+    top:10px;
+    color:$disabled-clr;
+    // text-align: right;
+    z-index: 3;
+
+}

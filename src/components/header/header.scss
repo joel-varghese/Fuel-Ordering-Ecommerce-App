@@ -1,0 +1,84 @@
+@import "../../assets/styles/constants.scss";
+
+.bf-flex-grow-initial {
+    flex-grow: initial !important;
+}
+.bf-header {
+    &.bf-absolute {
+        position: absolute !important;
+        width: 100%;
+    }
+    &.bg-light {
+        background-color: transparent !important;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    &.bf-form-links {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        .container-fluid {
+            width: 100%;
+        }
+    }
+    &.bf-no-links {
+        #navbarScroll {
+            display: none !important;
+        }
+        &.bf-logo-center {
+            .navbar-brand {
+                margin: 0 auto;
+            }
+        }
+    }
+    .navbar-brand {
+        img {
+            width: 200px;
+        }
+    }
+    #navbarScroll {
+        width: 100%;
+        align-items: flex-end;
+        .bf-nav-section {
+            max-height: 100px;
+            width: 100%;
+            justify-content: space-around;
+            div.nav-menu {
+                display: flex;
+                width: 100%;
+                justify-content: flex-end;
+                > div {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: $btn-primary-clr;
+                    a {
+                        color: $btn-primary-clr;
+                        font-weight: 400;
+                        letter-spacing: 1px;
+                    }
+                    .admin-name {
+                        margin-right: 30px;
+                    }
+                    &.nav-items {
+                        width: calc(100% - 200px);
+                    }
+                    &.login-items {
+                        justify-content: flex-end;
+                        width: 200px;
+                        a {
+                            &:first-child {
+                                margin-right: 10px;
+                            }
+                            &:hover {
+                                background-color: $hover-clr;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .bf-admin-landing-page {
+
+    }
+}

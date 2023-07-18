@@ -1,0 +1,244 @@
+@import "../../assets/styles/constants.scss";
+.navbar { 
+    &.bf-global-header {
+        padding-left: 3vw;
+        padding-right: 3.5vw;
+        height: max(10vh, 70px);
+        width: 82%;
+        background-color: $clr-white;
+        justify-content: space-between;
+        position: fixed;
+        left: 18%;
+        z-index: 3;
+//        width: 80%;
+        @media screen and (min-width: 1600px) {
+            width: 82.5%;
+            left: 17.5%;
+            padding-left: 72px;
+            padding-left: calc(2vw - 5px);
+            max-height: 70px;
+        }
+        @media screen and (min-width: 1700px) {
+            width: 82.5%;
+            left: 17.5%;
+            padding-left: 74px;
+            padding-right: 81px;
+            max-height: 70px;
+        }
+
+        @media screen and (min-width: 1920px) {
+            width: calc(100% - 337px);
+            left: 340px;
+            padding-left: 70px
+        }
+
+        @media screen and (min-width: 1950px) {
+            width: calc(100% - 337px);
+            left: 350px;
+            padding-left: 3.5vw;
+        }
+
+
+        .bf-global-search-component {
+            width: 49%;
+            .search-icon {
+                z-index: 2;
+                font-size: 22px;
+                margin-top: 3px;
+            }
+            input {
+                margin-left: -20px;
+                padding-left: 30px;
+                border-bottom: 1px solid $btn-primary-clr !important;
+            }
+            > div.bf-relative {
+                .bf-accout-sugesstion-dropdown {
+                    top: 25px !important;
+                }
+            }
+
+        }
+        .bf-global-notifications {
+            margin-right: 34px;
+            .position-relative {
+                cursor: pointer;
+            }
+        }
+        .bf-user-icon {
+            font-size: 40px;
+            cursor: pointer;
+        }
+        .bf-user-profile-img{
+            height: 40px;
+            width: 40px;
+            border-radius: 100%;
+            cursor: pointer;
+        }
+        .bf-edit-profile-icon {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 14px;
+            cursor: pointer;
+        }
+        #bf-menu-userdropdown {
+            max-width: 165px !important;
+            min-width: 165px !important;
+            padding-right: 10px !important;
+            width: auto !important;
+            background-color: transparent !important;
+            color: $primary-clr !important;
+            border: transparent !important;
+            justify-content: space-between;
+            &:hover, &:focus, &:visited, &:active {
+                background-color: transparent !important;
+                color: $primary-clr !important;
+                border: transparent !important;
+            }
+            &::after {
+                display: none;
+            }
+            .bf-access-level {
+                font-size: 12px;
+                font-weight: 300;
+            }
+            .bf-menu-user-name {
+                max-width: 130px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                text-transform: capitalize;
+            }
+            img {
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .bf-user-menu-dropdown {
+        border-radius: 0;
+        border: none;
+        border-radius: 0;
+        box-shadow: 3px 3px 4px rgb(0 0 0 / 16%), -2px 2px 3px rgb(0 0 0 / 20%) !important;
+        left: -42px!important;
+        top: 95%!important;
+        width: calc(100% + 42px);
+    }
+}
+.bf-logo-fuel-order {
+    display: none;
+}
+.bf-fuel-order-container {
+    .bf-logo-fuel-order {
+        display: block;
+    }
+    .bf-home-company-name {
+        &.bf-search-result-name {
+            font-weight: 600;
+            margin-top: -12px;
+            margin-bottom: 5px;
+            letter-spacing: 4px;
+            font-size: 2.3rem;
+        }
+    }
+    .bf-sidebar-logo {
+        width: 75%;
+        max-width: 180px;
+        margin-right: 60px;
+        img {
+            max-width: 100%;
+        }
+    }
+    .bf-global-search-component {
+        input {
+            margin-right: 60px;
+        }
+    }
+    .bf-hide-visibility {
+        visibility: hidden;
+    }
+    .navbar {
+        &.bf-global-header {
+            width: 95%;
+            left: 5%;
+            @media screen and (min-width: 1700px) {
+                padding-left: 30px;
+                padding-right: 55px;
+            }
+        }
+    }
+}
+.bf-mobile-view-header {
+    display: none;
+}
+@media screen and (min-width:350px) and (max-width:767px) {
+    .navbar{
+        &.bf-global-header {
+            display: none;
+        }
+    }
+    .bf-mobile-view-header {
+        display: flex;
+        background-color: $btn-primary-clr;
+        color: $clr-white;
+        min-height: 92px;
+        height: 92px;
+        align-items: center;
+        justify-content: flex-start;
+        > div {
+            img {
+                height: 60px;
+            }
+            padding-right: 23px;
+            border-right: 1px solid $clr-white;
+            padding-left: 25px;
+            padding-top: 16px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            width: calc(100% - 125px);
+        }
+    }
+    .menu-list {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width:1366px) and (max-width:1520px) {
+    .bf-fuel-order-container {
+        .bf-sidebar-logo {
+            max-width: 230px;
+        }
+        .navbar.bf-global-header {
+            left: 4%;
+            width: 97%;
+        }
+    }
+}
+
+@media screen and (min-width:1920px) {
+    .bf-fuel-order-container {
+        .bf-sidebar-logo {
+            max-width: 230px !important;
+            &.bf-logo-fuel-order {
+                margin-right: 0 !important;
+            }
+        }
+        .navbar.bf-global-header {
+            left: 3%;
+            width: 97%;
+        }
+    }
+    .navbar { 
+        &.bf-global-header {
+            height: 78px !important;
+        }
+    }
+}

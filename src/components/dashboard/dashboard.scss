@@ -1,0 +1,288 @@
+@import "../../assets/styles/constants.scss";
+
+.bf-dashboard-section-container {
+  height: 100%;
+}
+.bf-dashboard-body{
+  width: calc(100% - 200px);
+  .bf-dashboard-tabs-container{
+    padding: 1.5vw 3.5vw 1.5vw 3.5vw;
+    background-color: $dashboard-bg-clr;
+    height: calc(100vh - max(10vh, 70px));
+    margin-top: max(10vh, 70px);
+    overflow: hidden;
+    .bf-operator-enrollment-section.login-section .login-form {
+      padding-left: 0 !important;
+      padding-top: 0 !important;
+      form .bf-dashboard-signup-body .bf-download-sample-xl a {
+        margin-top: 0;
+      }
+    }
+  }
+  
+  .bf-show-mobile {
+    display: none !important;
+  }
+  .bf-mobile-pad {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  @media screen and (min-width:350px) and (max-width:767px) {
+    .bf-hide-mobile {
+      display: none !important;
+    }
+    .bf-show-mobile {
+      display: flex !important;
+    }
+    .bf-select-component {
+      height: 44px;
+      width: 100%;
+    }
+    width: calc(100%);
+    .bf-dashboard-tabs-container {
+      margin-top: 0 !important;
+      background-color: $clr-white;
+      padding: 0;
+      height: calc(100% - 90px - 75px);
+    }
+    .bf-select-label {
+      font-size: 14px;
+      margin-bottom: 7px;
+      color: $btn-primary-clr;
+    }
+  }
+}
+
+.custom-searchbar {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #ccc;
+}
+.search-icon {
+  color: $btn-primary-clr;
+}
+.menu-list {
+  width: 18%;
+  min-width: 200px;
+  max-width: 350px;
+  .menu-item {
+    color: #6A7B89;
+    font-size: 13px;
+  }
+}
+.bell-icon {
+  fill: $btn-primary-clr;
+}
+.bf-notifications-popover-buttons {
+  .bf-btn-imp {
+    &:hover {
+      background-color: $hover-clr !important;
+    }
+  } 
+}
+.notification-count {
+  width: 15px;
+  height: 15px;
+  background: $bf-error-clr;
+  color: #fff;
+  border: 1px solid $clr-white;
+  border-radius: 50%;
+  font-size: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0px;
+  left: 14px;
+
+}
+
+.bf-fuel-order-container {
+  .bf-dashboard-body {
+    width: calc(100% - 80px);
+  }
+  .bf-dashboard-tabs-container{
+    padding: 1vw 2vw 1.5vw 2vw;
+  } 
+}
+.bf-dashboard-signup.signup-section form {
+  height: 100% !important;
+}
+.bf-dashboard-signup .bf-dashboard-signup-body {
+  height: calc(100% - 210px) !important;
+}
+.bf-dashboard-body 
+.bf-dashboard-tabs-container 
+.bf-operator-enrollment-section.login-section 
+.login-form form .bf-dashboard-signup-body  {
+  .bf-download-sample-xl.bf-error-temp {
+    margin-top: -26px !important; 
+  }
+}
+@media screen and (min-width:1700px) {
+  .bf-dashboard-body{
+    .bf-dashboard-tabs-container{
+      padding-left: 85px;
+      padding-right: 85px;
+      height: calc(100vh - 78px);
+      margin-top: 78px;
+      .bf-operator-enrollment-section.login-section {
+        height: 100%;
+        .login-form {
+          width: 100% !important;
+          form {
+            padding-bottom: 0;
+            height: 100% !important;
+            overflow-y: hidden;
+            h1 {
+              margin-top: 0px !important;
+              margin-bottom: 20px !important;
+            }
+              .bf-dashboard-signup-body {
+                height: calc(100% - 88px - 82px);
+                .bf-heading.bf-subheading {
+                  margin-bottom: 15px !important;
+                  &::after {
+                    width: 97%;
+                  }
+                }
+                > div {
+                  padding-right: 20%;
+                  .bf-buttons-section {
+                    margin-top: -20px !important;
+                  }
+                }
+                .mb-4.col-md-4.bulk-upload {
+                  margin-bottom: 0 !important;
+                }
+                .bf-download-sample-xl {
+                  height: 20px;
+                  margin-top: -12px !important;
+                  &.bf-error-temp {
+                    margin-top: 0px !important;
+                  }
+                  a {
+                    margin-top: 0;
+                  }
+                }
+            }
+            &.admin-add-user {
+              .bf-dashboard-signup-body {
+                > div {
+                  .bf-buttons-section {
+                    button {
+                      height: 36px !important;
+                    }
+                  }
+                }
+              }
+            }
+            .bf-buttons-contanier,
+            .bf-dashboard-signup-buttons.add-user-buttons {
+              button.bf-btn-login {
+                width: 200px !important;
+                flex: 0 0 200px !important;
+              }
+              .bf-btn-clear {
+                margin-left: 40px !important;
+              }
+            }
+            &.admin-add-user {
+              .bf-dashboard-signup-body {
+                .row {
+                  .row {
+                    .bf-heading.bf-subheading {
+                      &:first-child {
+                        margin-top: -20px !important;
+                      }
+                    }
+                    .bf-location-container {
+                      margin-bottom: 30px !important;
+                      .css-14el2xx-placeholder {
+                        height: 40px !important;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .operator-form {
+          height: 100%;
+          form {
+            padding-bottom: 0;
+            height: 100% !important;
+            h1 {
+               margin-bottom: 25px !important;
+            }
+            .bf-dashboard-signup-body {
+              height: calc(100% - 194px);
+              > div {
+                &:first-child {
+                  padding-right: 10%;
+                }
+                .accordion {
+                  .accordion-item {
+                    .accordion-collapse {
+                      .accordion-body {
+                        padding-top: 0 !important;
+                        .mb-3.row {
+                          padding-bottom: 0 !important;
+                          &.bf-payment-signup-information {
+                            .add-more,
+                            .remove {
+                              margin-top: -16px !important;
+                              height: 30px;
+                            }
+                          }
+                          &.bf-banking-information,
+                          &.bf-airport-loc-info {
+                            .add-more,
+                            .remove {
+                              bottom: -12px;
+                              height: 30px;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        &.bf-operator-signup-mobile-section {
+          .bf-dashboard-signup-buttons {
+            margin-left: 0 !important;
+            button {
+              &:first-child {
+                margin-left: 0 !important;
+              }
+            }
+          }
+          .bf-mrgb-0.row {
+            padding-left: 0 !important;
+          }
+          form {
+            overflow: hidden;
+          }
+        }
+      }
+    }
+  } 
+  .bf-fuel-order-container {
+    .bf-dashboard-body {
+      .bf-dashboard-tabs-container {
+        padding: 1vw 2vw 1.5vw 2vw !important;
+      }
+    }
+  }
+}
+@media screen and (min-width:350px) and (max-width:676px) {
+  .bf-dashboard-body {
+    height: 100%;
+  }
+}

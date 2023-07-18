@@ -1,0 +1,2189 @@
+@import "../../../assets/styles/constants.scss";
+
+.statistics-container {
+  height: 100%;
+  width: calc(100% + 1.5vw);
+  overflow-y: hidden;
+  overflow-x: hidden;
+  padding-right: 0.3vw;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  .statistics {
+    &.row,
+    .row {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+    .bf-statustics-list {
+      .statistic-card {
+        height: 8.5vw;
+        width: 23.5%;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+      }
+    }
+    .bf-mrgt2p {
+      margin-top: 2%;
+    }
+    .bf-graph {
+      background-color: transparent !important;
+      .statistic-card {
+        width: 74.5%;
+        height: 28.5vh;
+        &:first-child {
+          align-items: flex-start;
+          > div {
+            width: 60%;
+            margin-left: 20%;
+          }
+        }
+        &:last-child {
+          width: 23.5%;
+          margin-left: 2%;
+        }
+        img {
+          width: 60%;
+          margin-left: 20%;
+        }
+      }
+    }
+    .bf-chart {
+      background-color: transparent !important;
+      .statistic-card {
+        width: 49%;
+        height: 28.5vh;
+        &:first-child {
+          > div {
+            margin-left: 0;
+            width: 100%;
+            padding-left: 20px;
+          }
+        }
+        &.bf-add-banner {
+          font-weight: bold;
+          color: rgba(5, 27, 46, 0.2);
+          font-size: 30px;
+        }
+        img {
+          height: 75%;
+          width: 100%;
+        }
+      }
+    }
+  }
+  .statistic-card {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgb(0 0 0 / 9%);
+    font-weight: bold;
+    &.chart {
+      justify-content: center;
+      height: 340px;
+      flex-direction: column;
+    }
+    .icon {
+      background: #f7eee8;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+    }
+  }
+
+  .statistics-row {
+    height: 45%;
+    display: flex;
+    .bf-statistics-flights-savings {
+      height: 100%;
+      width: 20%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      > div {
+        height: calc(50% - 5px);
+        margin-bottom: 5px;
+        &.bf-statistics-flights {
+          background-color: $btn-primary-clr;
+        }
+        &.bf-statistics-savings {
+          margin-top: 5px;
+          margin-bottom: 0;
+          background-color: $clr-white;
+          button {
+            display: none;
+          }
+        }
+      }
+    }
+    .bf-upcoming-trips {
+      width: calc(55% - 10px);
+      height: 100%;
+      margin-left: 10px;
+      background-color: $clr-white;
+    }
+    .bf-top-fbos {
+      width: calc(25% - 10px);
+      height: 100%;
+      margin-left: 10px;
+      background-color: $clr-white;
+    }
+  }
+  .bf-statistics-container {
+    height: 100%;
+    width: 90%;
+    .statistics-trip-row {
+      height: 22%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .bf-fuel-price-by-location {
+        height: 100%;
+        width: 33% !important;
+        background-color: $clr-white;
+        > div {
+          > div {
+            &#chart11 {
+              > div {
+                margin-left: -80px;
+                margin-top: -20px;
+                @media screen and (min-width: 1600px) {
+                  margin-left: 0px;
+                  margin-top: 0px;
+                }
+                .apexcharts-legend {
+                  left: 75px !important;
+                  > div {
+                    > span {
+                      &:first-child {
+                        width: 10px !important;
+                        height: 10px !important;
+                      }
+                      &:last-child {
+                        font-size: 12px !important;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          // width: 100% !important;
+          // height: 100% !important;
+          &.trip-label {
+            text-align: left;
+            color: $btn-primary-clr;
+            font-weight: 600;
+            padding-left: 15px;
+          }
+          &.trip-chat {
+            width: 80% !important;
+            margin-left: 10%;
+            &.bf-dispute-trip {
+              height: 100% !important;
+              > div {
+                width: 100% !important;
+                height: 100% !important;
+                > div {
+                  width: 100% !important;
+                  height: 100% !important;
+                  > div {
+                    width: 100% !important;
+                    height: 100% !important;
+                  }
+                }
+              }
+            }
+          }
+        }
+        // > div {
+        //     width: 100% !important;
+        //     height: 100% !important;
+        //     > div {
+        //         width: 100% !important;
+        //         height: 100% !important;
+        //     }
+        // }
+        // }
+      }
+    }
+    .statistics-graf-row {
+      height: calc(77% - 10px);
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      > div {
+        height: 50% !important;
+        display: flex;
+        flex-direction: row;
+        .bf-stauts-details {
+          width: 100%;
+          height: 100% !important;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          .bf-order-fuel-status {
+            height: calc(100% - 10px);
+            width: 49%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: $clr-white;
+            margin-bottom: 5px;
+            .bf-order-status,
+            .bf-fuel-status {
+              width: 100%;
+              height: 100%;
+              &.bf-avg-price {
+                .bf-price-label {
+                  font-weight: 600;
+                  color: $btn-primary-clr;
+                  margin-left: 15px;
+                  margin-bottom:-30%;
+                }
+                > div {
+                  height: calc(100% - 40px) !important;
+                }
+              }
+              > div {
+                height: 100% !important;
+                width: 100% !important;
+                > div {
+                  height: 100% !important;
+                  width: 100% !important;
+                  > div {
+                    height: 100% !important;
+                    width: 100% !important;
+                    > div:first-child {
+                      height: 100% !important;
+                      width: 100% !important;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .bf-fuel-price-by-location {
+            height: calc(100% - 10px);
+            width: 49% !important;
+            background-color: $clr-white;
+            > div {
+              width: 75% !important;
+              height: 70% !important;
+              margin-left: 12%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              > div {
+                width: 100% !important;
+                height: 100% !important;
+                > div {
+                  width: 100% !important;
+                  height: 100% !important;
+                }
+              }
+            }
+          }
+        }
+
+        &.bf-top-destinations {
+          width: 100%;
+          margin-top: 5px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          > div {
+            width: 49%;
+            height: 100% !important;
+            background-color: $clr-white;
+            > div {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              height: 100% !important;
+              width: 100% !important;
+
+              > div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100% !important;
+                width: 100% !important;
+                > div {
+                  height: 100% !important;
+                  width: 100% !important;
+                  > div:first-child {
+                    height: 100% !important;
+                    width: 100% !important;
+                  }
+                }
+              }
+            }
+            &.bf-disputes-section {
+              display: flex;
+              align-items: center;
+              flex-direction: row;
+              justify-content: center;
+            }
+          }
+        }
+      }
+    }
+  }
+  .bf-more-statistic-details {
+    width: 24%;
+    height: 100%;
+    margin-left: 1%;
+    display: flex;
+    flex-direction: column;
+    .bf-more-space {
+      height: 22%;
+      width: 100%;
+      background-color: $clr-white;
+    }
+    .bf-more-trending-details {
+      height: calc(77% - 10px);
+      width: 100%;
+      margin-top: 10px;
+      background-color: $clr-white;
+      > div {
+        height: calc(100% - 20px);
+        width: 80%;
+        max-width: 300px;
+        margin: 20px auto 0;
+        > div {
+          &:first-child {
+            width: 100% !important;
+            height: 80% !important;
+          }
+        }
+        .bf-top-destinations {
+          font-size: 12px;
+        }
+      }
+    }
+    .bf-more-statistics {
+      height: 22%;
+      width: 100%;
+      background-color: $clr-white;
+      > div {
+        width: 80% !important;
+        margin-left: 10%;
+        &.trip-label {
+          width: 100%;
+          color: $btn-primary-clr;
+          font-weight: 600;
+          margin-left: 15px;
+        }
+        > div {
+          width: 100% !important;
+          height: 100% !important;
+          > div {
+            width: 100% !important;
+            height: 100% !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.bf-dashboard-statistics {
+  height: 100%;
+  width: calc(100% + 1.5vw);
+  overflow-y: hidden;
+  overflow-x: hidden;
+  padding-right: 0.3vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &.bf-scroll-imp {
+    overflow-y: auto !important;
+  }
+  .bf-trip-card-details {
+    width: 100%;
+    height: 30.5%;
+    min-height: 30.5%;
+    margin-top: 5px;
+    margin-left: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    @media screen and (min-width:1252px) and (max-width:1280px){
+      .order-dtl{
+        width: 57% !important; 
+        &:last-child {
+          width: 49% !important;
+        } 
+      } 
+     
+    }
+    @media screen and (min-width:780px) and (max-width:1250px){
+      .bf-tirp-chart,.bf-tirp-chart1,.bf-tirp-chart2,.bf-tirp-chart3{
+        height: 69% !important;
+      } 
+    }
+    @media screen and (min-width:1500px) and (max-width:1700px){
+      .bf-tirp-chart,.bf-tirp-chart1,.bf-tirp-chart2,.bf-tirp-chart3{
+        height: 67% !important;
+      }   
+    }
+    @media screen and (min-width:1701px) and (max-width:1820px){
+      .bf-tirp-chart,.bf-tirp-chart1,.bf-tirp-chart2,.bf-tirp-chart3{
+        height: 71% !important;
+      }    
+    }
+    @media screen and (min-width:1821px) and (max-width:2048px) {
+      .bf-tirp-chart,.bf-tirp-chart1,.bf-tirp-chart2,.bf-tirp-chart3{
+        height: 72% !important;
+      }       
+    }
+    @media screen and (min-width:2049px) and (max-width:2731px) {
+      .bf-tirp-chart,.bf-tirp-chart1,.bf-tirp-chart2,.bf-tirp-chart3{
+        height: 75% !important;
+      }     
+    }
+    @media screen and (min-width:2732px) and (max-width:4097px) {
+      .bf-tirp-chart,.bf-tirp-chart1,.bf-tirp-chart2,.bf-tirp-chart3{
+        height: 81% !important;
+      }        
+    }
+
+    @media screen and (min-width:4098px) and (max-width:5463px) {   
+      .bf-tirp-chart,.bf-tirp-chart1,.bf-tirp-chart2,.bf-tirp-chart3{
+        height: 87% !important;
+      }   
+    }
+    @media screen and (min-width:5464px) and (max-width:5500px) {
+      .bf-tirp-chart,.bf-tirp-chart1,.bf-tirp-chart2,.bf-tirp-chart3{
+        height: 90% !important;
+      }   
+    }
+    @media screen and (min-width:1530px)and (max-width:1699px) {
+      .circle ,.circle1,.circle2,.circle3{
+        width: 45% !important;
+      }
+    }
+    @media screen and (min-width:1700px) {
+      .circle ,.circle1,.circle2,.circle3{
+        width: 52% !important;
+      }
+
+  }
+  @media screen and (min-width:1240px) and (max-width:1279px){
+    .circle ,.circle1,.circle2,.circle3{
+      width: 30% !important;
+    }        
+  }
+  @media screen and (min-width:1092px) and (max-width:1239px){
+    .circle ,.circle1,.circle2,.circle3{
+      width: 34% !important;
+    }      
+  }
+  
+    .bf-tirp-card {
+      width: 24%;
+      height: 100%;
+      background-color: $clr-white;
+
+      border-radius: 3px;
+      box-shadow: 0px 0px 3px rgb(0 0 0 / 25%);
+      &:hover {
+        box-shadow: 0px 0px 5px rgb(0 0 0 / 45%);
+      }
+      > div {
+        height: 100%;
+      }
+
+      .bf-trip-label { 
+        font-size: $font-size-14;
+        font-weight: 700;
+        color: $btn-primary-clr;;
+        background-color: rgb(218, 227, 243);
+        text-align: center;
+      }
+      .bf-tirp-chart {
+        width: 100%;
+        margin-left: 0%;
+        height: 64%;
+        background-color: rgb(218, 227, 243);
+
+        .circle {
+          top: -2%;
+          margin: auto !important;
+          width: 45%;
+          height: 100%;
+          //line-height: 80px;
+          // font-size: 20px;
+          font-weight: bold;
+          -moz-border-radius: 90%;
+          border-radius: 120%;
+          border: solid 6px rgb(132, 151, 176);
+          color: grey;
+          text-align: center;
+          position: relative;
+          justify-content: center;
+          display: flex;
+          background: white;
+          
+        }
+        .overlay {
+          top: -70%;
+          position: relative;
+          display: flex;
+          margin-left: 26.5%;
+        }
+        
+      }
+      .order-full {
+        width: 100%;
+      
+        display: flex;
+        .order-dtl {
+          width: 51%;
+          height:100%;
+          text-align:center;
+          flex-direction: column;
+          font-size: 12px;
+          display:flex;
+          padding-bottom: 10px;
+          &:last-child{
+            width: 49% !important;
+          }
+        }
+
+        .order-dtl2 {
+          width: 50%;
+          height:100%;
+          text-align:center;
+          font-size: 14px;
+           display:flex;
+        }
+      }
+
+      .bf-trip-label1 {
+        font-size:$font-size-14;
+        font-weight: 700;
+        color: $btn-primary-clr;
+        background-color: rgb(226, 240, 217);
+        text-align: center;
+      }
+      .bf-tirp-chart1 {
+        width: 100%;
+        margin-left: 0%;
+        height: 64%;
+        background-color: rgb(226, 240, 217);
+        .circle1 {
+          top: -2%;
+          margin: auto !important;
+          width: 45%;
+          height: 100%;
+          //line-height: 80px;
+          // font-size: 20px;
+          font-weight: bold;
+          -moz-border-radius: 90%;
+          border-radius: 120%;
+          border: solid 6px #548235;
+          color: grey;
+          text-align: center;
+          position: relative;
+          justify-content: center;
+          display: flex;
+          background: white;
+        }
+        .overlay1 {
+          top: -90%;
+          position: relative;
+          display: flex;
+          margin-left: 26.5%;
+        }
+      }
+
+      .bf-trip-label2 {
+        font-size: $font-size-14;
+        font-weight: 700;
+        color: $btn-primary-clr;
+        background-color: rgb(226, 207, 241);
+        text-align: center;
+      }
+      .bf-tirp-chart2 {
+        width: 100%;
+        margin-left: 0%;
+        height: 64%;
+        background-color: rgb(226, 207, 241);
+        .circle2 {
+          top: -2%;
+          margin: auto !important;
+          width: 45%;
+          height: 100%;
+          //line-height: 80px;
+          // font-size: 20px;
+          font-weight: bold;
+          -moz-border-radius: 90%;
+          border-radius: 120%;
+          border: solid 6px  #b17fdb;
+          color: grey;
+          text-align: center;
+          position: relative;
+          justify-content: center;
+          display: flex;
+          background: white;
+        }
+        .overlay2 {
+          top: -90%;
+          position: relative;
+          display: flex;
+          margin-left: 26.5%;
+        }
+      }
+
+      .bf-trip-label3 {
+        font-size: $font-size-14;
+        font-weight: 700;
+        color: $btn-primary-clr;
+        background-color:  #f8cbad;
+        text-align: center;
+      }
+      .bf-tirp-chart3 {
+        width: 100%;
+        margin-left: 0%;
+        height: 64%;
+        background-color: #f8cbad;
+        .circle3 {
+          top: -2%;
+          margin: auto !important;
+          width: 45%;
+          height: 100%;
+          //line-height: 80px;
+          // font-size: 20px;
+          font-weight: bold;
+          -moz-border-radius: 90%;
+          border-radius: 120%;
+          border: solid 6px #f4b183;
+          color: grey;
+          text-align: center;
+          position: relative;
+          justify-content: center;
+          display: flex;
+          background: white;
+        }
+        .overlay3 {
+          top: -90%;
+          position: relative;
+          display: flex;
+          margin-left: 26.5%;
+        }
+      }
+    }
+  }
+  .bf-dashboard-graphs-container {
+    width: 100%;
+    height: 66%;
+    display: flex;
+    margin-left: 2px;
+    justify-content: space-between;
+    margin-top: 10px;
+    .bf-cost-price-container {
+      width: 80%;
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      > div {
+        border-radius: 3px;
+        &.bf-avg-cost {
+          width: 45%;
+          height: 50%;
+          margin-bottom: 10px;
+          background-color: $clr-white;
+          box-shadow: 0px 0px 3px rgb(0 0 0 / 25%);
+          #chart1{
+            min-height: 200px !important;
+            width: 93%;
+            .apexcharts-canvas{
+              svg{ 
+                  text{
+                    &.apexcharts-title-text{
+                      font-size: $font-size-14;
+                      font-weight: 700;
+                      color: $btn-primary-clr;
+                      font-family: $font-family;
+                      text-align: center;
+                    }
+                }
+              }
+              
+            }
+            @media screen and (min-width:780px) and (max-width:900px) {
+              .apexcharts-canvas{
+                svg{
+                  width: 200px !important;
+                  height: 300px !important;
+                  g{
+                    &.apexcharts-inner{
+                      scale: 1.2 1.7;
+                      translate: 7px -16px;
+                    }
+                  }
+                }
+                
+              }
+            }
+            @media screen and (min-width:910px) and (max-width:1092px)  {
+              .apexcharts-canvas{
+                svg{
+                  width: 200px !important;
+                  height: 300px !important;
+                  g{
+                    &.apexcharts-inner{
+                      scale: 0.9 1.4;
+                      translate: 11px -11px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          // text {
+          //   padding-top: 1%;
+          //   font-size:  1vw !important;
+          // }
+        }
+        &.bf-avg-price {
+          width: 51.5%;
+          height: 50%;
+          margin-left: 1.5%;
+          background-color: $clr-white;
+          box-shadow: 0px 0px 3px rgb(0 0 0 / 25%);
+          @media screen and (min-width:1252px) and (max-width:1280px){
+            svg{
+              g{
+                &.geojson-layer{
+                  transform: scaleY(0.9) !important;
+                  translate: -27px 4px !important;
+                  &.geojson-layer-mobile-view{
+                    transform: scaleY(0.9) !important;
+                    translate: -46px 13px !important;
+                  }
+                }
+              }
+            }
+          }
+
+          @media screen and (min-width:1700px) and (max-width:1810px){
+            svg{
+              width: 500px !important;
+              g{
+                &.geojson-layer{  
+                  translate: -14px -8px  !important;
+                  scale: 1.03 !important;
+                  &.geojson-layer-mobile-view{
+                    translate: -194px -35px !important;
+                  }
+                }
+              }
+            }
+          }
+          @media screen and (min-width:1811px) and (max-width:2048px){
+            svg{
+              width: 600px !important;
+              margin-top: -8px !important;
+              g{
+                &.geojson-layer{  
+                  // translate: -14px -6px  !important;
+                  translate: 11px 4px !important;
+                  scale: 1.03;
+                  &.geojson-layer-mobile-view{
+                    translate: -256px -35px !important;
+                  }
+                }
+              }
+            }
+          }
+          @media screen and (min-width:2050px) and (max-width:2731px){
+            svg{
+              width: 800px !important;
+              g{
+                &.geojson-layer{
+                  scale: 1.5 1.3 !important;
+                  translate: -63px 4px !important;
+                  &.geojson-layer-mobile-view{
+                    scale: 2 1.7 !important;
+                    translate: -194px -29px !important;
+                  }
+                }
+              }
+            }
+          }
+
+          @media screen and (min-width:2740px) and (max-width:4097px){
+            svg{
+              width: 1400px !important;
+              g{
+                &.geojson-layer{
+                  scale: 1.8 1.6 !important;
+                  translate: -43px 9px !important;
+                  &.geojson-layer-mobile-view{
+                    scale: 3.4 2.9 !important;
+                    translate: -1036px -589px !important;
+                  }
+                }
+              }
+            }
+          }
+         
+          > div {
+            height: calc(100% - 30px);
+          }
+          .bf-price-label {
+            font-size:$font-size-14 ;
+            font-weight: 700;
+            color: $btn-primary-clr;
+            margin-bottom:-35%;
+            text-align:center;
+            display:flex;
+            justify-content: center;
+            @media screen and (min-width: 1920px) {
+              margin-bottom: -38%;
+            }
+            @media screen and (min-width:780px) and (max-width:900px)  {
+              margin-bottom: -59%;
+            }
+            @media screen and (min-width:910px) and (max-width:1092px)  {
+              margin-bottom: -48%;
+            }
+            @media screen and (max-width:767px) {
+              margin-bottom: -38%;
+              
+            }
+          }
+        }
+        &.bf-top-gallons {
+          background-color: $clr-white;
+          height: calc(50% - 11px);
+          width: 45%;
+          overflow-y: hidden;
+          overflow-x: hidden;
+          box-shadow: 0px 0px 3px rgb(0 0 0 / 25%);
+         
+          > div {
+            width: 80%;
+            margin-left: 8%;
+            // height: 100% !important;
+            align-items: center;   
+            .apexcharts-canvas{
+              svg{ 
+                  text{
+                    &.apexcharts-title-text{
+                      font-size: $font-size-14;
+                      font-weight: 700;
+                      text-align: center;
+                      color: $btn-primary-clr !important;
+                    }
+                }
+              }   
+            } 
+          
+            // .apexcharts-legend.apexcharts-align-center.apx-legend-position-bottom{
+            //   inset: auto -52px 14px!important;
+            //   }
+             
+            > div {
+              width: 100% !important;
+              height: 100% !important;
+             
+            }
+            
+          }
+         
+          
+          
+          .bf-gallons-label {
+            // margin-top: -74px;
+            font-size: 14px;
+            padding-left: 0;
+            // margin-bottom: -25%;
+            color: $btn-primary-clr;
+            text-align: center;
+            font-weight: 700;
+            // display: flex;
+            width: 100%;
+            margin-left: 0;
+            // align-items: center;
+            // justify-content: center;
+            // right: 0;
+            // bottom: 0;
+           
+            
+          }
+        }
+        &.bf-upcoming-dests {
+          width: 51.5%; 
+          margin-left: 1.5%;
+          height: calc(50% - 11px);
+          background-color: $clr-white;
+          box-shadow: 0px 0px 3px rgb(0 0 0 / 25%);
+          overflow-y: auto;
+          .upcoming-dest-head{
+            font-size:  $font-size-14 !important;
+            font-weight: 700 !important;
+            color: $btn-primary-clr !important;
+            &.upcoming-dest-body{
+              font-size: 12px!important;
+              font-weight: 500 !important;
+              
+            }
+            @media screen and (min-width:780px) and (max-width:1092px)  {
+              font-size: 5px !important;
+            }
+          }
+          .apexcharts-canvas{
+            svg{ 
+              @media screen and (min-width:1243px) and (max-width:1366px)  {
+                width: 409px !important;
+              }
+                text{
+                  &.apexcharts-title-text{
+                    font-size: $font-size-14 !important;
+                    font-weight: 700;
+                    text-align: center;
+                    color: $btn-primary-clr !important; 
+                  }
+              }
+            }   
+          }
+          .apexcharts-canvas.apexcharts-theme-light {
+            margin: auto !important;
+          }
+          &.bf-fuel-details-chart-section {
+            text {
+              font-size:  12px !important;
+
+            }
+            @media screen and (min-width:1239px) and (max-width:1300px){
+              text{
+                font-size: 10px !important;
+
+              }
+            }
+            @media screen and (min-width:1090px) and (max-width:1240px){
+              text{
+                font-size: 9px !important;
+
+              }
+            }
+            @media screen and (min-width:910px) and (max-width:1091px){
+              text{
+                font-size: 9px !important;
+              }
+            }
+          }
+        }
+
+        &:hover {
+          box-shadow: 0px 0px 5px rgb(0 0 0 / 45%);
+        }
+        border-radius: 3px;
+      }
+    }
+    .new-internal-table{
+      width:100% !important;
+      display: flex; 
+      justify-content: space-between;
+    }
+    .apexcharts-menu-icon{
+      display: none !important;
+    }
+    .multi-line-graph{
+    padding-top: 10px !important;
+    height: calc(85% - 5px) !important;
+    width:49% !important;
+    overflow-y: hidden !important;
+    padding-bottom: 14px;
+    }
+    .bf-destination-container {
+      width: 25%;
+      height: 100%;
+      justify-content: space-between;
+      display: flex;
+      flex-direction: column;
+      @media screen and (min-width:1252px) and (max-width:1280px){
+        .order-dtl{
+          width: 51% !important; 
+          &:last-child {
+            width: 49% !important;
+          } 
+        } 
+       
+      }
+      .bf-dest-con {
+        width: 100%;
+        height: 50%;
+        background-color: $clr-white;
+        margin-bottom: 10px;
+        border-radius: 3px;
+        box-shadow: 0px 0px 3px rgb(0 0 0 / 25%);
+        &:hover {
+          box-shadow: 0px 0px 5px rgb(0 0 0 / 45%);
+        }
+        > div {
+          height: 100%;
+        }
+        .bf-trip-label {
+          font-size: $font-size-14;
+          font-weight: 700;
+          color: $btn-primary-clr;
+          background-color: rgb(218, 227, 243);
+          text-align: center;
+        }
+        .bf-tirp-chart {
+          width: 100%;
+          margin-left: 0%;
+          height: 65%;
+          background-color: rgb(218, 227, 243);
+          @media screen and (min-width:780px) and (max-width:1279px){
+            height: 70% !important;
+          }
+          @media screen and (min-width:1500px) and (max-width:1700px){
+              height: 69% !important;
+          }
+          @media screen and (min-width:1701px) and (max-width:1820px){
+              height: 73% !important;
+          }
+          @media screen and (min-width:1821px) and (max-width:2048px) {
+              height: 74% !important;
+          }
+          @media screen and (min-width:2049px) and (max-width:2731px) {
+              height: 77% !important;
+          }
+          @media screen and (min-width:2732px) and (max-width:4097px) {
+              height: 83% !important;
+          }
+          @media screen and (min-width:4098px) and (max-width:5463px) {   
+              height: 88% !important;
+          }
+          @media screen and (min-width:5464px) and (max-width:5500px) {
+              height: 91% !important;
+          }
+          .apexcharts-canvas{
+            svg{
+              g{
+                &.apexcharts-xaxis-title{
+                  translate: 54px 39px !important ;
+                @media screen and (min-width:1252px) and (max-width:1280px){
+                  translate: 50px 34px !important;
+                }
+                @media screen and (min-width:1240px) and (max-width:1279px){
+                    translate: 63px 49px  !important;      
+                }
+                @media screen and (min-width:1092px) and (max-width:1239px){
+                  translate: 64px 55px !important;       
+                }
+        
+
+                @media screen and (min-width:1500px) and (max-width:1590px){
+                  translate: 63px 50px !important;
+              }
+              @media screen and (min-width:1591px) and (max-width:1700px){
+                translate: 81px 50px !important;
+            }
+                @media screen and (min-width:1701px) and (max-width:1820px){
+                  translate:83px 71px !important;       
+                }
+                @media screen and (min-width:1821px) and (max-width:2048px) {
+                  translate: 92px 82px  !important;        
+                }
+                @media screen and (min-width:2049px) and (max-width:2559px) {
+                  translate: 103px 114px  !important;       
+                }
+                @media screen and (min-width:2560px) and (max-width:3839px) {
+                  translate: 150px 143px !important;        
+                }
+                @media screen and (min-width:3840px) and (max-width:4097px) {
+                  translate: 166px 187px  !important;             
+                }    
+                @media screen and (min-width:4098px) and (max-width:5463px) {   
+                  translate: 181px 324px  !important;                 
+                       
+                }
+                @media screen and (min-width:5464px) and (max-width:5500px) {
+                  translate: 180px 362px  !important;
+                }
+                }
+              }
+            }
+           }
+  
+          .circle {
+            top: -2%;
+            margin: auto !important;
+            width: 50% !important;
+            height: 100% !important;
+            //line-height: 80px;
+            font-weight: bold;
+            -moz-border-radius: 90%;
+            border-radius: 120%;
+            border: solid 6px rgb(132, 151, 176);
+            color: grey;
+            text-align: center;
+            position: relative;
+            justify-content: center;
+            display: flex;
+            background: white;
+            &.circle-colour{
+              @media screen and (min-width:1280px)and (max-width:1699px) {
+                &:last-child{
+                  top: -2%;
+                  width: 48% !important;
+                  height: 101% !important;
+                }
+
+              }
+              
+            }
+            
+           
+            @media screen and (min-width:1530px)and (max-width:1699px) {
+              width: 48% !important;
+          }
+            @media screen and (min-width:1700px) {
+                width: 54% !important;
+            }
+            @media screen and (min-width:1240px) and (max-width:1279px){
+              width: 30% !important;
+                   
+          }
+          @media screen and (min-width:1092px) and (max-width:1239px){  
+              width: 34% !important;
+               
+          }
+          }
+         
+          .overlay {
+            top: -70%;
+            position: relative;
+            display: flex;
+            margin-left: 26.5%;
+          }
+        }
+        .order-full {
+          width: 100%;
+        
+          display: flex;
+          .order-dtl {
+            width: 51%;
+            height:100%;
+          text-align:center;
+          flex-direction: column;
+           font-size: 12px;
+            display:flex;
+            &:last-child{
+              width: 49% !important;
+            }
+          }
+      }
+      &:last-child {
+        height: calc(50% - 12px);
+        margin-bottom: 1px;
+      }
+        
+      }
+      .bf-space {
+        width: 100%;
+        //height: 67%;
+        margin-top: 1%;
+        // box-shadow: 0px 0px 5px rgb(0 0 0 / 45%);
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .bf-adspace {
+          color: $gray-c2;
+          font-weight: 600;
+          font-size: 16px;
+        }
+      }
+      
+    }
+    &.bf-activity-chart-section {
+      .bf-cost-price-container {
+        div.bf-top-gallons {
+          height: 100% !important;
+          #chart{
+            .apexcharts-canvas{
+              svg{ 
+                  text{
+                    &.apexcharts-title-text{
+                      font-size: $font-size-14;
+                      font-family: $font-family ;
+                      font-weight: 700;
+                      text-align: center;
+                      color: $btn-primary-clr !important;
+                    }
+                }
+              }   
+            }
+          }
+          // .apexcharts-legend.apexcharts-align-center.apx-legend-position-bottom {
+          //   inset: auto 0px 25px !important;
+          // }
+        }
+        .bf-upcoming-dests {
+          height: 100% !important;
+         
+        }
+      }
+    }
+
+   
+  }
+}
+.bf-operator-fbo-TotalGallons{
+  .bf-top-customers-by-tail {
+    @media screen and (min-width:780px)  and (max-width:1092px) {
+      .bf-gallons-label{
+         font-size: 10px !important;
+       }
+      }
+    #chart{
+      @media screen and (min-width:1366px) and (max-width:1900px)  {
+        .apexcharts-legend.apexcharts-align-center.apx-legend-position-bottom{
+          inset: auto 0px 43px !important;
+        }  
+        svg{
+          width: 502px !important;
+                 
+            g{
+              &.apexcharts-inner.apexcharts-graphical{
+                scale: 1 0.7;
+                translate: 4px -14px;
+              }
+        
+          }
+        }
+        .apexcharts-legend.apx-legend-position-bottom.apexcharts-align-center{
+          justify-content: left !important;
+          margin-left:25% !important;
+
+        }
+      }
+      @media screen and (min-width:1900px) and (max-width:2073px)  {
+        .apexcharts-legend.apexcharts-align-center.apx-legend-position-bottom{
+          inset: auto -30px 80px !important;
+        }
+        svg{
+          width: 502px !important;
+          foreignObject{
+            width: 500px !important;
+          }
+            g{
+              &.apexcharts-inner.apexcharts-graphical{
+                scale: 1 0.7;
+                translate: 4px -14px;
+              }
+          }
+        }
+        .apexcharts-legend.apx-legend-position-bottom.apexcharts-align-center{
+          justify-content: left !important;
+          margin-left:2% !important;
+
+        }
+      }
+      @media screen and (min-width:2073px) and (max-width:4050px)  {
+        .apexcharts-legend.apexcharts-align-center.apx-legend-position-bottom{
+          inset: auto 53px 89px !important;
+        }
+        svg{
+          width: 600px !important;  
+          foreignObject{
+            width: 600px !important;
+          }
+            g{
+              &.apexcharts-inner.apexcharts-graphical{
+                scale: 1 0.7;
+                translate: 4px -14px;
+              }
+        
+          }
+        }
+        .apexcharts-legend.apx-legend-position-bottom.apexcharts-align-center{
+          justify-content: left !important;
+          margin-left:2% !important;
+
+        }
+      }
+      @media screen and (min-width:4098px) and (max-width:5450px)  {
+        .apexcharts-legend.apexcharts-align-center.apx-legend-position-bottom{
+          inset: auto 236px 129px !important;
+        }
+        svg{
+          width: 1000px !important;
+          foreignObject{
+            width: 1000px !important;
+          }
+            g{
+              &.apexcharts-inner.apexcharts-graphical{
+                scale: 1 0.7;
+                translate:  28px -14px;
+              }
+        
+          }
+        }
+        .apexcharts-legend.apx-legend-position-bottom.apexcharts-align-center{
+          justify-content: left !important;
+          margin-left:2% !important;
+
+        }
+      }
+      @media screen and (min-width:5464px)  {
+        .apexcharts-legend.apexcharts-align-center.apx-legend-position-bottom{
+          inset: auto 418px 174px !important;
+        }
+        svg{
+          width: 1500px !important;
+          foreignObject{
+            width: 1500px !important;
+          }
+            g{
+              &.apexcharts-inner.apexcharts-graphical{
+                scale: 1 0.7;
+                translate: 38px -14px;
+              }
+        
+          }
+        }
+        .apexcharts-legend.apx-legend-position-bottom.apexcharts-align-center{
+          justify-content: left !important;
+          margin-left:2% !important;
+
+        }
+      }
+      @media screen and (min-width:910px)  and (max-width:1360px) {
+        .apexcharts-legend.apexcharts-align-center.apx-legend-position-bottom{
+          inset: auto 23px 66px !important;
+        }
+        svg{
+          width: 502px !important;
+            g{
+              &.apexcharts-inner.apexcharts-graphical{
+                scale: 1 0.6;
+                translate: 4px -14px;
+              }
+        
+          }
+        }
+        .apexcharts-legend.apx-legend-position-bottom.apexcharts-align-center{
+          justify-content: left !important;
+          margin-left:21% !important;
+
+        }
+       
+      }
+      @media screen and (min-width:800px)  and (max-width:915px) {
+       .bf-gallons-label{
+          font-size: 10px;
+        }
+        .apexcharts-legend.apexcharts-align-center.apx-legend-position-bottom{
+          inset: auto 0px 26px !important;
+        }
+        svg{
+          width: 300px !important;
+            g{
+              &.apexcharts-inner.apexcharts-graphical{
+                scale: 1 0.7;
+                translate: 4px -5px;
+              }
+        
+          }
+        }
+        .apexcharts-legend.apx-legend-position-bottom.apexcharts-align-center{
+          justify-content: left !important;
+          margin-left:24% !important;
+
+        }
+       
+      }
+      @media screen and (min-width:770px)  and (max-width:785px) {
+        .bf-gallons-label{
+           font-size: 10px;
+         }
+         .apexcharts-legend.apexcharts-align-center.apx-legend-position-bottom{
+          inset: auto 0px 26px !important;
+        }
+         svg{
+           width: 300px !important;
+          
+             g{
+               &.apexcharts-inner.apexcharts-graphical{
+                 scale: 1 1.2;
+                 translate: 4px -14px;
+               }
+         
+           }
+         }
+         .apexcharts-legend.apx-legend-position-bottom.apexcharts-align-center{
+           justify-content: left !important;
+           margin-left:6% !important;
+ 
+         }
+        
+       }
+    }
+  }
+}
+
+.bf-scroll-imp {
+  .bf-top-customers-by-tail {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    padding-top: 20px;
+    .bf-gallons-label {
+      position: absolute;
+      top: 2px;
+      width: 100%;
+      text-align: center;
+      height: initial !important;
+    }  
+    #chart {
+      margin-top: -20px;
+       
+    }
+    .apexcharts-legend.apexcharts-align-center.apx-legend-position-bottom {
+      inset: auto -15px 17px !important;
+    }
+  }
+}
+
+.apextop{
+  margin-top:-25%;
+}
+
+.gallonlabel{
+
+    text-align: center;
+  font-size: medium;
+  font-weight: bold;
+  color: green;
+
+}
+
+.gallonsaving{
+  text-align: center;
+  font-size: medium;
+ font-weight: 600;
+  color: green;
+  
+}
+
+
+.fuellabel{
+  text-align: center;
+  font-size: medium;
+  font-weight: bold;
+  color: red;
+  
+}
+
+.fuelsaving{
+  text-align: center;
+  font-size: medium;
+  font-weight: 600;
+  color: red;
+  
+}
+
+.savingslabel{
+  text-align: center;
+  font-size: medium;
+  font-weight: bold;
+  color: green;
+  
+}
+
+
+
+.saving {
+  text-align: center;
+  font-size: medium;
+  font-weight: 600;
+  color: green;
+}
+
+.modal {
+  background-color: "black";
+  border-radius: 5;
+  max-width: 500;
+  min-height: 300;
+  margin: "0 auto";
+  padding: 30;
+}
+
+.rec .rec-pagination {
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  margin: -17rem 17rem 0 0;
+}
+
+.rec .rec-dot {
+  position: relative;
+  background-color: var(--btn-scroll-color);
+  border: none;
+}
+.rec .rec-arrow-down,
+.rec .rec-arrow-up {
+  visibility: hidden;
+}
+.rec .rec-dot_active {
+  background-color: var(--primary-color);
+  border: none;
+}
+.rec .rec-arrow-down,
+.rec .rec-arrow-up {
+  visibility: hidden;
+}
+
+.circle-count{ margin-top: 10px !important; position: absolute !important; z-index: 1 !important;}
+.bf-chart-circle{ position: absolute}
+
+.circle-colour{
+  border: solid 6px #b5b364 !important;
+  width:144px !important;
+  height: 144px !important;
+  margin-left: 27% !important;
+}
+.circle-colour-red{
+  width:144px !important;
+  height: 144px !important;
+  border: solid 6px #c96d7e !important;
+  margin-left: 27% !important;
+  
+}
+.bf-trip-label-5{
+  background-color: #fbfad6 !important;
+}
+.bf-tirp-chart-5{
+  background-color: #fbfad6 !important;
+}
+.bf-trip-label-4{
+  background-color: #fbd6dd !important;
+}
+.bf-tirp-chart-4{
+  background-color: #fbd6dd !important;
+}
+.apexcharts-toolbar{
+  display:none !important
+}
+
+// #gauge-chart2 {
+//     .text-group {
+//         transform: translate(35%, 39%) !important;
+//         text {
+//             font-size: 16px !important;
+//         }
+//     }
+// }
+@media screen and (min-width: 768px) and (max-width: 1250px) {
+.bf-dashboard-statistics  {
+    height: 100%;
+    overflow-y: auto;
+    .bf-trip-card-details{
+      flex-wrap: wrap;
+      width: 100%;
+      height: 70%;
+      min-height: 400px;
+      justify-content: space-between !important;
+      .bf-tirp-card{
+        width:49% ;
+        margin-bottom: 10px;
+        height: 50%;
+        .circle ,.circle1,.circle2,.circle3{
+          
+          min-height: 111px;
+          margin: auto !important;
+          // width: 27% !important;
+          min-width: 110px;
+          height: 94% !important;
+          
+        }
+      }
+    }
+    .bf-dashboard-graphs-cantainer-chart{
+      flex-direction: column!important;
+      height: 69%;
+      min-height: 623px;
+      .bf-cost-price-container{
+        .bf-upcoming-dests{
+          .bf-fuel-details-chart-section{
+            text {
+               font-size: 7px !important; 
+            }
+          }
+        }
+      }
+      .bf-cost-price-container-chart{
+        margin-top: 10px;
+        height: 66%;
+        min-height: 400px;
+        width: 100%;
+        justify-content: space-between;
+        
+        .bf-avg-cost{
+          width: 49% !important;
+        }
+        .bf-avg-price{
+          margin-left:0 auto !important;
+          width: 49% !important;
+        }
+        .bf-top-gallons{
+          width: 49% !important;
+        }
+        .bf-upcoming-dests{
+          margin-left:0 auto !important;
+          width: 49% !important;
+        }
+      }
+      .bf-destination-container{
+        flex-direction: row;
+        width: 100%;
+        height: 34%;
+        min-height: 200px;
+        margin-top: 10px;
+        justify-content: space-between;
+        .bf-dest-con{
+          height: 100%;
+          width: 49%;
+          .bf-tirp-chart{
+            .circle{
+              min-height: 111px;
+              margin:  auto!important;
+              // width: 27% !important;
+              min-width: 110px;
+            
+              height: 94% !important;
+            }
+          }
+          &:last-child {
+            height: 100%;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    &.bf-scroll-imp {
+      .bf-dashboard-graphs-cantainer-chart {
+        flex-direction: column-reverse !important;
+      }
+    }
+  }
+}
+
+.bf-scroll-imp {
+.bf-top-customers-by-tail {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  padding-top: 20px;
+  .bf-gallons-label {
+    position: absolute;
+    top: 2px;
+    width: 100%;
+    text-align: center;
+    height: initial !important;
+  }  
+  #chart {
+    margin-top: -20px;
+    svg{
+      g{
+        &.apexcharts-inner.apexcharts-graphical{
+          translate: 2px 6px !important;
+        }
+      }
+    }
+
+  }
+  .apexcharts-legend.apexcharts-align-center.apx-legend-position-bottom {
+    inset: auto -15px 17px !important;
+    @media screen and (min-width: 1920px) {
+      inset: auto -15px -1px !important;
+    }
+    @media screen and (min-width:1252px) and (max-width:1362px){
+      inset: auto -24px 17px !important;
+    }
+  }
+}
+}
+
+.apextop{
+  margin-top:-25%;
+}
+
+.gallonlabel{
+
+    text-align: center;
+  font-size: medium;
+  font-weight: bold;
+  color: green;
+
+}
+
+.gallonsaving{
+  text-align: center;
+  font-size: medium;
+ font-weight: 600;
+  color: green;
+  
+}
+
+
+.fuellabel{
+  text-align: center;
+  font-size: medium;
+  font-weight: bold;
+  color: red;
+  
+}
+
+.fuelsaving{
+  text-align: center;
+  font-size: medium;
+  font-weight: 600;
+  color: red;
+  
+}
+
+.savingslabel{
+  text-align: center;
+  font-size: medium;
+  font-weight: bold;
+  color: green;
+  
+}
+
+
+
+.saving {
+  text-align: center;
+  font-size: medium;
+  font-weight: 600;
+  color: green;
+}
+
+.modal {
+  background-color: "black";
+  border-radius: 5;
+  max-width: 500;
+  min-height: 300;
+  margin: "0 auto";
+  padding: 30;
+}
+
+.rec .rec-pagination {
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  margin: -17rem 17rem 0 0;
+}
+
+.rec .rec-dot {
+  position: relative;
+  background-color: var(--btn-scroll-color);
+  border: none;
+}
+.rec .rec-arrow-down,
+.rec .rec-arrow-up {
+  visibility: hidden;
+}
+.rec .rec-dot_active {
+  background-color: var(--primary-color);
+  border: none;
+}
+.rec .rec-arrow-down,
+.rec .rec-arrow-up {
+  visibility: hidden;
+}
+
+.circle-count{margin-top: 10px !important; position: absolute !important; z-index: 1 !important;}
+.bf-chart-circle{
+   position: absolute;
+   .apexcharts-canvas{
+    svg{
+    
+      @media screen and (min-width:1600px) {
+        height: 400px !important;
+      }
+      g{
+        line{
+          &.apexcharts-xaxis-tick{
+            opacity: 0 !important;
+          }
+        }
+        &.apexcharts-series{
+          translate: 0px -12.7px;
+          
+        @media screen and (min-width:1240px) and (max-width:1279px){
+            translate:  4px -8px !important; 
+            transform: scaleX(0.93);     
+        }
+        @media screen and (min-width:1092px) and (max-width:1239px){
+          translate:  4px -8px !important; 
+          transform: scaleX(0.93);          
+        }
+
+        @media screen and (min-width:1500px) and (max-width:1700px){
+          translate:  3px -6px !important;  
+          transform: scaleX(0.95);   
+        }
+       
+        @media screen and (min-width:1701px) and (max-width:1820px){
+          translate:  8px 9px !important;  
+          transform: scaleX(0.9);          
+        }
+        @media screen and (min-width:1821px) and (max-width:2048px) {
+          translate:  8px 21px !important;  
+          transform: scaleX(0.9);           
+        }
+        @media screen and (min-width:2049px) and (max-width:2731px) {
+          translate:  20px 42px !important;  
+          transform: scaleX(0.86);          
+        }
+        @media screen and (min-width:2732px) and (max-width:4097px) {
+          translate:  24px 93px  !important;
+          transform: scaleX(0.85);                
+        }
+        
+        @media screen and (min-width:4098px) and (max-width:5463px) {   
+          translate:  0px 220px  !important;
+          transform: scaleX(0.95);                     
+               
+        }
+        @media screen and (min-width:5464px) and (max-width:5500px) {
+          translate:  0px 265px !important;  
+          transform: scaleX(0.95);   
+        }
+        }
+
+        &.apexcharts-xaxis-title{
+          translate: 47px 37px !important;
+          text{
+            font-size:11px !important ;
+            font-family: $font-family;
+          }
+         
+        @media screen and (min-width:1252px) and (max-width:1280px){
+          translate: 45px 34px !important;
+        }
+        @media screen and (min-width:1240px) and (max-width:1279px){
+            translate: 64px 52px !important;      
+        }
+        @media screen and (min-width:1092px) and (max-width:1239px){
+          translate: 64px 55px !important;       
+        }
+
+        @media screen and (min-width:1500px) and (max-width:1590px){
+            translate:  57px 50px !important;
+        }
+        @media screen and (min-width:1591px) and (max-width:1700px){
+          translate:  71px 50px !important;
+      }
+       
+        @media screen and (min-width:1701px) and (max-width:1820px){
+          translate:  79px 72px !important;       
+        }
+        @media screen and (min-width:1821px) and (max-width:2048px) {
+          translate: 88px 79px !important;        
+        }
+        @media screen and (min-width:2049px) and (max-width:2559px) {
+          translate: 100px 102px !important;        
+        }
+        @media screen and (min-width:2560px) and (max-width:3839px) {
+          translate: 142px 147px !important;        
+        }
+        @media screen and (min-width:3840px) and (max-width:4097px) {
+          translate:  155px 162px  !important;            
+        }
+        
+        @media screen and (min-width:4098px) and (max-width:5463px) {   
+          translate: 180px 307px   !important;                 
+               
+        }
+        @media screen and (min-width:5464px) and (max-width:5500px) {
+          translate: 180px 366px  !important;
+        }
+        }
+      }
+    }
+   }
+  }
+
+.circle-colour{
+  border: solid 6px #b5b364 !important;
+  width:144px !important;
+  height: 144px !important;
+  margin-left: 27% !important;
+}
+.circle-colour-red{
+  width:144px !important;
+  height: 144px !important;
+  border: solid 6px #c96d7e !important;
+  margin-left: 27% !important;
+  
+}
+.bf-trip-label-5{
+  background-color: #fbfad6 !important;
+}
+.bf-tirp-chart-5{
+  background-color: #fbfad6 !important;
+}
+.bf-trip-label-4{
+  background-color: #fbd6dd !important;
+}
+.bf-tirp-chart-4{
+  background-color: #fbd6dd !important;
+}
+.apexcharts-toolbar{
+  display:none !important
+}
+
+// #gauge-chart2 {
+//     .text-group {
+//         transform: translate(35%, 39%) !important;
+//         text {
+//             font-size: 16px !important;
+//         }
+//     }
+// }
+@media screen and (min-width: 768px) and (max-width: 1250px) {
+.bf-dashboard-statistics  {
+    height: 100%;
+    overflow-y: auto;
+    .bf-trip-card-details{
+      flex-wrap: wrap;
+      width: 100%;
+      height: 70%;
+      min-height: 400px;
+      justify-content: space-between !important;
+      .bf-tirp-card{
+      width:49% ;
+      margin-bottom: 10px;
+      height: 50%;
+      .circle ,.circle1,.circle2,.circle3{
+        
+        min-height: 111px;
+        margin: auto !important;
+        // width: 30% !important;
+        min-width: 110px;
+        height: 94% !important;
+        
+      }
+      }
+    }
+    .bf-dashboard-graphs-cantainer-chart{
+      flex-direction: column-reverse;
+      height: 69%;
+      min-height: 623px;
+      .bf-cost-price-container{
+        .bf-upcoming-dests{
+          .bf-fuel-details-chart-section{
+            text {
+               font-size: 7px !important; 
+          }
+          }
+        }
+      }
+      .bf-cost-price-container-chart{
+        margin-top: 10px;
+        height: 66%;
+        min-height: 400px;
+        width: 100%;
+        justify-content: space-between;
+        
+        .bf-avg-cost{
+          width: 49% !important;
+        }
+        .bf-avg-price{
+          margin-left:0 auto !important;
+          width: 49% !important;
+        }
+        .bf-top-gallons{
+          width: 49% !important;
+        }
+        .bf-upcoming-dests{
+          margin-left:0 auto !important;
+          width: 49% !important;
+        }
+      }
+      .bf-destination-container{
+        flex-direction: row;
+        width: 100%;
+        height: 34%;
+        min-height: 200px;
+        margin-top: 10px;
+        justify-content: space-between;
+      .bf-dest-con{
+        height: 100%;
+        width: 49%;
+        .bf-tirp-chart{
+          .circle{
+            min-height: 111px;
+            margin:  auto!important;
+            // width: 27% !important;
+            min-width: 110px;
+           
+            height: 94% !important;
+          }
+        }
+          &:last-child {
+            height: 100%;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (min-width:768px) and (max-width:932px) {
+  .bf-dashboard-statistics.bf-dashboard-graphs-container.bf-cost-price-container.bf-avg-cost {
+    .apexcharts-inner.apexcharts-graphical{
+      scale: 1 2 !important;
+
+    }
+  }
+}
+@media screen and (min-width:350px) and (max-width:767px) {
+  .bf-dashboard-statistics{
+  &.bf-operator-fbo-TotalGallons{
+    height: 100%;
+    overflow-y: auto;
+    .bf-trip-card-details{
+      flex-wrap: wrap;
+      min-height: 287px;
+      margin-top: 10%;
+      width: 100%;
+      height: 70%;
+      justify-content: space-evenly!important;
+    }
+    .bf-tirp-card{
+      width: 38% !important;
+      margin-bottom: 10px;
+      height: 50% !important;
+      .circle ,.circle1,.circle2,.circle3{ 
+        min-height: 82px;
+        margin: auto !important;
+        width: 27% !important;
+        min-width: 83px;
+        height: 94% !important;
+      }
+      .order-full .order-dtl{
+        font-size: 7px !important;
+      }
+    }
+    .bf-dashboard-graphs-cantainer-chart{
+      flex-direction: column;
+      height: 69%;
+      min-height: 845px;
+      margin-bottom: 10%;
+      .bf-cost-price-container-chart{
+        flex-direction: column!important;
+        flex-wrap: nowrap!important;
+        margin-top: 10px;
+        height: 50%;
+        margin-left: 8%;
+        min-height: 700px;
+        width: 100%;
+        justify-content: space-between;
+        > div {
+          &.bf-avg-cost{
+            width: 84% !important;
+            #chart1 {
+              min-height: 0 !important;
+              svg{
+                translate:10px 10px !important;
+              }
+            }
+          }
+          &.bf-avg-price{
+            margin-left:0  !important;
+            width: 84% !important;
+            svg{
+              .geojson-layer{
+                translate: 16px 7px !important;
+                scale: 0.8 !important;
+
+              }
+              .geojson-layer{
+                &.geojson-layer-mobile-view {
+                  scale:0.8 !important;
+                  translate:-20px 2px  !important;
+                }
+
+              } 
+            }
+          }
+          &.bf-top-gallons{
+            width: 84% !important;
+            margin-top: 10px;
+            #chart{
+              .apexcharts-legend.apexcharts-align-center.apx-legend-position-bottom{
+                inset: auto 0px 35px !important;
+              }
+              svg{
+                  g{
+                    &.apexcharts-inner.apexcharts-graphical{
+                      scale: 1 0.7;
+                      translate: -9px -14px !important;
+                    }
+                }
+              }
+              .apexcharts-legend.apx-legend-position-bottom.apexcharts-align-center{
+                justify-content: left !important;
+                margin-left:20% !important;
+      
+              }
+            }
+            .bf-gallons-label{
+              font-size: 10px !important;
+            }
+          }
+          &.bf-upcoming-dests{
+            margin-left:0 !important;
+            width: 84% !important;
+            margin-top: 10px;
+            .upcoming-dest-head {
+              font-size: 9px !important;
+            }
+          }
+        }
+      }
+      .bf-destination-container{
+        width: 100%;
+        height: 50% !important;
+        min-height: 129px;
+        margin-top: 10px;
+        flex-direction: row;
+        justify-content: space-evenly;
+      .bf-dest-con{
+        height: 100% !important;
+        width: 38% !important;
+        }
+        &:last-child {
+          height: 100% !important;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+}

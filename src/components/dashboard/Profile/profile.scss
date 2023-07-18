@@ -1,0 +1,17 @@
+.profile-popover {
+  border: none !important;
+  box-shadow: 0px 3px 6px #00000029;
+  background: #FFFFFF;
+  .popover-body {
+    color: #051B2E;
+    font-size: 12px;
+    width: 150px;
+    padding: 5px;
+    div {
+      margin: 8px;
+    }
+  }
+  .popover-arrow {
+    display: none !important;
+  }
+}

@@ -1,0 +1,285 @@
+
+@import "../../assets/styles/constants.scss";
+
+.bf-fbo-signup-section {
+    .login-form {
+        &.bf-fbo-signup {
+        form {
+            width: 95%;
+            max-width: 550px;
+            }
+        }
+    }
+    
+    .bg-image-container {
+        background-image: url('../../assets/images/operator-bg.png') !important;
+    }
+    
+    .bf-btn-left0i {
+        margin-left: 0 !important;
+    }
+    .mb-4.col-md-6 {
+        margin-bottom: 0.5rem !important;
+    }
+    .copy-rights {
+        margin-bottom: 25px;
+        font-size: 14px !important;
+    }
+    .bf-fbo-enrollement-header {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        position: relative;
+        .nav-link {
+            position: absolute;
+            right: 50px;
+            top: 14px;
+        }
+    }
+}
+.bf-login-right-sec{
+    padding-top: 110px;
+    .bf-banner-img-placeholder {
+
+        color: #FFF;
+    
+        font-size: 36px;
+    
+        letter-spacing: 5px;
+    
+        font-weight: 600;
+    
+        text-align: center;
+    
+        margin-bottom: 45px;
+    
+    }
+    
+    ul {
+    
+        list-style-image: url('../../assets/images/bullet-icon.png');
+    
+        width: 70%;
+        
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    
+        li {
+    
+            color: #FFF;
+    
+            margin-bottom: 10px;
+    
+            &::marker {
+    
+                margin-top: 2px;
+    
+            }
+            span {
+                margin-left: 10px;
+                display: flex;
+                margin-bottom: 15px;
+            }
+    
+        }
+    
+    }
+}
+.bf-mrgt20 {
+    margin-top: 20px;
+}
+
+.accordion-body {
+    > .row {
+        &.bf-add-new {
+            &:first-child {
+                    > div {
+                    &:first-child {
+                        .add-more {
+                             display: none;
+                        }
+                    }
+                    .remove {
+                        display: flex !important;
+                    }
+                }
+            }
+        }
+    }
+}
+.bf-mrgl30 {
+    margin-left: 30px;
+}
+.bf-checkbox {
+    position: relative;
+    input {
+        background-image: none !important;
+    }
+}
+
+
+
+.bf-accordion-add {
+    .row {
+        position: relative;
+        .add-more,.remove {
+            position: absolute;
+            bottom: -5px;
+        }
+        .remove {
+            left: 150px;
+        }
+        &:first-child {
+            .remove {
+                display: none;
+            }
+        }
+    }
+    
+    &.bf-add-new-section {
+        .row {
+            position: relative;
+            .add-more,.remove {
+                position: absolute;
+                bottom: -7px;
+            }
+            .remove {
+                left: 150px;
+            }
+            &:first-child {
+                .remove {
+                    display: flex;
+                    left: 0px;
+                }
+                .add-more {
+                    display: none;
+                }
+            }
+            &:not(:first-child) {
+                margin-top: 30px !important;
+            }
+            &:not(:last-child) {
+                margin-top: 30px !important;
+                .add-more {
+                    display: none;
+                }
+                .remove {
+                    display: flex;
+                    left: 0px;
+                }
+            }
+            &:first-child {
+                margin-top: 0px !important;
+            }
+        }
+    }
+}
+
+.accordion .accordion-item .accordion-body {
+    &.bf-accordion-add {
+        padding-bottom: 10px !important;
+    }
+}
+
+@media screen and (min-width:1700px) {
+    .bf-fbo-enrollment-section {
+        &.bf-fbo-signup-section {
+            .login-form {
+                &.bf-fbo-signup {
+                    form {
+                        width: 95%;
+                        max-width: 700px;
+                        .bf-mrgt2px {
+                            margin-top: 2px;
+                        }
+                        .bf-mrg-20px {
+                            margin-top: 20px;
+                        }
+                        .mb-4{
+                            &.col-md-6 {
+                                select {
+                                    height: 50px;
+                                }
+                                &:nth-child(odd) {
+                                    padding-right: 30px;    
+                                    padding-left: 0;
+                                }
+                                &:nth-child(even) {
+                                    padding-left: 30px;
+                                    padding-right: 0;
+                                }
+                            }
+                        }
+                        button.bf-btn-login {
+                            width: 200px !important;
+                            font-size: 16px;
+                            &:hover {
+                                background-color: $hover-clr;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .bf-fbo-enrollment-section {
+        .login-form {
+            padding: 0 !important;
+            justify-content: flex-start !important;
+           .navbar {
+                display: none;
+            }
+            form {
+                margin-top: 30px;
+                height: calc(100% - 120px);
+                max-width: 100%;
+                width: 100% !important;
+                padding-left: 30px;
+                padding-right: 30px;
+                overflow-y: auto;
+                h1 {
+                    font-size: 20px !important;
+                    justify-content: center;
+                    font-weight: 600;
+                    position: absolute !important;
+                    width: calc(100% - 60px);
+                    background-color: $clr-white;
+                    z-index: 2;
+                }
+                > .row {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    margin-top: 50px !important;
+                    > div {
+                        // padding-left: 0;
+                        padding-right: 0;
+                        &:first-child {
+                            height: calc(100% - 80px);
+                            overflow-y: auto;
+                        }
+                        input,
+                        select {
+                            height: 44px;
+                        }
+                        .mb-4.col-md-6 {
+                            margin-bottom: 0 !important;
+                            padding-right: 0;
+                            &.bf-mrgt2px {
+                                margin-bottom: 22px !important;
+                            }
+                        }
+                    }
+                }
+                .copy-rights {
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}

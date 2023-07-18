@@ -1,0 +1,369 @@
+@import "../../assets/styles/constants.scss";
+.bf-side-menu {
+    padding-right: 0 !important;
+    > div {
+        width: 100% !important;
+    }
+    .bf-sideBar {
+        .bf-sidebar-logo {
+            width: 75%;
+            max-width: 210px;
+            min-width: 180px;
+            margin: 31px auto max(min(7vh, 10em), 4rem) auto;
+            img {
+                width: 100%;
+            }
+        }
+       .order-btn {
+            width: fit-content;
+            min-height: 50px;
+            font-size: $font-size-16;
+            font-weight: 600;
+            box-shadow: $menu-button-shadow;
+            width: 75% !important;
+            max-width: 210px;
+            min-width: 180px;
+            &:hover {
+                box-shadow: $menu-button-shadow !important;
+            }
+        }
+        .bf-side-tabs-container {
+            height: 70vh;
+            overflow-y: auto;
+            margin-top: max(min(5vh, 5em), 1rem);
+            .bf-side-tabs {
+                width: 18%;
+                max-width: 200px;
+                min-width: 180px;
+                font-size: $font-size-16;
+                color: $btn-primary-clr;
+                margin: 0 auto 0 auto;
+                padding-top: 0;
+                padding-bottom: 0;
+                @media screen and (min-width:1700px) {
+                    min-width: 210px;
+                    max-width: 210px;
+                }
+                .bf-tab-icon {
+                    min-width: 30px !important;
+                    color: $btn-primary-clr;
+                    font-size: 20px;
+                    margin-right: 7px;
+                }
+                li {
+                    > div { 
+                        padding-left: 0;
+                        opacity: 0.6;
+                        padding-top: 6px;
+                        padding-bottom: 6px;
+                        padding-right: 0;
+                        @media screen and (min-width: 1900px){
+                            padding-top: 8px;
+                            padding-bottom: 8px;
+                        }
+                        .bf-menu-item-text {
+                            span {
+                                font-family: $font-family;
+                                font-size: 14px;
+                                text-transform: capitalize;
+                                @media screen and (min-width: 1900px){
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                        &.bf-menu-account, &.bf-menu-order {
+                            .bf-tab-icon {
+                                svg {
+                                    font-size: 25px;
+                                    margin-left: -3px;
+                                }
+                            }
+                        }
+                        &.bf-menu-reports {
+                            img {
+                                width: 18px;
+                            }
+                        }
+                        &.bf-menu-auditLogs {
+                            img {
+                                width: 22px;
+                            }
+                        }
+                        &.bf-menu-clientOnboarding {
+                            img {
+                                width: 22px;
+                            }
+                        }
+                        &.bf-active-menu-item {
+                            opacity: 1;
+                            .bf-tab-icon {
+                                font-size: 21px;
+                            }
+                            > div {
+                                &.bf-menu-item-text {
+                                    span {
+                                        font-size: 15px;
+                                        @media screen and (min-width: 1900px){
+                                            font-size: 19px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                
+                .bf-menu-actions {
+                    padding-left: 37px;
+                    position: relative;
+                    &::before {
+                        height: 97%;
+                        width: 1px;
+                        content: '';
+                        left: 11px;
+                        top: -12px;
+                        background-color: #686868;
+                        position: absolute;
+                    }
+                    li {
+                        position: relative;
+                        &::before {
+                            height: 1px;
+                            width: 20px;
+                            content: '';
+                            left: -26px;
+                            top: 50%;
+                            background-color: #686868;
+                            position: absolute;
+                        }
+                        > div {
+                            opacity: 1 !important;
+                            margin-top: 0;
+                            margin-bottom: 0;
+                            span {
+                                font-size: 12px !important;
+                                display: flex;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                    &.bf-internal-user-actions {
+                        &::before {
+                            height: 93%;
+                            top: -12px;
+                            @media screen and (min-width:1920px) {
+                                height: 88%;
+                            }
+                        }
+                        li {
+                            &::before {
+                                top: 50%;
+                            }
+                        }
+                    }
+                    &.bf-operator-actions {
+                        li {
+                            &::before {
+                                top: 51%;
+                            }
+                        }
+                    }
+                    &.bf-fbo-actions {
+                        &::before {
+                            left: 10.5px;
+                        }
+                        li {
+                            &::before {
+                                top: 51%;
+                                left: -26.5px;
+                            }
+                        }
+                    }
+                    .bf-disable-add {
+                        span {
+                            cursor: default !important;
+                            color: $disabled-clr !important;
+                        }
+                    }
+                }
+            }
+        }
+        .bf-fuel-pricing,
+        .bf-client-portal-icon,
+        .bf-audit-log-icon,
+        .bf-admin-icon {
+            width: 22px;
+        }
+    }
+    .MuiDrawer-paper {
+        width: 18% !important;
+        max-width: 350px;
+        min-width: 200px !important;
+        border-right: 0 !important;
+    }
+    
+}
+
+.bf-side-tabs-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.bf-side-tabs-container::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3); 
+    border-radius: 8px;
+}
+
+.bf-side-tabs-container::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.8); 
+}
+// .MuiDrawer-paper::-webkit-scrollbar {
+//     width: 2em;
+//     height: 2em
+// }
+// .MuiDrawer-paper::-webkit-scrollbar-button {
+//     background: #ccc
+// }
+// .MuiDrawer-paper::-webkit-scrollbar-track-piece {
+//     background: #888
+// }
+// .MuiDrawer-paper::-webkit-scrollbar-thumb {
+//     background: #eee
+// }​
+.bf-slideIn {
+    display: none;
+    position: absolute;
+    right: 5px;
+    top: calc(50% - 10px);
+    cursor: pointer;
+    width: 12px;
+}
+.bf-fuel-order-nav-links {
+    display: none;
+    .bf-side-tabs {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    .bf-fuel-order-hamburger-menu {
+        font-size: 25px;
+        cursor: pointer;
+    }
+    .bf-fuel-order-menu-items-list {
+        margin-top: max(5vw,115px);        
+        > div {
+            > div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                cursor: pointer;
+                .bf-fuel-pricing,
+                .bf-client-portal-icon,
+                .bf-audit-log-icon {
+                    width: 22px;
+                }
+                .bf-tab-icon {
+                    font-size: 22px;
+                }
+                .bf-menu-account {
+                    .bf-tab-icon {
+                        svg {
+                            font-size: 24px;
+                        }
+                    }
+                }
+                .bf-menu-clientOnboarding {
+                    .bf-tab-icon {
+                        img {
+                            height: 22px;
+                        }
+                    }
+                }
+                .bf-menu-item-text {
+                    visibility: hidden;
+                    font-size: 12px;
+                    text-align: center;
+                    text-transform: capitalize;
+                    line-height: 13px;
+                }
+                &:hover {
+                    .bf-menu-item-text {
+                        visibility: visible;
+                    }   
+                }
+            }
+        }
+    }
+}
+.bf-fuel-order-container {
+    .bf-slideIn { 
+        display: flex;
+    }
+    .bf-side-menu {
+        .MuiDrawer-paper {
+            margin-left: -500px;
+            transition: margin-left 0.25s linear 0s;
+        }
+        &.bf-show-side-menu {
+            .MuiDrawer-paper {
+                margin-left: 0px;
+            }   
+        }
+    }
+    .bf-side-menu {
+        padding: 15px 0px 10px;
+        > div {
+            &:first-child {
+                width: initial !important;
+            }
+        }
+    }
+    .menu-list {
+        width: 75px !important;
+        min-width: 0 !important;
+    }
+    .bf-side-menu .MuiDrawer-paper {
+        // width: 0 !important;
+        // margin: 0 !important;
+        // min-width: 0 !important;
+    }
+    .bf-sideBar {
+        .bf-side-tabs-container {
+            .bf-side-tabs {
+                // width: 0 !important;
+                // min-width: 0 !important;
+            }
+        }
+    }
+    .bf-fuel-order-nav-links {
+        display: block;
+    }
+}
+
+@media screen and (min-width:1920px) {
+
+    .bf-fuel-order-menu-items-list {
+        margin-top: max(5vw,160px) !important;  
+    }
+}
+@media screen and (min-width:350px) and (max-width:767px) {
+    .bf-side-menu {
+        .bf-sideBar {
+            .bf-side-tabs-container {
+                .bf-side-tabs {
+                    li {
+                        > div {
+                            &.bf-hide-on-mobile {
+                                display: none !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,118 @@
+@import "../../assets/styles/constants.scss";
+
+.bf-mobile-footer-menus {
+    display: none;
+    position: fixed;
+    height: 75px;
+    z-index: 1222;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #E5E4E4;
+    color: $btn-primary-clr;
+    font-size: 12px;
+    padding-left: 31px;
+    padding-right: 18px;
+    .bf-tab-active {
+        // border-top: 1.5px solid $btn-primary-clr;
+    }
+    > div {
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        padding-top: 10px;
+        padding-bottom: 3px;
+        &:not(:nth-child(3)) {
+            > img {
+                margin-top: 12px;
+                &.bf-footer-ordres {
+                    height: 40px;
+                }
+            }
+            span {
+                margin-top: 2px;
+            }
+        }
+        &.bf-more {
+            justify-content: space-between !important;
+            img {
+                margin-top: 19px;
+            }
+            span {
+                margin-top: 12px !important;
+            }
+        }
+        &.d-flex-column {
+            cursor: pointer;
+        }
+    }
+    .bf-mobile-dashboard-nav {
+        position: fixed;
+        bottom: 75px;
+        right: 19px;
+        height: auto;
+        box-shadow: 0 -4px 6px rgba(0,0,0,0.16);
+        background-color: $clr-white;
+        .bf-fuel-order-nav-links {
+            display: none;
+        }
+        .bf-side-menu {
+            padding: 0;
+            height: auto;
+            .MuiDrawer-root.bf-sideBar {
+                .bf-sidebar-logo {
+                    display: none;
+                }
+                .order-btn {
+                    display: none;
+                }
+                .MuiPaper-root.MuiPaper-elevation {
+                    position: relative;
+                    height: auto;
+                    .bf-side-tabs-container {
+                        height: auto;
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+    }
+    .bf-mobile-profile-nav {
+        margin-top: 20px;
+        border-top: 1px solid #707070;
+        padding-top: 10px;
+        padding-left: 10px;
+        .bf-user-profile-img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+        .bf-user-icon {
+            font-size: 25px;
+            margin-right: 10px;
+        }
+        .logout {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            img {
+                margin-right: 10px;
+            }
+        }
+    }
+    @media screen and (min-width:350px) and (max-width:767px) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .bf-side-menu {
+            .MuiDrawer-paper {
+                margin-left: 0 !important;
+                .bf-side-tabs-container {
+                    .bf-slideIn {
+                        display: none !important;
+                    }
+                }
+            }
+        }
+    }
+}

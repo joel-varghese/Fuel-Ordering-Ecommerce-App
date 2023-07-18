@@ -1,0 +1,113 @@
+@import "../../assets/styles/constants.scss";
+
+.bf-date-picker {
+    .bf-date-label {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 6px;
+        font-size: 14px;
+        color: $primary-clr;
+    }
+    &.bf-date-picker-disabled {
+        .MuiTextField-root {
+            background-color: $clr-white !important;
+        }
+    }
+
+    .MuiTextField-root {
+        background-color: $gray-clr;
+        > div {
+            border-radius: 0 !important;
+            .MuiOutlinedInput-notchedOutline {
+                border-color: rgba(0, 0, 0, 0.23) !important;
+                border-width: 1px !important;
+            }
+            &:hover {
+                .MuiOutlinedInput-notchedOutline {
+                    border-color: rgba(0, 0, 0, 0.23) !important;
+                    border-width: 1px !important;
+                }
+            }
+            &.Mui-focused {
+                .MuiOutlinedInput-notchedOutline {
+                    border-color: #86b7fe !important;
+                    border-width: 1px !important;
+                    outline: 0;
+                    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%) !important;
+                }
+            }
+        }
+        input {
+            height: 38px;
+            box-sizing: border-box;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        .MuiIconButton-root {
+            svg {
+                visibility: hidden;
+            }
+            background-image: url(../../assets/images/calendar-icon.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            opacity: 0.9;
+            padding-left: 0;
+            
+        }
+        .MuiInputAdornment-positionEnd {
+            margin-left: 0;
+        }
+    }
+    &.bf-error-date-border {
+        .MuiTextField-root {
+            > div {
+                .MuiOutlinedInput-notchedOutline {
+                    border-color: $bf-error-clr !important;
+                    border-width: 1px !important;
+                }
+            }
+        }
+    }
+    .error{
+        margin-top: 3.5px !important;
+    }
+}
+
+@media screen and (min-width:1024px) and (max-width:1365px) {
+    .bf-date-picker.bf-date-sm {
+        .MuiTextField-root {
+            input {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1366px) and (max-width:1520px) {
+    .bf-date-picker.bf-date-sm {
+        .MuiTextField-root {
+            input {
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1521px) and (max-width:1599px) {
+    .bf-date-picker.bf-date-sm {
+        .MuiTextField-root {
+            input {
+                font-size: 15px;
+            }
+        }
+    }
+}
+.bf-report-filter-section {
+    .bf-report-filter-container {
+        .bf-date-picker {
+            input {
+                padding-left: 2px;
+            }
+        }
+    }
+}
